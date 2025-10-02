@@ -1,8 +1,58 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   font-family: 'Inter', sans-serif;
+}
+
+:root {
+  /* Primary Color */
+  --color-primary: 39, 141, 164;
+  --color-primary-hex: #278da4;
+  
+  /* Secondary Color */
+  --color-secondary: 0, 60, 132;
+  --color-secondary-hex: #003c84;
+  
+  /* Tertiary Color (White) */
+  --color-tertiary: 255, 255, 255;
+  --color-tertiary-hex: #ffffff;
+}
+
+/* Custom CSS Classes */
+.bg-primary {
+  background-color: rgb(var(--color-primary));
+}
+
+.bg-secondary {
+  background-color: rgb(var(--color-secondary));
+}
+
+.bg-tertiary {
+  background-color: rgb(var(--color-tertiary));
+}
+
+.text-primary {
+  color: rgb(var(--color-primary));
+}
+
+.text-secondary {
+  color: rgb(var(--color-secondary));
+}
+
+.text-tertiary {
+  color: rgb(var(--color-tertiary));
+}
+
+.border-primary {
+  border-color: rgb(var(--color-primary));
+}
+
+.border-secondary {
+  border-color: rgb(var(--color-secondary));
+}
+
+.border-tertiary {
+  border-color: rgb(var(--color-tertiary));
 }
