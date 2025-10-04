@@ -231,7 +231,7 @@ const Navbar = () => {
 
             <button
               onClick={toggleHelpline}
-              className="bg-secondary text-tertiary px-4 py-2 rounded text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
+              className="bg-primary text-tertiary px-4 py-2 rounded text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
             >
               Admissions Helpline
               <HiMenuAlt2 />
@@ -240,7 +240,7 @@ const Navbar = () => {
         </div>
 
         {/* Main Navbar */}
-        <div className="w-full px-5 py-4 bg-primary text-tertiary relative">
+        <div className="w-full px-5 py-4 bg-secondary text-tertiary relative">
           <div className="flex justify-between items-center">
             {/* Left side - Navigation items */}
             <div className="flex gap-8 flex-wrap text-tertiary font-medium no-underline text-sm whitespace-nowrap transition-colors">
@@ -330,7 +330,7 @@ const Navbar = () => {
             </div>
 
             {/* Right side - Apply Button */}
-            <button className="bg-secondary text-tertiary px-6 py-2 rounded text-sm font-medium hover:bg-tertiary hover:text-primary transition-colors flex items-center gap-2 border-2 border-secondary">
+            <button className="bg-primary text-tertiary px-6 py-2 rounded text-sm font-medium hover:bg-tertiary hover:text-primary transition-colors flex items-center gap-2 border-2 border-secondary">
               Apply Now
             </button>
           </div>

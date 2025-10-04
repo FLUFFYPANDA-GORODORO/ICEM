@@ -2,7 +2,7 @@
 import React from "react";
 import Indira from "../assets/ICEM_Banner.jpg";
 
-const Hero = () => {
+const Home = () => {
   const jobOpenings = [
     {
       id: 1,
@@ -57,4 +57,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
