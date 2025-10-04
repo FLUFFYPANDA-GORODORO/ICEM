@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import StudentWelfare from "./components/StudentCorner/StudentWelfare";
 import IIC from "./components/StudentCorner/IIC";
 import InductionProgramme from "./components/StudentCorner/InductionProgramme";
+import CivilEngineering from "./components/ProgramsOffered/CivilEngineering";
 import NewNav from "./components/NewNav";
 // // add more pages as you build them
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/student-corner/student-welfare" element={<StudentWelfare />} />
             <Route path="/student-corner/iic" element={<IIC />} />
             <Route path="/student-corner/induction-programme" element={<InductionProgramme />} />
+            <Route path="/programs-offered/civil-eng" element={<CivilEngineering/>} />
             {/* add more <Route> as needed */}
           </Routes>
         </div>
