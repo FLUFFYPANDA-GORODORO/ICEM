@@ -23,16 +23,25 @@ const Navbar = () => {
 
   const dropdownContent = {
     aboutUs: {
-      title: "Our Navigation",
-      sections: [
+  title: "Our Navigation",
+  sections: [
+    {
+      items: [
         {
-          items: [
-            "Indira College of Engineering and Management (ICEM)",
-            "Shree Chanakya Education Society",
-            "Indira Group of Institute",
-            "Chairpersons Profile & Chief Mentor IGL",
-          ],
+          label: "Indira College of Engineering and Management (ICEM)",
+          link: "/about/overview",
         },
+        { label: "Shree Chanakya Education Society",
+          link: "/about/chanakya-edu"
+         },
+        { label: "Indira Group of Institute",
+          link: "/about/IGOI"
+         },
+        { label: "Chairpersons Profile & Chief Mentor IGL",
+          link: "/about/cfcm"
+         },
+      ],
+    },
         {
           title: "Facilities",
           items: [
@@ -278,7 +287,7 @@ const Navbar = () => {
           {/* Main Navigation */}
           <div className="flex justify-end items-center h-[55%] text-black px-6 text-sm font-medium whitespace-nowrap gap-10 ">
             <div
-              className="flex items-center gap-1 cursor-pointer hover:text-primary  bg-gray-100 "
+              className="flex items-center gap-1 cursor-pointer hover:text-primary "
               onMouseEnter={() => handleMouseEnter("aboutUs")}
               onMouseLeave={handleMouseLeave}
             >
