@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import Logo from "../assets/Logo.png";
 import { HiMenuAlt2, HiX, HiChevronDown } from "react-icons/hi";
@@ -10,22 +9,15 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
-  const toggleHelpline = () => {
-    setIsHelplineOpen(!isHelplineOpen);
-  };
+  const toggleHelpline = () => setIsHelplineOpen(!isHelplineOpen);
 
   const handleMouseEnter = (dropdownName) => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
-    }
+    if (dropdownTimeout) clearTimeout(dropdownTimeout);
     setActiveDropdown(dropdownName);
   };
 
   const handleMouseLeave = () => {
-    const timeout = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
+    const timeout = setTimeout(() => setActiveDropdown(null), 150);
     setDropdownTimeout(timeout);
   };
 
@@ -86,10 +78,11 @@ const Navbar = () => {
         },
       ],
     },
-    undergraduate: {
-      title: "Undergraduate Programs",
+    programs: {
+      title: "Programs",
       sections: [
         {
+          title: "Undergraduate Programs",
           items: [
             "Civil Engineering",
             "Computer Engineering",
@@ -102,12 +95,8 @@ const Navbar = () => {
             "Integrated MBA (BCA + MCA)",
           ],
         },
-      ],
-    },
-    postgraduate: {
-      title: "Postgraduate Programs",
-      sections: [
         {
+          title: "Postgraduate Programs",
           items: [
             "MBA",
             "MCA",
@@ -196,9 +185,8 @@ const Navbar = () => {
     },
   };
 
-  const renderDropdownContent = (content) => {
-  return (
-    <div className="max-w-7xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+  const renderDropdownContent = (content) => (
+    <div className="max-w-8xl  px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {content.sections.map((section, index) => (
         <div key={index}>
           <h3 className="text-lg font-semibold text-secondary mb-4">
@@ -214,14 +202,14 @@ const Navbar = () => {
                   <Link
                     to={item.link}
                     className="flex justify-between items-center w-full text-gray-800 hover:text-primary transition-colors"
-                    onClick={() => setActiveDropdown(null)} // Close dropdown on click
+                    onClick={() => setActiveDropdown(null)}
                   >
                     <span>{item.label || item}</span>
                     <TbExternalLink className="text-gray-500" />
                   </Link>
                 ) : (
                   <div className="flex justify-between items-center w-full">
-                    <span className="text-gray-800">{item.label || item}</span>
+                    <span>{item.label || item}</span>
                     <TbExternalLink className="text-gray-400 opacity-50" />
                   </div>
                 )}
@@ -232,157 +220,135 @@ const Navbar = () => {
       ))}
     </div>
   );
-};
 
   return (
     <>
-      <nav className="bg-secondary shadow-sm font-sans text-tertiary relative">
-        {/* Top Bar */}
-        <div className="flex justify-between items-center px-5 py-2 bg-tertiary border-b border-gray-200 text-sm">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img src={Logo} alt="Logo" className="h-20" />
-          </div>
-
-          {/* Top Bar Links + Helpline */}
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 text-secondary font-medium no-underline transition-colors">
-              <a href="/" className="hover:text-primary">
-                Pay Fee
-              </a>
-              <span className="text-gray-400">|</span>
-              <a href="/alumni" className="hover:text-primary">
-                ERP Login Staff
-              </a>
-              <span className="text-gray-400">|</span>
-              <a href="/request-document" className="hover:text-primary">
-                ERP Login Student
-              </a>
-              <span className="text-gray-400">|</span>
-              <a href="/careers" className="hover:text-primary">
-                360<sup>0</sup> Tour
-              </a>
-              <span className="text-gray-400">|</span>
-              <a href="/chalkerp" className="hover:text-primary">
-                Contact Us
-              </a>
-            </div>
-
-            <button
-              onClick={toggleHelpline}
-              className="bg-primary text-tertiary px-4 py-2 rounded text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
-            >
-              Admissions Helpline
-              <HiMenuAlt2 />
-            </button>
-          </div>
+      {/* Outer Layout like NewNav */}
+      <nav className="w-full h-[12vh] flex bg-white shadow-sm font-sans relative">
+        {/* Left: Logo Section */}
+        <div className="w-[30%] h-full flex items-center justify-center">
+          <img src={Logo} alt="Logo" className="h-20 pl-4" />
         </div>
 
-        {/* Main Navbar */}
-        <div className="w-full px-5 py-4 bg-secondary text-tertiary relative">
-          <div className="flex justify-between items-center">
-            {/* Left side - Navigation items */}
-            <div className="flex gap-8 flex-wrap text-tertiary font-medium no-underline text-sm whitespace-nowrap transition-colors">
-              {/* About Us */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("aboutUs")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>About Us</span>
-                <HiChevronDown className="text-sm" />
+        {/* Right: Navigation Section */}
+        <div className="w-[70%] h-full flex flex-col">
+          {/* Top Bar */}
+          <div className="flex justify-end  w-full h-[45%] text-xs text-gray-700 bg-white">
+            {/* Container for all top bar content - shifted to right */}
+            <div className="flex  gap-8">
+              {/* Left Links */}
+              <div className="flex items-center gap-2 font-bold">
+                <a href="/" className="hover:text-primary">
+                  Pay Fee
+                </a>
+                <span className="text-gray-400">|</span>
+                <a href="/" className="hover:text-primary">
+                  ERP Login Staff
+                </a>
+                <span className="text-gray-400">|</span>
+                <a href="/" className="hover:text-primary">
+                  ERP Login Student
+                </a>
+                <span className="text-gray-400">|</span>
+                <a href="/" className="hover:text-primary">
+                  360<sup>0</sup> Tour
+                </a>
+                <span className="text-gray-400">|</span>
+                <a href="/" className="hover:text-primary">
+                  Contact Us
+                </a>
               </div>
 
-              {/* Student Corner */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("studentCorner")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>Student Corner</span>
-                <HiChevronDown className="text-sm" />
+              {/* Right Buttons */}
+              <div className="flex ">
+                <button className="bg-primary text-white px-8 py-1 text-xs hover:bg-primary/90 font-bold border-r border-white">
+                  Apply Now
+                </button>
+                <button
+                  onClick={toggleHelpline}
+                  className="bg-primary text-white px-4 py-1 text-xs flex items-center gap-3 hover:bg-primary/90 font-bold"
+                >
+                  Admissions Helpline
+                  <HiMenuAlt2 size={14} />
+                </button>
               </div>
-
-              {/* Undergraduate Programs */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("undergraduate")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>Undergraduate Programs</span>
-                <HiChevronDown className="text-sm" />
-              </div>
-
-              {/* Postgraduate Programs */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("postgraduate")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>Postgraduate Programs</span>
-                <HiChevronDown className="text-sm" />
-              </div>
-
-              {/* Admission */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("admission")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>Admission</span>
-                <HiChevronDown className="text-sm" />
-              </div>
-
-              {/* Placement */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("placement")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>Placement</span>
-                <HiChevronDown className="text-sm" />
-              </div>
-
-              {/* Alumni */}
-              <h2 className="hover:text-secondary cursor-pointer">Alumni</h2>
-
-              {/* Gallery */}
-              <h2 className="hover:text-secondary cursor-pointer">Gallery</h2>
-
-              {/* Accreditation */}
-              <div
-                className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter("accreditation")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span>Accreditation</span>
-                <HiChevronDown className="text-sm" />
-              </div>
-
-              {/* Research */}
-              <h2 className="hover:text-secondary cursor-pointer">Research</h2>
-
-              {/* Blog */}
-              <h2 className="hover:text-secondary cursor-pointer">Blog</h2>
             </div>
-
-            {/* Right side - Apply Button */}
-            <button className="bg-primary text-tertiary px-6 py-2 rounded text-sm font-medium hover:bg-tertiary hover:text-primary transition-colors flex items-center gap-2 border-2 border-secondary">
-              Apply Now
-            </button>
           </div>
 
-          {/* Full-width Dropdown */}
-          {activeDropdown && (
+          {/* Main Navigation */}
+          <div className="flex justify-end items-center h-[55%] text-black px-6 text-sm font-medium whitespace-nowrap gap-10 ">
             <div
-              onMouseEnter={() => handleMouseEnter(activeDropdown)}
+              className="flex items-center gap-1 cursor-pointer hover:text-primary  bg-gray-100 "
+              onMouseEnter={() => handleMouseEnter("aboutUs")}
               onMouseLeave={handleMouseLeave}
-              className="absolute top-full left-0 w-full bg-gray-200/60 backdrop-blur-md shadow-2xl border-t border-gray-300 z-50"
             >
-              {renderDropdownContent(dropdownContent[activeDropdown])}
+              <span>About Us</span>
+             
             </div>
-          )}
+
+            <div
+              className="flex items-center gap-1 cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("studentCorner")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Student Corner</span>
+        
+            </div>
+
+            {/* Combined Programs Dropdown */}
+            <div
+              className="flex items-center gap-1 cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("programs")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Programs</span>
+         
+            </div>
+
+            <div
+              className="flex items-center gap-1 cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("admission")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Admission</span>
+           
+            </div>
+
+            <div
+              className="flex items-center gap-1 cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("placement")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Placement</span>
+       
+            </div>
+
+            <h2 className="hover:text-secondary cursor-pointer hover:text-primary">Alumni</h2>
+
+            <div
+              className="flex items-center gap-1 cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("accreditation")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Accreditation</span>
+         
+            </div>
+
+            <h2 className="hover:text-secondary cursor-pointer hover:text-primary">Research</h2>
+          </div>
         </div>
+
+        {/* Dropdowns */}
+        {activeDropdown && (
+          <div
+            onMouseEnter={() => handleMouseEnter(activeDropdown)}
+            onMouseLeave={handleMouseLeave}
+            className="absolute top-full left-0 w-full backdrop-blur-md bg-white/60 shadow-xl border-t border-gray-200 z-50"
+
+          >
+            {renderDropdownContent(dropdownContent[activeDropdown])}
+          </div>
+        )}
       </nav>
 
       {/* Helpline Slide Panel */}
@@ -391,11 +357,11 @@ const Navbar = () => {
           isHelplineOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="bg-primary text-tertiary p-4 flex justify-between items-center">
+        <div className="bg-primary text-white p-4 flex justify-between items-center">
           <h3 className="text-lg font-bold">Admissions Helpline</h3>
           <button
             onClick={toggleHelpline}
-            className="text-tertiary hover:text-secondary transition-colors"
+            className="text-white hover:text-gray-200 transition-colors"
           >
             <HiX size={24} />
           </button>
