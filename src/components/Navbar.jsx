@@ -1,8 +1,9 @@
 // Navbar.jsx
-import React, { useState } from 'react';
-import Logo from '../assets/Logo.png';
+import React, { useState } from "react";
+import Logo from "../assets/Logo.png";
 import { HiMenuAlt2, HiX, HiChevronDown } from "react-icons/hi";
 import { TbExternalLink } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isHelplineOpen, setIsHelplineOpen] = useState(false);
@@ -37,8 +38,8 @@ const Navbar = () => {
             "Indira College of Engineering and Management (ICEM)",
             "Shree Chanakya Education Society",
             "Indira Group of Institute",
-            "Chairpersons Profile & Chief Mentor IGL"
-          ]
+            "Chairpersons Profile & Chief Mentor IGL",
+          ],
         },
         {
           title: "Facilities",
@@ -50,28 +51,40 @@ const Navbar = () => {
             "Canteen",
             "Gym",
             "Primary Health Centre",
-            "Governance"
-          ]
-        }
-      ]
+            "Governance",
+          ],
+        },
+      ],
     },
     studentCorner: {
       title: "Student Corner",
       sections: [
         {
           items: [
-            "Student Welfare",
-            "IIC",
-            "Induction Programme",
-            "Student Council",
-            "National Service Scheme",
-            "ICEM Awards",
-            "Academics",
-            "Committies",
-            "Grievance Redressals"
-          ]
-        }
-      ]
+            {
+              label: "Student Welfare",
+              link: "/student-corner/student-welfare",
+            },
+            { label: "IIC", link: "/student-corner/iic" },
+            {
+              label: "Induction Programme",
+              link: "/student-corner/induction-programme",
+            },
+            {
+              label: "Student Council",
+              link: "/student-corner/student-council",
+            },
+            { label: "National Service Scheme", link: "/student-corner/nss" },
+            { label: "ICEM Awards", link: "/student-corner/icem-awards" },
+            { label: "Academics", link: "/student-corner/academics" },
+            { label: "Committies", link: "/student-corner/committees" },
+            {
+              label: "Grievance Redressals",
+              link: "/student-corner/grievance-redressals",
+            },
+          ],
+        },
+      ],
     },
     undergraduate: {
       title: "Undergraduate Programs",
@@ -86,10 +99,10 @@ const Navbar = () => {
             "First Year Engineering",
             "Information Technology",
             "Integrated MBA (BBA + MBA)",
-            "Integrated MBA (BCA + MCA)"
-          ]
-        }
-      ]
+            "Integrated MBA (BCA + MCA)",
+          ],
+        },
+      ],
     },
     postgraduate: {
       title: "Postgraduate Programs",
@@ -99,10 +112,10 @@ const Navbar = () => {
             "MBA",
             "MCA",
             "M-Tech in Mechanical Engineering",
-            "M-Tech in Computer Science"
-          ]
-        }
-      ]
+            "M-Tech in Computer Science",
+          ],
+        },
+      ],
     },
     admission: {
       title: "Admission",
@@ -114,8 +127,8 @@ const Navbar = () => {
             "Integrated MBA (BBA + MBA)",
             "MBA",
             "MCA",
-            "Admission Advertisement"
-          ]
+            "Admission Advertisement",
+          ],
         },
         {
           title: "Admission Process",
@@ -127,10 +140,10 @@ const Navbar = () => {
             "Fee Structure",
             "NOTICE",
             "Scholarship",
-            "IL & ACAP Merit List & Vacancy Position"
-          ]
-        }
-      ]
+            "IL & ACAP Merit List & Vacancy Position",
+          ],
+        },
+      ],
     },
     placement: {
       title: "Placement",
@@ -140,10 +153,10 @@ const Navbar = () => {
             "Placement Team",
             "Our Recruiters",
             "Placed Students",
-            "Placement Policy"
-          ]
-        }
-      ]
+            "Placement Policy",
+          ],
+        },
+      ],
     },
     accreditation: {
       title: "Accreditation",
@@ -154,8 +167,8 @@ const Navbar = () => {
             "SSR reports year wise",
             "Criteria wise Details",
             "AQAR reports",
-            "NAAC Certificate"
-          ]
+            "NAAC Certificate",
+          ],
         },
         {
           title: "IQAC",
@@ -165,8 +178,8 @@ const Navbar = () => {
             "MOMS & Actions",
             "IQAC Formats",
             "Best Practices",
-            "Distinctive Practice"
-          ]
+            "Distinctive Practice",
+          ],
         },
         {
           title: "Reports & Others",
@@ -176,34 +189,50 @@ const Navbar = () => {
             "NIRF",
             "Financial Statements",
             "Soft Skills & Aptitude",
-            "Reports"
-          ]
-        }
-      ]
-    }
+            "Reports",
+          ],
+        },
+      ],
+    },
   };
 
   const renderDropdownContent = (content) => {
-    return (
-      <div className="max-w-7xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {content.sections.map((section, index) => (
-          <div key={index}>
-            <h3 className="text-lg font-semibold text-secondary mb-4">
-              {section.title || content.title}
-            </h3>
-            <ul className="space-y-4 text-gray-800 text-sm">
-              {section.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="flex justify-between items-center border-b border-gray-300 pb-2">
-                  <a href="#" className="hover:text-primary transition-colors">{item}</a>
-                  <TbExternalLink className="text-gray-500" />
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    );
-  };
+  return (
+    <div className="max-w-7xl mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {content.sections.map((section, index) => (
+        <div key={index}>
+          <h3 className="text-lg font-semibold text-secondary mb-4">
+            {section.title || content.title}
+          </h3>
+          <ul className="space-y-4 text-gray-800 text-sm">
+            {section.items.map((item, itemIndex) => (
+              <li
+                key={itemIndex}
+                className="flex justify-between items-center border-b border-gray-300 pb-2"
+              >
+                {item.link ? (
+                  <Link
+                    to={item.link}
+                    className="flex justify-between items-center w-full text-gray-800 hover:text-primary transition-colors"
+                    onClick={() => setActiveDropdown(null)} // Close dropdown on click
+                  >
+                    <span>{item.label || item}</span>
+                    <TbExternalLink className="text-gray-500" />
+                  </Link>
+                ) : (
+                  <div className="flex justify-between items-center w-full">
+                    <span className="text-gray-800">{item.label || item}</span>
+                    <TbExternalLink className="text-gray-400 opacity-50" />
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
 
   return (
     <>
@@ -218,15 +247,25 @@ const Navbar = () => {
           {/* Top Bar Links + Helpline */}
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-secondary font-medium no-underline transition-colors">
-              <a href="/" className="hover:text-primary">Pay Fee</a>
+              <a href="/" className="hover:text-primary">
+                Pay Fee
+              </a>
               <span className="text-gray-400">|</span>
-              <a href="/alumni" className="hover:text-primary">ERP Login Staff</a>
+              <a href="/alumni" className="hover:text-primary">
+                ERP Login Staff
+              </a>
               <span className="text-gray-400">|</span>
-              <a href="/request-document" className="hover:text-primary">ERP Login Student</a>
+              <a href="/request-document" className="hover:text-primary">
+                ERP Login Student
+              </a>
               <span className="text-gray-400">|</span>
-              <a href="/careers" className="hover:text-primary">360<sup>0</sup> Tour</a>
+              <a href="/careers" className="hover:text-primary">
+                360<sup>0</sup> Tour
+              </a>
               <span className="text-gray-400">|</span>
-              <a href="/chalkerp" className="hover:text-primary">Contact Us</a>
+              <a href="/chalkerp" className="hover:text-primary">
+                Contact Us
+              </a>
             </div>
 
             <button
@@ -244,11 +283,10 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             {/* Left side - Navigation items */}
             <div className="flex gap-8 flex-wrap text-tertiary font-medium no-underline text-sm whitespace-nowrap transition-colors">
-
               {/* About Us */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('aboutUs')}
+                onMouseEnter={() => handleMouseEnter("aboutUs")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>About Us</span>
@@ -258,7 +296,7 @@ const Navbar = () => {
               {/* Student Corner */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('studentCorner')}
+                onMouseEnter={() => handleMouseEnter("studentCorner")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>Student Corner</span>
@@ -268,7 +306,7 @@ const Navbar = () => {
               {/* Undergraduate Programs */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('undergraduate')}
+                onMouseEnter={() => handleMouseEnter("undergraduate")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>Undergraduate Programs</span>
@@ -278,7 +316,7 @@ const Navbar = () => {
               {/* Postgraduate Programs */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('postgraduate')}
+                onMouseEnter={() => handleMouseEnter("postgraduate")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>Postgraduate Programs</span>
@@ -288,7 +326,7 @@ const Navbar = () => {
               {/* Admission */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('admission')}
+                onMouseEnter={() => handleMouseEnter("admission")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>Admission</span>
@@ -298,7 +336,7 @@ const Navbar = () => {
               {/* Placement */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('placement')}
+                onMouseEnter={() => handleMouseEnter("placement")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>Placement</span>
@@ -314,7 +352,7 @@ const Navbar = () => {
               {/* Accreditation */}
               <div
                 className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-colors relative"
-                onMouseEnter={() => handleMouseEnter('accreditation')}
+                onMouseEnter={() => handleMouseEnter("accreditation")}
                 onMouseLeave={handleMouseLeave}
               >
                 <span>Accreditation</span>
@@ -326,7 +364,6 @@ const Navbar = () => {
 
               {/* Blog */}
               <h2 className="hover:text-secondary cursor-pointer">Blog</h2>
-
             </div>
 
             {/* Right side - Apply Button */}
@@ -349,12 +386,17 @@ const Navbar = () => {
       </nav>
 
       {/* Helpline Slide Panel */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${
-        isHelplineOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${
+          isHelplineOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="bg-primary text-tertiary p-4 flex justify-between items-center">
           <h3 className="text-lg font-bold">Admissions Helpline</h3>
-          <button onClick={toggleHelpline} className="text-tertiary hover:text-secondary transition-colors">
+          <button
+            onClick={toggleHelpline}
+            className="text-tertiary hover:text-secondary transition-colors"
+          >
             <HiX size={24} />
           </button>
         </div>
@@ -362,14 +404,20 @@ const Navbar = () => {
         <div className="p-6 text-gray-800 space-y-6 overflow-y-auto h-full">
           {/* Numbers */}
           <div className="space-y-4">
-            <p className="text-sm text-gray-600">For more information give a miss call on</p>
+            <p className="text-sm text-gray-600">
+              For more information give a miss call on
+            </p>
             <div className="bg-blue-50 p-4 rounded-lg">
-              <p className="text-2xl font-bold text-primary text-center">1800 267 1999</p>
+              <p className="text-2xl font-bold text-primary text-center">
+                1800 267 1999
+              </p>
             </div>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-primary border-b border-gray-200 pb-2">Regional Helplines</h4>
+            <h4 className="font-semibold text-primary border-b border-gray-200 pb-2">
+              Regional Helplines
+            </h4>
             <div className="space-y-3">
               <div>
                 <p className="font-medium text-sm">Admission Helpline</p>
@@ -385,7 +433,9 @@ const Navbar = () => {
                 <p className="text-lg font-semibold">9810355724</p>
               </div>
               <div>
-                <p className="font-medium text-sm">UP / Bihar / Jharkhand Helpline</p>
+                <p className="font-medium text-sm">
+                  UP / Bihar / Jharkhand Helpline
+                </p>
                 <p className="text-lg font-semibold">9873288076</p>
               </div>
               <div>
@@ -404,7 +454,10 @@ const Navbar = () => {
 
       {/* Overlay */}
       {isHelplineOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={toggleHelpline} />
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleHelpline}
+        />
       )}
     </>
   );
