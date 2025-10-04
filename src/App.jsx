@@ -6,10 +6,12 @@ import StudentWelfare from "./components/StudentCorner/StudentWelfare";
 import IIC from "./components/StudentCorner/IIC";
 import InductionProgramme from "./components/StudentCorner/InductionProgramme";
 import CivilEngineering from "./components/ProgramsOffered/CivilEngineering";
+import NewNav from "./components/NewNav";
+// // add more pages as you build them
 
 function App() {
   return (
-      <div className="flex flex-col min-h-screen bg-gray-100">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
           <Routes>
