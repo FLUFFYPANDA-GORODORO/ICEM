@@ -5,7 +5,11 @@ import Home from "./Pages/Home";
 import StudentWelfare from "./components/StudentCorner/StudentWelfare";
 import IIC from "./components/StudentCorner/IIC";
 import InductionProgramme from "./components/StudentCorner/InductionProgramme";
-import NewNav from "./components/NewNav";
+
+import Overview from "./components/AboutUs/Overview";
+import ChanakyaEdu from "./components/AboutUs/ChanakyaEdu";
+import IGOI from "./components/AboutUs/IGOI";
+import CFCM from "./components/AboutUs/CFCM";
 // // add more pages as you build them
 
 function App() {
@@ -15,6 +19,10 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about/overview" element={<Overview />} />
+            <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
+            <Route path="/about/IGOI" element={<IGOI />} />
+            <Route path="/about/cfcm" element={<CFCM />} />
             <Route path="/student-corner/student-welfare" element={<StudentWelfare />} />
             <Route path="/student-corner/iic" element={<IIC />} />
             <Route path="/student-corner/induction-programme" element={<InductionProgramme />} />
