@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
-import FacultyImg from "../../assets/chanakya.png"; // temporary faculty placeholder
 
 function Overview() {
   const rightLinks = [
@@ -235,15 +234,12 @@ function Overview() {
               key={index}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4"
             >
-              <img
-                src={FacultyImg}
-                alt={leader.name}
-                className="w-full h-64 object-cover rounded-t-xl"
-              />
+              {/* Empty Placeholder */}
+              <div className="w-full h-64 bg-gray-200 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
+                [ Image Placeholder ]
+              </div>
               <div className="mt-4">
-                <h4 className="font-semibold text-gray-800">
-                  {leader.name}
-                </h4>
+                <h4 className="font-semibold text-gray-800">{leader.name}</h4>
                 <p className="text-sm text-gray-600">{leader.designation}</p>
               </div>
             </div>
@@ -260,11 +256,10 @@ function Overview() {
               key={index}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4"
             >
-              <img
-                src={FacultyImg}
-                alt={hod.name}
-                className="w-full h-60 object-cover rounded-t-xl"
-              />
+              {/* Empty Placeholder */}
+              <div className="w-full h-60 bg-gray-200 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
+                [ Image Placeholder ]
+              </div>
               <div className="mt-4">
                 <h4 className="font-semibold text-gray-800">{hod.name}</h4>
                 <p className="text-sm text-gray-600">{hod.designation}</p>

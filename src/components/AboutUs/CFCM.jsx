@@ -12,63 +12,68 @@ function CFCM() {
   return (
     <div className="w-full bg-white text-gray-800">
       {/* Chairperson's Message */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <h3 className="text-2xl font-bold mb-6">Chairperson’s Message</h3>
-        <div className="flex flex-col md:flex-row gap-8 bg-gray-50 rounded-xl p-6 shadow-md">
-          <div className="md:w-1/3">
-            <img
-              src={ChairpersonImg}
-              alt="Chairperson"
-              className="rounded-lg object-cover w-full h-[380px]"
-            />
-            <div className="flex justify-center gap-4 mt-3 text-gray-700 text-lg">
-              <FaFacebookF />
-              <FaLinkedinIn />
-              <FaInstagram />
-              <FaTwitter />
-              <FaYoutube />
-            </div>
-            <div className="mt-3 text-center">
-              <h4 className="font-semibold text-lg">Dr. Tarita Shankar</h4>
-              <p className="text-sm text-gray-600">
-                Founder Secretary & Chief Managing Trustee, SCES <br />
-                Chairperson & Chief Mentor, Indira Group of Institutes
-              </p>
-              <p className="text-sm text-gray-600 mt-1">
-                Email:{" "}
-                <a
-                  href="mailto:taritashankar@indiraedu.com"
-                  className="text-blue-600 hover:underline"
-                >
-                  taritashankar@indiraedu.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="md:w-2/3 text-gray-700 leading-relaxed">
-            <p className="mb-3">
-              Pursuit of Management Education at Indira Group of Institutes has
-              been an inspiring journey. With over two decades of existence,
-              Indira strongly believes in the power of education to transform
-              the youth. Indira embraces change and epitomizes matching
-              innovation in curriculum, helping aspiring managers become capable
-              professionals.
-            </p>
-            <p className="mb-3">
-              Indira offers holistic and transformative learning experiences,
-              designed and delivered by experts from industry and academia. Our
-              curriculum keeps programs contextually abreast, and our pedagogy
-              inspires application-oriented learning.
-            </p>
-            <p>
-              Indira strives to create good human beings and not just
-              professionals. With confidence that our intentions have matched
-              our efforts, I wish you the very best in the future.
-            </p>
-          </div>
-        </div>
+   <div className="max-w-7xl mx-auto px-6 py-12">
+  <h3 className="text-2xl font-bold mb-6">Chairperson’s Message</h3>
+  <div className="flex flex-col md:flex-row gap-8 bg-gray-50 rounded-xl p-6 shadow-md">
+    
+    {/* Left Side - Image Placeholder + Socials */}
+    <div className="md:w-1/3">
+      {/* Image Placeholder */}
+      <div className="w-full h-[380px] bg-gray-200 flex items-center justify-center text-gray-500 rounded-lg">
+        [ Image Placeholder ]
       </div>
+
+      <div className="flex justify-center gap-4 mt-3 text-gray-700 text-lg">
+        <FaFacebookF />
+        <FaLinkedinIn />
+        <FaInstagram />
+        <FaTwitter />
+        <FaYoutube />
+      </div>
+
+      <div className="mt-3 text-center">
+        <h4 className="font-semibold text-lg">Dr. Tarita Shankar</h4>
+        <p className="text-sm text-gray-600">
+          Founder Secretary & Chief Managing Trustee, SCES <br />
+          Chairperson & Chief Mentor, Indira Group of Institutes
+        </p>
+        <p className="text-sm text-gray-600 mt-1">
+          Email:{" "}
+          <a
+            href="mailto:taritashankar@indiraedu.com"
+            className="text-blue-600 hover:underline"
+          >
+            taritashankar@indiraedu.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    {/* Right Side - Message Content */}
+    <div className="md:w-2/3 text-gray-700 leading-relaxed">
+      <p className="mb-3">
+        Pursuit of Management Education at Indira Group of Institutes has
+        been an inspiring journey. With over two decades of existence,
+        Indira strongly believes in the power of education to transform
+        the youth. Indira embraces change and epitomizes matching
+        innovation in curriculum, helping aspiring managers become capable
+        professionals.
+      </p>
+      <p className="mb-3">
+        Indira offers holistic and transformative learning experiences,
+        designed and delivered by experts from industry and academia. Our
+        curriculum keeps programs contextually abreast, and our pedagogy
+        inspires application-oriented learning.
+      </p>
+      <p>
+        Indira strives to create good human beings and not just
+        professionals. With confidence that our intentions have matched
+        our efforts, I wish you the very best in the future.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* Visionary Educationist */}
       <div className="max-w-7xl mx-auto px-6 pb-12">
