@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FAQSection from "./FAQSection";
 
-import CompBrochure from "../../assets/CompBrochure.pdf"; // brochure file
+import CompBrochure from "../../assets/BEComp.pdf"; // brochure file
 
 function Computer() {
   const [activeFAQ, setActiveFAQ] = useState(null);
