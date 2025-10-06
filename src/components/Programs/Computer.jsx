@@ -432,10 +432,9 @@ export default function Computer() {
           </div>
         </div>
       </div>
-    
-            {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
-<FAQSection />
 
+      {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
+      <FAQSection />
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
