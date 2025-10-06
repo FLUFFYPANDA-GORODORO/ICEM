@@ -1,7 +1,11 @@
 import React from "react";
-import research from "../../assets/research.jpg"; // your uploaded image path
-
+import { useState } from "react";
+import research from "../../assets/research.jpg";
+import BEComp from "../../assets/BEComp.pdf";
 const Research = () => {
+  const [activeAccordion, setActiveAccordion] = useState(null);
+  const [activeTab, setActiveTab] = useState("Overview");
+
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
@@ -493,6 +497,676 @@ const Research = () => {
                 innovation across disciplines and real-world applications that
                 impact industries and communities.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Department Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-8">
+            Research Information
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left Sidebar Tabs */}
+            <div className="bg-white shadow-md border border-gray-200 rounded-lg p-4">
+              <ul className="space-y-2">
+                {[
+                  "Overview",
+                  "Publication",
+                  "IPR",
+                  "Research Activities",
+                  "Research Policy",
+                ].map((tab, i) => (
+                  <li
+                    key={i}
+                    onClick={() => setActiveTab(tab)} // 👈 sets the active tab
+                    className={`p-3 rounded-md cursor-pointer font-medium ${
+                      activeTab === tab
+                        ? "bg-blue-50 border-l-4 border-secondary text-secondary"
+                        : "hover:bg-gray-100 text-gray-700"
+                    }`}
+                  >
+                    {tab}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right Accordion */}
+            {/* Right Accordion (Dynamic Content Based on Sidebar Selection) */}
+            <div className="bg-white shadow-md border border-gray-200 rounded-lg">
+              {/* Overview Accordion */}
+              {activeTab === "Overview" && (
+                <>
+                  {[
+                    {
+                      title: "1. About the R&D Cell",
+                      content: (
+                        <>
+                          <p>
+                            Indira College of Engineering and Management is
+                            committed to inculcate research culture among
+                            faculty, researchers and students. The R&D Cell aims
+                            to develop and promote research and development
+                            activities to realize the vision and mission of the
+                            college. The research areas of academic, practical
+                            and social significance will be identified and thus
+                            contributing to the nation development.
+                          </p>
+                          <p className="mt-3">
+                            The research policy defines the applicable rules and
+                            regulations to be adhered while carrying out various
+                            research activities and norms related to safe and
+                            ethical conduct of research. The R&D Cell provides
+                            guidance to faculty members and students
+                            consistently to write research papers, research
+                            projects and IPR activities. The management
+                            encourages all faculty members and students by
+                            providing financial assistance for research paper
+                            presentation, attending national/international
+                            conferences, publishing books and filing copyrights
+                            and patents. To encourage innovative ideas and
+                            competitive projects, the Institute provides Seed
+                            funding to the research projects to develop
+                            prototype and testing.
+                          </p>
+                        </>
+                      ),
+                    },
+                    {
+                      title: "2. Objectives",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2">
+                          <li>
+                            To identify and inform all researchers about the
+                            research opportunities available in academic,
+                            industry, government and research organizations.
+                          </li>
+                          <li>
+                            To provide a conducive environment and motivation
+                            for undertaking interdisciplinary projects and
+                            research.
+                          </li>
+                          <li>
+                            To facilitate the presentation of research work in
+                            national/international conferences and enhance
+                            publication standards.
+                          </li>
+                          <li>
+                            To establish centers of excellence in association
+                            with industries and undertake joint research
+                            projects.
+                          </li>
+                          <li>
+                            To establish long-term relationships with research
+                            organizations to widen funding and research scope.
+                          </li>
+                          <li>
+                            To encourage participative research and promote
+                            internal funded projects and consultancy services.
+                          </li>
+                          <li>
+                            To acquire membership of renowned professional
+                            bodies and build global institutional linkages.
+                          </li>
+                          <li>
+                            To ensure quality and uphold high standards of
+                            ethics and integrity in all research activities.
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "3. Memorandums of Understanding (MoUs)",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2">
+                          <li>
+                            MoU with Consortium of Technical Education for
+                            innovative programs and research initiatives.
+                          </li>
+                          <li>
+                            MoU with Shashitek Company, Bangalore for
+                            internships and real-time tech projects.
+                          </li>
+                          <li>
+                            MoU with Cyber Secured India for cyber security and
+                            digital forensics training.
+                          </li>
+                          <li>
+                            MoU with RWTH Aachen University, Germany for
+                            collaborative research projects.
+                          </li>
+                          <li>
+                            MoU with Sahyadri Pratishthan Gad Samvardhan Samiti
+                            for environmental and heritage awareness.
+                          </li>
+                          <li>
+                            MoU with India First Robotics Innovation and
+                            Research LLP for robotics training.
+                          </li>
+                          <li>
+                            MoU with IQAC Cluster India to support NAAC
+                            accreditation improvement.
+                          </li>
+                          <li>
+                            MoU with Gryphon Consultancy for training and
+                            placement opportunities.
+                          </li>
+                          <li>
+                            MoU with Edukerron to develop and monitor academic
+                            work plans and projects.
+                          </li>
+                          <li>
+                            MoU with Global Reach for international study tours,
+                            lectures, and workshops.
+                          </li>
+                          <li>
+                            MoU with MIT-ADT Incubator Forum for startup
+                            mentoring programs under NITI Aayog.
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "4. Research & Development Documents",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Registered Ph.D Guides AY [2024-2025]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Registered Ph.D Guides AY [2023-2024]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Registered Ph.D Guides AY [2022-2023]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Research & Development Committee AY [2024-2025]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Research & Development Committee AY [2023-2024]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Research & Development Committee
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                  ].map((section, i) => (
+                    <div key={i} className="border-b border-gray-200">
+                      <button
+                        onClick={() =>
+                          setActiveAccordion(activeAccordion === i ? null : i)
+                        }
+                        className={`w-full flex justify-between items-center p-4 text-left font-medium ${
+                          activeAccordion === i
+                            ? "bg-secondary text-white"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        {section.title}
+                        <span className="text-xl font-bold">
+                          {activeAccordion === i ? "−" : "+"}
+                        </span>
+                      </button>
+                      {activeAccordion === i && (
+                        <div className="p-4 bg-gray-50 text-gray-700">
+                          {section.content}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </>
+              )}
+
+              {/* Publication Accordion */}
+              {activeTab === "Publication" && (
+                <>
+                  {[
+                    {
+                      title: "1. Journals",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Key Publications in the Indexed Journals by
+                              Faculty Members AY-[2023-2024]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Key Publications in the Indexed Journals by
+                              Faculty Members AY-[2022-2023]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Key Publications in the Indexed Journals by
+                              Faculty Members AY-[2021-2022]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "2. Conferences",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Conference 2023-24
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Conference 2022-23
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Conference 2021-22
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "3. Books",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Books AY-2023-2024
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Books AY-2022-2023
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Books AY-2021-2022
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                  ].map((section, i) => (
+                    <div key={i} className="border-b border-gray-200">
+                      <button
+                        onClick={() =>
+                          setActiveAccordion(activeAccordion === i ? null : i)
+                        }
+                        className={`w-full flex justify-between items-center p-4 text-left font-medium ${
+                          activeAccordion === i
+                            ? "bg-secondary text-white"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        {section.title}
+                        <span className="text-xl font-bold">
+                          {activeAccordion === i ? "−" : "+"}
+                        </span>
+                      </button>
+                      {activeAccordion === i && (
+                        <div className="p-4 bg-gray-50 text-gray-700">
+                          {section.content}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </>
+              )}
+              {/* IPR Accordion */}
+              {/* IPR Accordion */}
+              {/* IPR Accordion */}
+              {activeTab === "IPR" && (
+                <div className="p-0">
+                  {[
+                    {
+                      title: "1. Patents",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Patents Filed/Published in the AY-[2023-24]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Patents Filed/Published in the AY-[2022-23]
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Patents Filed/Published in the AY-[2021-22]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "2. Copyrights",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Copyrights Filed in the academic year 2023-24
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Copyrights Filed in the academic year 2022-23
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "3. Trademarks",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Trademarks Registered in the academic year 2023-24
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Trademarks Registered in the academic year 2022-23
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                  ].map((section, i) => (
+                    <div key={i} className="border-b border-gray-200">
+                      <button
+                        onClick={() =>
+                          setActiveAccordion(activeAccordion === i ? null : i)
+                        }
+                        className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
+                          activeAccordion === i
+                            ? "bg-secondary text-white"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        {section.title}
+                        <span className="text-xl font-bold">
+                          {activeAccordion === i ? "−" : "+"}
+                        </span>
+                      </button>
+
+                      {activeAccordion === i && (
+                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                          {section.content}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {/* Research Activities Accordion */}
+              {activeTab === "Research Activities" && (
+                <div className="p-0">
+                  {[
+                    {
+                      title: "1. Workshops/Seminars Conducted AY-[2023-24]",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Workshops/Seminars Conducted AY-[2023-24]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "2. Workshops/Seminars Conducted AY-[2022-23]",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Workshops/Seminars Conducted AY-[2022-23]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "3. Workshops/Seminars Conducted AY-[2021-22]",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Workshops/Seminars Conducted AY-[2021-22]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                  ].map((section, i) => (
+                    <div key={i} className="border-b border-gray-200">
+                      <button
+                        onClick={() =>
+                          setActiveAccordion(activeAccordion === i ? null : i)
+                        }
+                        className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
+                          activeAccordion === i
+                            ? "bg-secondary text-white"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        {section.title}
+                        <span className="text-xl font-bold">
+                          {activeAccordion === i ? "−" : "+"}
+                        </span>
+                      </button>
+
+                      {activeAccordion === i && (
+                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                          {section.content}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {/* Research Policy Accordion */}
+              {activeTab === "Research Policy" && (
+                <div className="p-0">
+                  {[
+                    {
+                      title: "Research Policy [2023-24]",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Research Policy Document for AY [2023-24]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "Research Policy [2022-23]",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Research Policy Document for AY [2022-23]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                    {
+                      title: "Research Policy [2021-22]",
+                      content: (
+                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                          <li>
+                            <a
+                              href={BEComp}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Research Policy Document for AY [2021-22]
+                            </a>
+                          </li>
+                        </ul>
+                      ),
+                    },
+                  ].map((section, i) => (
+                    <div key={i} className="border-b border-gray-200">
+                      <button
+                        onClick={() =>
+                          setActiveAccordion(activeAccordion === i ? null : i)
+                        }
+                        className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
+                          activeAccordion === i
+                            ? "bg-secondary text-white"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        {section.title}
+                        <span className="text-xl font-bold">
+                          {activeAccordion === i ? "−" : "+"}
+                        </span>
+                      </button>
+
+                      {activeAccordion === i && (
+                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                          {section.content}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
