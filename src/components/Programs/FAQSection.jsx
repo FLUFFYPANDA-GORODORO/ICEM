@@ -1,0 +1,423 @@
+import React, { useState } from "react";
+import { pdfjs } from "react-pdf";
+
+// ✅ Import all syllabus PDFs
+import BE_Syllabus from "../../assets/BEComp.pdf";
+import TE_Syllabus from "../../assets/TEComp.pdf";
+import SE_Syllabus from "../../assets/SEComp.pdf";
+import SY_BTech from "../../assets/BTech.pdf";
+import MTech_2024 from "../../assets/MTECHFinal.pdf";
+import MTech_Syllabus from "../../assets/MTECHComp.pdf";
+
+// ✅ Import all Course Structure Images
+import FESEM1 from "../../assets/FESEM1.png";
+import FESEM2 from "../../assets/FESEM2.png";
+import SESEM1 from "../../assets/SESEM1.png";
+import SESEM2 from "../../assets/SESEM2.png";
+import TESEM1 from "../../assets/TESEM1.png";
+import TESEM2 from "../../assets/TESEM2.png";
+import BESEM1 from "../../assets/BESEM1.png";
+import BESEM2 from "../../assets/BESEM2.png";
+
+// ✅ PDF.js Worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
+const FAQSection = () => {
+  const [activeFAQ, setActiveFAQ] = useState(null);
+  const [activeSyllabus, setActiveSyllabus] = useState(null);
+  const [activeStructure, setActiveStructure] = useState(null);
+  const [activeWhyIndira, setActiveWhyIndira] = useState(null);
+  const [activeFeatures, setActiveFeatures] = useState(null);
+  const [activeTab, setActiveTab] = useState("Overview"); // Default tab
+
+  const faqCategories = [
+    "Overview",
+    "Syllabus",
+    "Course Structure & Credits",
+    "Facilities",
+    "Staff",
+    "Why Indira ICEM",
+    "Features",
+    "Fees",
+  ];
+
+  // ✅ Overview Accreditation Questions
+  const faqData = [
+    {
+      question: "About Department",
+      answer: `Keeping in view the emerging IT industry challenges, the computer department at ICEM is known for its academic excellence along with professional learning flexibility for turning the students and providing enhanced training in advanced technologies. The students are trained in core domain areas like Computational Complexity Theory, Applications and Databases, Computer Graphics, Programming and Algorithms.
+
+The Computer Engineering Department at ICEM is well equipped with the Highly Qualified and Skilled Teaching Staff with Industrial Experience, Sophisticated Laboratories and state-of-art infrastructure.
+
+The Department focusses on inculcating in-depth knowledge of all fields of Computer Engineering as well as imparting knowledge of discipline, teamwork, communication skills and an ability to work with a diverse set of constraints. The Department regularly arranges guest lectures, seminars and workshops to train the students in all these aspects. The trainers are from Academia as well as from Industry.
+
+The Department also provides extra inputs through in-house certification programs, aptitude, soft skills, technical training & GATE coaching for Final Year students. To build the overall personality of every student the department also arranges Hackathon, Tech-Fest, Paper Presentations, various competitions which are for the students and organized by the students.`,
+    },
+    {
+      question: "Programs Offered",
+      answer: `Department of Computer Engineering was established in 2007 by offering undergraduate program (B.Tech) and postgraduate program (M.Tech) in Computer Engineering. The program is affiliated to University of Pune, recognized by Govt. of Maharashtra & All India Council of Technical Education (AICTE) New Delhi.`,
+    },
+    {
+      question: "VISION",
+      answer: `To become an acclaimed center of excellence by rendering modern technology, academics and research for creating holistic, socio-economic professionals with interdisciplinary potential.`,
+    },
+    {
+      question: "MISSION",
+      answer: `To foster strong fundamental concepts to students and inspire them to find creative solutions with critical thinking and disciplined time managed environment.
+To impart knowledge and skill based education in collaboration with industry, academia and research organizations.
+To develop a center of excellence and setup a research laboratory to develop software applications for the society with the association of industry.
+To enlighten students with the latest technologies through carefully designed training modules with the alliance of Alumni and Industry as a part of value added education.
+To nurture and nourish effective communication, interpersonal skills, and create awareness of ethical and social responsibilities.`,
+    },
+  ];
+
+  // ✅ Why Indira ICEM Section
+  const whyIndiraData = [
+    {
+      question: "About Indira College of Engineering & Management",
+      answer: `Indira College of Engineering and Management (ICEM), Pune is an AICTE approved engineering college in Pune, established in 2007 under the umbrella of Indira Group of Institutes. The institute is approved by All India Council of Technical Education (AICTE), New Delhi, recognized by the Government of Maharashtra, and is affiliated to Savitribai Phule, Pune University. 
+
+ICEM, one of the best NAAC accredited engineering colleges in Pune, has laid its foundation in the serene and picturesque settings of Parandwadi Village of Maval Taluka, which was then dried in terms of educational and infrastructural facilities. With the untiring efforts of the management, this college has been successful in creating educational and economic possibilities in the adjacent rural areas. 
+
+The college offers a stress-free process for Engineering Admission 2024 with reasonable Engineering Admission 2024 fees, thus helping the locals. It has also made possible positive results in empowering people from surrounding rural communities and has been a torch-bearer in providing the refined education system.
+
+Indira College of Engineering Management, Pune has maintained a perfect balance between the theory and the practical aspects of the learning process, with the theoretical inputs being adequately supplemented by functional components as case studies, fieldwork, industry visits, interaction with professionals, and project study. 
+
+Several industrial tours organized by the institute help the students get exposed to industry practices, skills demanded, management practices, industry expectations, and market opportunities. Such Industry–Institute Interaction keeps the students abreast with the latest technology to help them meet the competitive standards of the industry. ICEM is thus the best engineering college in Pune, empowering students for life.`,
+    },
+    {
+      question: "Three Decade Legacy",
+      answer: `The legacy of three decades is a reflection of its highly qualified resource teams which structure advanced teaching methodologies to create a quality industry-ready force year after year.`,
+    },
+    {
+      question: "Fully Equipped World Class Campus",
+      answer: `Our commitment to excellence extends to the facilities, infrastructure, sports, library, secure and safe hostels, and classrooms equipped with modern education technology.`,
+    },
+    {
+      question: "Global Learning Platform",
+      answer: `The advanced global learning exposure is offered to students via numerous international programs and tie-ups with foreign universities and industries in Singapore, Dubai, Malaysia, and other countries.`,
+    },
+  ];
+
+  // ✅ Features Section
+  const featuresData = [
+    {
+      question: "Distinct Features at Indira College of Engineering & Management",
+      answer: `• Highly qualified and skilled teaching staff with industry experience.
+• MoU with the University of Nottingham, Malaysia.
+• Strong Industry-Institute Interaction & MoU with many industries.
+• Domain-oriented international technical certifications.
+• Scholar club for students' career elevation and academic enrichment.
+• Well-equipped workshop & sophisticated laboratories.
+• Well-stocked library with many online & digital journals.
+• Care club to counsel & mentor students for personal and academic growth.
+• Computer Laboratory with 100 Mbps internet facility and Wi-Fi connectivity.
+• Separate Boys and Girls hostel with mess facility.
+• Excellent and hygienic canteen facility, recreation hall, sports, and gym.
+• Efficient transport system connecting the campus with various hubs of Pune.
+• Classrooms with advanced training pedagogies.
+• Regular industrial visits and educational tours.`,
+    },
+    {
+      question: "Accreditations & Recognitions",
+      answer: `• Approved by All India Council of Technical Education (AICTE), New Delhi
+• Recognized by Government of Maharashtra
+• Affiliated to Savitribai Phule Pune University
+• NAAC Accredited Institution`,
+    },
+  ];
+
+  // ✅ Syllabus Data
+  const syllabusData = [
+    {
+      category: "Syllabus for Computer Engineering (SPPU Courses)",
+      items: [
+        { id: "be", name: "BE Computer Engineering (2019 Course) Pattern Syllabus", pdf: BE_Syllabus },
+        { id: "te", name: "TE Computer Engineering (2019 Course) Pattern Syllabus", pdf: TE_Syllabus },
+        { id: "se", name: "SE Computer Engineering (2019 Course) Pattern Syllabus", pdf: SE_Syllabus },
+      ],
+    },
+    {
+      category: "Syllabus for Computer Engineering (Autonomous Courses)",
+      items: [
+        { id: "sybtech", name: "SY BTech 2025 course", pdf: SY_BTech },
+        { id: "mtech2024", name: "MTech Computer Engineering 2024 course", pdf: MTech_2024 },
+        { id: "mtechsyl", name: "M Tech Computer Engineering Syllabus", pdf: MTech_Syllabus },
+      ],
+    },
+  ];
+
+  // ✅ Course Structure (Images)
+  const courseStructure = [
+    { id: "fe1", name: "FE SEM 1 Course Structure", img: FESEM1 },
+    { id: "fe2", name: "FE SEM 2 Course Structure", img: FESEM2 },
+    { id: "se1", name: "SE SEM 1 Course Structure", img: SESEM1 },
+    { id: "se2", name: "SE SEM 2 Course Structure", img: SESEM2 },
+    { id: "te1", name: "TE SEM 1 Course Structure", img: TESEM1 },
+    { id: "te2", name: "TE SEM 2 Course Structure", img: TESEM2 },
+    { id: "be1", name: "BE SEM 1 Course Structure", img: BESEM1 },
+    { id: "be2", name: "BE SEM 2 Course Structure", img: BESEM2 },
+  ];
+
+  // ✅ Facilities Data (Labs)
+  const labs = [
+    { id: 1, name: "Programming Lab-I", pcs: 17, config: "ASUS Intel Core i5, 8GB RAM, 512 SSD, 19.5' LED | Lenovo Think Center Core i7, 8GB RAM, 1TB HDD", software: "UBUNTU OS: Python, JDK, C++, G++, Jupyter Notebook, Pycharm, Flex, Mysql, Nasm, TASM, Samba, Eclipse, Libgraph, yacc" },
+    { id: 2, name: "Programming Lab-II", pcs: 20, config: "Lenovo Think Center Core i7, 8GB RAM, 1TB HDD, 19.5' LED", software: "UBUNTU OS: Python, JDK, C++, G++, Jupyter Notebook, Pycharm, Flex, Mysql, Nasm, TASM, Samba, Eclipse, Libgraph, yacc" },
+    { id: 3, name: "Artificial Intelligence and Research Lab-I", pcs: 29, config: "Lenovo Think Center Core i7, 8GB RAM, 1TB HDD, 19.5' LED", software: "UBUNTU OS: Python, JDK, C++, G++, Jupyter Notebook, Pycharm, Tensorflow, Keras, OpenGL, yacc" },
+    { id: 4, name: "Artificial Intelligence and Research Lab-II", pcs: 20, config: "HP Pro Tower 280 G9 Intel i5-12500, 8GB RAM, 512GB NVME HDD, 19.5' LED", software: "UBUNTU OS: Python, JDK, C++, G++, Jupyter Notebook, Pycharm, Mysql, Netbeans, Android Studio, yacc" },
+    { id: 5, name: "Project Lab", pcs: 22, config: "HCL Infinity Intel C2D, 2GB RAM, 320GB HDD, 18.5' Monitor", software: "UBUNTU OS: Python, JDK, C++, G++, NASM, MongoDB, Mysql" },
+    { id: 6, name: "Database Management System Lab", pcs: 38, config: "Lenovo Think Center Core i7, 8GB RAM, 1TB HDD | HCL Infinity Intel C2D, 2GB RAM, 320GB HDD", software: "UBUNTU OS: Python, JDK, G++, Lamp Server, Flex, SBCL, Mysql, Nasm, TASM, NS2, Oracle, Samba, Eclipse, Libgraph, yacc" },
+    { id: 7, name: "iOS (Apple) Lab", pcs: 10, config: "Apple M1 Chip with 8-Core CPU & 7-Core GPU, 8GB RAM, 256GB SSD", software: "MAC OS" },
+    { id: 8, name: "Operating System and Networking Lab", pcs: 39, config: "ASUS Intel Core i5, 8GB RAM, 512 SSD | HCL Infinity Intel C2D, 2GB RAM, 320GB HDD", software: "UBUNTU OS: Python, JDK, C++, G++, Jupyter Notebook, Pycharm, Mysql, Packet Tracer, Wireshark, Samba, Eclipse, Libgraph" },
+  ];
+
+  return (
+    <div className="w-full bg-[#f7f7f7] text-black py-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-10">Department Information</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* LEFT MENU */}
+          <div className="bg-white rounded-lg shadow-sm p-4 space-y-2 text-sm font-medium text-gray-700">
+            {faqCategories.map((tab, i) => (
+              <div
+                key={i}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setActiveSyllabus(null);
+                  setActiveStructure(null);
+                  setActiveWhyIndira(null);
+                  setActiveFeatures(null);
+                }}
+                className={`px-3 py-2 rounded cursor-pointer hover:bg-gray-100 transition-all ${
+                  activeTab === tab
+                    ? "border-l-4 border-red-600 bg-gray-50 font-semibold text-red-700"
+                    : ""
+                }`}
+              >
+                {tab}
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT SECTION */}
+          <div className="md:col-span-2 bg-white rounded-lg shadow-sm p-6 space-y-6">
+            
+            {/* ✅ Staff Tab - Empty for now */}
+            {activeTab === "Staff" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Staff Information</h3>
+                <div className="text-gray-700 text-center py-8">
+                  <p>Staff information will be added soon.</p>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Why Indira ICEM Tab */}
+            {activeTab === "Why Indira ICEM" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Why Choose Indira ICEM</h3>
+                {whyIndiraData.map((item, i) => (
+                  <div key={i} className="border rounded-md mb-2">
+                    <div
+                      onClick={() =>
+                        setActiveWhyIndira(activeWhyIndira === i ? null : i)
+                      }
+                      className={`flex justify-between items-center px-4 py-2 cursor-pointer ${
+                        activeWhyIndira === i
+                          ? "bg-red-600 text-white"
+                          : "hover:bg-gray-100"
+                      }`}
+                    >
+                      <span>{i + 1}. {item.question}</span>
+                      <span className="text-xl font-bold">
+                        {activeWhyIndira === i ? "−" : "+"}
+                      </span>
+                    </div>
+                    {activeWhyIndira === i && (
+                      <div className="p-4 text-sm bg-gray-50 text-gray-700 whitespace-pre-line">
+                        {item.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* ✅ Features Tab */}
+            {activeTab === "Features" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Key Features & Accreditations</h3>
+                {featuresData.map((item, i) => (
+                  <div key={i} className="border rounded-md mb-2">
+                    <div
+                      onClick={() =>
+                        setActiveFeatures(activeFeatures === i ? null : i)
+                      }
+                      className={`flex justify-between items-center px-4 py-2 cursor-pointer ${
+                        activeFeatures === i
+                          ? "bg-red-600 text-white"
+                          : "hover:bg-gray-100"
+                      }`}
+                    >
+                      <span>{i + 1}. {item.question}</span>
+                      <span className="text-xl font-bold">
+                        {activeFeatures === i ? "−" : "+"}
+                      </span>
+                    </div>
+                    {activeFeatures === i && (
+                      <div className="p-4 text-sm bg-gray-50 text-gray-700 whitespace-pre-line">
+                        {item.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* ✅ Facilities */}
+            {activeTab === "Facilities" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">
+                  Department of Computer Engineering Laboratories
+                </h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border border-gray-300 text-left">
+                    <thead className="bg-gray-100 font-semibold">
+                      <tr>
+                        <th className="border p-2">Sr. No.</th>
+                        <th className="border p-2">Lab Name</th>
+                        <th className="border p-2">Total PCs</th>
+                        <th className="border p-2">Configuration</th>
+                        <th className="border p-2">Software Installed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {labs.map((lab) => (
+                        <tr key={lab.id} className="hover:bg-gray-50">
+                          <td className="border p-2">{lab.id}</td>
+                          <td className="border p-2 font-medium">{lab.name}</td>
+                          <td className="border p-2">{lab.pcs}</td>
+                          <td className="border p-2">{lab.config}</td>
+                          <td className="border p-2">{lab.software}</td>
+                        </tr>
+                      ))}
+                      <tr className="font-bold bg-gray-100">
+                        <td className="border p-2 text-center" colSpan={2}>Total</td>
+                        <td className="border p-2">195</td>
+                        <td className="border p-2" colSpan={2}></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Syllabus */}
+            {activeTab === "Syllabus" && (
+              <div>
+                {syllabusData.map((section) => (
+                  <div key={section.category} className="mb-6">
+                    <h3 className="text-lg font-semibold mb-2">{section.category}</h3>
+                    {section.items.map((item) => (
+                      <div key={item.id} className="border rounded-md mb-2">
+                        <div
+                          onClick={() => setActiveSyllabus(activeSyllabus === item.id ? null : item.id)}
+                          className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        >
+                          <span>{item.name}</span>
+                          <span className="text-xl font-bold">
+                            {activeSyllabus === item.id ? "−" : "+"}
+                          </span>
+                        </div>
+                        {activeSyllabus === item.id && (
+                          <div className="p-3 bg-gray-50">
+                            <iframe
+                              src={item.pdf}
+                              title={item.name}
+                              className="w-full h-[600px] border rounded-md"
+                            ></iframe>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* ✅ Course Structure */}
+            {activeTab === "Course Structure & Credits" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">
+                  Course Structure & Credit Details
+                </h3>
+                {courseStructure.map((item) => (
+                  <div key={item.id} className="border rounded-md mb-2">
+                    <div
+                      onClick={() =>
+                        setActiveStructure(activeStructure === item.id ? null : item.id)
+                      }
+                      className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                    >
+                      <span>{item.name}</span>
+                      <span className="text-xl font-bold">
+                        {activeStructure === item.id ? "−" : "+"}
+                      </span>
+                    </div>
+                    {activeStructure === item.id && (
+                      <div className="p-3 bg-gray-50 flex justify-center">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="rounded-md border max-h-[700px] object-contain"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* ✅ Overview */}
+            {activeTab === "Overview" && (
+              <>
+                {faqData.map((faq, i) => (
+                  <div key={i} className="border rounded-md bg-white overflow-hidden transition-all duration-300">
+                    <div
+                      onClick={() => setActiveFAQ(activeFAQ === i ? null : i)}
+                      className={`flex justify-between items-center p-3 cursor-pointer font-medium transition-colors ${
+                        activeFAQ === i ? "bg-red-600 text-white" : "text-black"
+                      }`}
+                    >
+                      <span>
+                        {i + 1}. {faq.question}
+                      </span>
+                      <span className="text-xl font-bold">{activeFAQ === i ? "−" : "+"}</span>
+                    </div>
+                    {activeFAQ === i && (
+                      <div className="p-3 text-sm bg-gray-50 text-gray-700 whitespace-pre-line">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </>
+            )}
+
+            {/* ✅ Fees Tab - Placeholder */}
+            {activeTab === "Fees" && (
+              <div className="text-gray-700">
+                <p className="text-lg">
+                  Fee structure information will be added soon.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FAQSection;

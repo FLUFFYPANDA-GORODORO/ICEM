@@ -35,6 +35,39 @@ import Gym from "./components/AboutUs/Facilities.jsx/Gym";
 import PHC from "./components/AboutUs/Facilities.jsx/PHC";
 import Bus from "./components/AboutUs/Facilities.jsx/Bus";
 import Governance from "./components/AboutUs/Governance";
+
+// import Governance from "./components/Facilities/Governance";
+
+// import CivilEngineering from "./components/ProgramsOffered/CivilEngineering";
+
+import Overview from "./components/AboutUs/Overview";
+import ChanakyaEdu from "./components/AboutUs/ChanakyaEdu";
+import IGOI from "./components/AboutUs/IGOI";
+import CFCM from "./components/AboutUs/CFCM";
+import Placement from "./components/Placement/Placement";
+import Computer from "./components/Programs/Computer";
+
+import AIDS from "./components/Programs/AIDS";
+import Civil from "./components/Programs/Civil";
+// import Computer from "./components/Programs/Computer";
+import ENTC from "./components/Programs/ENTC";
+import FE from "./components/Programs/FE";
+import IMBA from "./components/Programs/IMBA";
+import IMCA from "./components/Programs/IMCA";
+import IT from "./components/Programs/IT";
+import MBA from "./components/Programs/MBA";
+import MCA from "./components/Programs/MCA";
+import Mech from "./components/Programs/Mech";
+import MTECHComp from "./components/Programs/MTECHComp";
+import MTECHMech from "./components/Programs/MTECHMech";
+import Sports from "./components/AboutUs/Facilities.jsx/Sports";
+import Library from "./components/AboutUs/Facilities.jsx/Library";
+import Hostel from "./components/AboutUs/Facilities.jsx/Hostel";
+import Canteen from "./components/AboutUs/Facilities.jsx/Canteen";
+import Gym from "./components/AboutUs/Facilities.jsx/Gym";
+import PHC from "./components/AboutUs/Facilities.jsx/PHC";
+import Bus from "./components/AboutUs/Facilities.jsx/Bus";
+import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
 // import Governance from "./components/Facilities/Governance";
 
@@ -61,8 +94,6 @@ function App() {
             path="/student-corner/induction-programme"
             element={<InductionProgramme />}
           />
-          <Route path="/placement" element={<Placement />} />
-          <Route path="/research" element={<Research />} />
 
           {/* ==== PROGRAMS ROUTES ==== */}
           <Route path="/programs/ai-ds" element={<AIDS />} />
