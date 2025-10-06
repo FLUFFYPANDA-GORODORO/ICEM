@@ -432,10 +432,9 @@ function Computer() {
           </div>
         </div>
       </div>
-    
-            {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
-<FAQSection />
 
+      {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
+      <FAQSection />
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
@@ -538,6 +537,3 @@ function Computer() {
 }
 
 export default Computer;
-import React, { useState } from "react";
-// import React, { useState } from "react";
-
