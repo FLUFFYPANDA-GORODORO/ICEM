@@ -35,7 +35,7 @@ import Gym from "./components/AboutUs/Facilities.jsx/Gym";
 import PHC from "./components/AboutUs/Facilities.jsx/PHC";
 import Bus from "./components/AboutUs/Facilities.jsx/Bus";
 import Governance from "./components/AboutUs/Governance";
-
+import Research from "./components/Research/Research";
 // import Governance from "./components/Facilities/Governance";
 
 // // add more pages as you build them
@@ -61,6 +61,8 @@ function App() {
             path="/student-corner/induction-programme"
             element={<InductionProgramme />}
           />
+          <Route path="/placement" element={<Placement />} />
+          <Route path="/research" element={<Research />} />
 
           {/* ==== PROGRAMS ROUTES ==== */}
           <Route path="/programs/ai-ds" element={<AIDS />} />
