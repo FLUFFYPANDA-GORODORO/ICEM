@@ -3,7 +3,7 @@ import FAQSection from "./FAQSection";
 
 import CompBrochure from "../../assets/BEComp.pdf"; // brochure file
 
-function Computer() {
+export default function Computer() {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -535,5 +535,3 @@ function Computer() {
     </div>
   );
 }
-
-export default Computer;
