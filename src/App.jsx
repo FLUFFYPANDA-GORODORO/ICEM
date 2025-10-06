@@ -5,34 +5,93 @@ import Home from "./Pages/Home";
 import StudentWelfare from "./components/StudentCorner/StudentWelfare";
 import IIC from "./components/StudentCorner/IIC";
 import InductionProgramme from "./components/StudentCorner/InductionProgramme";
-import CivilEngineering from "./components/ProgramsOffered/CivilEngineering";
+// import CivilEngineering from "./components/ProgramsOffered/CivilEngineering";
 
 import Overview from "./components/AboutUs/Overview";
 import ChanakyaEdu from "./components/AboutUs/ChanakyaEdu";
 import IGOI from "./components/AboutUs/IGOI";
 import CFCM from "./components/AboutUs/CFCM";
+import Computer from "./components/Programs/Computer";
+
+import AIDS from "./components/Programs/AIDS";
+import Civil from "./components/Programs/Civil";
+// import Computer from "./components/Programs/Computer";
+import ENTC from "./components/Programs/ENTC";
+import FE from "./components/Programs/FE";
+import IMBA from "./components/Programs/IMBA";
+import IMCA from "./components/Programs/IMCA";
+import IT from "./components/Programs/IT";
+import MBA from "./components/Programs/MBA";
+import MCA from "./components/Programs/MCA";
+import Mech from "./components/Programs/Mech";
+import MTECHComp from "./components/Programs/MTECHComp";
+import MTECHMech from "./components/Programs/MTECHMech";
+import Sports from "./components/AboutUs/Facilities.jsx/Sports";
+import Library from "./components/AboutUs/Facilities.jsx/Library";
+import Hostel from "./components/AboutUs/Facilities.jsx/Hostel";
+import Canteen from "./components/AboutUs/Facilities.jsx/Canteen";
+import Gym from "./components/AboutUs/Facilities.jsx/Gym";
+import PHC from "./components/AboutUs/Facilities.jsx/PHC";
+import Bus from "./components/AboutUs/Facilities.jsx/Bus";
+import Governance from "./components/AboutUs/Governance";
+
+// import Governance from "./components/Facilities/Governance";
+
 // // add more pages as you build them
 
 function App() {
   return (
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about/overview" element={<Overview />} />
-            <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
-            <Route path="/about/IGOI" element={<IGOI />} />
-            <Route path="/about/cfcm" element={<CFCM />} />
-            <Route path="/student-corner/student-welfare" element={<StudentWelfare />} />
-            <Route path="/student-corner/iic" element={<IIC />} />
-            <Route path="/student-corner/induction-programme" element={<InductionProgramme />} />
-            <Route path="/programs-offered/civil-eng" element={<CivilEngineering/>} />
-            {/* add more <Route> as needed */}
-          </Routes>
-        </div>
-        <Footer />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about/overview" element={<Overview />} />
+          <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
+          <Route path="/about/IGOI" element={<IGOI />} />
+          <Route path="/about/cfcm" element={<CFCM />} />
+
+          <Route
+            path="/student-corner/student-welfare"
+            element={<StudentWelfare />}
+          />
+          <Route path="/student-corner/iic" element={<IIC />} />
+          <Route
+            path="/student-corner/induction-programme"
+            element={<InductionProgramme />}
+          />
+
+          {/* ==== PROGRAMS ROUTES ==== */}
+          <Route path="/programs/ai-ds" element={<AIDS />} />
+          <Route path="/programs/civil-engineering" element={<Civil />} />
+          <Route path="/programs/computer-engineering" element={<Computer />} />
+          <Route path="/programs/entc" element={<ENTC />} />
+          <Route path="/programs/fye" element={<FE />} />
+          <Route path="/programs/imba" element={<IMBA />} />
+          <Route path="/programs/imca" element={<IMCA />} />
+          <Route path="/programs/it" element={<IT />} />
+          <Route path="/programs/mba" element={<MBA />} />
+          <Route path="/programs/mca" element={<MCA />} />
+          <Route path="/programs/mechanical-engineering" element={<Mech />} />
+          <Route path="/programs/mtech-comp" element={<MTECHComp />} />
+          <Route path="/programs/mtech-mech" element={<MTECHMech />} />
+
+          {/* add more <Route> as needed */}
+
+          {/* ==== FACILITIES ROUTES ==== */}
+          <Route path="/facilities/sports" element={<Sports />} />
+          <Route path="/facilities/library" element={<Library />} />
+          <Route path="/facilities/hostel" element={<Hostel />} />
+          <Route path="/facilities/transport" element={<Bus />} />
+          <Route path="/facilities/canteen" element={<Canteen />} />
+          <Route path="/facilities/gym" element={<Gym />} />
+          <Route path="/facilities/health-centre" element={<PHC />} />
+          <Route path="/facilities/governance" element={<Governance />} />
+          {/* <Route path="/facilities/governance" element={<Governance />} /> */}
+        </Routes>
       </div>
+      <Footer />
+    </div>
   );
 }
 
