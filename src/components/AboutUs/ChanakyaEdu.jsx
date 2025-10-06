@@ -1,15 +1,6 @@
 import React from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
 
-// 🧑‍💼 Sample trustee images (replace with actual ones in your assets folder)
-import Trustee1 from "../../assets/chanakya.png";
-import Trustee2 from "../../assets/chanakya.png";
-import Trustee3 from "../../assets/chanakya.png";
-import Trustee4 from "../../assets/chanakya.png";
-import Trustee5 from "../../assets/chanakya.png";
-import Trustee6 from "../../assets/chanakya.png";
-import Trustee7 from "../../assets/chanakya.png";
-
 function ChanakyaEdu() {
   const rightLinks = [
     "Overview",
@@ -38,37 +29,30 @@ function ChanakyaEdu() {
     {
       name: "Smt. Sarita Shankar Wakalkar",
       role: "President",
-      img: Trustee1,
     },
     {
       name: "Dr. Tarita Shankar",
       role: "Chief Managing Trustee and Founder Secretary",
-      img: Trustee2,
     },
     {
       name: "Mr. Shardul Gangal",
       role: "Vice - President",
-      img: Trustee3,
     },
     {
       name: "Mr. Sahil Tarita Shankar",
       role: "Joint Secretary",
-      img: Trustee4,
     },
     {
       name: "Mr. Rajesh Deshmukh",
       role: "Treasurer",
-      img: Trustee5,
     },
     {
       name: "Ms. Priya Joshi",
       role: "Trustee Member",
-      img: Trustee6,
     },
     {
       name: "Mr. Karan Patil",
       role: "Trustee Member",
-      img: Trustee7,
     },
   ];
 
@@ -102,44 +86,37 @@ function ChanakyaEdu() {
             with the aim of providing top quality post-graduate education in the
             ﬁelds of Business Management, International Business and Information
             Technology. By consistently providing quality education over the
-            past few decades, institutes at Indira Group is now considered as
-            one of the best institutes in Pune.
+            past few decades, institutes at Indira Group are now considered as
+            some of the best in Pune.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
             At a time when India was struggling to put its economy back on its
-            feet, after the nation having pawned the “family jewels” just to
-            keep aﬂoat, Dr. Tarita Shankar sensed that education too would have
-            to become more broad-based and more vocational in nature if India
-            was to stand up to the world competition in quality and price for
-            its products. The then Finance Minister had prescribed reforms for
-            the economy, and so, in 1994, began a saga of growth and quality in
-            education; a story that is just reaching its zenith with 14 full
-            ﬂedged Institutes registering a strong presence on Pune’s
-            educational horizon.
+            feet, Dr. Tarita Shankar sensed that education too would have to
+            become more broad-based and more vocational in nature if India was
+            to stand up to global competition. Thus, in 1994, began a saga of
+            growth and quality education — a story that continues with 14 full
+            ﬂedged Institutes making a strong presence in Pune’s educational
+            landscape.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Since inception, the Institutes managed by SCES, have maintained
-            high academic standards and have successfully provided trained
-            manpower to the industrial and services sector of the country. These
-            institutes are now listed amongst the top colleges not just in Pune,
-            but also in Maharashtra and India.
+            Since inception, the Institutes managed by SCES have maintained high
+            academic standards and have successfully provided trained manpower
+            to the industrial and services sector of the country.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
             With a modest strength of 60 students pursuing a single course, SCES
-            has grown steadily and today boasts of 14 Institutes, having more
-            than 8000 students from all over India pursuing multi-disciplinary,
-            graduate & post-graduate programs.
+            has grown steadily and today boasts of 14 Institutes with over 8000
+            students from across India pursuing multi-disciplinary programs.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-10">
-            The objective of the institute is providing ‘Management education in
-            a corporate environment’, which has been possible due to the sincere
-            and dedicated efforts of the members of SCES, who have invaluable
-            experience in varied areas like academics, industry, service and
-            social-world.
+            The objective of the institute is to provide ‘Management education
+            in a corporate environment’, which has been possible due to the
+            sincere and dedicated efforts of the SCES members, who bring
+            invaluable experience from varied sectors.
           </p>
 
           {/* Board of Trustees Section */}
@@ -156,11 +133,10 @@ function ChanakyaEdu() {
                   key={index}
                   className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="w-full h-50 object-cover"
-                  />
+                  {/* Placeholder instead of Image */}
+                  <div className="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+                    [ Image Placeholder ]
+                  </div>
                   <div className="p-4 text-center">
                     <h4 className="font-semibold text-lg text-gray-900">
                       {member.name}

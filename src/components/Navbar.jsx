@@ -43,18 +43,19 @@ const Navbar = () => {
       ],
     },
         {
-          title: "Facilities",
-          items: [
-            "Sports",
-            "Library",
-            "Hostel",
-            "Transport",
-            "Canteen",
-            "Gym",
-            "Primary Health Centre",
-            "Governance",
-          ],
-        },
+  title: "Facilities",
+  items: [
+    { label: "Sports", link: "/facilities/sports" },
+    { label: "Library", link: "/facilities/library" },
+    { label: "Hostel", link: "/facilities/hostel" },
+    { label: "Transport", link: "/facilities/transport" },
+    { label: "Canteen", link: "/facilities/canteen" },
+    { label: "Gym", link: "/facilities/gym" },
+    { label: "Primary Health Centre", link: "/facilities/health-centre" },
+    { label: "Governance", link: "/facilities/governance" },
+  ],
+},
+
       ],
     },
     studentCorner: {
@@ -88,33 +89,35 @@ const Navbar = () => {
       ],
     },
     programs: {
-      title: "Programs",
-      sections: [
-        {
-          title: "Undergraduate Programs",
-          items: [
-            "Civil Engineering",
-            "Computer Engineering",
-            "Mechanical Engineering",
-            "Artificial Intelligence and Data Science",
-            "Electronics and Telecommunication",
-            "First Year Engineering",
-            "Information Technology",
-            "Integrated MBA (BBA + MBA)",
-            "Integrated MBA (BCA + MCA)",
-          ],
-        },
-        {
-          title: "Postgraduate Programs",
-          items: [
-            "MBA",
-            "MCA",
-            "M-Tech in Mechanical Engineering",
-            "M-Tech in Computer Science",
-          ],
-        },
+  title: "Programs",
+  sections: [
+    {
+      title: "Undergraduate Programs",
+      items: [
+        { label: "Civil Engineering", link: "/programs/civil-engineering" },
+        { label: "Computer Engineering", link: "/programs/computer-engineering" },
+        { label: "Mechanical Engineering", link: "/programs/mechanical-engineering" },
+        { label: "Artificial Intelligence and Data Science", link: "/programs/ai-ds" },
+        { label: "Electronics and Telecommunication", link: "/programs/entc" },
+        { label: "First Year Engineering", link: "/programs/fye" },
+        { label: "Information Technology", link: "/programs/it" },
+        { label: "Integrated MBA (BBA + MBA)", link: "/programs/imba" },
+        { label: "Integrated MCA (BCA + MCA)", link: "/programs/imca" },
       ],
     },
+    {
+      title: "Postgraduate Programs",
+      items: [
+        { label: "MBA", link: "/programs/mba" },
+        { label: "MCA", link: "/programs/mca" },
+        { label: "M-Tech in Mechanical Engineering", link: "/programs/mtech-mech" },
+        { label: "M-Tech in Computer Science", link: "/programs/mtech-comp" },
+      ],
+    },
+  ],
+},
+
+
     admission: {
       title: "Admission",
       sections: [

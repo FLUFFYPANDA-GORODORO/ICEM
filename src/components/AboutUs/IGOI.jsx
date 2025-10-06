@@ -1,8 +1,5 @@
 import React from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
-import ChairpersonImg from "../../assets/chanakya.png";
-import PrincipalImg from "../../assets/chanakya.png";
-import CollegeImg from "../../assets/chanakya.png"; // temporary placeholder image for all 15 institutes
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 function IGOI() {
@@ -69,55 +66,36 @@ function IGOI() {
 
           <p className="text-gray-700 leading-relaxed mb-4">
             Shree Chanakya Education Society’s “Indira Group of Institutes”,
-            Pune was established in 1994, with the explicit vision to provide
-            sustainable impetus to the corporate and entrepreneurial abilities
-            in the youth. The realization that a robust framework of education
-            is indispensable for the growth of global leaders, the visionary,
-            Dr. Tarita Shankar, Chairperson, Indira Group, integrated her
-            pursuit of excellence and articulated educational institutions,
-            known as Indira Group of Institutes (IGI), which imbibe human
-            excellence and demonstrate strong social values, with a single
-            minded pursuit of developing the youth to become business leaders.
+            Pune was established in 1994 with a vision to provide sustainable
+            impetus to the corporate and entrepreneurial abilities in the youth.
+            Under the leadership of Dr. Tarita Shankar, IGI has grown into a
+            hub of excellence fostering innovation, leadership, and social
+            responsibility.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Unrelenting initiatives by the management team at Indira led to
-            adding of multi-disciplines such as Management, Information
-            Technology, Pharmacy, Commerce, Science, Engineering and Mass
-            Communication to the group and growth has been as deep as it has
-            been wide. With 12 institutions, IGI now offers education right from
-            Kindergarten to Doctorate level studies. IGI believes in the
-            economic independence of individuals. In this endeavor we aim to
-            inspire our post graduate students to create a niche for themselves
-            in the Indian Economic order ﬁrst, and then compete globally. We owe
-            our gratitude to the Indian Industry for consistently collaborating
-            with us in this endeavor. Renowned industrialists have visited us
-            and tremendously enhanced the morale of our students by sharing
-            their vast knowledge and experience about entrepreneurial
-            opportunities and foster a spirit of entrepreneurship amongst
-            students.
+            Through disciplines like Management, Information Technology,
+            Pharmacy, Commerce, Science, Engineering, and Mass Communication,
+            IGI offers education from Kindergarten to Doctorate levels.
+            Collaboration with industry experts ensures students develop both
+            professional competence and entrepreneurial skills.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Having traversed the journey of twenty-ﬁve years we have ourselves
-            made certain signiﬁcant achievements which, we are aware, are but
-            the building blocks for achieving further heights.
+            Having completed over two decades of excellence, IGI stands as a
+            symbol of quality education and leadership in India.
           </p>
 
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
-            <li>Indira is ranked amongst the top 2 B-schools in Pune, by AIMA – IMJ.</li>
+            <li>Ranked among the top 2 B-Schools in Pune by AIMA – IMJ.</li>
             <li>Top 30 All India ranking on Industry Interface parameters.</li>
-            <li>Consistently strong academic results and university ranks.</li>
-            <li>Strong placement record with top corporate recruiters.</li>
-            <li>Campus agreement with Microsoft for software and training.</li>
-            <li>Workshops by Microsoft for train-the-trainer modules.</li>
-            <li>Ranked among Top 3 Educational Institutes in Pune by Business India.</li>
-            <li>Accredited by multiple national certifying bodies.</li>
-            <li>First management institute in Maharashtra accredited by NBA, New Delhi.</li>
+            <li>Consistently strong academic results and placements.</li>
+            <li>Microsoft campus agreement for training and software access.</li>
+            <li>Accredited by NBA and recognized by multiple national bodies.</li>
           </ul>
         </div>
 
-        {/* Right Section */}
+        {/* Right Sidebar */}
         <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
@@ -167,20 +145,17 @@ function IGOI() {
         </div>
       </div>
 
-
       {/* Chairperson's Message */}
       <div className="max-w-7xl mx-auto px-6 pb-10">
         <h3 className="text-2xl font-bold mb-6">Chairperson’s Message</h3>
         <div className="flex flex-col md:flex-row gap-8 bg-gray-50 rounded-xl p-6 shadow-md">
           <div className="md:w-1/3">
-            <img
-              src={ChairpersonImg}
-              alt="Chairperson"
-              className="rounded-lg object-cover w-full h-[380px]"
-            />
+            {/* Placeholder for Chairperson Image */}
+            <div className="w-full h-[380px] bg-gray-200 flex items-center justify-center text-gray-500 rounded-lg">
+              [ Image Placeholder ]
+            </div>
             <div className="flex justify-center gap-4 mt-3 text-gray-700">
-              <FaFacebookF /> <FaLinkedinIn /> <FaInstagram /> <FaTwitter />{" "}
-              <FaYoutube />
+              <FaFacebookF /> <FaLinkedinIn /> <FaInstagram /> <FaTwitter /> <FaYoutube />
             </div>
             <div className="mt-3 text-center">
               <h4 className="font-semibold text-lg">Dr. Tarita Shankar</h4>
@@ -199,25 +174,23 @@ function IGOI() {
               </p>
             </div>
           </div>
+
           <div className="md:w-2/3 text-gray-700 leading-relaxed">
             <p className="mb-3">
               Pursuit of Management Education at Indira Group of Institutes has
               been an inspiring journey. With over two decades of existence,
               Indira strongly believes in the power of education to transform
-              the youth. Indira embraces change and epitomizes matching
-              innovation in curriculum, helping aspiring managers become
-              capable professionals.
+              the youth.
             </p>
             <p className="mb-3">
               Indira offers holistic and transformative learning experiences,
-              designed and delivered by experts from industry and academia. Our
-              curriculum keeps programs contextually abreast, and our pedagogy
-              inspires application-oriented learning.
+              designed by industry and academia experts. Our curriculum promotes
+              innovation and application-based learning.
             </p>
             <p>
-              Indira strives to create good human beings and not just
-              professionals. With confidence that our intentions have matched
-              our efforts, I wish you the very best in the future.
+              Indira strives to create not just professionals but responsible
+              citizens. We remain committed to nurturing future leaders of
+              tomorrow.
             </p>
           </div>
         </div>
@@ -228,37 +201,34 @@ function IGOI() {
         <h3 className="text-2xl font-bold mb-6">Principal’s Message</h3>
         <div className="flex flex-col md:flex-row gap-8 bg-gray-100 rounded-xl p-6 shadow-md">
           <div className="md:w-1/3">
-            <img
-              src={PrincipalImg}
-              alt="Principal"
-              className="rounded-lg object-cover w-full h-[350px]"
-            />
+            {/* Placeholder for Principal Image */}
+            <div className="w-full h-[350px] bg-gray-200 flex items-center justify-center text-gray-500 rounded-lg">
+              [ Image Placeholder ]
+            </div>
             <div className="flex justify-center gap-4 mt-3 text-gray-700">
-              <FaFacebookF /> <FaLinkedinIn /> <FaInstagram /> <FaTwitter />{" "}
-              <FaYoutube />
+              <FaFacebookF /> <FaLinkedinIn /> <FaInstagram /> <FaTwitter /> <FaYoutube />
             </div>
             <div className="mt-3 text-center">
               <h4 className="font-semibold text-lg">Dr. Nilesh Uke</h4>
               <p className="text-sm text-gray-600">Principal, ICEM</p>
             </div>
           </div>
+
           <div className="md:w-2/3 text-gray-700 leading-relaxed">
             <p className="mb-3">
-              Indira Institutes appeared with the vision of creating a strong
-              academic foundation while fostering the all-round development of
-              students. It gives me immense pleasure to lead Indira College of
-              Engineering and Management, providing opportunities for students
-              and faculty to engage with industry experts and research scholars.
+              Indira Institutes have been built on a strong foundation of
+              academic excellence and innovation. It gives me immense pride to
+              lead ICEM, fostering creativity, discipline, and research-driven
+              growth.
             </p>
             <p className="mb-3">
-              ICEM follows a unique pedagogy ensuring students face the demands
-              of a rapidly evolving world. This is supported by real-world
-              exposure through industry interaction and applied learning.
+              We prepare students for the evolving challenges of the
+              professional world through real-world exposure and mentorship from
+              industry experts.
             </p>
             <p>
-              Our vision combines academic excellence with ethical values,
-              inspiring our students to become leaders who make a positive
-              difference in society.
+              Our mission is to develop ethical, confident, and competent
+              leaders who bring positive change to society.
             </p>
           </div>
         </div>
@@ -266,14 +236,24 @@ function IGOI() {
 
       {/* Institutes Section */}
       <div className="max-w-7xl mx-auto px-6 pb-20">
-        <h3 className="text-2xl font-bold mb-8 text-gray-900">Institutes under Indira Group (IGI)</h3>
+        <h3 className="text-2xl font-bold mb-8 text-gray-900">
+          Institutes under Indira Group (IGI)
+        </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {institutes.map((inst, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-              <img src={CollegeImg} alt={inst.name} className="w-full h-48 object-cover rounded-t-xl" />
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+            >
+              {/* Placeholder instead of Image */}
+              <div className="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 rounded-t-xl">
+                [ Image Placeholder ]
+              </div>
               <div className="p-4 text-center">
-                <h4 className="font-semibold text-gray-800 text-base">{inst.name}</h4>
+                <h4 className="font-semibold text-gray-800 text-base">
+                  {inst.name}
+                </h4>
                 <p className="text-sm text-gray-500 mt-1">{inst.url}</p>
                 <button className="mt-3 px-4 py-2 bg-blue-900 text-white text-sm font-medium rounded hover:bg-blue-800 transition">
                   Read More
