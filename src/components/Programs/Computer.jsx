@@ -536,8 +536,3 @@ function Computer() {
     </div>
   );
 }
-
-export default Computer;
-import React, { useState } from "react";
-// import React, { useState } from "react";
-
