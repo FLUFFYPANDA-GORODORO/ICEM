@@ -86,7 +86,8 @@ function App() {
           <Route path="/facilities/gym" element={<Gym />} />
           <Route path="/facilities/health-centre" element={<PHC />} />
           <Route path="/facilities/governance" element={<Governance />} />
-           <Route path="/research" element={<Research />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/placement" element={<Placement />} />
           {/* <Route path="/facilities/governance" element={<Governance />} /> */}
         </Routes>
       </div>
