@@ -11,7 +11,7 @@ import Overview from "./components/AboutUs/Overview";
 import ChanakyaEdu from "./components/AboutUs/ChanakyaEdu";
 import IGOI from "./components/AboutUs/IGOI";
 import CFCM from "./components/AboutUs/CFCM";
-// // add more pages as you build them
+import Placement from "./components/Placement/Placement";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
             <Route path="/student-corner/student-welfare" element={<StudentWelfare />} />
             <Route path="/student-corner/iic" element={<IIC />} />
             <Route path="/student-corner/induction-programme" element={<InductionProgramme />} />
-            <Route path="/programs-offered/civil-eng" element={<CivilEngineering/>} />
+            <Route path="/placement" element={<Placement/>} />
             {/* add more <Route> as needed */}
           </Routes>
         </div>
