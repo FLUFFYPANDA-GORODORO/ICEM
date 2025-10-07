@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
+import CompBrochure from "../../assets/BEComp.pdf";
 
 function Governance() {
   const [activeFAQ, setActiveFAQ] = useState(null);
@@ -89,117 +90,145 @@ function Governance() {
           </p>
 
           {/* Governance Committee Placeholders */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 mb-10">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div
-                key={i}
-                className="w-full h-56 bg-gray-200 flex items-center justify-center text-gray-500 rounded-lg shadow-sm"
-              >
-                [ Committee / Member Placeholder ]
-              </div>
-            ))}
-          </div>
+          
 
           {/* ===== FAQ Accordion Section ===== */}
-          <h3 className="text-2xl font-bold mb-6">
-            Frequently Asked Questions
-          </h3>
+         import CompBrochure from "../../assets/BEComp.pdf"; // import your PDF
 
-          <div className="bg-white rounded-lg shadow-sm p-6 space-y-4">
-            {[
-              {
-                question:
-                  "What is the B.E. CSE with Specialisation in Artificial Intelligence & Future Technologies?",
-                answer:
-                  "It’s a 4-year undergraduate program focusing on computer science fundamentals along with cutting-edge areas like Artificial Intelligence, Blockchain, Cloud Computing, and Cyber Security.",
-              },
-              {
-                question:
-                  "What makes this AI and Future Technology course different from other CSE programs?",
-                answer:
-                  "This is not a standard Computer Science degree. This program offers a multidisciplinary CSE Specialisation in AI and Future Technologies. It blends theoretical knowledge with industry-aligned practical training, preparing students for real-world applications in cybersecurity, blockchain, cloud infrastructure, and AI-driven innovation.",
-              },
-              {
-                question:
-                  "What subjects are included in the AI and Future Technology course?",
-                answer:
-                  "Key subjects include Programming Languages, Data Structures, Artificial Intelligence, Machine Learning, Blockchain, Cloud Computing, and Cyber Security.",
-              },
-              {
-                question: "What is the program structure and duration?",
-                answer:
-                  "The program is structured over 4 years with 8 semesters, combining academic theory, lab work, and a 6–12 month internship.",
-              },
-              {
-                question: "What types of projects will students work on?",
-                answer:
-                  "Students work on industry-aligned projects involving AI models, predictive analytics, cloud deployments, and cybersecurity simulations.",
-              },
-              {
-                question:
-                  "Does the program support innovation and entrepreneurship?",
-                answer:
-                  "Yes. The program encourages innovation and provides incubation support for entrepreneurial students through collaborations with tech industries.",
-              },
-              {
-                question:
-                  "What career paths are available after completing this degree?",
-                answer:
-                  "Graduates can pursue roles like AI Engineer, Data Scientist, Blockchain Developer, Cloud Architect, or Cyber Security Analyst.",
-              },
-              {
-                question: "Is this B.E. CSE program aligned with industry needs?",
-                answer:
-                  "Absolutely. The curriculum is designed with inputs from top industry experts and recruiters to match real-world technology trends.",
-              },
-              {
-                question: "Is this program UGC-recognized and AICTE-approved?",
-                answer:
-                  "Yes, the program is fully approved by AICTE and follows all UGC guidelines.",
-              },
-              {
-                question: "Is this a good program for future tech leaders?",
-                answer:
-                  "Definitely. It provides the skills, exposure, and innovation mindset required to lead in technology-driven industries.",
-              },
-            ].map((faq, i) => (
-              <div
-                key={i}
-                className="border rounded-md bg-white overflow-hidden transition-all duration-300"
-              >
-                {/* Question Header */}
-                <div
-                  onClick={() => setActiveFAQ(activeFAQ === i ? null : i)}
-                  className={`flex justify-between items-center p-3 cursor-pointer font-medium transition-colors ${
-                    activeFAQ === i ? "bg-red-600 text-white" : "text-black"
-                  }`}
-                >
-                  <span>
-                    {i + 1}. {faq.question}
-                  </span>
-                  <span className="text-xl font-bold">
-                    {activeFAQ === i ? "−" : "+"}
-                  </span>
-                </div>
+// inside your Governance component (replace FAQ section with this)
+<h3 className="mt-10 text-2xl font-bold mb-6">
+  Institutional Committees & Governance Documents
+</h3>
 
-                {/* Answer */}
-                <div
-                  className={`transition-all duration-300 overflow-hidden ${
-                    activeFAQ === i ? "max-h-96" : "max-h-0"
-                  }`}
-                >
-                  <div className="p-3 text-sm bg-gray-50 text-gray-700">
-                    {faq.answer}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+<div className="bg-white rounded-lg shadow-sm border border-gray-200 divide-y divide-gray-200">
+  {[
+    {
+      title: "College Development Committee (CDC)",
+      pdf: CompBrochure,
+      description:
+        "The CDC oversees academic development, infrastructure improvement, and faculty growth plans. Download the document below for full details.",
+    },
+    {
+      title: "Institute Level Committees - AY 2024-25",
+      pdf: CompBrochure,
+      description:
+        "Institute-level committees ensure quality assurance and student engagement across all departments.",
+    },
+    {
+      title: "Governing Body (AY 2023-24 to AY 2027-28)",
+      pdf: CompBrochure,
+      description:
+        "The Governing Body is responsible for strategic direction, policy formulation, and institutional oversight.",
+    },
+    {
+      title: "Academic Council (AY 2023-24 to AY 2025-26)",
+      pdf: CompBrochure,
+      description:
+        "The Academic Council monitors curriculum design, academic standards, and teaching outcomes.",
+    },
+    {
+      title: "Finance Committee (AY 2023-24 to AY 2025-26)",
+      pdf: CompBrochure,
+      description:
+        "This committee handles budget planning, fund utilization, and financial audits.",
+    },
+    {
+      title: "Examination Committee (AY 2023-24 to AY 2025-26)",
+      pdf: CompBrochure,
+      description:
+        "The Examination Committee manages exam schedules, evaluation systems, and result publication.",
+    },
+  ].map((item, index) => (
+    <div key={index} className="overflow-hidden">
+      {/* Accordion Header */}
+      <div
+        onClick={() => setActiveFAQ(activeFAQ === index ? null : index)}
+        className="flex justify-between items-center w-full px-4 py-3 cursor-pointer hover:bg-gray-100 transition-colors duration-200"
+      >
+        <span className="font-medium text-gray-900 underline underline-offset-2">
+          {item.title}
+        </span>
+        <span className="text-xl font-bold text-gray-700">
+          {activeFAQ === index ? "−" : "+"}
+        </span>
+      </div>
+
+      {/* Accordion Content */}
+      <div
+        className={`transition-all duration-300 overflow-hidden ${
+          activeFAQ === index ? "max-h-60" : "max-h-0"
+        }`}
+      >
+        <div className="px-6 py-4 bg-gray-50 text-gray-700 text-sm leading-relaxed">
+          <p className="mb-3">{item.description}</p>
+          <a
+            href={item.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary/90 transition"
+          >
+            View / Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
 
-        {/* RIGHT SECTION (Unchanged) */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
-          {/* Sidebar, contact form, quick links same as before */}
+        {/* ===== RIGHT SIDEBAR ===== */}
+        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col gap-8">
+          {/* Navigation Links */}
+          <div>
+            <h3 className="text-lg font-semibold border-b border-gray-700 pb-2 mb-4">
+              Related Pages
+            </h3>
+            <ul className="space-y-3 text-sm">
+              {rightLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="hover:text-secondary transition-colors duration-200"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold border-b border-gray-700 pb-2 mb-4">
+              Quick Links
+            </h3>
+            <ul className="space-y-3 text-sm">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="hover:text-secondary transition-colors duration-200"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Box */}
+          <div className="bg-secondary/20 border border-secondary/30 rounded-lg p-4 text-sm">
+            <h4 className="font-semibold text-secondary mb-2">Need Help?</h4>
+            <p className="text-gray-300 leading-relaxed">
+              For admissions or academic queries, contact our support team for
+              quick assistance.
+            </p>
+            <p className="mt-3 text-secondary font-medium">
+              ✉ admissions@indiraicem.ac.in
+            </p>
+            <p className="text-secondary font-medium">📞 +91 98765 43210</p>
+          </div>
         </div>
       </div>
     </div>

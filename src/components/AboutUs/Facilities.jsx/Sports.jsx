@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Sports() {
+  const [activeFAQ, setActiveFAQ] = useState(null);
+
   const sports = [
     "Gymnastics",
     "Swimming",
@@ -16,68 +18,83 @@ function Sports() {
     "Chess",
   ];
 
-  const rightLinks = [
-    "Sports",
-    "Library",
-    "Hostel",
-    "Transport",
-    "Canteen",
-    "Gym",
-    "Primary Health Centre",
-    "Governance",
-  ];
-
-  const quickLinks = [
-    "Eligibility & Fees",
-    "Download Certificate Formats",
-    "Admission Helpline",
-    "Availability of Forms",
-    "Apply Online",
+  const faqs = [
+    {
+      question: "Does ICEM have dedicated sports facilities on campus?",
+      answer:
+        "Yes, ICEM offers dedicated infrastructure for both indoor and outdoor sports including grounds, courts, and gymnasium facilities for students.",
+    },
+    {
+      question: "Are intercollegiate sports tournaments conducted?",
+      answer:
+        "Yes. ICEM organizes and participates in intercollegiate, university, and national level tournaments in multiple sports disciplines.",
+    },
+    {
+      question: "Is there a sports committee or coordinator?",
+      answer:
+        "Yes, ICEM has a dedicated Sports Committee and Faculty Sports Coordinator who plan, organize, and supervise sports activities throughout the academic year.",
+    },
+    {
+      question: "Are there any awards or scholarships for athletes?",
+      answer:
+        "Outstanding performers in sports are recognized annually with awards, certificates, and in some cases, sports scholarships or fee concessions.",
+    },
+    {
+      question: "Is participation in sports compulsory for students?",
+      answer:
+        "Participation is encouraged but not compulsory. However, students are motivated to take part in annual sports week and fitness programs.",
+    },
   ];
 
   return (
     <div className="w-full bg-white text-gray-800">
-      {/* Header Section */}
-      
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 py-16 px-6 ">
+      {/* ===== Page Container ===== */}
+      <div className="max-w-7xl mx-auto py-16 px-6 space-y-12">
         
-        {/* Left Section */}
-        <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md flex flex-col">
-        <div className="bg-primary py-8 flex justify-center items-center rounded-t-xl mb-6">
-          <h2>Sports @ICEM</h2>
-        </div>
-          {/* Overview Section */}
-          <h3 className="text-2xl font-semibold text-secondary mb-4">
-            Overview
-          </h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            A strong sports infrastructure has several advantages, including
-            enhancing community involvement and social interaction, encouraging
-            talent development, generating economic benefits through events, and
-            improving quality of life in general. High-quality sporting venues
-            can motivate individuals to engage in physical activity, improving
-            mental health outcomes and lowering healthcare expenditures.
+        {/* ===== Page Title ===== */}
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+            Sports @ ICEM
+          </h1>
+          <p className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+            At Indira College of Engineering & Management (ICEM), sports are an
+            integral part of the holistic development of students. The college
+            provides a range of sports facilities that encourage physical fitness,
+            teamwork, discipline, and leadership among students.
           </p>
+        </div>
 
-          {/* Sports Infrastructure Section */}
-          <h3 className="text-2xl font-semibold text-secondary mb-6">
-            Sports Infrastructure
-          </h3>
+        {/* ===== Overview Section ===== */}
+        <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+          <h2 className="text-2xl font-bold text-secondary mb-4">
+            Sports Overview
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            ICEM believes that participation in sports is vital for overall
+            growth, instilling in students the values of teamwork, discipline,
+            and perseverance. The college provides ample infrastructure for a
+            variety of sports and games, both indoor and outdoor, to cater to
+            diverse interests. Students are encouraged to participate in sports
+            events, inter-college tournaments, and university-level competitions
+            throughout the year.
+          </p>
+        </div>
 
-          {/* Sports Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+        {/* ===== Sports Gallery Grid ===== */}
+        <div>
+          <h2 className="text-2xl font-bold text-secondary mb-6">
+            Sports Infrastructure & Activities
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {sports.map((sport, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-2xl shadow-md bg-gray-200 flex justify-center items-center h-48 cursor-pointer group"
+                className="relative rounded-xl shadow-md overflow-hidden bg-gray-200 group h-56 flex items-center justify-center"
               >
-                {/* Placeholder Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 group-hover:from-primary/70 group-hover:to-primary/60 transition-all duration-300"></div>
+                {/* Placeholder Image */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 group-hover:from-secondary/70 group-hover:to-secondary/60 transition-all duration-300"></div>
 
-                {/* Sport Name */}
-                <p className="relative text-white text-lg font-semibold z-10 drop-shadow-md group-hover:scale-110 transition-transform duration-300">
+                <p className="relative text-white font-semibold text-lg z-10 group-hover:scale-110 transition-transform duration-300 drop-shadow-md">
                   {sport}
                 </p>
               </div>
@@ -85,35 +102,44 @@ function Sports() {
           </div>
         </div>
 
-        {/* Right Section (Sidebar) */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
-          {/* About Links */}
-          <ul className="space-y-4 w-full mb-8">
-            {rightLinks.map((link, index) => (
-              <li
-                key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+        {/* ===== FAQ Section ===== */}
+        <div>
+          <h2 className="text-2xl font-bold mb-6 text-secondary">
+            Frequently Asked Questions
+          </h2>
+          <div className="bg-white rounded-lg shadow-sm p-6 space-y-4">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className="border rounded-md bg-white overflow-hidden transition-all duration-300"
               >
-                {link}
-              </li>
-            ))}
-          </ul>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
-              QUICK LINKS
-            </h4>
-            <ul className="space-y-2">
-              {quickLinks.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
+                {/* Question Header */}
+                <div
+                  onClick={() => setActiveFAQ(activeFAQ === i ? null : i)}
+                  className={`flex justify-between items-center p-3 cursor-pointer font-medium transition-colors ${
+                    activeFAQ === i ? "bg-secondary text-white" : "text-black"
+                  }`}
                 >
-                  <span className="text-red-500">•</span> {item}
-                </li>
-              ))}
-            </ul>
+                  <span>
+                    {i + 1}. {faq.question}
+                  </span>
+                  <span className="text-xl font-bold">
+                    {activeFAQ === i ? "−" : "+"}
+                  </span>
+                </div>
+
+                {/* Answer */}
+                <div
+                  className={`transition-all duration-300 overflow-hidden ${
+                    activeFAQ === i ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  <div className="p-3 text-sm bg-gray-50 text-gray-700 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

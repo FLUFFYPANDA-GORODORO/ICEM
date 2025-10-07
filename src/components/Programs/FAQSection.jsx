@@ -28,17 +28,26 @@ const FAQSection = () => {
   const [activeStructure, setActiveStructure] = useState(null);
   const [activeWhyIndira, setActiveWhyIndira] = useState(null);
   const [activeFeatures, setActiveFeatures] = useState(null);
+  const [activeAdmission, setActiveAdmission] = useState(null);
   const [activeTab, setActiveTab] = useState("Overview"); // Default tab
 
   const faqCategories = [
     "Overview",
+    "Sanction Intake",
+    "Eligibility Criteria",
+    "Documents Required",
+    "Admission Procedure",
+    "Fee Structure",
+    "Admission Advertisement",
+    "IL & ACAP Merit List",
+    "NOTICE",
+    "Scholarship",
     "Syllabus",
     "Course Structure & Credits",
     "Facilities",
     "Staff",
     "Why Indira ICEM",
     "Features",
-    "Fees",
   ];
 
   // ✅ Overview Accreditation Questions
@@ -69,6 +78,106 @@ To develop a center of excellence and setup a research laboratory to develop sof
 To enlighten students with the latest technologies through carefully designed training modules with the alliance of Alumni and Industry as a part of value added education.
 To nurture and nourish effective communication, interpersonal skills, and create awareness of ethical and social responsibilities.`,
     },
+  ];
+
+  // ✅ Admission Related Data
+  const admissionData = {
+    sanctionIntake: [
+      {
+        program: "B.Tech Computer Engineering",
+        intake: "180 Seats",
+        duration: "4 Years",
+        type: "Full Time"
+      },
+      {
+        program: "M.Tech Computer Engineering",
+        intake: "24 Seats",
+        duration: "2 Years",
+        type: "Full Time"
+      }
+    ],
+    eligibilityCriteria: [
+      {
+        program: "B.Tech Computer Engineering",
+        criteria: `• Passed 10+2 examination with Physics and Mathematics as compulsory subjects along with one of the Chemistry/Biotechnology/Biology/Technical Vocational subject.
+• Obtained at least 45% marks (40% in case of candidate belonging to reserved category) in the above subjects taken together.
+• Valid score in JEE Main/MHT-CET or equivalent entrance examination.`
+      },
+      {
+        program: "M.Tech Computer Engineering",
+        criteria: `• Passed Bachelor's degree or equivalent in the relevant field.
+• Obtained at least 50% marks (45% in case of candidate belonging to reserved category) in the qualifying examination.
+• Valid score in GATE or equivalent entrance examination.`
+      }
+    ],
+    documentsRequired: [
+      "10th Standard Mark Sheet & Passing Certificate",
+      "12th Standard Mark Sheet & Passing Certificate",
+      "Graduation Mark Sheets & Degree Certificate (for M.Tech)",
+      "Transfer Certificate / School Leaving Certificate",
+      "Migration Certificate (if applicable)",
+      "Domicile Certificate",
+      "Nationality Certificate / Birth Certificate",
+      "Aadhar Card",
+      "Passport Size Photographs",
+      "Caste Certificate (if applicable)",
+      "Caste Validity Certificate (if applicable)",
+      "Non-Creamy Layer Certificate (if applicable)",
+      "Gap Certificate (if applicable)",
+      "JEE Main/MHT-CET/GATE Score Card",
+      "Allotment Letter from Admission Authority"
+    ],
+    admissionProcedure: [
+      "Register for the respective entrance examination (JEE Main/MHT-CET for B.Tech, GATE for M.Tech)",
+      "Participate in the Centralized Admission Process (CAP) conducted by Maharashtra State",
+      "Fill the option form for college preference",
+      "Get allotted to Indira College of Engineering & Management through CAP rounds",
+      "Complete the document verification process",
+      "Pay the admission fees to confirm the seat",
+      "Report to the college for final admission formalities"
+    ],
+    scholarship: [
+      {
+        name: "Government Scholarships",
+        details: `• EBC Scholarship
+• OBC Scholarship
+• SC/ST Scholarship
+• NT/DNT Scholarship
+• Minority Scholarship`
+      },
+      {
+        name: "State Government Schemes",
+        details: `• Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna
+• Dr. Punjabrao Deshmukh Vasatigruh Nirvah Bhatta Yojna
+• Post Matric Scholarship Scheme`
+      },
+      {
+        name: "Institute Scholarships",
+        details: `• Merit-based scholarships for top performers
+• Fee concession for economically weaker sections
+• Sports quota scholarships
+• Special scholarships for female students`
+      }
+    ]
+  };
+
+  // ✅ Notice Data
+  const noticeData = [
+    {
+      title: "Admission Notice 2024-25",
+      date: "March 15, 2024",
+      content: "Admissions for Academic Year 2024-25 are now open. Interested candidates can apply through the official website."
+    },
+    {
+      title: "Last Date for Application Submission",
+      date: "June 30, 2024",
+      content: "Last date for submission of application forms for B.Tech and M.Tech programs is June 30, 2024."
+    },
+    {
+      title: "Document Verification Schedule",
+      date: "July 15-20, 2024",
+      content: "Document verification for admitted candidates will be conducted from July 15 to July 20, 2024."
+    }
   ];
 
   // ✅ Why Indira ICEM Section
@@ -188,6 +297,7 @@ Several industrial tours organized by the institute help the students get expose
                   setActiveStructure(null);
                   setActiveWhyIndira(null);
                   setActiveFeatures(null);
+                  setActiveAdmission(null);
                 }}
                 className={`px-3 py-2 rounded cursor-pointer hover:bg-gray-100 transition-all ${
                   activeTab === tab
@@ -203,6 +313,188 @@ Several industrial tours organized by the institute help the students get expose
           {/* RIGHT SECTION */}
           <div className="md:col-span-2 bg-white rounded-lg shadow-sm p-6 space-y-6">
             
+            {/* ✅ Sanction Intake */}
+            {activeTab === "Sanction Intake" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Sanctioned Intake</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border border-gray-300 text-sm">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th className="border p-3 text-left">Program</th>
+                        <th className="border p-3 text-left">Intake</th>
+                        <th className="border p-3 text-left">Duration</th>
+                        <th className="border p-3 text-left">Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {admissionData.sanctionIntake.map((program, index) => (
+                        <tr key={index} className="hover:bg-gray-50">
+                          <td className="border p-3 font-medium">{program.program}</td>
+                          <td className="border p-3">{program.intake}</td>
+                          <td className="border p-3">{program.duration}</td>
+                          <td className="border p-3">{program.type}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Eligibility Criteria */}
+            {activeTab === "Eligibility Criteria" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Eligibility Criteria</h3>
+                {admissionData.eligibilityCriteria.map((program, index) => (
+                  <div key={index} className="border rounded-md mb-4">
+                    <div
+                      onClick={() => setActiveAdmission(activeAdmission === `eligibility-${index}` ? null : `eligibility-${index}`)}
+                      className="flex justify-between items-center px-4 py-3 cursor-pointer bg-gray-50 hover:bg-gray-100"
+                    >
+                      <span className="font-semibold">{program.program}</span>
+                      <span className="text-xl font-bold">
+                        {activeAdmission === `eligibility-${index}` ? "−" : "+"}
+                      </span>
+                    </div>
+                    {activeAdmission === `eligibility-${index}` && (
+                      <div className="p-4 bg-white whitespace-pre-line">
+                        {program.criteria}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* ✅ Documents Required */}
+            {activeTab === "Documents Required" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Documents Required for Admission</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {admissionData.documentsRequired.map((doc, index) => (
+                    <div key={index} className="flex items-start space-x-2 p-3 border rounded-lg bg-gray-50">
+                      <span className="text-red-600 font-bold">•</span>
+                      <span>{doc}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Admission Procedure */}
+            {activeTab === "Admission Procedure" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Admission Procedure</h3>
+                <div className="space-y-3">
+                  {admissionData.admissionProcedure.map((step, index) => (
+                    <div key={index} className="flex items-start space-x-3 p-3 border rounded-lg bg-gray-50">
+                      <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                        {index + 1}
+                      </span>
+                      <span>{step}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Fee Structure */}
+            {activeTab === "Fee Structure" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Fee Structure</h3>
+                <div className="text-center py-8 bg-gray-50 rounded-lg">
+                  <p className="text-gray-600 mb-4">Fee structure for Academic Year 2024-25 will be updated soon.</p>
+                  <p className="text-sm text-gray-500">Please contact the admission office for detailed fee information.</p>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Admission Advertisement */}
+            {activeTab === "Admission Advertisement" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Admission Advertisement 2024-25</h3>
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                  <h4 className="font-bold text-lg text-yellow-800 mb-3">Admissions Open for Academic Year 2024-25</h4>
+                  <div className="space-y-2 text-yellow-700">
+                    <p>• B.Tech Computer Engineering - 180 Seats</p>
+                    <p>• M.Tech Computer Engineering - 24 Seats</p>
+                    <p>• Apply through Maharashtra CAP Process</p>
+                    <p>• Last Date for Application: June 30, 2024</p>
+                  </div>
+                  <div className="mt-4 p-4 bg-white rounded border">
+                    <p className="font-semibold">Contact Admission Office:</p>
+                    <p>Phone: 020-XXXX-XXXX</p>
+                    <p>Email: admissions@icem.ac.in</p>
+                    <p>Website: www.icem.ac.in</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ IL & ACAP Merit List */}
+            {activeTab === "IL & ACAP Merit List" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Institute Level & ACAP Merit Lists</h3>
+                <div className="space-y-4">
+                  <div className="border rounded-lg p-4 bg-blue-50">
+                    <h4 className="font-bold text-blue-800 mb-2">ACAP (Centralized Admission Process) Merit List</h4>
+                    <p className="text-blue-700">Merit lists will be published on the official CAP website as per the schedule declared by Maharashtra State.</p>
+                  </div>
+                  <div className="border rounded-lg p-4 bg-green-50">
+                    <h4 className="font-bold text-green-800 mb-2">Institute Level Merit List</h4>
+                    <p className="text-green-700">Institute level merit lists for vacant seats will be displayed on the college notice board and official website.</p>
+                  </div>
+                  <div className="text-center py-4 bg-gray-50 rounded">
+                    <p className="text-gray-600">Merit lists will be updated as per the admission schedule.</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ NOTICE */}
+            {activeTab === "NOTICE" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Important Notices</h3>
+                <div className="space-y-4">
+                  {noticeData.map((notice, index) => (
+                    <div key={index} className="border-l-4 border-red-600 bg-gray-50 p-4 rounded-r">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="font-bold text-lg">{notice.title}</h4>
+                        <span className="bg-red-600 text-white px-2 py-1 rounded text-sm">{notice.date}</span>
+                      </div>
+                      <p className="text-gray-700">{notice.content}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ✅ Scholarship */}
+            {activeTab === "Scholarship" && (
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Scholarship Schemes</h3>
+                {admissionData.scholarship.map((scheme, index) => (
+                  <div key={index} className="border rounded-md mb-4">
+                    <div
+                      onClick={() => setActiveAdmission(activeAdmission === `scholarship-${index}` ? null : `scholarship-${index}`)}
+                      className="flex justify-between items-center px-4 py-3 cursor-pointer bg-gray-50 hover:bg-gray-100"
+                    >
+                      <span className="font-semibold">{scheme.name}</span>
+                      <span className="text-xl font-bold">
+                        {activeAdmission === `scholarship-${index}` ? "−" : "+"}
+                      </span>
+                    </div>
+                    {activeAdmission === `scholarship-${index}` && (
+                      <div className="p-4 bg-white whitespace-pre-line">
+                        {scheme.details}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* ✅ Staff Tab - Empty for now */}
             {activeTab === "Staff" && (
               <div>
@@ -403,15 +695,6 @@ Several industrial tours organized by the institute help the students get expose
                   </div>
                 ))}
               </>
-            )}
-
-            {/* ✅ Fees Tab - Placeholder */}
-            {activeTab === "Fees" && (
-              <div className="text-gray-700">
-                <p className="text-lg">
-                  Fee structure information will be added soon.
-                </p>
-              </div>
             )}
           </div>
         </div>

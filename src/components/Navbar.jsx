@@ -37,6 +37,7 @@ const Navbar = () => {
             { label: "Indira Group of Institute", link: "/about/IGOI" },
             { label: "Chairpersons Profile & Chief Mentor IGL", link: "/about/cfcm" },
             { label: "Facilities", link: "/facilities/sports" },
+            { label: "Governance", link: "/facilities/governance" },
             { label: "Campus Leadership", link: "" },
           ],
         },
