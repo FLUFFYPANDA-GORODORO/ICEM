@@ -279,7 +279,8 @@ const Navbar = () => {
               <span>Programs & Admission</span>
             </div>
             <Link to="/placement" className="hover:text-primary">Placement</Link>
-            <h2 className="hover:text-primary cursor-pointer">Alumni</h2>
+            <Link to="/alumni" className="hover:text-primary">Placement</Link>
+            {/* <h2 className="hover:text-primary cursor-pointer">Alumni</h2> */}
             <div
               className="flex items-center gap-1 cursor-pointer hover:text-primary"
               onMouseEnter={() => handleMouseEnter("accreditation")}

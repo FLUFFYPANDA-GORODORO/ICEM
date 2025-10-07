@@ -36,6 +36,7 @@ import PHC from "./components/AboutUs/Facilities.jsx/PHC";
 import Bus from "./components/AboutUs/Facilities.jsx/Bus";
 import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
+import Alumni from "./Pages/Alumni";
 // // add more pages as you build them
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/alumni" element={<Alumni />} />
           <Route path="/about/overview" element={<Overview />} />
           <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
           <Route path="/about/IGOI" element={<IGOI />} />
