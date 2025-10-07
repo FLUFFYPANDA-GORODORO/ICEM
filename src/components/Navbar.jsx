@@ -33,9 +33,15 @@ const Navbar = () => {
               label: "Indira College of Engineering and Management (ICEM)",
               link: "/about/overview",
             },
-            { label: "Shree Chanakya Education Society", link: "/about/chanakya-edu" },
+            {
+              label: "Shree Chanakya Education Society",
+              link: "/about/chanakya-edu",
+            },
             { label: "Indira Group of Institute", link: "/about/IGOI" },
-            { label: "Chairpersons Profile & Chief Mentor IGL", link: "/about/cfcm" },
+            {
+              label: "Chairpersons Profile & Chief Mentor IGL",
+              link: "/about/cfcm",
+            },
             { label: "Facilities", link: "/facilities/sports" },
             { label: "Governance", link: "/facilities/governance" },
             { label: "Campus Leadership", link: "" },
@@ -49,15 +55,27 @@ const Navbar = () => {
       sections: [
         {
           items: [
-            { label: "Student Welfare", link: "/student-corner/student-welfare" },
+            {
+              label: "Student Welfare",
+              link: "/student-corner/student-welfare",
+            },
             { label: "IIC", link: "/student-corner/iic" },
-            { label: "Induction Programme", link: "/student-corner/induction-programme" },
-            { label: "Student Council", link: "/student-corner/student-council" },
+            {
+              label: "Induction Programme",
+              link: "/student-corner/induction-programme",
+            },
+            {
+              label: "Student Council",
+              link: "/student-corner/student-council",
+            },
             { label: "National Service Scheme", link: "/student-corner/nss" },
             { label: "ICEM Awards", link: "/student-corner/icem-awards" },
             { label: "Academics", link: "/student-corner/academics" },
             { label: "Committies", link: "/student-corner/committees" },
-            { label: "Grievance Redressals", link: "/student-corner/grievance-redressals" },
+            {
+              label: "Grievance Redressals",
+              link: "/student-corner/grievance-redressals",
+            },
           ],
         },
       ],
@@ -70,10 +88,22 @@ const Navbar = () => {
           title: "Undergraduate Programs",
           items: [
             { label: "Civil Engineering", link: "/programs/civil-engineering" },
-            { label: "Computer Engineering", link: "/programs/computer-engineering" },
-            { label: "Mechanical Engineering", link: "/programs/mechanical-engineering" },
-            { label: "Artificial Intelligence and Data Science", link: "/programs/ai-ds" },
-            { label: "Electronics and Telecommunication", link: "/programs/entc" },
+            {
+              label: "Computer Engineering",
+              link: "/programs/computer-engineering",
+            },
+            {
+              label: "Mechanical Engineering",
+              link: "/programs/mechanical-engineering",
+            },
+            {
+              label: "Artificial Intelligence and Data Science",
+              link: "/programs/ai-ds",
+            },
+            {
+              label: "Electronics and Telecommunication",
+              link: "/programs/entc",
+            },
             { label: "First Year Engineering", link: "/programs/fye" },
             { label: "Information Technology", link: "/programs/it" },
             { label: "Integrated MBA (BBA + MBA)", link: "/programs/imba" },
@@ -85,11 +115,16 @@ const Navbar = () => {
           items: [
             { label: "MBA", link: "/programs/mba" },
             { label: "MCA", link: "/programs/mca" },
-            { label: "M-Tech in Mechanical Engineering", link: "/programs/mtech-mech" },
-            { label: "M-Tech in Computer Science", link: "/programs/mtech-comp" },
+            {
+              label: "M-Tech in Mechanical Engineering",
+              link: "/programs/mtech-mech",
+            },
+            {
+              label: "M-Tech in Computer Science",
+              link: "/programs/mtech-comp",
+            },
           ],
         },
-       
       ],
     },
 
@@ -198,19 +233,54 @@ const Navbar = () => {
           <div className="flex justify-end w-full h-[45%] text-xs text-gray-700 bg-white">
             <div className="flex gap-8">
               <div className="flex items-center gap-2 font-bold">
-                <a href="https://rapid.grayquest.com/iudp-master" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Pay Fee</a>
+                <a
+                  href="https://rapid.grayquest.com/iudp-master"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  Pay Fee
+                </a>
                 <span className="text-gray-400">|</span>
-                <a href="https://indira.edupluscampus.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">ERP Login Staff</a>
+                <a
+                  href="https://indira.edupluscampus.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  ERP Login Staff
+                </a>
                 <span className="text-gray-400">|</span>
-                <a href="https://myindira.edupluscampus.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">ERP Login Student</a>
+                <a
+                  href="https://myindira.edupluscampus.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  ERP Login Student
+                </a>
                 <span className="text-gray-400">|</span>
-                <a href="https://indiraicem.ac.in/ICEM-360-degree-virtual-tour/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                <a
+                  href="https://indiraicem.ac.in/ICEM-360-degree-virtual-tour/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
                   360<sup>0</sup> Tour
                 </a>
                 <span className="text-gray-400">|</span>
-                <a href="https://lc-icem-sumedh.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-primary">LC</a>
+                <a
+                  href="https://lc-icem-sumedh.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  Leaving Certificate
+                </a>
                 <span className="text-gray-400">|</span>
-                <a href="/" className="hover:text-primary">Contact Us</a>
+                <Link to="/contact" className="hover:text-primary">
+                  Contact Us
+                </Link>
               </div>
 
               {/* Buttons */}
@@ -220,13 +290,6 @@ const Navbar = () => {
                   className="bg-primary text-white px-8 py-1 text-xs hover:bg-primary/90 font-bold border-r border-white"
                 >
                   Apply Now
-                </button>
-                <button
-                  onClick={toggleHelpline}
-                  className="bg-primary text-white px-4 py-1 text-xs flex items-center gap-3 hover:bg-primary/90 font-bold"
-                >
-                  Admissions Helpline
-                  <HiMenuAlt2 size={14} />
                 </button>
               </div>
             </div>
@@ -255,9 +318,16 @@ const Navbar = () => {
             >
               <span>Programs & Admission</span>
             </div>
-            <Link to="/placement" className="hover:text-primary">Placement</Link>
-            <Link to="/alumni" className="hover:text-primary">Alumni</Link>
-            <h2 className="hover:text-primary cursor-pointer">Examination</h2>
+            <Link to="/placement" className="hover:text-primary">
+              Placement
+            </Link>
+            <Link to="/alumni" className="hover:text-primary">
+              Alumni
+            </Link>
+            <Link to="/examination" className="hover:text-primary">
+              Examination
+            </Link>
+            {/* <h2 className="hover:text-primary cursor-pointer">Examination</h2> */}
             <div
               className="flex items-center gap-1 cursor-pointer hover:text-primary"
               onMouseEnter={() => handleMouseEnter("accreditation")}
@@ -265,7 +335,9 @@ const Navbar = () => {
             >
               <span>Accreditation</span>
             </div>
-            <Link to="/research" className="hover:text-primary">Research</Link>
+            <Link to="/research" className="hover:text-primary">
+              Research
+            </Link>
           </div>
         </div>
 

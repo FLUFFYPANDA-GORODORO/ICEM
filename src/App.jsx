@@ -38,6 +38,8 @@ import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
 import Alumni from "./Pages/Alumni";
 import Statutory from "./components/StudentCorner/Statutory";
+import ContactUs from "./components/ContactUs";
+import Examination from "./components/Examination";
 // // add more pages as you build them
 
 function App() {
@@ -92,6 +94,8 @@ function App() {
           <Route path="/facilities/governance" element={<Governance />} />
           <Route path="/research" element={<Research />} />
           <Route path="/placement" element={<Placement />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/examination" element={<Examination />} />
 
           {/* <Route path="/facilities/governance" element={<Governance />} /> */}
         </Routes>
