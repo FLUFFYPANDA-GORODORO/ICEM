@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
 import BEComp from "../../assets/BEComp.pdf";
 
-function InductionProgramme() {
+function Academics() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const rightLinks = [
     "Student Welfare",
-    "IIC",
     "Induction Programme",
     "Student Council",
     "National Service Scheme (NSS)",
@@ -27,14 +26,11 @@ function InductionProgramme() {
     "Apply Online",
   ];
 
-  const activityReports = [
-    "Report 2023-2024",
-    "Report 2022-2023",
-    "Report 2021-2022",
-    "Report 2018-2019",
-    "Report 2017-2018",
-    "Report 2016-2017",
-    "Report 2015-2016",
+  const iacReports = [
+    "IAC 2024-25 – Odd Semester",
+    "IAC 2023-24 – Even Semester",
+    "IAC 2021-22 – Sem-I",
+    "IAC 2021-22 – Sem-II",
   ];
 
   const toggleAccordion = (index) => {
@@ -47,64 +43,104 @@ function InductionProgramme() {
       <div className="w-full h-[60vh] relative">
         <img
           src={Banner}
-          alt="Induction Programme"
+          alt="ICEM Campus"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-            Induction Programme
+            Academic Cell
           </h1>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 py-16 px-6">
-        {/* Left Content */}
+        {/* Left Section */}
         <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold text-secondary mb-6">
-            About Induction Programme
+            About the Academic Cell
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            The term <b>induction</b> is generally used to describe the process
-            whereby new incumbents adjust to or acclimatize to their new roles
-            and environment. In other words, it is a well-planned event to
-            educate new entrants about the institution’s environment and connect
-            them with the people in it.
-          </p>
-
-          <h3 className="text-xl font-semibold text-secondary mb-3">
-            Objectives of the Induction Programme
-          </h3>
-
-          <p className="text-gray-700 leading-relaxed mb-4">
-            The purpose of the <b>Student Induction Programme</b> is to help new
-            students adjust and feel comfortable in the new environment,
-            inculcate in them the ethos and culture of the institution, help
-            them build bonds with other students and faculty members, and expose
-            them to a sense of larger purpose and self-exploration.
-          </p>
-
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-6 mb-10">
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">
-              Key Highlights of the Programme
-            </h4>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Orientation about the institution and its departments.</li>
-              <li>Interactive sessions with faculty and student mentors.</li>
-              <li>Workshops on personality development and ethics.</li>
-              <li>Introduction to academic rules, facilities, and resources.</li>
-              <li>Team-building and cultural integration activities.</li>
-            </ul>
+          {/* Dean Info */}
+          <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
+            <div className="w-40 h-40 bg-gray-200 flex items-center justify-center text-gray-500 text-sm rounded-lg shadow-md">
+              [ Image Placeholder ]
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-800">
+                Dr. Saurabh Harishchand Gupta
+              </h3>
+              <p className="text-gray-600">Dean (Academics)</p>
+            </div>
           </div>
 
-          {/* Activities Accordion */}
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The <b>Academic Cell</b> is one of the core departments on the campus
+            serving the academic community. It ensures the smooth functioning of
+            all academic operations and facilitates continuous improvement in
+            teaching and learning processes. The cell plays a vital role in
+            academic coordination, planning, and monitoring across all
+            departments of the institution.
+          </p>
+
           <h3 className="text-xl font-semibold text-secondary mb-4">
-            Activities
+            Key Activities Undertaken by the Academic Cell:
+          </h3>
+
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
+            <li>
+              Coordinate the Academic Calendar setting and teaching plan for the
+              college.
+            </li>
+            <li>
+              Coordinate with departments for load calculations and assignments
+              of faculties for subjects.
+            </li>
+            <li>Counselling on NEP 2020.</li>
+            <li>Curriculum development and review.</li>
+            <li>
+              Time Table preparation and monthly review ensuring effective
+              implementation.
+            </li>
+            <li>Classroom allotment and scheduling.</li>
+            <li>
+              Review and monitor proper conduction of classes and adherence to
+              the teaching plan.
+            </li>
+            <li>
+              Ensure proper conduction of teacher reviews, student feedback, and
+              mentoring programs.
+            </li>
+            <li>
+              Collate and report continuous student assessment marks.
+            </li>
+            <li>
+              Oversee preparation of provisional and final detention lists and
+              communicate students’ performance to parents/guardians.
+            </li>
+            <li>Monitor result analysis and academic performance trends.</li>
+            <li>
+              Coordinate and conduct <b>Founders Day (Graduation Ceremony)</b>.
+            </li>
+            <li>Implement and monitor the Peer Teaching Scheme.</li>
+            <li>Collect and analyze feedback (online & in-classroom).</li>
+            <li>
+              Drive academic reforms and ensure effective implementation across
+              departments.
+            </li>
+            <li>
+              Coordinate <b>Digital Learning</b> initiatives and monitor Online
+              Teaching-Learning Processes (TLP).
+            </li>
+          </ul>
+
+          {/* IAC Report  */}
+          <h3 className="text-xl font-semibold text-secondary mb-4">
+            IAC Reports
           </h3>
 
           <div className="space-y-3">
-            {activityReports.map((report, index) => (
+            {iacReports.map((report, index) => (
               <div
                 key={index}
                 className="border border-gray-300 rounded-lg bg-gray-50 overflow-hidden"
@@ -141,10 +177,10 @@ function InductionProgramme() {
           </div>
         </div>
 
-        {/* Right Sidebar */}
+        {/* Right Section */}
         <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
-          {/* Sidebar Links */}
-          <ul className="space-y-4 mb-8">
+          {/* About Links */}
+          <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
@@ -225,4 +261,4 @@ function InductionProgramme() {
   );
 }
 
-export default InductionProgramme;
+export default Academics;

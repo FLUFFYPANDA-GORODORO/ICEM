@@ -1,150 +1,260 @@
 import React from "react";
-import ICEM_Banner from "../../assets/ICEM_Banner.jpg";
+import Banner from "../../assets/ICEM_Banner.jpg";
+import EstablishmentCert from "../../assets/Establisment_Certificate.pdf";
+import IICRatingCert from "../../assets/IIC_Rating_Certificate_2023-24.pdf";
 
-const IIC = () => {
+function IIC() {
+  const rightLinks = [
+    "Student Welfare",
+    "IIC",
+    "Induction Programme",
+    "Student Council",
+    "National Service Scheme (NSS)",
+    "ICEM Awards",
+    "Academic Cell",
+    "Academic Calendar",
+    "Statutory Committee",
+    "Non-Statutory Committee",
+    "Grievance Redressal",
+  ];
+
+  const quickLinks = [
+    "Eligibility & Fees",
+    "Download Certificate Formats",
+    "Admission Helpline",
+    "Availability of Forms",
+    "Apply Online",
+  ];
+
+  const iicTeam = [
+    ["1", "Dr. Nilesh Uke, Director", "Head of Institute"],
+    ["2", "Dr. Saurabh Gupta, Dean-Academics", "President"],
+    ["3", "Ms. Supriya Kumbhar, Asst Prof- FY", "Convener"],
+    ["4", "Ms. Minal Patil, Asst Prof-Computer", "Members"],
+    ["5", "Ms. Deepa Padwal, Asst Prof-AI/DS", "Members"],
+    ["6", "Mr. Vishal Meshram, Asst Prof-Mechanical", "Members"],
+    ["7", "Ms. Priyanka Patil, Asst Prof-E&TC", "Members"],
+    ["8", "Ms. Aditi Hupparikar, Asst Prof-MBA", "Members"],
+    ["9", "Ms. Dhanshri Pisal, Asst Prof-MCA", "Members"],
+    ["10", "Ms. Trupti Kathale, Asst Prof-FY", "Members"],
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Banner Section */}
-      <div className="relative w-full h-64 md:h-96 flex items-center justify-center">
-        <img 
-          src={ICEM_Banner} 
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="IIC Banner"
+    <div className="w-full bg-white text-gray-800">
+      {/* Hero Banner */}
+      <div className="w-full h-[60vh] relative">
+        <img
+          src={Banner}
+          alt="Institution’s Innovation Council"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center">
-          <div className="w-full text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white shadow-lg tracking-wide">IIC</h1>
-            <p className="text-lg md:text-xl mt-2 text-white opacity-80 font-medium">Institution's Innovation Council</p>
-          </div>
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+            Institution’s Innovation Council (IIC)
+          </h1>
         </div>
       </div>
 
       {/* Main Content */}
-      <section className="max-w-4xl mx-auto p-4 md:p-8">
-        {/* Introduction Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-4">Introduction</h2>
-          <p>
-            <strong>Indira College of Engineering and Management</strong> has established Institution's Innovation Council (ICEM - IIC) under the guidelines of Ministry of Education's Innovation Cell (MIC) to promote innovation and entrepreneurship at Institute level.
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 py-16 px-6">
+        {/* Left Content */}
+        <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md">
+          <h2 className="text-2xl font-semibold text-secondary mb-6">
+            Introduction
+          </h2>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            <b>Indira College of Engineering and Management</b> has established
+            the <b>Institution’s Innovation Council (ICEM - IIC)</b> under the
+            guidelines of the Ministry of Education’s Innovation Cell (MIC) to
+            promote innovation and entrepreneurship at the institute level.
           </p>
-          <h3 className="text-xl font-semibold text-gray-700 mt-6">
-            Establishment Year: December 2021
+
+          <p className="text-gray-700 mb-4">
+            <b>Establishment Year:</b> December 2021
+          </p>
+
+          <h3 className="text-xl font-semibold text-secondary mb-3">
+            Objective of ICEM – IIC
           </h3>
-        </div>
 
-        {/* Objectives Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Objective of ICEM - IIC</h2>
-          <p className="text-gray-600">
-            To encourage, inspire and nurture young minds of students by supporting them to work with new ideas and transform them into prototypes as well as products, thus creating a vibrant local innovation ecosystem in the institute.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            To encourage, inspire and nurture young minds of students by
+            supporting them to work with new ideas and transform them into
+            prototypes as well as products, thus creating a vibrant local
+            innovation ecosystem within the institute.
           </p>
-        </div>
 
-        {/* Functions Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Functions of ICEM - IIC</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>To conduct various innovation and entrepreneurship-related activities prescribed by Ministry of Education's Innovation Cell.</li>
-            <li>To mentor, identify and reward innovations and share success stories.</li>
-            <li>To organize periodic workshops/seminars/interactions with entrepreneurs, investors, professionals and create a mentor pool for student innovators.</li>
-            <li>To highlight innovative projects carried out by institution's faculty and students.</li>
-            <li>To organize idea competitions, business plan competitions, mini-challenges, hackathons, etc. with the involvement of industries.</li>
+          <h3 className="text-xl font-semibold text-secondary mb-3">
+            Functions of ICEM – IIC
+          </h3>
+
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
+            <li>
+              Conduct various innovation and entrepreneurship-related activities
+              prescribed by the Ministry of Education’s Innovation Cell.
+            </li>
+            <li>
+              Mentor, identify, and reward innovations, while sharing success
+              stories.
+            </li>
+            <li>
+              Organize periodic workshops, seminars, and interactions with
+              entrepreneurs, investors, and professionals to create a mentor
+              pool for student innovators.
+            </li>
+            <li>
+              Highlight innovative projects carried out by institution’s faculty
+              and students.
+            </li>
+            <li>
+              Conduct idea competitions, business plan competitions, mini
+              challenges, and hackathons with active industry involvement.
+            </li>
           </ul>
-        </div>
 
-        {/* IIC Team Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-10">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">ICEM – IIC Team</h2>
-          <h4 className="text-lg font-semibold text-gray-700 mb-4">
-            The team consists of the following members
-          </h4>
+          <h3 className="text-xl font-semibold text-secondary mb-3">
+            ICEM – IIC Team
+          </h3>
+
+          <p className="text-gray-700 mb-4">
+            The team consists of the following members:
+          </p>
+
           <div className="overflow-x-auto">
-            <table className="min-w-full border border-gray-200">
+            <table className="w-full border border-gray-300 text-left text-gray-800">
               <thead className="bg-gray-100">
                 <tr>
-                  <th className="border border-gray-200 px-4 py-2 text-left font-semibold">Sr.No</th>
-                  <th className="border border-gray-200 px-4 py-2 text-left font-semibold">Name of Member</th>
-                  <th className="border border-gray-200 px-4 py-2 text-left font-semibold">Position assigned in IIC</th>
+                  <th className="border p-2 text-center">Sr. No.</th>
+                  <th className="border p-2">Name of Member</th>
+                  <th className="border p-2">Position assigned in IIC</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white">
-                  <td className="border border-gray-200 px-4 py-2">1</td>
-                  <td className="border border-gray-200 px-4 py-2">Dr Nilesh Uke, Director</td>
-                  <td className="border border-gray-200 px-4 py-2">Head of Institute</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-2">2</td>
-                  <td className="border border-gray-200 px-4 py-2">Dr Saurabh Gupta, Dean-Academics</td>
-                  <td className="border border-gray-200 px-4 py-2">President</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border border-gray-200 px-4 py-2">3</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Supriya Kumbhar, Asst Prof- FY</td>
-                  <td className="border border-gray-200 px-4 py-2">Convener</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-2">4</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Minal Patil, Asst Prof-Computer</td>
-                  <td rowSpan="7" className="border border-gray-200 px-4 py-2">Members</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border border-gray-200 px-4 py-2">5</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Deepa Padwal, Asst Prof-AI/DS</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-2">6</td>
-                  <td className="border border-gray-200 px-4 py-2">Mr Vishal Meshram, Asst Prof-Mechanical</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border border-gray-200 px-4 py-2">7</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Priyanka Patil, Asst Prof-E&amp;TC</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-2">8</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Aditi Hupparikar, Asst Prof-MBA</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border border-gray-200 px-4 py-2">9</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Dhanshri Pisal, Asst Prof-MCA</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-2">10</td>
-                  <td className="border border-gray-200 px-4 py-2">Ms Trupti Kathale, Asst Prof-FY</td>
-                </tr>
+                {iicTeam.map(([sr, name, pos]) => (
+                  <tr key={sr} className="odd:bg-white even:bg-gray-50">
+                    <td className="border p-2 text-center">{sr}</td>
+                    <td className="border p-2">{name}</td>
+                    <td className="border p-2">{pos}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
+          {/* Certificates Section */}
+          <div className="grid md:grid-cols-2 gap-6 mb-10 mt-6">
+            <div className="border border-gray-200 bg-gray-50 rounded-lg p-5 shadow-sm text-center">
+              <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                Establishment Certificate
+              </h4>
+              <a
+                href={EstablishmentCert}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 font-medium underline hover:text-blue-800 transition"
+              >
+                View Certificate
+              </a>
+            </div>
+
+            <div className="border border-gray-200 bg-gray-50 rounded-lg p-5 shadow-sm text-center">
+              <h4 className="font-semibold text-lg text-gray-800 mb-2">
+                IIC Rating Certificate 2023–24
+              </h4>
+              <a
+                href={IICRatingCert}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 font-medium underline hover:text-blue-800 transition"
+              >
+                View Certificate
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Certificates Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Establishment Certificate */}
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Establishment Certificate</h3>
-            <div className="flex justify-center">
-              <iframe
-                title="Establishment Certificate"
-                className="w-full h-96 border border-gray-300 rounded-lg"
-                src="https://indiraicem.ac.in/assets/pdf/Establisment_Certificate.pdf"
+        {/* Right Sidebar */}
+        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+          {/* Sidebar Links */}
+          <ul className="space-y-4 mb-8">
+            {rightLinks.map((link, index) => (
+              <li
+                key={index}
+                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+              >
+                {link}
+              </li>
+            ))}
+          </ul>
+
+          {/* Contact Form */}
+          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
+            <h3 className="text-center text-lg font-bold mb-4">
+              GET IN TOUCH WITH US
+            </h3>
+            <form className="space-y-3">
+              <input
+                type="text"
+                placeholder="YOUR NAME*"
+                className="w-full p-2 text-black rounded"
               />
-            </div>
+              <div className="flex items-center bg-white rounded">
+                <span className="pl-2">🇮🇳</span>
+                <input
+                  type="text"
+                  placeholder="PHONE NUMBER*"
+                  className="w-full p-2 text-black rounded-r"
+                />
+              </div>
+              <input
+                type="email"
+                placeholder="YOUR EMAIL ID"
+                className="w-full p-2 text-black rounded"
+              />
+              <select className="w-full p-2 text-black rounded">
+                <option>Select Program</option>
+                <option>Engineering</option>
+                <option>MBA</option>
+                <option>MCA</option>
+              </select>
+              <input
+                type="text"
+                placeholder="STATE"
+                className="w-full p-2 text-black rounded"
+              />
+              <p className="text-xs text-gray-400">
+                By providing your contact details, you agree to receive updates
+                from Indira College through WhatsApp.
+              </p>
+              <button
+                type="submit"
+                className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition"
+              >
+                Apply Now
+              </button>
+            </form>
           </div>
-          {/* IIC Rating Certificate */}
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">IIC Rating Certificate 2023-24</h3>
-            <div className="flex justify-center">
-              <iframe
-                title="IIC Rating Certificate 2023-24"
-                className="w-full h-96 border border-gray-300 rounded-lg"
-                src="https://indiraicem.ac.in/assets/pdf/IIC_Rating_Certificate_2023-24.pdf"
-              />
-            </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
+              QUICK LINKS
+            </h4>
+            <ul className="space-y-2">
+              {quickLinks.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
+                >
+                  <span className="text-red-500">•</span> {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
-};
+}
 
 export default IIC;
