@@ -44,6 +44,8 @@ import Grievance from "./components/StudentCorner/Grievance";
 import NationalServiceScheme from "./components/StudentCorner/NationalServiceScheme";
 import IcemStudentCouncil from "./components/StudentCorner/IcemStudentCouncil";
 import Academics from "./components/StudentCorner/Academics";
+import IcemAwards from "./components/StudentCorner/IcemAwards";
+import AwardDetails from "./components/StudentCorner/AwardDetails";
 
 function App() {
   return (
