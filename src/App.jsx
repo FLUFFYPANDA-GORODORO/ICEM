@@ -37,6 +37,7 @@ import Bus from "./components/AboutUs/Facilities.jsx/Bus";
 import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
 import Alumni from "./Pages/Alumni";
+import Statutory from "./components/StudentCorner/Statutory";
 // // add more pages as you build them
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
             path="/student-corner/induction-programme"
             element={<InductionProgramme />}
           />
+          <Route path="/student-corner/committees" element={<Statutory />} />
 
           {/* ==== PROGRAMS ROUTES ==== */}
           <Route path="/programs/ai-ds" element={<AIDS />} />
@@ -90,6 +92,7 @@ function App() {
           <Route path="/facilities/governance" element={<Governance />} />
           <Route path="/research" element={<Research />} />
           <Route path="/placement" element={<Placement />} />
+
           {/* <Route path="/facilities/governance" element={<Governance />} /> */}
         </Routes>
       </div>
