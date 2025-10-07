@@ -38,7 +38,10 @@ import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
 import Alumni from "./Pages/Alumni";
 import Statutory from "./components/StudentCorner/Statutory";
-// // add more pages as you build them
+import Grievance from "./components/StudentCorner/Grievance";
+import NationalServiceScheme from "./components/StudentCorner/NationalServiceScheme";
+import IcemStudentCouncil from "./components/StudentCorner/IcemStudentCouncil";
+import Academics from "./components/StudentCorner/Academics";
 
 function App() {
   return (
@@ -53,6 +56,7 @@ function App() {
           <Route path="/about/IGOI" element={<IGOI />} />
           <Route path="/about/cfcm" element={<CFCM />} />
 
+          {/* ==== STUDENT ROUTES ==== */}
           <Route
             path="/student-corner/student-welfare"
             element={<StudentWelfare />}
@@ -63,6 +67,24 @@ function App() {
             element={<InductionProgramme />}
           />
           <Route path="/student-corner/committees" element={<Statutory />} />
+          <Route
+            path="/student-corner/nss"
+            element={<NationalServiceScheme />}
+          />
+          <Route
+            path="/student-corner/grievance-redressals"
+            element={<Grievance />}
+          />
+          <Route
+            path="/student-corner/student-council"
+            element={<IcemStudentCouncil />}
+          />
+          <Route
+            path="/student-corner/academics"
+            element={<Academics />}
+          />
+
+          
 
           {/* ==== PROGRAMS ROUTES ==== */}
           <Route path="/programs/ai-ds" element={<AIDS />} />
