@@ -81,12 +81,12 @@ function App() {
 
           {/* ==== FACILITIES ROUTES ==== */}
           <Route path="/facilities/sports" element={<Sports />} />
-          <Route path="/facilities/library" element={<Library />} />
+          {/* <Route path="/facilities/library" element={<Library />} />
           <Route path="/facilities/hostel" element={<Hostel />} />
           <Route path="/facilities/transport" element={<Bus />} />
           <Route path="/facilities/canteen" element={<Canteen />} />
           <Route path="/facilities/gym" element={<Gym />} />
-          <Route path="/facilities/health-centre" element={<PHC />} />
+          <Route path="/facilities/health-centre" element={<PHC />} /> */}
           <Route path="/facilities/governance" element={<Governance />} />
           <Route path="/research" element={<Research />} />
           <Route path="/placement" element={<Placement />} />
