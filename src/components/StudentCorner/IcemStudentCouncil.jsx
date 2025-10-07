@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
 import BEComp from "../../assets/BEComp.pdf";
 
-function InductionProgramme() {
+function IcemStudentCouncil() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const rightLinks = [
     "Student Welfare",
-    "IIC",
     "Induction Programme",
     "Student Council",
     "National Service Scheme (NSS)",
@@ -27,14 +26,13 @@ function InductionProgramme() {
     "Apply Online",
   ];
 
-  const activityReports = [
-    "Report 2023-2024",
-    "Report 2022-2023",
-    "Report 2021-2022",
-    "Report 2018-2019",
-    "Report 2017-2018",
-    "Report 2016-2017",
-    "Report 2015-2016",
+  const councilReports = [
+    "Student Council A.Y. 2024-25",
+    "Student Council A.Y. 2023-24",
+    "Student Council A.Y. 2022-23",
+    "Student Council A.Y. 2019-20",
+    "Student Council A.Y. 2018-19",
+    "Student Council A.Y. 2017-18",
   ];
 
   const toggleAccordion = (index) => {
@@ -47,84 +45,110 @@ function InductionProgramme() {
       <div className="w-full h-[60vh] relative">
         <img
           src={Banner}
-          alt="Induction Programme"
+          alt="ICEM Campus"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-            Induction Programme
+            ICEM Student Council
           </h1>
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content Section */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 py-16 px-6">
-        {/* Left Content */}
+        {/* Left Section */}
         <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold text-secondary mb-6">
-            About Induction Programme
+            About ICEM Student Council
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            The term <b>induction</b> is generally used to describe the process
-            whereby new incumbents adjust to or acclimatize to their new roles
-            and environment. In other words, it is a well-planned event to
-            educate new entrants about the institution’s environment and connect
-            them with the people in it.
+            The purpose of the <b>Students Council (SC)</b> is to provide programs,
+            activities, and services which serve the co-curricular, cultural,
+            social, recreational, and educational interests of students at the
+            University and Colleges. The SC seeks to contribute to the development
+            of students’ leadership skills and experience, program planning and
+            development, volunteering, and fiscal management.
           </p>
 
-          <h3 className="text-xl font-semibold text-secondary mb-3">
-            Objectives of the Induction Programme
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The Students’ Council is established under the{" "}
+            <b>Maharashtra Public Universities Act, 1994 section 40 (B)</b> and
+            under the new <b>Maharashtra Public University Act 2016, Section 99</b>.
+            The act was passed with a view to improve the quality of higher
+            education and provides innovative measures for the welfare of
+            students, teachers, colleges, and universities.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            This act provides for the formation of student unions or associated
+            student bodies, distinctively called <b>Students’ Councils</b>. There
+            shall be a University Students’ Council and a College Students’
+            Council for each affiliated college to look after the welfare of
+            students and to promote and coordinate extra-curricular activities
+            for a better campus life. It is specifically noted that the Councils
+            shall not engage in political activities. This chartered student
+            council is authorized by the University to manage student activity
+            funds responsibly.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            <b>Indira College of Engineering and Management (ICEM)</b> has formed
+            its Student Council under the guidance of the above-mentioned Act.
+            The following are the council members.
+          </p>
+
+          <h3 className="text-xl font-semibold text-secondary mb-4">
+            Objective of Student Council
           </h3>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            The purpose of the <b>Student Induction Programme</b> is to help new
-            students adjust and feel comfortable in the new environment,
-            inculcate in them the ethos and culture of the institution, help
-            them build bonds with other students and faculty members, and expose
-            them to a sense of larger purpose and self-exploration.
+            The <b>Students’ Council (SC)</b> is the representative body of the
+            entire student community of Indira College of Engineering and
+            Management, Pune.
           </p>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-6 mb-10">
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">
-              Key Highlights of the Programme
-            </h4>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Orientation about the institution and its departments.</li>
-              <li>Interactive sessions with faculty and student mentors.</li>
-              <li>Workshops on personality development and ethics.</li>
-              <li>Introduction to academic rules, facilities, and resources.</li>
-              <li>Team-building and cultural integration activities.</li>
-            </ul>
-          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The <b>ICEM Student Council’s mission</b> is to encourage and promote
+            the values that represent good character in all students and build
+            responsible leaders within the student community. Together with ICEM
+            faculty, staff, alumni, and university support, it seeks to inspire
+            visions and actions for a more ethical and just world through the
+            exchange of ideas and information.
+          </p>
 
-          {/* Activities Accordion */}
+          <p className="text-gray-700 leading-relaxed mb-10">
+            The executive committee of <b>ICEM-SC</b> comprises advisors from the
+            management and faculty, and students elected as office bearers and
+            representatives from all classes across disciplines.
+          </p>
+
+          {/* Student Council Accordion Section */}
           <h3 className="text-xl font-semibold text-secondary mb-4">
-            Activities
+            Student Council Reports
           </h3>
 
-          <div className="space-y-3">
-            {activityReports.map((report, index) => (
+          <div className="space-y-2">
+            {councilReports.map((report, index) => (
               <div
                 key={index}
-                className="border border-gray-300 rounded-lg bg-gray-50 overflow-hidden"
+                className="border border-gray-300 rounded overflow-hidden"
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-gray-900 hover:bg-gray-100 transition-colors"
+                  className="w-full flex justify-between items-center px-4 py-3 bg-gray-50 hover:bg-gray-100 transition-colors"
                 >
-                  <span className="underline text-[16px] font-semibold hover:text-blue-700 transition">
-                    {report}
-                  </span>
-                  <span className="text-xl text-gray-700">
+                  <span className="font-medium text-gray-800">{report}</span>
+                  <span className="text-xl font-bold">
                     {openIndex === index ? "−" : "+"}
                   </span>
                 </button>
 
                 {openIndex === index && (
-                  <div className="p-4 bg-white border-t border-gray-200">
+                  <div className="p-4 bg-white border-t border-gray-300">
                     <p className="text-gray-700 mb-2">
-                      Click below to view the {report} document.
+                      Click below to view the {report} PDF.
                     </p>
                     <a
                       href={BEComp}
@@ -141,10 +165,10 @@ function InductionProgramme() {
           </div>
         </div>
 
-        {/* Right Sidebar */}
+        {/* Right Section */}
         <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
-          {/* Sidebar Links */}
-          <ul className="space-y-4 mb-8">
+          {/* About Links */}
+          <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
@@ -225,4 +249,4 @@ function InductionProgramme() {
   );
 }
 
-export default InductionProgramme;
+export default IcemStudentCouncil;
