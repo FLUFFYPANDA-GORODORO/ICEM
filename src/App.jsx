@@ -81,12 +81,9 @@ function App() {
             path="/student-corner/student-council"
             element={<IcemStudentCouncil />}
           />
-          <Route
-            path="/student-corner/academics"
-            element={<Academics />}
-          />
-
-          
+          <Route path="/student-corner/academics" element={<Academics />} />
+          <Route path="/student-corner/icem-awards" element={<IcemAwards />} />
+          <Route path="/awards/:id" element={<AwardDetails />} />
 
           {/* ==== PROGRAMS ROUTES ==== */}
           <Route path="/programs/ai-ds" element={<AIDS />} />
