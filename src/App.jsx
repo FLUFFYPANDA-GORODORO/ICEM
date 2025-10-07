@@ -36,6 +36,7 @@ import PHC from "./components/AboutUs/Facilities.jsx/PHC";
 import Bus from "./components/AboutUs/Facilities.jsx/Bus";
 import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
+import Alumni from "./Pages/Alumni";
 // // add more pages as you build them
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/alumni" element={<Alumni />} />
           <Route path="/about/overview" element={<Overview />} />
           <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
           <Route path="/about/IGOI" element={<IGOI />} />
@@ -79,12 +81,12 @@ function App() {
 
           {/* ==== FACILITIES ROUTES ==== */}
           <Route path="/facilities/sports" element={<Sports />} />
-          <Route path="/facilities/library" element={<Library />} />
+          {/* <Route path="/facilities/library" element={<Library />} />
           <Route path="/facilities/hostel" element={<Hostel />} />
           <Route path="/facilities/transport" element={<Bus />} />
           <Route path="/facilities/canteen" element={<Canteen />} />
           <Route path="/facilities/gym" element={<Gym />} />
-          <Route path="/facilities/health-centre" element={<PHC />} />
+          <Route path="/facilities/health-centre" element={<PHC />} /> */}
           <Route path="/facilities/governance" element={<Governance />} />
           <Route path="/research" element={<Research />} />
           <Route path="/placement" element={<Placement />} />

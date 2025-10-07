@@ -36,19 +36,8 @@ const Navbar = () => {
             { label: "Shree Chanakya Education Society", link: "/about/chanakya-edu" },
             { label: "Indira Group of Institute", link: "/about/IGOI" },
             { label: "Chairpersons Profile & Chief Mentor IGL", link: "/about/cfcm" },
-          ],
-        },
-        {
-          title: "Facilities",
-          items: [
-            { label: "Sports", link: "/facilities/sports" },
-            { label: "Library", link: "/facilities/library" },
-            { label: "Hostel", link: "/facilities/hostel" },
-            { label: "Transport", link: "/facilities/transport" },
-            { label: "Canteen", link: "/facilities/canteen" },
-            { label: "Gym", link: "/facilities/gym" },
-            { label: "Primary Health Centre", link: "/facilities/health-centre" },
-            { label: "Governance", link: "/facilities/governance" },
+            { label: "Facilities", link: "/facilities/sports" },
+            { label: "Campus Leadership", link: "" },
           ],
         },
       ],
@@ -99,20 +88,7 @@ const Navbar = () => {
             { label: "M-Tech in Computer Science", link: "/programs/mtech-comp" },
           ],
         },
-        {
-          title: "Admission",
-          items: [
-            "Engineering",
-            "Integrated MBA (BBA + MBA)",
-            "MBA",
-            "MCA",
-            "Admission Advertisement",
-            "Eligibility Criteria",
-            "Documents Required",
-            "Fee Structure",
-            "Scholarship",
-          ],
-        },
+       
       ],
     },
 
@@ -279,7 +255,8 @@ const Navbar = () => {
               <span>Programs & Admission</span>
             </div>
             <Link to="/placement" className="hover:text-primary">Placement</Link>
-            <h2 className="hover:text-primary cursor-pointer">Alumni</h2>
+            <Link to="/alumni" className="hover:text-primary">Alumni</Link>
+            <h2 className="hover:text-primary cursor-pointer">Examination</h2>
             <div
               className="flex items-center gap-1 cursor-pointer hover:text-primary"
               onMouseEnter={() => handleMouseEnter("accreditation")}

@@ -1,12 +1,12 @@
 // HeroSection.jsx
 import React from "react";
-import Indira from "../assets/ICEM_Banner.jpg";
+import Indira from "../assets/ICEM.jpg";
 
 const Home = () => {
   return (
     <div>
       {/* Hero Image Section */}
-      <div className="w-full h-[65vh] relative">
+      <div className="w-full  relative">
         <img
           src={Indira}
           alt="University Campus"
