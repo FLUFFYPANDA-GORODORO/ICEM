@@ -1,87 +1,128 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
 import Students from "../../assets/studentsraisinghands.jpg";
 import { FaBriefcase, FaGlobe, FaLightbulb, FaIndustry } from "react-icons/fa";
 import BEComp from "../../assets/BEComp.pdf";
 
+const words = ["Future", "Success", "Career", "Journey", "Impact", "Legacy"];
 function Placement() {
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [activeTab, setActiveTab] = useState("Placement Team");
+
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  // Words to cycle through dynamically
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const currentWord = words[currentWordIndex];
+
+      if (!isDeleting) {
+        // Typing forward
+        if (currentText === currentWord) {
+          setTimeout(() => setIsDeleting(true), 1000);
+          return;
+        }
+        setCurrentText(currentWord.substring(0, currentText.length + 1));
+      } else {
+        // Deleting backward
+        if (currentText === "") {
+          setIsDeleting(false);
+          setCurrentWordIndex((prev) => (prev + 1) % words.length);
+          return;
+        }
+        setCurrentText(currentWord.substring(0, currentText.length - 1));
+      }
+    };
+
+    const timeout = setTimeout(handleTyping, isDeleting ? 80 : 120);
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentWordIndex]);
+
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section */}
       <section className="w-full h-[60vh] relative">
+        {/* Background Banner */}
         <img
           src={Banner}
           alt="Indira College Banner"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
+          {/* Dynamic Typing Text */}
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg text-center px-4">
-            Industry Ready Program
+            Crafting Your{" "}
+            <span className="relative inline-block text-primary">
+              {currentText}
+              <span className="ml-1 animate-blink">|</span>
+            </span>
           </h1>
         </div>
+
+        {/* Cursor Blink Animation */}
+        <style>
+          {`
+          @keyframes blink {
+            50% { opacity: 0; }
+          }
+          .animate-blink {
+            animation: blink 1s step-start infinite;
+          }
+        `}
+        </style>
       </section>
 
       {/* Career Advancement Services (CAS) Section */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
-            Career Advancement Services (CAS)
+            We turn your potential into placement.
           </h2>
-          <p className="text-md text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
-            At Indira College, we don't just prepare students for jobs—we
-            prepare them for thriving careers. Our Career Advancement Services
-            (CAS) team is dedicated to building strong industry-academia
-            collaborations, ensuring that our students have access to the best
-            career opportunities while top companies gain access to the finest
-            talent.
+          <p className="text-xl text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
+            Indira College of Engineering and Management ensures every student
+            steps into the industry with confidence. From specialized training
+            to top-tier recruiter connect, our placement ecosystem is built to
+            transform academic learning into real-world success
           </p>
 
           {/* Three Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {/* Internships */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-secondary mb-4">
-                Internships: Learn by Doing
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* IRP */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-8 text-left rounded-lg">
+              <h3 className="text-xl font-bold text-secondary mb-4">
+                Industry Readiness Programme (IRP)
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
-                We believe experience is the best teacher. That's why we offer
-                6-month to 1-year summer and winter internships across all our
-                schools, allowing students to apply their knowledge in
-                real-world settings. These internships equip students with
-                industry exposure, practical skills, and a competitive edge in
-                the job market.
+              <p className="text-gray-700 leading-relaxed text-base">
+                IRP is curated by Gryphon Academy to be a structured training
+                initiative designed to prepare students for the real-world
+                demands of the corporate world. It focuses on building technical
+                expertise, professional communication, problem-solving
+                abilities, workplace discipline, and overall confidence. Through
+                hands-on training, mentorship, and industry-aligned modules, IRP
+                ensures that every student graduates with the skills, mindset,
+                and readiness to excel from day one in their careers.
               </p>
             </div>
 
-            {/* Placements */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-secondary mb-4">
-                Record Breaking Placements
+            {/* CLDP */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-8 text-left rounded-lg">
+              <h3 className="text-xl font-bold text-secondary mb-4">
+                Career Leadership Development Programme (CLDP)
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
-                Our stellar placements ensure the perfect launchpad for careers
-                with global giants like Google, Deloitte, and Amazon. The CAS
-                team matches talent with opportunity, offering career guidance,
-                skill-building workshops, and recruitment training—ensuring
-                students enter the workforce with confidence and a clear path to
-                success.
-              </p>
-            </div>
-
-            {/* Industry Network */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left  max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-secondary mb-4">
-                Strong Industry Network
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
-                Our deep-rooted ties with leading companies ensure that our
-                students have a competitive edge. From exclusive recruitment
-                opportunities to industrial training, we ensure they are able to
-                thrive in world's top organisations. Regular industry
-                interactions, corporate talks, and live projects prepare them
-                for dynamic career opportunities.
+              <p className="text-gray-700 leading-relaxed text-base">
+                CLDP is conceptualized by Gryphon Academy as a specialized
+                framework that trains the future MBA professionals to evolve
+                into industry-ready leaders. It focuses on building aptitude,
+                business communication, digital presence, and domain-specific
+                competencies essential for corporate success. Through systematic
+                training, guided mentorship, and specialization-driven modules,
+                CLDP ensures every student is prepared to step confidently into
+                leadership roles and achieve long-term career growth.
               </p>
             </div>
           </div>
@@ -97,34 +138,29 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Highest Package */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-secondary mb-2">₹27 LPA</h3>
+              <h3 className="text-4xl font-bold text-secondary mb-2">
+                ₹27 LPA
+              </h3>
               <p className="text-lg font-semibold text-primary mb-2">
                 Highest Package
-              </p>
-              <p className="text-gray-600 text-sm">
-                offered to a student by global giant Amazon
               </p>
             </div>
 
             {/* Students */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-secondary mb-2">₹10 LPA</h3>
+              <h3 className="text-4xl font-bold text-secondary mb-2">
+                ₹8.16LPA
+              </h3>
               <p className="text-lg font-semibold text-primary mb-2">
-                870+ Students
-              </p>
-              <p className="text-gray-600 text-sm">
-                Received Super Dream Offers from Juspay
+                Avg. Package
               </p>
             </div>
 
             {/* Companies */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-secondary mb-2">2000+</h3>
+              <h3 className="text-4xl font-bold text-secondary mb-2">350+</h3>
               <p className="text-lg font-semibold text-primary mb-2">
                 Recruiting Companies
-              </p>
-              <p className="text-gray-600 text-sm">
-                visit our campus annually for student placements
               </p>
             </div>
 
@@ -134,23 +170,19 @@ function Placement() {
               <p className="text-lg font-semibold text-primary mb-2">
                 Indira Graduates
               </p>
-              <p className="text-gray-600 text-sm">
-                earn higher salary than market average
-              </p>
             </div>
           </div>
         </div>
       </section>
-      {/* Industry Partnerships & MOUs Section */}
-      <section className="py-10 bg-white">
+
+      {/* <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200  shadow-md p-8 bg-white">
-            {/* Left Image Placeholder */}
+            
             <div className="w-full h-[500px] bg-gray-200 flex items-center justify-center text-gray-500 text-lg font-medium ">
               (image here)
             </div>
 
-            {/* Right Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
                 Industry Partnerships & MOUs
@@ -170,7 +202,7 @@ function Placement() {
                 Key Industry Partners:
               </h3>
 
-              {/* Placeholder Boxes for Logos */}
+              
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {[
                   "amazon",
@@ -197,7 +229,7 @@ function Placement() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Research Labs & Facilities Section */}
       <section className="py-5 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -208,16 +240,17 @@ function Placement() {
                 Research Labs & Facilities
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Indira College is committed to fostering a culture of research
-                and innovation through state-of-the-art research labs in AI,
-                Data Science, Cybersecurity, Robotics, and Engineering Sciences.
-                Our research ecosystem enables students and faculty to work on
-                breakthrough technologies, collaborate with global institutions,
-                and contribute to industry-focused Research and Development.
+                ICEM stands as a hub of innovation and experiential learning,
+                where technology, creativity, and research converge. Every
+                laboratory and facility is designed to nurture curiosity,
+                encourage experimentation, and build industry-relevant
+                expertise. These spaces empower students to translate concepts
+                into real-world solutions, fostering hands-on learning,
+                interdisciplinary collaboration, and future-ready innovation.
               </p>
 
               <h3 className="text-lg font-semibold text-secondary mb-4">
-                Industry & Research Collaborators:
+                Key Facilities Include:
               </h3>
 
               {/* Placeholder Boxes for Logos */}
@@ -254,150 +287,69 @@ function Placement() {
         </div>
       </section>
 
-      {/* Centre of Excellence */}
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200 shadow-md p-8 bg-white">
-            {/* Left Content */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-                Centres of Excellence
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Indira College's Centres of Excellence (CoEs) serve as the
-                epicentre of industry-academia collaboration, equipping students
-                with cutting-edge skills, industry-recognised certifications,
-                and exposure to real-world challenges. Each CoE is established
-                in partnership with global leaders, ensuring students get
-                hands-on training, live projects, and access to the latest
-                technology
-              </p>
-
-              <h3 className="text-lg font-semibold text-secondary mb-4">
-                COE Partners:
-              </h3>
-
-              {/* Placeholder Boxes for Logos */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {[
-                  "Adobe",
-                  "Airtel",
-                  "Biocon",
-                  "DRDO",
-                  "Honda",
-                  "Intel",
-                  "ISRO",
-                  "NVIDIA",
-                  "Philips",
-                  "Siemens",
-                  "Texas Instruments",
-                  "TCS",
-                ].map((partner, index) => (
-                  <div
-                    key={index}
-                    className="w-full h-20 bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 text-sm font-medium"
-                  >
-                    (image here)
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Image Placeholder */}
-            <div className="w-full h-[520px] bg-gray-200 flex items-center justify-center text-gray-500 text-lg font-medium">
-              (image here)
-            </div>
-          </div>
-        </div>
-      </section>
       {/* For Students: Building Future Leaders */}
+      {/* Section Wrapper */}
       <section
-        className="relative py-20 bg-center bg-cover text-white"
+        className="relative bg-cover bg-center bg-no-repeat text-white py-20"
         style={{ backgroundImage: `url(${Students})` }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        {/* Overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-            For Students: Building Future Leaders
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Your Career is Our Mission.
           </h2>
 
           {/* Subheading */}
-          <p className="text-lg max-w-4xl mx-auto mb-14 leading-relaxed opacity-90">
-            Indira College goes beyond placements, focusing on holistic career
-            development. Leadership training, entrepreneurship opportunities,
-            and real-world problem-solving empower students to excel as future
-            leaders. With industry-aligned curricula, structured collaborations,
-            and cutting-edge training, we prepare graduates not just for their
-            first job, but for lifelong success.
+          <p className="text-lg max-w-3xl mx-auto mb-14 leading-relaxed text-gray-200">
+            Your potential is limitless, and so are your opportunities at ICEM.
+            We merge academic rigor with real-world readiness, empowering you
+            with the skills, network, and experience to excel.
           </p>
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* 1️⃣ Internships & Industry Exposure */}
-            <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <FaBriefcase className="text-5xl mb-4 text-secondary" />
-                <h3 className="text-xl font-bold mb-3">
-                  Internships & Industry Exposure
-                </h3>
-                <p className="text-sm opacity-90 leading-relaxed">
-                  Our students gain hands-on experience through paid
-                  internships, semester-long industry immersions, and global
-                  internship opportunities with leading brands like FIFA and
-                  Disney.
-                </p>
+            {[
+              {
+                icon: <FaBriefcase className="text-4xl mb-4 text-primary" />,
+                title: "Alumni Mentorship & Placement Guidance",
+                desc: "Connect with our powerful network of accomplished alumni for one-on-one mentorship. Get personalized guidance on career paths, resume building, and interview strategies to land your dream role.",
+              },
+              {
+                icon: <FaGlobe className="text-4xl mb-4 text-primary" />,
+                title: "Corporate Partnerships & Recruitment Drive",
+                desc: "We have established strong, lasting relationships with a diverse portfolio of national and multinational corporations. Benefit from exclusive recruitment drives, on-campus placements, and direct access to sought-after employers actively seeking ICEM talent.",
+              },
+              {
+                icon: <FaLightbulb className="text-4xl mb-4 text-primary" />,
+                title: "Internships & Industry Exposure",
+                desc: "Theory meets practice through mandatory, paid internships with our partner companies. From semester-long projects in Pune to global opportunities, gain invaluable hands-on experience that makes your resume stand out.",
+              },
+              {
+                icon: <FaIndustry className="text-4xl mb-4 text-primary" />,
+                title: "Career Development Workshops",
+                desc: "We polish your professional edge. Through a continuous schedule of workshops—from mastering communication and leadership to acing mock interviews and building a powerful personal brand—we ensure you are not just qualified, but truly job-ready.",
+              },
+            ].map((card, index) => (
+              <div
+                key={index}
+                className="bg-white/10 border border-white/10 hover:border-primary/40 hover:bg-white/15 p-8 rounded-2xl shadow-lg backdrop-blur-md transition-all duration-300 flex flex-col items-center text-center"
+              >
+                {/* ✅ Centered content */}
+                <div className="flex flex-col items-center text-center">
+                  {card.icon}
+                  <h3 className="text-lg font-bold mb-3 text-white">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-gray-200 leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* 2️⃣ Global Learning Opportunities */}
-            <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <FaGlobe className="text-5xl mb-4 text-secondary" />
-                <h3 className="text-xl font-bold mb-3">
-                  Global Learning Opportunities
-                </h3>
-                <p className="text-sm opacity-90 leading-relaxed">
-                  With collaborations across 300+ global institutions, our
-                  students explore international internships, semester
-                  exchanges, and dual-degree programs in Europe, North America,
-                  and Asia.
-                </p>
-              </div>
-            </div>
-
-            {/* 3️⃣ Skills That Set You Apart */}
-            <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <FaLightbulb className="text-5xl mb-4 text-secondary" />
-                <h3 className="text-xl font-bold mb-3">
-                  Skills That Set You Apart
-                </h3>
-                <p className="text-sm opacity-90 leading-relaxed">
-                  Beyond academics — presentation, communication, and leadership
-                  skills through resume workshops, mock interviews, and
-                  professional development sessions.
-                </p>
-              </div>
-            </div>
-
-            {/* 4️⃣ Industry-Specific Expertise */}
-            <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <FaIndustry className="text-5xl mb-4 text-secondary" />
-                <h3 className="text-xl font-bold mb-3">
-                  Industry-Specific Expertise
-                </h3>
-                <p className="text-sm opacity-90 leading-relaxed">
-                  Industry-driven curriculum co-created with experts: live
-                  projects, case studies, certifications, and technical training
-                  ensure job readiness from day one.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -525,59 +477,108 @@ function Placement() {
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
-            For Recruiters: Upgrade your Workforce
+            Trusted by the Best in the Business
           </h2>
           <p className="text-md text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
-            Whether your organisation is looking to hire exceptional,
-            industry-ready talent for jobs or internships, engage directly with
-            students and faculty, collaborate across multiple levels, or explore
-            research opportunities — we will work with you to craft an
-            engagement strategy aligned with your company's interests.
+            Our strongest endorsements come from our recruitment partners.
+            Discover why leading companies consistently choose ICEM graduates to
+            drive their success.
           </p>
 
-          {/* Three Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-secondary mb-4">
-                Summer & Winter Internships
+          {/* Testimonial Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2">
+            {/* 1️⃣ Force Motors */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
+                <span className="text-gray-400 text-sm">Logo Here</span>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
+                "ICEM has always provided us with trained mechanical engineers,
+                and as an organization, we appreciate the college's efforts to
+                prepare students for the industry."
+              </p>
+              <h3 className="text-sm font-semibold text-secondary">
+                Mr. Rahul Bagale
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
-                We understand the importance of hands-on experience in preparing
-                students for their careers. That is why we offer summer and
-                winter internships for 6 months to 1 year across all our
-                schools. Our students are available for internships in various
-                fields, giving companies the opportunity to train and work with
-                the next generation of leaders.
+              <p className="text-xs text-gray-500">
+                Group HR Head – Force Motors
               </p>
             </div>
 
-            {/* Placements */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-secondary mb-4">
-                Talent Acquisition
+            {/* 2️⃣ Vascon Engineers */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
+                <span className="text-gray-400 text-sm">Logo Here</span>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
+                "We have entered into an MOU with ICEM to actively support their
+                endeavours in providing excellent job opportunities for civil
+                engineering students. Our longstanding partnership of over a
+                decade with ICEM will continue further to support the civil
+                engineers."
+              </p>
+              <h3 className="text-sm font-semibold text-secondary">
+                Mr. Siddharth Moorthy
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
-                Our Career Advancement Services team is committed to providing
-                students with the best opportunities and industry partners with
-                the brightest minds. We connect companies with top tier talent.
-                Through combined placement drives, we streamline recruitment,
-                offering companies access to a wider pool of candidates across
-                campuses.
+              <p className="text-xs text-gray-500">
+                Managing Director – Vascon Engineers
               </p>
             </div>
 
-            {/* Industry Network */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left  max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-secondary mb-4">
-                Program Co-creation
+            {/* 3️⃣ Data Axle */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
+                <span className="text-gray-400 text-sm">Logo Here</span>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
+                "While conducting campus recruitment drives across the country,
+                ICEM consistently emerges as the top choice due to their
+                exceptional commitment to preparing students for their dream job
+                offers."
+              </p>
+              <h3 className="text-sm font-semibold text-secondary">
+                Ms. Shilpi Mahar
               </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
-                We collaborate with industry experts to co-create curricula that
-                aligns with current trends and real-world challenges. This
-                ensures our programs are industry-relevant, equipping our
-                students with a competitive edge. Through ongoing partnerships
-                and feedback, we ensure that our graduates are prepared for the
-                workforce.
+              <p className="text-xs text-gray-500">Manager, TA – Data Axle</p>
+            </div>
+
+            {/* 4️⃣ Bridgestone */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
+                <span className="text-gray-400 text-sm">Logo Here</span>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
+                "We appreciate the designed training programs by ICEM aimed at
+                equipping core Mechanical Engineering students with the
+                necessary skills to excel in the industry. These programs ensure
+                that students emerge as industry-ready professionals."
+              </p>
+              <h3 className="text-sm font-semibold text-secondary">
+                Ms. Sumana Chakraborty
+              </h3>
+              <p className="text-xs text-gray-500">
+                HR Business Partner – Bridgestone India
+              </p>
+            </div>
+
+            {/* 5️⃣ Tata Technologies */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 max-w-sm mx-auto flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
+                <span className="text-gray-400 text-sm">Logo Here</span>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
+                "ICEM has been a part of the Ready Engineers Programme for a
+                long time. Their way of creating resources prepared specifically
+                to meet the needs of students ensures a transformative
+                experience that prepares them effectively for the corporate
+                world."
+              </p>
+              <h3 className="text-sm font-semibold text-secondary">
+                Mr. Sushant Kumar
+              </h3>
+              <p className="text-xs text-gray-500">
+                India Lead – University Relations & Campus Recruitment, Tata
+                Technologies
               </p>
             </div>
           </div>
@@ -621,18 +622,17 @@ function Placement() {
       </section>
 
       {/* Recruiter Showcase Section */}
-      <section className="py-16 bg-white">
+      <section className="py-5 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase">
-            Indira Degree Opens Doors. Wide.
+            Your Career, Connected to the Best
           </h2>
           <p className="text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
-            At Indira College, there is an intensive focus on ensuring every
-            student is industry-ready. With more than{" "}
-            <strong>2000 recruiters</strong> visiting our campus each year, our
-            graduates receive the support, resources, and opportunities they
-            need to thrive in a dynamic global job market.
+            The consistent quality and industry-readiness of ICEM graduates have
+            made our campus a preferred recruitment destination for top-tier
+            companies across the globe. These partnerships are a testament to
+            our shared commitment to nurturing future-ready professionals
           </p>
 
           {/* Company Placeholder Grid */}
@@ -648,6 +648,88 @@ function Placement() {
           </div>
         </div>
       </section>
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          {/* Section Heading */}
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
+            Empowering Future-Ready Professionals
+          </h2>
+          <p className="text-md text-gray-700 max-w-4xl mx-auto mb-14 leading-relaxed">
+            At ICEM, we nurture talent through structured programs that prepare
+            students for the corporate world and long-term leadership success.
+          </p>
+
+          {/* Two Program Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* 1️⃣ Industry Readiness Programme */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-8 text-left rounded-lg">
+              <h3 className="text-xl font-bold text-secondary mb-4">
+                Industry Readiness Programme (IRP)
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                This programme is designed to seamlessly bridge the gap between
+                campus and corporate, equipping you with the precise technical
+                and professional skills required to contribute from day one.
+              </p>
+
+              <ul className="text-gray-700 text-sm space-y-2 list-disc pl-5">
+                <li>
+                  <strong>Domain-Specific Certifications:</strong> Earn
+                  credentials in high-demand technologies like AWS, Python, and
+                  AutoCAD.
+                </li>
+                <li>
+                  <strong>Live Projects & Case Studies:</strong> Solve
+                  real-world business challenges from our industry partners.
+                </li>
+                <li>
+                  <strong>Corporate Communication & Etiquette:</strong> Master
+                  professional communication, presentations, and workplace
+                  conduct.
+                </li>
+                <li>
+                  <strong>Product & Project Management Tools:</strong> Gain
+                  hands-on experience with Jira and Trello to manage modern
+                  workflows.
+                </li>
+              </ul>
+            </div>
+
+            {/* 2️⃣ Career & Leadership Development Programme */}
+            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-8 text-left rounded-lg">
+              <h3 className="text-xl font-bold text-secondary mb-4">
+                Career & Leadership Development Programme (CLDP)
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                Go beyond your first job and build a legacy. This programme
+                develops the strategic mindset, leadership qualities, and career
+                management skills for long-term success.
+              </p>
+
+              <ul className="text-gray-700 text-sm space-y-2 list-disc pl-5">
+                <li>
+                  <strong>Personal Branding & LinkedIn Mastery:</strong> Craft a
+                  powerful professional identity that stands out to recruiters.
+                </li>
+                <li>
+                  <strong>Advanced Interview & Negotiation Training:</strong>{" "}
+                  Master all interview rounds and the art of salary negotiation.
+                </li>
+                <li>
+                  <strong>Leadership & Team Management:</strong> Develop core
+                  skills in decision-making, conflict resolution, and leading
+                  teams.
+                </li>
+                <li>
+                  <strong>Lifelong Career Strategy:</strong> Access alumni
+                  networks and mentorship for continuous growth and opportunity.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Placement Information Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
