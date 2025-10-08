@@ -59,13 +59,13 @@ export default function Computer() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={toggleModal}
-                className="bg-secondary hover:bg-primary/90 text-white px-6 py-2 rounded-md transition-colors"
+                className="bg-secondary hover:bg-white hover:text-black text-white px-6 py-2 rounded-md transition-colors"
               >
                 Apply Now
               </button>
               <button
                 onClick={handleBrochureDownload}
-                className="border border-white hover:bg-white hover:text-secondary px-6 py-2 rounded-md transition-colors"
+                className="border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md transition-colors"
               >
                 Download Brochure
               </button>
@@ -158,9 +158,7 @@ export default function Computer() {
 
           {/* RIGHT FORM SECTION */}
           <div className="flex-1 bg-gray-50 p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto">
-            <h3 className="text-2xl font-bold bg-secondary text-white text-center py-3 rounded-md mb-6">
-              Apply Now
-            </h3>
+            
 
             <form className="space-y-4">
               {/* Name */}
@@ -418,13 +416,13 @@ export default function Computer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleBrochureDownload}
-              className="bg-secondary hover:bg-primary/90 text-white px-8 py-3 rounded-md font-semibold transition-colors"
+              className="bg-secondary hover:bg-white hover:text-black text-white px-8 py-3 rounded-md font-semibold transition-colors"
             >
               Download Brochure
             </button>
             <button
               onClick={toggleModal}
-              className="bg-white hover:bg-gray-100 text-secondary px-8 py-3 rounded-md font-semibold transition-colors"
+              className="bg-white hover:bg-white hover:text-black text-secondary px-8 py-3 rounded-md font-semibold transition-colors"
             >
               Apply Now
             </button>

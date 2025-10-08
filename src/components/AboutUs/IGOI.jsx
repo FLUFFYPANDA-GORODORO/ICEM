@@ -96,10 +96,10 @@ function IGOI() {
         </div>
 
         {/* Right Sidebar */}
-        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
-              <li key={index} className="pb-2 border-b border-white/30 hover:text-primary cursor-pointer transition-colors">
+              <li key={index} className="pb-2 border-b border-white/30 hover:text-black cursor-pointer transition-colors">
                 {link}
               </li>
             ))}
@@ -141,7 +141,7 @@ function IGOI() {
               <p className="text-xs text-white/70">
                 By providing your contact details, you agree to receive updates from Indira College through WhatsApp.
               </p>
-              <button type="submit" className="w-full bg-primary text-white font-semibold py-2 rounded hover:bg-primary/90 transition">
+              <button type="submit" className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-primary/90 transition">
                 Apply Now
               </button>
             </form>

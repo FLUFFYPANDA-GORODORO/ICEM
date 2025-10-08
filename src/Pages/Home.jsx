@@ -591,7 +591,7 @@ const Home = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-secondary rounded-xl text-center text-white py-14 px-6">
+          <div className="bg-primary rounded-xl text-center text-white py-14 px-6">
             <h2 className="text-3xl font-bold mb-4">
               Shape Your Future with Us
             </h2>

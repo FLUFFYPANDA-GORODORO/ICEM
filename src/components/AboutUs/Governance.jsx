@@ -171,7 +171,7 @@ function Governance() {
         </div>
 
         {/* ===== RIGHT SIDEBAR ===== */}
-        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col gap-8">
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col gap-8">
           {/* Navigation Links */}
           <div>
             <h3 className="text-lg font-semibold border-b border-white/30 pb-2 mb-4">
@@ -182,7 +182,7 @@ function Governance() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="hover:text-primary transition-colors duration-200"
+                    className="hover:text-black transition-colors duration-200"
                   >
                     {link}
                   </a>
