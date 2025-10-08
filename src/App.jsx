@@ -46,6 +46,7 @@ import IcemStudentCouncil from "./components/StudentCorner/IcemStudentCouncil";
 import Academics from "./components/StudentCorner/Academics";
 import IcemAwards from "./components/StudentCorner/IcemAwards";
 import AwardDetails from "./components/StudentCorner/AwardDetails";
+import Accreditation from "./components/AboutUs/Accreditation";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
           <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
           <Route path="/about/IGOI" element={<IGOI />} />
           <Route path="/about/cfcm" element={<CFCM />} />
+          <Route path="/about/accreditation" element={<Accreditation/>}/>
 
           {/* ==== STUDENT ROUTES ==== */}
           <Route
