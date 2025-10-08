@@ -65,7 +65,7 @@ function IGOI() {
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Shree Chanakya Education Society’s “Indira Group of Institutes”,
+            Shree Chanakya Education Society's "Indira Group of Institutes",
             Pune was established in 1994 with a vision to provide sustainable
             impetus to the corporate and entrepreneurial abilities in the youth.
             Under the leadership of Dr. Tarita Shankar, IGI has grown into a
@@ -96,36 +96,52 @@ function IGOI() {
         </div>
 
         {/* Right Sidebar */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
-              <li key={index} className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors">
+              <li key={index} className="pb-2 border-b border-white/30 hover:text-primary cursor-pointer transition-colors">
                 {link}
               </li>
             ))}
           </ul>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
+          <div className="bg-secondary/90 p-6 rounded-lg mb-8">
             <h3 className="text-center text-lg font-bold mb-4">GET IN TOUCH WITH US</h3>
             <form className="space-y-3">
-              <input type="text" placeholder="YOUR NAME*" className="w-full p-2 text-black rounded" />
+              <input 
+                type="text" 
+                placeholder="YOUR NAME*" 
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary" 
+              />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
-                <input type="text" placeholder="PHONE NUMBER*" className="w-full p-2 text-black rounded-r" />
+                <span className="pl-2 text-gray-600">🇮🇳</span>
+                <input 
+                  type="text" 
+                  placeholder="PHONE NUMBER*" 
+                  className="w-full p-2 text-black rounded-r focus:outline-none focus:ring-2 focus:ring-primary" 
+                />
               </div>
-              <input type="email" placeholder="YOUR EMAIL ID" className="w-full p-2 text-black rounded" />
-              <select className="w-full p-2 text-black rounded">
+              <input 
+                type="email" 
+                placeholder="YOUR EMAIL ID" 
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary" 
+              />
+              <select className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary">
                 <option>Select Program</option>
                 <option>Engineering</option>
                 <option>MBA</option>
                 <option>MCA</option>
               </select>
-              <input type="text" placeholder="STATE" className="w-full p-2 text-black rounded" />
-              <p className="text-xs text-gray-400">
+              <input 
+                type="text" 
+                placeholder="STATE" 
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary" 
+              />
+              <p className="text-xs text-white/70">
                 By providing your contact details, you agree to receive updates from Indira College through WhatsApp.
               </p>
-              <button type="submit" className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition">
+              <button type="submit" className="w-full bg-primary text-white font-semibold py-2 rounded hover:bg-primary/90 transition">
                 Apply Now
               </button>
             </form>
@@ -133,11 +149,11 @@ function IGOI() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">QUICK LINKS</h4>
+            <h4 className="text-center text-primary font-bold mb-4 border-t border-white/30 pt-4">QUICK LINKS</h4>
             <ul className="space-y-2">
               {quickLinks.map((item, index) => (
                 <li key={index} className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors">
-                  <span className="text-red-500">•</span> {item}
+                  <span className="text-primary">•</span> {item}
                 </li>
               ))}
             </ul>
@@ -147,7 +163,7 @@ function IGOI() {
 
       {/* Chairperson's Message */}
       <div className="max-w-7xl mx-auto px-6 pb-10">
-        <h3 className="text-2xl font-bold mb-6">Chairperson’s Message</h3>
+        <h3 className="text-2xl font-bold text-secondary mb-6">Chairperson's Message</h3>
         <div className="flex flex-col md:flex-row gap-8 bg-gray-50 rounded-xl p-6 shadow-md">
           <div className="md:w-1/3">
             {/* Placeholder for Chairperson Image */}
@@ -167,7 +183,7 @@ function IGOI() {
                 Email:{" "}
                 <a
                   href="mailto:taritashankar@indiraedu.com"
-                  className="text-blue-600 hover:underline"
+                  className="text-primary hover:underline"
                 >
                   taritashankar@indiraedu.com
                 </a>
@@ -196,9 +212,9 @@ function IGOI() {
         </div>
       </div>
 
-      {/* Principal’s Message */}
+      {/* Principal's Message */}
       <div className="max-w-7xl mx-auto px-6 pb-20">
-        <h3 className="text-2xl font-bold mb-6">Principal’s Message</h3>
+        <h3 className="text-2xl font-bold text-secondary mb-6">Principal's Message</h3>
         <div className="flex flex-col md:flex-row gap-8 bg-gray-100 rounded-xl p-6 shadow-md">
           <div className="md:w-1/3">
             {/* Placeholder for Principal Image */}
@@ -236,7 +252,7 @@ function IGOI() {
 
       {/* Institutes Section */}
       <div className="max-w-7xl mx-auto px-6 pb-20">
-        <h3 className="text-2xl font-bold mb-8 text-gray-900">
+        <h3 className="text-2xl font-bold text-secondary mb-8">
           Institutes under Indira Group (IGI)
         </h3>
 
@@ -244,7 +260,7 @@ function IGOI() {
           {institutes.map((inst, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               {/* Placeholder instead of Image */}
               <div className="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 rounded-t-xl">
@@ -255,7 +271,7 @@ function IGOI() {
                   {inst.name}
                 </h4>
                 <p className="text-sm text-gray-500 mt-1">{inst.url}</p>
-                <button className="mt-3 px-4 py-2 bg-blue-900 text-white text-sm font-medium rounded hover:bg-blue-800 transition">
+                <button className="mt-3 px-4 py-2 bg-secondary text-white text-sm font-medium rounded hover:bg-secondary/90 transition">
                   Read More
                 </button>
               </div>

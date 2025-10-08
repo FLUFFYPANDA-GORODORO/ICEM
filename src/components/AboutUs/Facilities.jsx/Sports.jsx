@@ -353,12 +353,12 @@ function Sports() {
 
   const currentFacility = facilities[activeSection];
 
-  return (
+ return (
     <div className="w-full bg-white text-gray-800">
       <div className="max-w-7xl mx-auto py-16 px-6 space-y-12">
         {/* Banner Image */}
         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary to-blue-600 opacity-90"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-90"></div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-4">

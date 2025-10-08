@@ -1,4 +1,3 @@
-// HeroSection.jsx
 import React from "react";
 import Indira from "../assets/ICEM.jpg";
 
@@ -6,7 +5,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Image Section */}
-      <div className="w-full  relative">
+      <div className="w-full relative">
         <img
           src={Indira}
           alt="University Campus"
@@ -36,18 +35,18 @@ const Home = () => {
 
         {/* Ranking Images */}
         <div className="grid grid-cols-2 gap-6">
-          <div className="bg-pink-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
+          <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
             <span className="text-gray-400 text-sm">[ NAAC Image Here ]</span>
           </div>
           <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
             <span className="text-gray-400 text-sm">[ NIRF Image Here ]</span>
           </div>
-          <div className="bg-yellow-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
+          <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
             <span className="text-gray-400 text-sm">
               [ QS Ranking Image Here ]
             </span>
           </div>
-          <div className="bg-purple-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
+          <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28">
             <span className="text-gray-400 text-sm">
               [ World Ranking Image Here ]
             </span>
@@ -95,131 +94,131 @@ const Home = () => {
       </div>
 
       {/* Academic Year 2026 + Apply Form Section */}
-      {/* Academic Year 2026 + Apply Form Section */}
-<div className="bg-[#fef9f2] py-16">
-  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
-    {/* Left Section - Program List */}
-    <div className="lg:col-span-2 bg-[#fff4e1] rounded-lg p-8 shadow-sm">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        ACADEMIC <span className="text-secondary">YEAR 2026</span>
-      </h2>
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
+          {/* Left Section - Program List */}
+          <div className="lg:col-span-2 bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              ACADEMIC <span className="text-secondary">YEAR 2026</span>
+            </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-gray-800">
-        {[
-          "Civil Engineering",
-          "Computer Engineering",
-          "Mechanical Engineering",
-          "Artificial Intelligence and Data Science",
-          "Electronics and Telecommunication",
-          "First Year Engineering",
-          "Information Technology",
-          "Integrated MBA (BBA + MBA)",
-          "Integrated MBA (BCA + MCA)",
-          "MBA",
-          "MCA",
-          "M-Tech in Mechanical Engineering",
-          "M-Tech in Computer Science",
-        ].map((item, index) => (
-          <p key={index} className="flex items-start text-sm">
-            <span className="text-secondary mr-2 font-bold">›</span>
-            <span className="hover:underline cursor-pointer">{item}</span>
-          </p>
-        ))}
-      </div>
-    </div>
-
-    {/* Right Section - Apply Now Form */}
-    <div className="bg-white rounded-lg p-8 shadow-md border border-gray-100">
-      <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-        Apply Now
-      </h3>
-
-      <form className="space-y-4">
-        <input
-          type="text"
-          placeholder="Enter Name *"
-          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-        />
-
-        <input
-          type="email"
-          placeholder="Enter Email Address *"
-          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-        />
-
-        <div className="flex gap-2">
-          <select className="w-24 border border-gray-300 rounded-md px-2 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
-            <option>+91</option>
-          </select>
-          <input
-            type="tel"
-            placeholder="Enter Mobile Number *"
-            className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-          />
-        </div>
-
-        <div className="flex gap-2">
-          <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
-            <option>Select State *</option>
-          </select>
-          <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
-            <option>Select City *</option>
-          </select>
-        </div>
-
-        {/* Discipline first, Course below */}
-        <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
-          <option>Select Discipline Applying For *</option>
-        </select>
-
-        <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
-          <option>Select Course *</option>
-        </select>
-
-        <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
-          <option>Select Program *</option>
-        </select>
-
-        <input
-          type="text"
-          placeholder="Enter CET Score"
-          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-        />
-
-        {/* Captcha Section */}
-        <div className="flex gap-3 items-center">
-          <div className="bg-gray-100 border border-gray-300 rounded-md w-1/2 flex items-center justify-center py-2">
-            <span className="text-lg font-bold text-gray-700 select-none">
-              8fcb09
-            </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-gray-800">
+              {[
+                "Civil Engineering",
+                "Computer Engineering",
+                "Mechanical Engineering",
+                "Artificial Intelligence and Data Science",
+                "Electronics and Telecommunication",
+                "First Year Engineering",
+                "Information Technology",
+                "Integrated MBA (BBA + MBA)",
+                "Integrated MBA (BCA + MCA)",
+                "MBA",
+                "MCA",
+                "M-Tech in Mechanical Engineering",
+                "M-Tech in Computer Science",
+              ].map((item, index) => (
+                <p key={index} className="flex items-start text-sm">
+                  <span className="text-secondary mr-2 font-bold">›</span>
+                  <span className="hover:underline cursor-pointer hover:text-primary transition-colors">
+                    {item}
+                  </span>
+                </p>
+              ))}
+            </div>
           </div>
-          <input
-            type="text"
-            placeholder="Enter Captcha"
-            className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-          />
+
+          {/* Right Section - Apply Now Form */}
+          <div className="bg-white rounded-lg p-8 shadow-md border border-gray-200">
+            <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
+              Apply Now
+            </h3>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Enter Name *"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              <input
+                type="email"
+                placeholder="Enter Email Address *"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              <div className="flex gap-2">
+                <select className="w-24 border border-gray-300 rounded-md px-2 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>+91</option>
+                </select>
+                <input
+                  type="tel"
+                  placeholder="Enter Mobile Number *"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              <div className="flex gap-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select State *</option>
+                </select>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select City *</option>
+                </select>
+              </div>
+
+              {/* Discipline first, Course below */}
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Discipline Applying For *</option>
+              </select>
+
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Course *</option>
+              </select>
+
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Program *</option>
+              </select>
+
+              <input
+                type="text"
+                placeholder="Enter CET Score"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              {/* Captcha Section */}
+              <div className="flex gap-3 items-center">
+                <div className="bg-gray-100 border border-gray-300 rounded-md w-1/2 flex items-center justify-center py-2">
+                  <span className="text-lg font-bold text-gray-700 select-none">
+                    8fcb09
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter Captcha"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              {/* Agreement */}
+              <div className="flex items-center gap-2 mt-2">
+                <input type="checkbox" id="agree" />
+                <label htmlFor="agree" className="text-sm text-gray-700">
+                  I agree to receive information regarding my submitted enquiry*
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md transition"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
         </div>
-
-        {/* Agreement */}
-        <div className="flex items-center gap-2 mt-2">
-          <input type="checkbox" id="agree" />
-          <label htmlFor="agree" className="text-sm text-gray-700">
-            I agree to receive information regarding my submitted enquiry*
-          </label>
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full bg-[#E85C0D] hover:bg-[#d14f08] text-white font-semibold py-2 rounded-md transition"
-        >
-          SUBMIT
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
+      </div>
 
       {/* Recruiters Section */}
       <div className="bg-gray-50 py-16">
@@ -242,6 +241,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {/* Energy & Innovation Section */}
       <div className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -256,56 +256,56 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
             {/* Card 1 */}
             <div>
-              <div className="w-full h-60 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
+              <div className="w-full h-60 bg-white/20 rounded-lg mb-4 flex items-center justify-center text-white/70 text-sm">
                 [ Image 1 Here ]
               </div>
               <h3 className="text-lg font-semibold mb-2 underline underline-offset-4">
                 Get Industry-ready
               </h3>
-              <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+              <p className="text-white/80 text-sm mb-4 leading-relaxed">
                 We ensure every graduate is industry-ready through cutting-edge
                 curriculum, innovation labs, and strong industry collaborations
                 that keep students aligned with the latest technologies and
                 trends.
               </p>
-              <p className="text-secondary font-medium hover:underline cursor-pointer flex items-center gap-2">
+              <p className="text-white font-medium hover:underline cursor-pointer flex items-center gap-2">
                 Know more <span>➜</span>
               </p>
             </div>
 
             {/* Card 2 */}
             <div>
-              <div className="w-full h-60 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
+              <div className="w-full h-60 bg-white/20 rounded-lg mb-4 flex items-center justify-center text-white/70 text-sm">
                 [ Image 2 Here ]
               </div>
               <h3 className="text-lg font-semibold mb-2 underline underline-offset-4">
                 Research from Day One
               </h3>
-              <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+              <p className="text-white/80 text-sm mb-4 leading-relaxed">
                 At Indira College, research is a way of life, supported by
                 state-of-the-art facilities, experienced faculty, and
                 collaborations that empower students to solve real-world
                 challenges.
               </p>
-              <p className="text-secondary font-medium hover:underline cursor-pointer flex items-center gap-2">
+              <p className="text-white font-medium hover:underline cursor-pointer flex items-center gap-2">
                 Know more <span>➜</span>
               </p>
             </div>
 
             {/* Card 3 */}
             <div>
-              <div className="w-full h-60 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
+              <div className="w-full h-60 bg-white/20 rounded-lg mb-4 flex items-center justify-center text-white/70 text-sm">
                 [ Image 3 Here ]
               </div>
               <h3 className="text-lg font-semibold mb-2 underline underline-offset-4">
                 Start-up
               </h3>
-              <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                Indira College’s Innovation Incubator equips students with
+              <p className="text-white/80 text-sm mb-4 leading-relaxed">
+                Indira College's Innovation Incubator equips students with
                 design, prototyping, marketing, and funding resources, turning
                 start-up ideas into impactful ventures that shape the future.
               </p>
-              <p className="text-secondary font-medium hover:underline cursor-pointer flex items-center gap-2">
+              <p className="text-white font-medium hover:underline cursor-pointer flex items-center gap-2">
                 Know more <span>➜</span>
               </p>
             </div>
@@ -362,7 +362,7 @@ const Home = () => {
                   [ Thumbnail 1 ]
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer">
+                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer hover:text-primary transition-colors">
                     Bharat Unbound | The Indira College Journey
                   </h3>
                   <p className="text-sm text-gray-600">
@@ -377,7 +377,7 @@ const Home = () => {
                   [ Thumbnail 2 ]
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer">
+                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer hover:text-primary transition-colors">
                     Experience Excellence at Indira College | World-Class
                     Education
                   </h3>
@@ -390,7 +390,7 @@ const Home = () => {
                   [ Thumbnail 3 ]
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer">
+                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer hover:text-primary transition-colors">
                     A Journey of Learning, Research & Inspiring Excellence
                   </h3>
                 </div>
@@ -402,9 +402,8 @@ const Home = () => {
                   [ Thumbnail 4 ]
                 </div>
                 <div>
-                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer">
-                    A Journey of Academic & Professional Transformation |
-                    Virtual Tour 2025
+                  <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer hover:text-primary transition-colors">
+                    A Journey of Academic & Professional Transformation | Virtual Tour 2025
                   </h3>
                 </div>
               </div>
@@ -428,7 +427,7 @@ const Home = () => {
 
           {/* Description */}
           <p className="text-gray-700 text-lg max-w-6xl leading-relaxed mb-10">
-            Indira College of Engineering & Management’s faculty combines
+            Indira College of Engineering & Management's faculty combines
             academic rigor with real-world expertise, guiding students to think
             critically and creatively. Alongside our accomplished professors, we
             host distinguished guest faculty, including industry leaders and
@@ -453,8 +452,6 @@ const Home = () => {
         </div>
       </div>
 
-      
-
       {/* News & Announcements Section */}
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -463,7 +460,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold text-gray-900">
               News & Announcements
             </h2>
-            <button className="text-sm text-gray-700 hover:text-secondary font-medium flex items-center gap-1">
+            <button className="text-sm text-gray-700 hover:text-primary font-medium flex items-center gap-1 transition-colors">
               See All News <span className="text-lg">→</span>
             </button>
           </div>
@@ -477,7 +474,7 @@ const Home = () => {
                   [ Main News Image Here ]
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-secondary mb-2 hover:underline cursor-pointer">
+                  <h3 className="text-xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
                     Indira College and Industry Partner Launch Innovation Centre
                     for Research and Emerging Technologies
                   </h3>
@@ -505,12 +502,12 @@ const Home = () => {
                 },
                 {
                   title:
-                    "Director Leads Dialogue on Transforming India’s Education Ecosystem",
+                    "Director Leads Dialogue on Transforming India's Education Ecosystem",
                   date: "September 26, 2025",
                 },
                 {
                   title:
-                    "Indira Faculty Chairs Session on Strengthening India’s Global Education Network",
+                    "Indira Faculty Chairs Session on Strengthening India's Global Education Network",
                   date: "September 26, 2025",
                 },
               ].map((news, i) => (
@@ -520,11 +517,11 @@ const Home = () => {
                   </div>
                   <div>
                     {news.tag && (
-                      <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium">
+                      <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium">
                         {news.tag}
                       </span>
                     )}
-                    <h4 className="text-base font-semibold text-gray-900 hover:underline cursor-pointer">
+                    <h4 className="text-base font-semibold text-gray-900 hover:underline cursor-pointer hover:text-primary transition-colors">
                       {news.title}
                     </h4>
                     <p className="text-sm text-gray-500 mt-1">
@@ -546,7 +543,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold text-gray-900">
               Academic Conferences & Events
             </h2>
-            <button className="text-sm text-gray-700 hover:text-secondary font-medium flex items-center gap-1">
+            <button className="text-sm text-gray-700 hover:text-primary font-medium flex items-center gap-1 transition-colors">
               See All <span className="text-lg">→</span>
             </button>
           </div>
@@ -582,7 +579,7 @@ const Home = () => {
                   [ Event Image ]
                 </div>
                 <div className="p-4">
-                  <p className="text-secondary font-semibold text-sm mb-2">
+                  <p className="text-primary font-semibold text-sm mb-2">
                     {event.date}
                   </p>
                   <h4 className="text-gray-900 font-medium text-base">
@@ -594,11 +591,11 @@ const Home = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-black rounded-xl text-center text-white py-14 px-6">
+          <div className="bg-secondary rounded-xl text-center text-white py-14 px-6">
             <h2 className="text-3xl font-bold mb-4">
               Shape Your Future with Us
             </h2>
-            <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8 leading-relaxed">
+            <p className="text-white/80 max-w-3xl mx-auto text-lg mb-8 leading-relaxed">
               Discover limitless opportunities at Indira College, where
               innovation, learning, and industry connect. Take the first step
               towards your dreams. Explore our programs and get in touch to
@@ -644,14 +641,14 @@ const Home = () => {
 
                   {/* Content */}
                   <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-secondary cursor-pointer">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-primary cursor-pointer transition-colors">
                       Blog Title {index + 1}
                     </h3>
                     <p className="text-gray-600 text-sm mb-3">
                       A short summary of the blog post highlighting key
                       takeaways or insights from our students or faculty.
                     </p>
-                    <p className="text-sm text-secondary font-medium cursor-pointer hover:underline">
+                    <p className="text-sm text-primary font-medium cursor-pointer hover:underline">
                       Read More →
                     </p>
                   </div>

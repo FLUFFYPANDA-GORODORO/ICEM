@@ -96,7 +96,7 @@ function ChanakyaEdu() {
             become more broad-based and more vocational in nature if India was
             to stand up to global competition. Thus, in 1994, began a saga of
             growth and quality education — a story that continues with 14 full
-            ﬂedged Institutes making a strong presence in Pune’s educational
+            ﬂedged Institutes making a strong presence in Pune's educational
             landscape.
           </p>
 
@@ -113,18 +113,18 @@ function ChanakyaEdu() {
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-10">
-            The objective of the institute is to provide ‘Management education
-            in a corporate environment’, which has been possible due to the
+            The objective of the institute is to provide 'Management education
+            in a corporate environment', which has been possible due to the
             sincere and dedicated efforts of the SCES members, who bring
             invaluable experience from varied sectors.
           </p>
 
           {/* Board of Trustees Section */}
           <div className="mt-12">
-            <h3 className="text-2xl font-bold mb-2">Board of Trustees</h3>
+            <h3 className="text-2xl font-bold text-secondary mb-2">Board of Trustees</h3>
             <p className="text-gray-600 mb-8">
-              Managing Committee Members/Trustees of ‘Shree Chanakya Education
-              Society’
+              Managing Committee Members/Trustees of 'Shree Chanakya Education
+              Society'
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -150,13 +150,13 @@ function ChanakyaEdu() {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           {/* About Links */}
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+                className="pb-2 border-b border-white/30 hover:text-primary cursor-pointer transition-colors"
               >
                 {link}
               </li>
@@ -164,7 +164,7 @@ function ChanakyaEdu() {
           </ul>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
+          <div className="bg-secondary/90 p-6 rounded-lg mb-8">
             <h3 className="text-center text-lg font-bold mb-4">
               GET IN TOUCH WITH US
             </h3>
@@ -172,22 +172,22 @@ function ChanakyaEdu() {
               <input
                 type="text"
                 placeholder="YOUR NAME*"
-                className="w-full p-2 text-black rounded"
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
+                <span className="pl-2 text-gray-600">🇮🇳</span>
                 <input
                   type="text"
                   placeholder="PHONE NUMBER*"
-                  className="w-full p-2 text-black rounded-r"
+                  className="w-full p-2 text-black rounded-r focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <input
                 type="email"
                 placeholder="YOUR EMAIL ID"
-                className="w-full p-2 text-black rounded"
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <select className="w-full p-2 text-black rounded">
+              <select className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary">
                 <option>Select Program</option>
                 <option>Engineering</option>
                 <option>MBA</option>
@@ -196,15 +196,15 @@ function ChanakyaEdu() {
               <input
                 type="text"
                 placeholder="STATE"
-                className="w-full p-2 text-black rounded"
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-white/70">
                 By providing your contact details, you agree to receive updates
                 from Indira College through WhatsApp.
               </p>
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition"
+                className="w-full bg-primary text-white font-semibold py-2 rounded hover:bg-primary/90 transition"
               >
                 Apply Now
               </button>
@@ -213,7 +213,7 @@ function ChanakyaEdu() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
+            <h4 className="text-center text-primary font-bold mb-4 border-t border-white/30 pt-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2">
@@ -222,7 +222,7 @@ function ChanakyaEdu() {
                   key={index}
                   className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
                 >
-                  <span className="text-red-500">•</span> {item}
+                  <span className="text-primary">•</span> {item}
                 </li>
               ))}
             </ul>

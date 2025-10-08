@@ -145,13 +145,13 @@ function Overview() {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           {/* About Links */}
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+                className="pb-2 border-b border-white/30 hover:text-primary cursor-pointer transition-colors"
               >
                 {link}
               </li>
@@ -159,7 +159,7 @@ function Overview() {
           </ul>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
+          <div className="bg-secondary/90 p-6 rounded-lg mb-8">
             <h3 className="text-center text-lg font-bold mb-4">
               GET IN TOUCH WITH US
             </h3>
@@ -167,22 +167,22 @@ function Overview() {
               <input
                 type="text"
                 placeholder="YOUR NAME*"
-                className="w-full p-2 text-black rounded"
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
+                <span className="pl-2 text-gray-600">🇮🇳</span>
                 <input
                   type="text"
                   placeholder="PHONE NUMBER*"
-                  className="w-full p-2 text-black rounded-r"
+                  className="w-full p-2 text-black rounded-r focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <input
                 type="email"
                 placeholder="YOUR EMAIL ID"
-                className="w-full p-2 text-black rounded"
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <select className="w-full p-2 text-black rounded">
+              <select className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary">
                 <option>Select Program</option>
                 <option>Engineering</option>
                 <option>MBA</option>
@@ -191,15 +191,15 @@ function Overview() {
               <input
                 type="text"
                 placeholder="STATE"
-                className="w-full p-2 text-black rounded"
+                className="w-full p-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-white/70">
                 By providing your contact details, you agree to receive updates
                 from Indira College through WhatsApp.
               </p>
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition"
+                className="w-full bg-primary text-white font-semibold py-2 rounded hover:bg-primary/90 transition"
               >
                 Apply Now
               </button>
@@ -208,7 +208,7 @@ function Overview() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
+            <h4 className="text-center text-primary font-bold mb-4 border-t border-white/30 pt-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2">
@@ -217,7 +217,7 @@ function Overview() {
                   key={index}
                   className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
                 >
-                  <span className="text-red-500">•</span> {item}
+                  <span className="text-primary">•</span> {item}
                 </li>
               ))}
             </ul>
@@ -227,15 +227,15 @@ function Overview() {
 
       {/* Leader's Desk */}
       <div className="max-w-7xl mx-auto px-6 pb-16">
-        <h3 className="text-2xl font-bold mb-8">Leader’s Desk</h3>
+        <h3 className="text-2xl font-bold text-secondary mb-8">Leader's Desk</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {leaders.map((leader, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4"
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4 border border-gray-100"
             >
               {/* Empty Placeholder */}
-              <div className="w-full h-64 bg-gray-200 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
+              <div className="w-full h-64 bg-gray-100 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
                 [ Image Placeholder ]
               </div>
               <div className="mt-4">
@@ -249,15 +249,15 @@ function Overview() {
 
       {/* HOD Section */}
       <div className="max-w-7xl mx-auto px-6 pb-20">
-        <h3 className="text-2xl font-bold mb-8">Head of Departments (HoDs)</h3>
+        <h3 className="text-2xl font-bold text-secondary mb-8">Head of Departments (HoDs)</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {hods.map((hod, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4"
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4 border border-gray-100"
             >
               {/* Empty Placeholder */}
-              <div className="w-full h-60 bg-gray-200 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
+              <div className="w-full h-60 bg-gray-100 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
                 [ Image Placeholder ]
               </div>
               <div className="mt-4">

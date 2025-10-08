@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import FAQSection from "./FAQSection";
-
 import CompBrochure from "../../assets/BEComp.pdf"; // brochure file
 
 export default function Computer() {
@@ -37,19 +36,19 @@ export default function Computer() {
   return (
     <div className="w-full text-white">
       {/* ===== TOP DARK SECTION ===== */}
-      <div className="w-full bg-[#111] py-12">
+      <div className="w-full bg-primary py-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
           {/* LEFT TEXT SECTION */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold leading-snug">
               4-Year B.E. CSE Program <br />
               with specialisation in <br />
-              <span className="text-red-500">
+              <span className="text-secondary">
                 Artificial Intelligence & Future Technologies
               </span>
             </h2>
 
-            <p className="mt-4 text-gray-300 leading-relaxed">
+            <p className="mt-4 text-white/80 leading-relaxed">
               This innovative program blends foundational computer science
               knowledge with cutting-edge skills in Artificial Intelligence,
               Blockchain, Cloud Computing, and Cyber Security, helping prepare
@@ -60,13 +59,13 @@ export default function Computer() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={toggleModal}
-                className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md"
+                className="bg-secondary hover:bg-primary/90 text-white px-6 py-2 rounded-md transition-colors"
               >
                 Apply Now
               </button>
               <button
                 onClick={handleBrochureDownload}
-                className="border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md"
+                className="border border-white hover:bg-white hover:text-secondary px-6 py-2 rounded-md transition-colors"
               >
                 Download Brochure
               </button>
@@ -75,8 +74,8 @@ export default function Computer() {
 
           {/* RIGHT IMAGE SECTION (Placeholder) */}
           <div className="flex-1">
-            <div className="w-full h-[300px] bg-gray-700 rounded-lg flex items-center justify-center">
-              <p className="text-gray-400">[ Image Placeholder ]</p>
+            <div className="w-full h-[300px] bg-secondary/80 rounded-lg flex items-center justify-center">
+              <p className="text-white/60">[ Image Placeholder ]</p>
             </div>
           </div>
         </div>
@@ -132,7 +131,7 @@ export default function Computer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 px-6 items-start">
           {/* LEFT TEXT SECTION */}
           <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-3xl font-bold mb-4 leading-snug">
+            <h2 className="text-3xl font-bold text-secondary mb-4 leading-snug">
               B.E. CSE with Artificial Intelligence <br /> & Future Technologies
             </h2>
 
@@ -144,7 +143,7 @@ export default function Computer() {
               technologies.
             </p>
 
-            <h3 className="font-semibold text-xl mb-3 text-gray-800">
+            <h3 className="font-semibold text-xl text-secondary mb-3">
               Program Structure
             </h3>
 
@@ -159,7 +158,7 @@ export default function Computer() {
 
           {/* RIGHT FORM SECTION */}
           <div className="flex-1 bg-gray-50 p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto">
-            <h3 className="text-2xl font-bold bg-[#002D72] text-white text-center py-3 rounded-md mb-6">
+            <h3 className="text-2xl font-bold bg-secondary text-white text-center py-3 rounded-md mb-6">
               Apply Now
             </h3>
 
@@ -168,14 +167,14 @@ export default function Computer() {
               <input
                 type="text"
                 placeholder="Enter Name *"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
 
               {/* Email */}
               <input
                 type="email"
                 placeholder="Enter Email Address *"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
 
               {/* Mobile Number */}
@@ -186,20 +185,20 @@ export default function Computer() {
                 <input
                   type="tel"
                   placeholder="Enter Mobile Number *"
-                  className="flex-1 px-4 py-2 outline-none"
+                  className="flex-1 px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
               {/* State & City */}
               <div className="flex gap-3">
-                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500">
+                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
                   <option>Select State *</option>
                   <option>Maharashtra</option>
                   <option>Gujarat</option>
                   <option>Karnataka</option>
                 </select>
 
-                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500">
+                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
                   <option>Select City *</option>
                   <option>Pune</option>
                   <option>Mumbai</option>
@@ -209,14 +208,14 @@ export default function Computer() {
 
               {/* Discipline & Course */}
               <div className="flex gap-3">
-                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500">
+                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
                   <option>Select Discipline Applying For *</option>
                   <option>Engineering</option>
                   <option>Management</option>
                   <option>Computer Applications</option>
                 </select>
 
-                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500">
+                <select className="flex-1 border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
                   <option>Select Course *</option>
                   <option>B.E.</option>
                   <option>MBA</option>
@@ -225,7 +224,7 @@ export default function Computer() {
               </div>
 
               {/* Program */}
-              <select className="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500">
+              <select className="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
                 <option>Select Program *</option>
                 <option>Computer Engineering</option>
                 <option>Mechanical Engineering</option>
@@ -237,7 +236,7 @@ export default function Computer() {
               <input
                 type="text"
                 placeholder="Enter CET Score"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
 
               {/* Captcha Section */}
@@ -250,7 +249,7 @@ export default function Computer() {
                 <input
                   type="text"
                   placeholder="Enter Captcha"
-                  className="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -265,7 +264,7 @@ export default function Computer() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#E85C0D] hover:bg-[#d14f08] text-white font-semibold py-2 rounded-md mt-3"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md mt-3 transition-colors"
               >
                 SUBMIT
               </button>
@@ -277,7 +276,7 @@ export default function Computer() {
       {/* ===== PROGRAM HIGHLIGHTS SECTION ===== */}
       <div className="w-full bg-[#f7f7f7] py-16 text-black">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Program Highlights</h2>
+          <h2 className="text-3xl font-bold text-secondary mb-4">Program Highlights</h2>
           <p className="text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
             Our B.E. in Computer Science with Artificial Intelligence & Future
             Technologies offers a unique blend of cutting-edge knowledge and
@@ -295,7 +294,7 @@ export default function Computer() {
                 [ Image Placeholder ]
               </div>
               <div className="p-6 text-left">
-                <h3 className="font-semibold text-lg mb-2">
+                <h3 className="font-semibold text-lg text-secondary mb-2">
                   Interdisciplinary Expertise
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -314,7 +313,7 @@ export default function Computer() {
                 [ Image Placeholder ]
               </div>
               <div className="p-6 text-left">
-                <h3 className="font-semibold text-lg mb-2">
+                <h3 className="font-semibold text-lg text-secondary mb-2">
                   Cutting-Edge Laboratories
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -332,7 +331,7 @@ export default function Computer() {
                 [ Image Placeholder ]
               </div>
               <div className="p-6 text-left">
-                <h3 className="font-semibold text-lg mb-2">
+                <h3 className="font-semibold text-lg text-secondary mb-2">
                   Industry-Relevant Skills
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -351,7 +350,7 @@ export default function Computer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
           {/* LEFT TEXT SECTION */}
           <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4">Career Opportunities</h2>
+            <h2 className="text-3xl font-bold text-secondary mb-4">Career Opportunities</h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
               The field of AI and future technologies offers diverse career
               opportunities across various sectors. Professionals can shape
@@ -383,7 +382,7 @@ export default function Computer() {
       {/* ===== CAMPUS RECRUITMENT SECTION ===== */}
       <div className="w-full bg-[#f7f7f7] text-black py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Campus Recruitment</h2>
+          <h2 className="text-3xl font-bold text-secondary mb-4">Campus Recruitment</h2>
           <p className="text-gray-700 max-w-4xl mx-auto mb-10 leading-relaxed">
             The program prepares students to excel in diverse fields, including
             AI research labs, Blockchain start-ups, Cyber Security firms, and
@@ -408,9 +407,9 @@ export default function Computer() {
 
       {/* ===== NEXT STEPS SECTION ===== */}
       <div className="w-full bg-[#f7f7f7] py-16 flex justify-center px-6">
-        <div className="bg-[#1a1a1a] rounded-2xl max-w-5xl w-full text-center text-white py-12 px-6">
+        <div className="bg-primary rounded-2xl max-w-5xl w-full text-center text-white py-12 px-6">
           <h2 className="text-3xl font-semibold mb-4">The Next Steps</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
             The steps you take today shape your future. At Indira College, we
             empower bright minds with strong fundamentals, a global perspective,
             and leadership skills to make a meaningful change in the world.
@@ -419,13 +418,13 @@ export default function Computer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleBrochureDownload}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold"
+              className="bg-secondary hover:bg-primary/90 text-white px-8 py-3 rounded-md font-semibold transition-colors"
             >
               Download Brochure
             </button>
             <button
               onClick={toggleModal}
-              className="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-md font-semibold"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-3 rounded-md font-semibold transition-colors"
             >
               Apply Now
             </button>
@@ -443,11 +442,11 @@ export default function Computer() {
             <button
               onClick={toggleModal}
               aria-label="Close"
-              className="absolute top-3 right-3 text-gray-600 hover:text-red-600 text-2xl"
+              className="absolute top-3 right-3 text-gray-600 hover:text-primary text-2xl"
             >
               ×
             </button>
-            <h2 className="text-2xl font-bold text-center mb-6 text-blue-900">
+            <h2 className="text-2xl font-bold text-center mb-6 text-secondary">
               Apply Now
             </h2>
 
@@ -456,12 +455,12 @@ export default function Computer() {
               <input
                 type="text"
                 placeholder="Enter Name *"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <input
                 type="email"
                 placeholder="Enter Email Address *"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <div className="flex gap-2">
                 <select className="w-24 border border-gray-300 rounded px-2 py-2">
@@ -470,36 +469,36 @@ export default function Computer() {
                 <input
                   type="tel"
                   placeholder="Enter Mobile Number *"
-                  className="flex-1 border border-gray-300 rounded-md px-3 py-2"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
               <div className="flex gap-2">
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Select State *</option>
                 </select>
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Select City *</option>
                 </select>
               </div>
 
               <div className="flex gap-2">
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Select Discipline Applying For *</option>
                 </select>
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Select Course *</option>
                 </select>
               </div>
 
-              <select className="w-full border border-gray-300 rounded-md px-3 py-2">
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
                 <option>Select Program *</option>
               </select>
 
               <input
                 type="text"
                 placeholder="Enter CET Score"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
 
               <div className="flex gap-3 items-center">
@@ -511,7 +510,7 @@ export default function Computer() {
                 <input
                   type="text"
                   placeholder="Enter Captcha"
-                  className="flex-1 border border-gray-300 rounded-md px-3 py-2"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -524,7 +523,7 @@ export default function Computer() {
 
               <button
                 type="submit"
-                className="w-full bg-[#E85C0D] hover:bg-[#d14f08] text-white font-semibold py-2 rounded-md"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md transition-colors"
               >
                 SUBMIT
               </button>

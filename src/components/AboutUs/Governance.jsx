@@ -89,99 +89,92 @@ function Governance() {
             resources.
           </p>
 
-          {/* Governance Committee Placeholders */}
-          
+          {/* ===== Governance Documents Section ===== */}
+          <h3 className="mt-10 text-2xl font-bold text-secondary mb-6">
+            Institutional Committees & Governance Documents
+          </h3>
 
-          {/* ===== FAQ Accordion Section ===== */}
-         import CompBrochure from "../../assets/BEComp.pdf"; // import your PDF
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 divide-y divide-gray-200">
+            {[
+              {
+                title: "College Development Committee (CDC)",
+                pdf: CompBrochure,
+                description:
+                  "The CDC oversees academic development, infrastructure improvement, and faculty growth plans. Download the document below for full details.",
+              },
+              {
+                title: "Institute Level Committees - AY 2024-25",
+                pdf: CompBrochure,
+                description:
+                  "Institute-level committees ensure quality assurance and student engagement across all departments.",
+              },
+              {
+                title: "Governing Body (AY 2023-24 to AY 2027-28)",
+                pdf: CompBrochure,
+                description:
+                  "The Governing Body is responsible for strategic direction, policy formulation, and institutional oversight.",
+              },
+              {
+                title: "Academic Council (AY 2023-24 to AY 2025-26)",
+                pdf: CompBrochure,
+                description:
+                  "The Academic Council monitors curriculum design, academic standards, and teaching outcomes.",
+              },
+              {
+                title: "Finance Committee (AY 2023-24 to AY 2025-26)",
+                pdf: CompBrochure,
+                description:
+                  "This committee handles budget planning, fund utilization, and financial audits.",
+              },
+              {
+                title: "Examination Committee (AY 2023-24 to AY 2025-26)",
+                pdf: CompBrochure,
+                description:
+                  "The Examination Committee manages exam schedules, evaluation systems, and result publication.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="overflow-hidden">
+                {/* Accordion Header */}
+                <div
+                  onClick={() => setActiveFAQ(activeFAQ === index ? null : index)}
+                  className="flex justify-between items-center w-full px-4 py-3 cursor-pointer hover:bg-gray-100 transition-colors duration-200"
+                >
+                  <span className="font-medium text-gray-900 underline underline-offset-2 hover:text-primary transition-colors">
+                    {item.title}
+                  </span>
+                  <span className="text-xl font-bold text-gray-700">
+                    {activeFAQ === index ? "−" : "+"}
+                  </span>
+                </div>
 
-// inside your Governance component (replace FAQ section with this)
-<h3 className="mt-10 text-2xl font-bold mb-6">
-  Institutional Committees & Governance Documents
-</h3>
-
-<div className="bg-white rounded-lg shadow-sm border border-gray-200 divide-y divide-gray-200">
-  {[
-    {
-      title: "College Development Committee (CDC)",
-      pdf: CompBrochure,
-      description:
-        "The CDC oversees academic development, infrastructure improvement, and faculty growth plans. Download the document below for full details.",
-    },
-    {
-      title: "Institute Level Committees - AY 2024-25",
-      pdf: CompBrochure,
-      description:
-        "Institute-level committees ensure quality assurance and student engagement across all departments.",
-    },
-    {
-      title: "Governing Body (AY 2023-24 to AY 2027-28)",
-      pdf: CompBrochure,
-      description:
-        "The Governing Body is responsible for strategic direction, policy formulation, and institutional oversight.",
-    },
-    {
-      title: "Academic Council (AY 2023-24 to AY 2025-26)",
-      pdf: CompBrochure,
-      description:
-        "The Academic Council monitors curriculum design, academic standards, and teaching outcomes.",
-    },
-    {
-      title: "Finance Committee (AY 2023-24 to AY 2025-26)",
-      pdf: CompBrochure,
-      description:
-        "This committee handles budget planning, fund utilization, and financial audits.",
-    },
-    {
-      title: "Examination Committee (AY 2023-24 to AY 2025-26)",
-      pdf: CompBrochure,
-      description:
-        "The Examination Committee manages exam schedules, evaluation systems, and result publication.",
-    },
-  ].map((item, index) => (
-    <div key={index} className="overflow-hidden">
-      {/* Accordion Header */}
-      <div
-        onClick={() => setActiveFAQ(activeFAQ === index ? null : index)}
-        className="flex justify-between items-center w-full px-4 py-3 cursor-pointer hover:bg-gray-100 transition-colors duration-200"
-      >
-        <span className="font-medium text-gray-900 underline underline-offset-2">
-          {item.title}
-        </span>
-        <span className="text-xl font-bold text-gray-700">
-          {activeFAQ === index ? "−" : "+"}
-        </span>
-      </div>
-
-      {/* Accordion Content */}
-      <div
-        className={`transition-all duration-300 overflow-hidden ${
-          activeFAQ === index ? "max-h-60" : "max-h-0"
-        }`}
-      >
-        <div className="px-6 py-4 bg-gray-50 text-gray-700 text-sm leading-relaxed">
-          <p className="mb-3">{item.description}</p>
-          <a
-            href={item.pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary/90 transition"
-          >
-            View / Download PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
-
+                {/* Accordion Content */}
+                <div
+                  className={`transition-all duration-300 overflow-hidden ${
+                    activeFAQ === index ? "max-h-60" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 py-4 bg-gray-50 text-gray-700 text-sm leading-relaxed">
+                    <p className="mb-3">{item.description}</p>
+                    <a
+                      href={item.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary/90 transition"
+                    >
+                      View / Download PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* ===== RIGHT SIDEBAR ===== */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col gap-8">
+        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col gap-8">
           {/* Navigation Links */}
           <div>
-            <h3 className="text-lg font-semibold border-b border-gray-700 pb-2 mb-4">
+            <h3 className="text-lg font-semibold border-b border-white/30 pb-2 mb-4">
               Related Pages
             </h3>
             <ul className="space-y-3 text-sm">
@@ -189,7 +182,7 @@ function Governance() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="hover:text-secondary transition-colors duration-200"
+                    className="hover:text-primary transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -200,7 +193,7 @@ function Governance() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold border-b border-gray-700 pb-2 mb-4">
+            <h3 className="text-lg font-semibold border-b border-white/30 pb-2 mb-4">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm">
@@ -208,7 +201,7 @@ function Governance() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="hover:text-secondary transition-colors duration-200"
+                    className="hover:text-primary transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -218,16 +211,16 @@ function Governance() {
           </div>
 
           {/* Contact Box */}
-          <div className="bg-secondary/20 border border-secondary/30 rounded-lg p-4 text-sm">
-            <h4 className="font-semibold text-secondary mb-2">Need Help?</h4>
-            <p className="text-gray-300 leading-relaxed">
+          <div className="bg-primary/20 border border-primary/30 rounded-lg p-4 text-sm">
+            <h4 className="font-semibold text-primary mb-2">Need Help?</h4>
+            <p className="text-white/80 leading-relaxed">
               For admissions or academic queries, contact our support team for
               quick assistance.
             </p>
-            <p className="mt-3 text-secondary font-medium">
+            <p className="mt-3 text-primary font-medium">
               ✉ admissions@indiraicem.ac.in
             </p>
-            <p className="text-secondary font-medium">📞 +91 98765 43210</p>
+            <p className="text-primary font-medium">📞 +91 98765 43210</p>
           </div>
         </div>
       </div>

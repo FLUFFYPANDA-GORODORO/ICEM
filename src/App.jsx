@@ -28,12 +28,7 @@ import Mech from "./components/Programs/Mech";
 import MTECHComp from "./components/Programs/MTECHComp";
 import MTECHMech from "./components/Programs/MTECHMech";
 import Sports from "./components/AboutUs/Facilities.jsx/Sports";
-import Library from "./components/AboutUs/Facilities.jsx/Library";
-import Hostel from "./components/AboutUs/Facilities.jsx/Hostel";
-import Canteen from "./components/AboutUs/Facilities.jsx/Canteen";
-import Gym from "./components/AboutUs/Facilities.jsx/Gym";
-import PHC from "./components/AboutUs/Facilities.jsx/PHC";
-import Bus from "./components/AboutUs/Facilities.jsx/Bus";
+
 import Governance from "./components/AboutUs/Governance";
 import Research from "./components/Research/Research";
 import Alumni from "./Pages/Alumni";
