@@ -45,37 +45,51 @@ const Navbar = () => {
             { label: "Facilities", link: "/facilities/sports" },
             { label: "Governance", link: "/facilities/governance" },
             { label: "Campus Leadership", link: "" },
+            { label: "Examination", link: "/examination" },
+            { label: "Accreditation", link: "/accreditation" },
           ],
         },
       ],
     },
 
-    studentCorner: {
-      title: "Student Corner",
+    campusLife: {
+      title: "Campus Life",
       sections: [
         {
+          title: "Student Services",
           items: [
             {
               label: "Student Welfare",
-              link: "/student-corner/student-welfare",
+              link: "/campus-life/student-welfare",
             },
-            { label: "IIC", link: "/student-corner/iic" },
+            { label: "IIC", link: "/campus-life/iic" },
             {
               label: "Induction Programme",
-              link: "/student-corner/induction-programme",
+              link: "/campus-life/induction-programme",
             },
             {
               label: "Student Council",
-              link: "/student-corner/student-council",
+              link: "/campus-life/student-council",
             },
-            { label: "National Service Scheme", link: "/student-corner/nss" },
-            { label: "ICEM Awards", link: "/student-corner/icem-awards" },
-            { label: "Academics", link: "/student-corner/academics" },
-            { label: "Committies", link: "/student-corner/committees" },
+            { label: "National Service Scheme", link: "/campus-life/nss" },
+            { label: "ICEM Awards", link: "/campus-life/icem-awards" },
+            { label: "Academics", link: "/campus-life/academics" },
+            { label: "Committies", link: "/campus-life/committees" },
             {
               label: "Grievance Redressals",
-              link: "/student-corner/grievance-redressals",
+              link: "/campus-life/grievance-redressals",
             },
+          ],
+        },
+        {
+          title: "Campus Activities",
+          items: [
+            { label: "Cultural Events", link: "/campus-life/cultural-events" },
+            { label: "Sports & Recreation", link: "/campus-life/sports" },
+            { label: "Clubs & Societies", link: "/campus-life/clubs" },
+            { label: "Technical Fest", link: "/campus-life/tech-fest" },
+            { label: "Workshops & Seminars", link: "/campus-life/workshops" },
+            { label: "Annual Fest", link: "/campus-life/annual-fest" },
           ],
         },
       ],
@@ -184,7 +198,7 @@ const Navbar = () => {
     <div className="max-w-8xl px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {content.sections.map((section, index) => (
         <div key={index}>
-          <h3 className="text-lg font-semibold text-secondary mb-4">
+          <h3 className="text-lg  font-semibold text-secondary mb-4">
             {section.title || content.title}
           </h3>
           <ul className="space-y-4 text-gray-800 text-sm">
@@ -196,14 +210,14 @@ const Navbar = () => {
                 {item.link ? (
                   <Link
                     to={item.link}
-                    className="flex justify-between items-center w-full text-gray-800 hover:text-primary transition-colors"
+                    className="font-semibold flex justify-between items-center w-full text-gray-800 hover:text-primary transition-colors"
                     onClick={() => setActiveDropdown(null)}
                   >
                     <span>{item.label || item}</span>
-                    <TbExternalLink className="text-gray-500" />
+                    <TbExternalLink className="font-semibold text-gray-900" />
                   </Link>
                 ) : (
-                  <div className="flex justify-between items-center w-full">
+                  <div className="font-semibold flex justify-between items-center w-full">
                     <span>{item.label || item}</span>
                     <TbExternalLink className="text-gray-400 opacity-50" />
                   </div>
@@ -306,10 +320,10 @@ const Navbar = () => {
             </div>
             <div
               className="flex items-center gap-1 cursor-pointer hover:text-primary"
-              onMouseEnter={() => handleMouseEnter("studentCorner")}
+              onMouseEnter={() => handleMouseEnter("campusLife")}
               onMouseLeave={handleMouseLeave}
             >
-              <span>Student Corner</span>
+              <span>Campus Life</span>
             </div>
             <div
               className="flex items-center gap-1 cursor-pointer hover:text-primary"
@@ -324,17 +338,6 @@ const Navbar = () => {
             <Link to="/alumni" className="hover:text-primary">
               Alumni
             </Link>
-            <Link to="/examination" className="hover:text-primary">
-              Examination
-            </Link>
-            {/* <h2 className="hover:text-primary cursor-pointer">Examination</h2> */}
-            <div
-              className="flex items-center gap-1 cursor-pointer hover:text-primary"
-              onMouseEnter={() => handleMouseEnter("accreditation")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <span>Accreditation</span>
-            </div>
             <Link to="/research" className="hover:text-primary">
               Research
             </Link>

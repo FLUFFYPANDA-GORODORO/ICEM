@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FAQSection from "./FAQSection";
 // import React, { useState } from "react";
 
 
@@ -15,10 +16,10 @@ function IT() {
           {/* LEFT TEXT SECTION */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-              4-Year B.E. CSE Program <br />
+              4-Year B.E. IT Program <br />
               with specialisation in <br />
               <span className="text-red-500">
-                Artificial Intelligence & Future Technologies
+                Information Technolgy & Future Technologies
               </span>
             </h2>
 
@@ -345,134 +346,7 @@ function IT() {
 </div>
 
 {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
-<div className="w-full bg-[#f7f7f7] text-black py-16">
-  <div className="max-w-7xl mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-10">Frequently Asked Questions</h2>
-
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {/* LEFT MENU */}
-      <div className="bg-white rounded-lg shadow-sm p-4 space-y-2 text-sm font-medium text-gray-700">
-        {[
-          "About the Program",
-          "Admissions Process",
-          "Eligibility & Requirements",
-          "Fee Structure & Scholarships",
-          "Specialisations & Curriculum",
-          "Industry Exposure & Internships",
-          "Placements & Career Opportunities",
-          "Campus Life & Student Support",
-          "Faculty & Teaching Methodology",
-          "Global Opportunities & Dual Degrees",
-          "Infrastructure & Labs",
-          "Location & Accessibility",
-          "Why Choose Indira College?",
-          "Parent/Guardian Queries",
-          "Post-Graduation Pathways (MS, MTech, MBA, etc.)",
-          "FAQs for NRI/International Students",
-        ].map((item, i) => (
-          <div
-            key={i}
-            className={`px-3 py-2 rounded cursor-pointer hover:bg-gray-100 ${
-              i === 0 ? "border-l-4 border-red-600 bg-gray-50" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-
-      {/* RIGHT FAQ QUESTIONS */}
-      {/* RIGHT FAQ QUESTIONS (Accordion Functionality) */}
-<div className="md:col-span-2 bg-white rounded-lg shadow-sm p-6 space-y-4">
-  {[
-    {
-      question:
-        "What is the B.E. CSE with Specialisation in Artificial Intelligence & Future Technologies?",
-      answer:
-        "It’s a 4-year undergraduate program focusing on computer science fundamentals along with cutting-edge areas like Artificial Intelligence, Blockchain, Cloud Computing, and Cyber Security.",
-    },
-    {
-      question:
-        "What makes this AI and Future Technology course different from other CSE programs?",
-      answer:
-        "This is not a standard Computer Science degree. This program offers a multidisciplinary CSE Specialisation in AI and Future Technologies. It blends theoretical knowledge with industry-aligned practical training, preparing students for real-world applications in cybersecurity, blockchain, cloud infrastructure, and AI-driven innovation.",
-    },
-    {
-      question:
-        "What subjects are included in the AI and Future Technology course?",
-      answer:
-        "Key subjects include Programming Languages, Data Structures, Artificial Intelligence, Machine Learning, Blockchain, Cloud Computing, and Cyber Security.",
-    },
-    {
-      question: "What is the program structure and duration?",
-      answer:
-        "The program is structured over 4 years with 8 semesters, combining academic theory, lab work, and a 6–12 month internship.",
-    },
-    {
-      question: "What types of projects will students work on?",
-      answer:
-        "Students work on industry-aligned projects involving AI models, predictive analytics, cloud deployments, and cybersecurity simulations.",
-    },
-    {
-      question: "Does the program support innovation and entrepreneurship?",
-      answer:
-        "Yes. The program encourages innovation and provides incubation support for entrepreneurial students through collaborations with tech industries.",
-    },
-    {
-      question: "What career paths are available after completing this degree?",
-      answer:
-        "Graduates can pursue roles like AI Engineer, Data Scientist, Blockchain Developer, Cloud Architect, or Cyber Security Analyst.",
-    },
-    {
-      question: "Is this B.E. CSE program aligned with industry needs?",
-      answer:
-        "Absolutely. The curriculum is designed with inputs from top industry experts and recruiters to match real-world technology trends.",
-    },
-    {
-      question: "Is this program UGC-recognized and AICTE-approved?",
-      answer:
-        "Yes, the program is fully approved by AICTE and follows all UGC guidelines.",
-    },
-    {
-      question: "Is this a good program for future tech leaders?",
-      answer:
-        "Definitely. It provides the skills, exposure, and innovation mindset required to lead in technology-driven industries.",
-    },
-  ].map((faq, i) => (
-    <div
-      key={i}
-      className="border rounded-md bg-white overflow-hidden transition-all duration-300"
-    >
-      {/* Question Header */}
-      <div
-        onClick={() => setActiveFAQ(activeFAQ === i ? null : i)}
-        className={`flex justify-between items-center p-3 cursor-pointer font-medium transition-colors ${
-          activeFAQ === i ? "bg-red-600 text-white" : "text-black"
-        }`}
-      >
-        <span>
-          {i + 1}. {faq.question}
-        </span>
-        <span className="text-xl font-bold">
-          {activeFAQ === i ? "−" : "+"}
-        </span>
-      </div>
-
-      {/* Answer */}
-      <div
-        className={`transition-all duration-300 overflow-hidden ${
-          activeFAQ === i ? "max-h-96" : "max-h-0"
-        }`}
-      >
-        <div className="p-3 text-sm bg-gray-50 text-gray-700">{faq.answer}</div>
-      </div>
-    </div>
-  ))}
-</div>
-
-    </div>
-  </div>
-</div>
+<FAQSection />
 
 
 
