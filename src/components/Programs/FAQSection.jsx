@@ -356,7 +356,7 @@ Several industrial tours organized by the institute help the students get expose
   return (
     <div className="w-full bg-[#f7f7f7] text-black py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-10">Department Information</h2>
+        <h2 className="text-3xl font-bold text-secondary mb-10">Department Information</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* LEFT MENU */}
@@ -374,7 +374,7 @@ Several industrial tours organized by the institute help the students get expose
                 }}
                 className={`px-3 py-2 rounded cursor-pointer hover:bg-gray-100 transition-all ${
                   activeTab === tab
-                    ? "border-l-4 border-red-600 bg-gray-50 font-semibold text-red-700"
+                    ? "border-l-4 border-secondary bg-gray-50 font-semibold text-secondary"
                     : ""
                 }`}
               >
@@ -389,7 +389,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Sanction Intake */}
             {activeTab === "Sanction Intake" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Sanctioned Intake</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Sanctioned Intake</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full border border-gray-300 text-sm">
                     <thead className="bg-gray-100">
@@ -418,15 +418,15 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Eligibility Criteria */}
             {activeTab === "Eligibility Criteria" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Eligibility Criteria</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Eligibility Criteria</h3>
                 {admissionData.eligibilityCriteria.map((program, index) => (
                   <div key={index} className="border rounded-md mb-4">
                     <div
                       onClick={() => setActiveAdmission(activeAdmission === `eligibility-${index}` ? null : `eligibility-${index}`)}
                       className="flex justify-between items-center px-4 py-3 cursor-pointer bg-gray-50 hover:bg-gray-100"
                     >
-                      <span className="font-semibold">{program.program}</span>
-                      <span className="text-xl font-bold">
+                      <span className="font-semibold text-secondary">{program.program}</span>
+                      <span className="text-xl font-bold text-secondary">
                         {activeAdmission === `eligibility-${index}` ? "−" : "+"}
                       </span>
                     </div>
@@ -443,11 +443,11 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Documents Required */}
             {activeTab === "Documents Required" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Documents Required for Admission</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Documents Required for Admission</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {admissionData.documentsRequired.map((doc, index) => (
                     <div key={index} className="flex items-start space-x-2 p-3 border rounded-lg bg-gray-50">
-                      <span className="text-red-600 font-bold">•</span>
+                      <span className="text-secondary font-bold">•</span>
                       <span>{doc}</span>
                     </div>
                   ))}
@@ -458,11 +458,11 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Admission Procedure */}
             {activeTab === "Admission Procedure" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Admission Procedure</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Admission Procedure</h3>
                 <div className="space-y-3">
                   {admissionData.admissionProcedure.map((step, index) => (
                     <div key={index} className="flex items-start space-x-3 p-3 border rounded-lg bg-gray-50">
-                      <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                      <span className="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
                         {index + 1}
                       </span>
                       <span>{step}</span>
@@ -475,7 +475,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Fee Structure */}
             {activeTab === "Fee Structure" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Fee Structure</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Fee Structure</h3>
                 <div className="text-center py-8 bg-gray-50 rounded-lg">
                   <p className="text-gray-600 mb-4">Fee structure for Academic Year 2024-25 will be updated soon.</p>
                   <p className="text-sm text-gray-500">Please contact the admission office for detailed fee information.</p>
@@ -486,7 +486,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Admission Advertisement - Updated with PDF Accordions */}
             {activeTab === "Admission Advertisement" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Admission Advertisement 2024-25</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Admission Advertisement 2024-25</h3>
                 
                 {/* PDF Accordions */}
                 <div className="mb-6">
@@ -497,7 +497,7 @@ Several industrial tours organized by the institute help the students get expose
                         className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
                       >
                         <span>{item.name}</span>
-                        <span className="text-xl font-bold">
+                        <span className="text-xl font-bold text-secondary">
                           {activeAdmission === item.id ? "−" : "+"}
                         </span>
                       </div>
@@ -515,16 +515,16 @@ Several industrial tours organized by the institute help the students get expose
                 </div>
 
                 {/* Additional Admission Info */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                  <h4 className="font-bold text-lg text-blue-800 mb-3">Admissions Open for Academic Year 2024-25</h4>
-                  <div className="space-y-2 text-blue-700">
+                <div className="bg-primary/10 border border-primary/20 rounded-lg p-6">
+                  <h4 className="font-bold text-lg text-secondary mb-3">Admissions Open for Academic Year 2024-25</h4>
+                  <div className="space-y-2 text-secondary">
                     <p>• B.Tech Computer Engineering - 180 Seats</p>
                     <p>• M.Tech Computer Engineering - 24 Seats</p>
                     <p>• Apply through Maharashtra CAP Process</p>
                     <p>• Last Date for Application: June 30, 2024</p>
                   </div>
                   <div className="mt-4 p-4 bg-white rounded border">
-                    <p className="font-semibold">Contact Admission Office:</p>
+                    <p className="font-semibold text-secondary">Contact Admission Office:</p>
                     <p>Phone: 020-XXXX-XXXX</p>
                     <p>Email: admissions@icem.ac.in</p>
                     <p>Website: www.icem.ac.in</p>
@@ -536,7 +536,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ IL & ACAP Merit List - Updated with PDF Accordions */}
             {activeTab === "IL & ACAP Merit List" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Institute Level & ACAP Merit Lists</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Institute Level & ACAP Merit Lists</h3>
                 
                 {/* PDF Accordions */}
                 <div className="mb-6">
@@ -547,7 +547,7 @@ Several industrial tours organized by the institute help the students get expose
                         className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
                       >
                         <span>{item.name}</span>
-                        <span className="text-xl font-bold">
+                        <span className="text-xl font-bold text-secondary">
                           {activeAdmission === item.id ? "−" : "+"}
                         </span>
                       </div>
@@ -566,9 +566,9 @@ Several industrial tours organized by the institute help the students get expose
 
                 {/* Additional Information */}
                 <div className="space-y-4">
-                  <div className="border rounded-lg p-4 bg-green-50">
-                    <h4 className="font-bold text-green-800 mb-2">Institute Level Merit List</h4>
-                    <p className="text-green-700">Institute level merit lists for vacant seats will be displayed on the college notice board and official website.</p>
+                  <div className="border rounded-lg p-4 bg-primary/10">
+                    <h4 className="font-bold text-secondary mb-2">Institute Level Merit List</h4>
+                    <p className="text-secondary">Institute level merit lists for vacant seats will be displayed on the college notice board and official website.</p>
                   </div>
                   <div className="text-center py-4 bg-gray-50 rounded">
                     <p className="text-gray-600">Merit lists will be updated as per the admission schedule.</p>
@@ -580,13 +580,13 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ NOTICE */}
             {activeTab === "NOTICE" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Important Notices</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Important Notices</h3>
                 <div className="space-y-4">
                   {noticeData.map((notice, index) => (
-                    <div key={index} className="border-l-4 border-red-600 bg-gray-50 p-4 rounded-r">
+                    <div key={index} className="border-l-4 border-secondary bg-gray-50 p-4 rounded-r">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-bold text-lg">{notice.title}</h4>
-                        <span className="bg-red-600 text-white px-2 py-1 rounded text-sm">{notice.date}</span>
+                        <h4 className="font-bold text-lg text-secondary">{notice.title}</h4>
+                        <span className="bg-secondary text-white px-2 py-1 rounded text-sm">{notice.date}</span>
                       </div>
                       <p className="text-gray-700">{notice.content}</p>
                     </div>
@@ -598,24 +598,24 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Scholarship - Updated with Table */}
             {activeTab === "Scholarship" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Scholarship Schemes</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Scholarship Schemes</h3>
                 
                 {/* Scholarship Table */}
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3 text-gray-800">Scholarship Details</h4>
+                  <h4 className="font-semibold mb-3 text-secondary">Scholarship Details</h4>
                   <div className="overflow-x-auto">
                     <table className="w-full border border-gray-300 text-sm">
                       <thead className="bg-gray-100">
                         <tr>
-                          <th className="border p-3 text-left">Scholarship Category</th>
-                          <th className="border p-3 text-left">Scholarship Eligibility</th>
-                          <th className="border p-3 text-left">Nature of Scholarship</th>
+                          <th className="border p-3 text-left text-secondary">Scholarship Category</th>
+                          <th className="border p-3 text-left text-secondary">Scholarship Eligibility</th>
+                          <th className="border p-3 text-left text-secondary">Nature of Scholarship</th>
                         </tr>
                       </thead>
                       <tbody>
                         {scholarshipTableData.map((scholarship, index) => (
                           <tr key={index} className="hover:bg-gray-50">
-                            <td className="border p-3 font-medium">{scholarship.category}</td>
+                            <td className="border p-3 font-medium text-secondary">{scholarship.category}</td>
                             <td className="border p-3 whitespace-pre-line">{scholarship.eligibility}</td>
                             <td className="border p-3 whitespace-pre-line">{scholarship.scholarship}</td>
                           </tr>
@@ -626,17 +626,17 @@ Several industrial tours organized by the institute help the students get expose
                 </div>
 
                 {/* Additional Information */}
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                  <p className="text-sm text-yellow-800 mb-2">
+                <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+                  <p className="text-sm text-secondary mb-2">
                     <strong>Note:</strong> Above information is for basic understanding.
                   </p>
-                  <p className="text-sm text-yellow-800 mb-2">
+                  <p className="text-sm text-secondary mb-2">
                     Exact present rules / reforms, documents required and eligibility is available on Scholarship Schemes: 
-                    <a href="https://mahadbtmahait.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline ml-1">
+                    <a href="https://mahadbtmahait.gov.in/" target="_blank" rel="noopener noreferrer" className="text-secondary underline ml-1 font-medium">
                       https://mahadbtmahait.gov.in/
                     </a>
                   </p>
-                  <p className="text-sm text-yellow-800">
+                  <p className="text-sm text-secondary">
                     If applied to scholarship without complete documents, application will be rejected and candidates has to pay full fees.
                   </p>
                 </div>
@@ -648,8 +648,8 @@ Several industrial tours organized by the institute help the students get expose
                       onClick={() => setActiveAdmission(activeAdmission === `scholarship-${index}` ? null : `scholarship-${index}`)}
                       className="flex justify-between items-center px-4 py-3 cursor-pointer bg-gray-50 hover:bg-gray-100"
                     >
-                      <span className="font-semibold">{scheme.name}</span>
-                      <span className="text-xl font-bold">
+                      <span className="font-semibold text-secondary">{scheme.name}</span>
+                      <span className="text-xl font-bold text-secondary">
                         {activeAdmission === `scholarship-${index}` ? "−" : "+"}
                       </span>
                     </div>
@@ -666,7 +666,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Staff Tab - Empty for now */}
             {activeTab === "Staff" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Staff Information</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Staff Information</h3>
                 <div className="text-gray-700 text-center py-8">
                   <p>Staff information will be added soon.</p>
                 </div>
@@ -676,7 +676,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Why Indira ICEM Tab */}
             {activeTab === "Why Indira ICEM" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Why Choose Indira ICEM</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Why Choose Indira ICEM</h3>
                 {whyIndiraData.map((item, i) => (
                   <div key={i} className="border rounded-md mb-2">
                     <div
@@ -685,7 +685,7 @@ Several industrial tours organized by the institute help the students get expose
                       }
                       className={`flex justify-between items-center px-4 py-2 cursor-pointer ${
                         activeWhyIndira === i
-                          ? "bg-red-600 text-white"
+                          ? "bg-secondary text-white"
                           : "hover:bg-gray-100"
                       }`}
                     >
@@ -707,7 +707,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Features Tab */}
             {activeTab === "Features" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">Key Features & Accreditations</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-4">Key Features & Accreditations</h3>
                 {featuresData.map((item, i) => (
                   <div key={i} className="border rounded-md mb-2">
                     <div
@@ -716,7 +716,7 @@ Several industrial tours organized by the institute help the students get expose
                       }
                       className={`flex justify-between items-center px-4 py-2 cursor-pointer ${
                         activeFeatures === i
-                          ? "bg-red-600 text-white"
+                          ? "bg-secondary text-white"
                           : "hover:bg-gray-100"
                       }`}
                     >
@@ -738,34 +738,34 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Facilities */}
             {activeTab === "Facilities" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">
+                <h3 className="text-lg font-semibold text-secondary mb-4">
                   Department of Computer Engineering Laboratories
                 </h3>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border border-gray-300 text-left">
                     <thead className="bg-gray-100 font-semibold">
                       <tr>
-                        <th className="border p-2">Sr. No.</th>
-                        <th className="border p-2">Lab Name</th>
-                        <th className="border p-2">Total PCs</th>
-                        <th className="border p-2">Configuration</th>
-                        <th className="border p-2">Software Installed</th>
+                        <th className="border p-2 text-secondary">Sr. No.</th>
+                        <th className="border p-2 text-secondary">Lab Name</th>
+                        <th className="border p-2 text-secondary">Total PCs</th>
+                        <th className="border p-2 text-secondary">Configuration</th>
+                        <th className="border p-2 text-secondary">Software Installed</th>
                       </tr>
                     </thead>
                     <tbody>
                       {labs.map((lab) => (
                         <tr key={lab.id} className="hover:bg-gray-50">
                           <td className="border p-2">{lab.id}</td>
-                          <td className="border p-2 font-medium">{lab.name}</td>
+                          <td className="border p-2 font-medium text-secondary">{lab.name}</td>
                           <td className="border p-2">{lab.pcs}</td>
                           <td className="border p-2">{lab.config}</td>
                           <td className="border p-2">{lab.software}</td>
                         </tr>
                       ))}
                       <tr className="font-bold bg-gray-100">
-                        <td className="border p-2 text-center" colSpan={2}>Total</td>
-                        <td className="border p-2">195</td>
-                        <td className="border p-2" colSpan={2}></td>
+                        <td className="border p-2 text-center text-secondary" colSpan={2}>Total</td>
+                        <td className="border p-2 text-secondary">195</td>
+                        <td className="border p-2 text-secondary" colSpan={2}></td>
                       </tr>
                     </tbody>
                   </table>
@@ -778,15 +778,15 @@ Several industrial tours organized by the institute help the students get expose
               <div>
                 {syllabusData.map((section) => (
                   <div key={section.category} className="mb-6">
-                    <h3 className="text-lg font-semibold mb-2">{section.category}</h3>
+                    <h3 className="text-lg font-semibold text-secondary mb-2">{section.category}</h3>
                     {section.items.map((item) => (
                       <div key={item.id} className="border rounded-md mb-2">
                         <div
                           onClick={() => setActiveSyllabus(activeSyllabus === item.id ? null : item.id)}
                           className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
                         >
-                          <span>{item.name}</span>
-                          <span className="text-xl font-bold">
+                          <span className="text-secondary">{item.name}</span>
+                          <span className="text-xl font-bold text-secondary">
                             {activeSyllabus === item.id ? "−" : "+"}
                           </span>
                         </div>
@@ -809,7 +809,7 @@ Several industrial tours organized by the institute help the students get expose
             {/* ✅ Course Structure */}
             {activeTab === "Course Structure & Credits" && (
               <div>
-                <h3 className="text-lg font-semibold mb-4">
+                <h3 className="text-lg font-semibold text-secondary mb-4">
                   Course Structure & Credit Details
                 </h3>
                 {courseStructure.map((item) => (
@@ -820,8 +820,8 @@ Several industrial tours organized by the institute help the students get expose
                       }
                       className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
                     >
-                      <span>{item.name}</span>
-                      <span className="text-xl font-bold">
+                      <span className="text-secondary">{item.name}</span>
+                      <span className="text-xl font-bold text-secondary">
                         {activeStructure === item.id ? "−" : "+"}
                       </span>
                     </div>
@@ -847,7 +847,7 @@ Several industrial tours organized by the institute help the students get expose
                     <div
                       onClick={() => setActiveFAQ(activeFAQ === i ? null : i)}
                       className={`flex justify-between items-center p-3 cursor-pointer font-medium transition-colors ${
-                        activeFAQ === i ? "bg-red-600 text-white" : "text-black"
+                        activeFAQ === i ? "bg-secondary text-white" : "text-black"
                       }`}
                     >
                       <span>
