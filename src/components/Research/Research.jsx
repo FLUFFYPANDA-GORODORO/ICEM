@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import research from "../../assets/research.jpg";
 import BEComp from "../../assets/BEComp.pdf";
+
 const Research = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [activeTab, setActiveTab] = useState("Overview");
@@ -34,7 +35,7 @@ const Research = () => {
 
       {/* Placeholder for next sections */}
       <section className="py-10 text-center">
-        <h2 className="text-4xl font-bold text-black mb-6">
+        <h2 className="text-4xl font-bold text-secondary mb-6">
           Research & Innovation
         </h2>
         <p className="max-w-3xl mx-auto text-gray-700 leading-relaxed">
@@ -46,10 +47,11 @@ const Research = () => {
           of innovation
         </p>
       </section>
+
       {/* Our Impact in Numbers Section */}
       <section className="py-5 bg-white text-center">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-lg md:text-4xl font-bold text-blue-800 mb-4">
+          <h2 className="text-lg md:text-4xl font-bold text-secondary mb-4">
             Our Impact in Numbers
           </h2>
           <p className="text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -92,10 +94,10 @@ const Research = () => {
                 key={index}
                 className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-shadow"
               >
-                <h3 className="text-3xl md:text-4xl font-bold text-blue-700 mb-3">
+                <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-3">
                   {item.number}
                 </h3>
-                <p className="font-semibold text-gray-800 leading-snug">
+                <p className="font-semibold text-primary leading-snug">
                   {item.label}
                 </p>
               </div>
@@ -103,16 +105,17 @@ const Research = () => {
           </div>
         </div>
       </section>
+
       {/* Vibrant Research Ecosystem Section */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-4">
             Vibrant Research Ecosystem
           </h2>
           <p className="text-gray-700 text-center max-w-5xl mx-auto mb-12 leading-relaxed">
             From breakthroughs in sustainable technologies to transformative
-            research in healthcare and AI, Indira College’s vibrant research
+            research in healthcare and AI, Indira College's vibrant research
             ecosystem drives innovation, empowers communities, and inspires
             global scientific progress.
           </p>
@@ -121,11 +124,11 @@ const Research = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* 1 */}
             <div className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">
+              <h3 className="text-lg font-bold text-secondary mb-3">
                 13690+ Publications & 97000+ Citations
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Indira’s growing publication record reflects its commitment to
+                Indira's growing publication record reflects its commitment to
                 impactful research that resonates globally. Our strong citation
                 index stands as a testament to our academic credibility and
                 innovation.
@@ -134,7 +137,7 @@ const Research = () => {
 
             {/* 2 */}
             <div className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">
+              <h3 className="text-lg font-bold text-secondary mb-3">
                 Global Research Network Across 140+ Countries
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -147,7 +150,7 @@ const Research = () => {
 
             {/* 3 */}
             <div className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">
+              <h3 className="text-lg font-bold text-secondary mb-3">
                 Focus on UN Sustainable Development Goals (SDGs)
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -159,7 +162,7 @@ const Research = () => {
 
             {/* 4 */}
             <div className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">
+              <h3 className="text-lg font-bold text-secondary mb-3">
                 Undergraduate Research Participation
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -171,7 +174,7 @@ const Research = () => {
 
             {/* 5 */}
             <div className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">
+              <h3 className="text-lg font-bold text-secondary mb-3">
                 Global Recognition
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -183,7 +186,7 @@ const Research = () => {
 
             {/* 6 */}
             <div className="border border-gray-200 shadow-md bg-white p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-700 mb-3">
+              <h3 className="text-lg font-bold text-secondary mb-3">
                 Sponsored Research & Funding Success
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -195,11 +198,12 @@ const Research = () => {
           </div>
         </div>
       </section>
+
       {/* Central Prototyping Facility Section */}
       <section className="py-5 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Central Prototyping Facility
           </h2>
           <p className="text-gray-700 max-w-5xl mx-auto mb-12 leading-relaxed">
@@ -217,7 +221,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="p-6 text-left">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-secondary mb-3">
                   Advanced Prototyping Infrastructure
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -235,7 +239,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="p-6 text-left">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-secondary mb-3">
                   Free Access for Students and Faculty
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -252,7 +256,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="p-6 text-left">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-secondary mb-3">
                   Real-World Impact
                 </h3>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -272,11 +276,12 @@ const Research = () => {
           </div>
         </div>
       </section>
+
       {/* Conferences on Research & Innovation Section */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Conferences on Research & Innovation
           </h2>
           <p className="text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -298,7 +303,7 @@ const Research = () => {
                 <p className="text-gray-700 font-medium mb-2">
                   29th - 30th August, 2025
                 </p>
-                <h3 className="text-lg font-bold text-blue-700 leading-snug">
+                <h3 className="text-lg font-bold text-secondary leading-snug">
                   2nd International Conference on Machine Learning Algorithms
                 </h3>
               </div>
@@ -313,7 +318,7 @@ const Research = () => {
                 <p className="text-gray-700 font-medium mb-2">
                   7th - 9th August, 2025
                 </p>
-                <h3 className="text-lg font-bold text-blue-700 leading-snug">
+                <h3 className="text-lg font-bold text-secondary leading-snug">
                   29th Conference on VLSI Design and Test
                 </h3>
               </div>
@@ -328,7 +333,7 @@ const Research = () => {
                 <p className="text-gray-700 font-medium mb-2">
                   28th - 29th September, 2025
                 </p>
-                <h3 className="text-lg font-bold text-blue-700 leading-snug">
+                <h3 className="text-lg font-bold text-secondary leading-snug">
                   International Conference on Management & Information Systems
                   at Thailand
                 </h3>
@@ -337,11 +342,12 @@ const Research = () => {
           </div>
         </div>
       </section>
+
       {/* Student Prototypes Section */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-4">
             Student Prototypes at a Glance
           </h2>
           <p className="text-gray-700 text-center max-w-5xl mx-auto mb-12 leading-relaxed">
@@ -360,7 +366,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="col-span-3 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">
+                <h3 className="text-xl font-bold text-secondary mb-2">
                   InteLights
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -377,7 +383,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="col-span-3 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">
+                <h3 className="text-xl font-bold text-secondary mb-2">
                   Video Laryngoscope
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -394,7 +400,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="col-span-3 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">E-Bike</h3>
+                <h3 className="text-xl font-bold text-secondary mb-2">E-Bike</h3>
                 <p className="text-gray-700 leading-relaxed">
                   The Smart Electric Bike transforms old motorcycles into
                   eco-friendly, low-maintenance rides with remote ignition,
@@ -410,7 +416,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="col-span-3 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">
+                <h3 className="text-xl font-bold text-secondary mb-2">
                   Cold Storage Robot
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -427,7 +433,7 @@ const Research = () => {
                 (image here)
               </div>
               <div className="col-span-3 p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">
+                <h3 className="text-xl font-bold text-secondary mb-2">
                   Smart Water Quality Analyzer
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -440,11 +446,12 @@ const Research = () => {
           </div>
         </div>
       </section>
+
       {/* Student Innovation & Start-up Culture Section */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
             Student Innovation & Start-up Culture
           </h2>
 
@@ -462,7 +469,7 @@ const Research = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="border border-gray-200 shadow-md bg-gray-50 text-left p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-800 mb-3">
+              <h3 className="text-lg font-bold text-primary mb-3">
                 NewGen IEDC – Pre-incubation Support
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -475,7 +482,7 @@ const Research = () => {
 
             {/* Card 2 */}
             <div className="border border-gray-200 shadow-md bg-gray-50 text-left p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-800 mb-3">
+              <h3 className="text-lg font-bold text-primary mb-3">
                 INR 2 Crores+ in Prototype Grants
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -488,7 +495,7 @@ const Research = () => {
 
             {/* Card 3 */}
             <div className="border border-gray-200 shadow-md bg-gray-50 text-left p-8 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-blue-800 mb-3">
+              <h3 className="text-lg font-bold text-primary mb-3">
                 From Ideas to Impact
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -501,10 +508,11 @@ const Research = () => {
           </div>
         </div>
       </section>
+
       {/* Department Information Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
             Research Information
           </h2>
 
@@ -521,11 +529,11 @@ const Research = () => {
                 ].map((tab, i) => (
                   <li
                     key={i}
-                    onClick={() => setActiveTab(tab)} // 👈 sets the active tab
+                    onClick={() => setActiveTab(tab)}
                     className={`p-3 rounded-md cursor-pointer font-medium ${
                       activeTab === tab
-                        ? "bg-blue-50 border-l-4 border-secondary text-secondary"
-                        : "hover:bg-gray-100 text-gray-700"
+                        ? "bg-tertiary border-l-4 border-secondary text-secondary"
+                        : "hover:bg-gray-100 text-primary"
                     }`}
                   >
                     {tab}
@@ -535,7 +543,6 @@ const Research = () => {
             </div>
 
             {/* Right Accordion */}
-            {/* Right Accordion (Dynamic Content Based on Sidebar Selection) */}
             <div className="bg-white shadow-md border border-gray-200 rounded-lg">
               {/* Overview Accordion */}
               {activeTab === "Overview" && (
@@ -545,7 +552,7 @@ const Research = () => {
                       title: "1. About the R&D Cell",
                       content: (
                         <>
-                          <p>
+                          <p className="text-primary">
                             Indira College of Engineering and Management is
                             committed to inculcate research culture among
                             faculty, researchers and students. The R&D Cell aims
@@ -555,7 +562,7 @@ const Research = () => {
                             and social significance will be identified and thus
                             contributing to the nation development.
                           </p>
-                          <p className="mt-3">
+                          <p className="mt-3 text-primary">
                             The research policy defines the applicable rules and
                             regulations to be adhered while carrying out various
                             research activities and norms related to safe and
@@ -578,7 +585,7 @@ const Research = () => {
                     {
                       title: "2. Objectives",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-2 text-primary">
                           <li>
                             To identify and inform all researchers about the
                             research opportunities available in academic,
@@ -621,7 +628,7 @@ const Research = () => {
                     {
                       title: "3. Memorandums of Understanding (MoUs)",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-2 text-primary">
                           <li>
                             MoU with Consortium of Technical Education for
                             innovative programs and research initiatives.
@@ -672,12 +679,13 @@ const Research = () => {
                     {
                       title: "4. Research & Development Documents",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Registered Ph.D Guides AY [2024-2025]
                             </a>
@@ -687,6 +695,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Registered Ph.D Guides AY [2023-2024]
                             </a>
@@ -696,6 +705,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Registered Ph.D Guides AY [2022-2023]
                             </a>
@@ -705,6 +715,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Research & Development Committee AY [2024-2025]
                             </a>
@@ -714,6 +725,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Research & Development Committee AY [2023-2024]
                             </a>
@@ -723,6 +735,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Research & Development Committee
                             </a>
@@ -739,7 +752,7 @@ const Research = () => {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -748,7 +761,7 @@ const Research = () => {
                         </span>
                       </button>
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700">
+                        <div className="p-4 bg-tertiary text-primary">
                           {section.content}
                         </div>
                       )}
@@ -764,12 +777,13 @@ const Research = () => {
                     {
                       title: "1. Journals",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Key Publications in the Indexed Journals by
                               Faculty Members AY-[2023-2024]
@@ -780,6 +794,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Key Publications in the Indexed Journals by
                               Faculty Members AY-[2022-2023]
@@ -790,6 +805,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Key Publications in the Indexed Journals by
                               Faculty Members AY-[2021-2022]
@@ -801,12 +817,13 @@ const Research = () => {
                     {
                       title: "2. Conferences",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Conference 2023-24
                             </a>
@@ -816,6 +833,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Conference 2022-23
                             </a>
@@ -825,6 +843,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Conference 2021-22
                             </a>
@@ -835,12 +854,13 @@ const Research = () => {
                     {
                       title: "3. Books",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Books AY-2023-2024
                             </a>
@@ -850,6 +870,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Books AY-2022-2023
                             </a>
@@ -859,6 +880,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Books AY-2021-2022
                             </a>
@@ -875,7 +897,7 @@ const Research = () => {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -884,7 +906,7 @@ const Research = () => {
                         </span>
                       </button>
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700">
+                        <div className="p-4 bg-tertiary text-primary">
                           {section.content}
                         </div>
                       )}
@@ -892,8 +914,7 @@ const Research = () => {
                   ))}
                 </>
               )}
-              {/* IPR Accordion */}
-              {/* IPR Accordion */}
+
               {/* IPR Accordion */}
               {activeTab === "IPR" && (
                 <div className="p-0">
@@ -901,12 +922,13 @@ const Research = () => {
                     {
                       title: "1. Patents",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Patents Filed/Published in the AY-[2023-24]
                             </a>
@@ -916,6 +938,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Patents Filed/Published in the AY-[2022-23]
                             </a>
@@ -925,6 +948,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Patents Filed/Published in the AY-[2021-22]
                             </a>
@@ -935,12 +959,13 @@ const Research = () => {
                     {
                       title: "2. Copyrights",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Copyrights Filed in the academic year 2023-24
                             </a>
@@ -950,6 +975,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Copyrights Filed in the academic year 2022-23
                             </a>
@@ -960,12 +986,13 @@ const Research = () => {
                     {
                       title: "3. Trademarks",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Trademarks Registered in the academic year 2023-24
                             </a>
@@ -975,6 +1002,7 @@ const Research = () => {
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Trademarks Registered in the academic year 2022-23
                             </a>
@@ -991,7 +1019,7 @@ const Research = () => {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -1001,7 +1029,7 @@ const Research = () => {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}
@@ -1009,6 +1037,7 @@ const Research = () => {
                   ))}
                 </div>
               )}
+
               {/* Research Activities Accordion */}
               {activeTab === "Research Activities" && (
                 <div className="p-0">
@@ -1016,12 +1045,13 @@ const Research = () => {
                     {
                       title: "1. Workshops/Seminars Conducted AY-[2023-24]",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Workshops/Seminars Conducted AY-[2023-24]
                             </a>
@@ -1032,12 +1062,13 @@ const Research = () => {
                     {
                       title: "2. Workshops/Seminars Conducted AY-[2022-23]",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Workshops/Seminars Conducted AY-[2022-23]
                             </a>
@@ -1048,12 +1079,13 @@ const Research = () => {
                     {
                       title: "3. Workshops/Seminars Conducted AY-[2021-22]",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Workshops/Seminars Conducted AY-[2021-22]
                             </a>
@@ -1070,7 +1102,7 @@ const Research = () => {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -1080,7 +1112,7 @@ const Research = () => {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}
@@ -1088,6 +1120,7 @@ const Research = () => {
                   ))}
                 </div>
               )}
+
               {/* Research Policy Accordion */}
               {activeTab === "Research Policy" && (
                 <div className="p-0">
@@ -1095,12 +1128,13 @@ const Research = () => {
                     {
                       title: "Research Policy [2023-24]",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Research Policy Document for AY [2023-24]
                             </a>
@@ -1111,12 +1145,13 @@ const Research = () => {
                     {
                       title: "Research Policy [2022-23]",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Research Policy Document for AY [2022-23]
                             </a>
@@ -1127,12 +1162,13 @@ const Research = () => {
                     {
                       title: "Research Policy [2021-22]",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Research Policy Document for AY [2021-22]
                             </a>
@@ -1149,7 +1185,7 @@ const Research = () => {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -1159,7 +1195,7 @@ const Research = () => {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}

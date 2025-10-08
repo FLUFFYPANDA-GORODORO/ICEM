@@ -185,105 +185,53 @@ function Accreditation() {
         {/* Left Section */}
         <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md space-y-12">
           {/* === NAAC Section === */}
-          <div>
-            <h2 className="text-2xl font-semibold text-secondary mb-6">
-              {sections.naac.title}
-            </h2>
-            {sections.naac.accordions.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg bg-gray-50 overflow-hidden mb-3"
-              >
-                <button
-                  onClick={() => toggleAccordion("naac", index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-gray-800 hover:bg-gray-100 transition"
+          {Object.keys(sections).map((key) => (
+            <div key={key}>
+              <h2 className="text-2xl font-semibold text-secondary mb-6">
+                {sections[key].title}
+              </h2>
+              {sections[key].accordions.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg bg-gray-50 shadow-sm overflow-hidden mb-3"
                 >
-                  {item.heading}
-                  <span className="text-xl text-gray-600">
-                    {openAccordions.naac === index ? "−" : "+"}
-                  </span>
-                </button>
-                {openAccordions.naac === index && (
-                  <div className="p-4 bg-white border-t border-gray-200 text-gray-700">
-                    {item.content}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* === IQAC Section === */}
-          <div>
-            <h2 className="text-2xl font-semibold text-secondary mb-6">
-              {sections.iqac.title}
-            </h2>
-            {sections.iqac.accordions.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg bg-gray-50 overflow-hidden mb-3"
-              >
-                <button
-                  onClick={() => toggleAccordion("iqac", index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-gray-800 hover:bg-gray-100 transition"
-                >
-                  {item.heading}
-                  <span className="text-xl text-gray-600">
-                    {openAccordions.iqac === index ? "−" : "+"}
-                  </span>
-                </button>
-                {openAccordions.iqac === index && (
-                  <div className="p-4 bg-white border-t border-gray-200 text-gray-700">
-                    {item.content}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* === IQAC (Extended) Section === */}
-          <div>
-            <h2 className="text-2xl font-semibold text-secondary mb-6">
-              {sections.extended.title}
-            </h2>
-            {sections.extended.accordions.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg bg-gray-50 overflow-hidden mb-3"
-              >
-                <button
-                  onClick={() => toggleAccordion("extended", index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-gray-800 hover:bg-gray-100 transition"
-                >
-                  {item.heading}
-                  <span className="text-xl text-gray-600">
-                    {openAccordions.extended === index ? "−" : "+"}
-                  </span>
-                </button>
-                {openAccordions.extended === index && (
-                  <div className="p-4 bg-white border-t border-gray-200 text-gray-700">
-                    {item.content}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+                  <button
+                    onClick={() => toggleAccordion(key, index)}
+                    className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-gray-900 hover:bg-gray-100 transition"
+                  >
+                    {item.heading}
+                    <span className="text-xl text-secondary">
+                      {openAccordions[key] === index ? "−" : "+"}
+                    </span>
+                  </button>
+                  {openAccordions[key] === index && (
+                    <div className="p-4 bg-white border-t border-gray-200 text-gray-700">
+                      {item.content}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
 
         {/* Right Sidebar */}
-        <div className="md:w-1/3 bg-secondary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+          {/* Sidebar Links */}
           <ul className="space-y-4 mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+                className="pb-2 border-b border-white/30 hover:text-tertiary cursor-pointer transition-all duration-300 hover:underline"
               >
                 {link}
               </li>
             ))}
           </ul>
 
+          {/* Contact Form */}
           <div className="bg-tertiary p-6 rounded-lg mb-8">
-            <h3 className="text-center text-lg font-bold mb-4">
+            <h3 className="text-center text-lg font-bold mb-4 text-secondary">
               GET IN TOUCH WITH US
             </h3>
             <form className="space-y-3">
@@ -293,7 +241,7 @@ function Accreditation() {
                 className="w-full p-2 text-black rounded"
               />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
+                <span className="pl-2 text-black">🇮🇳</span>
                 <input
                   type="text"
                   placeholder="PHONE NUMBER*"
@@ -316,30 +264,31 @@ function Accreditation() {
                 placeholder="STATE"
                 className="w-full p-2 text-black rounded"
               />
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-300">
                 By providing your contact details, you agree to receive updates
                 from Indira College through WhatsApp.
               </p>
               <button
                 type="submit"
-                className="w-full bg-primary text-white font-semibold py-2 rounded hover:opacity-90 transition"
+                className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-white hover:text-[#003c84] transition-colors duration-300"
               >
                 Apply Now
               </button>
             </form>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h4 className="text-center text-primary font-bold mb-4 border-t border-gray-500 pt-4">
+            <h4 className="text-center text-secondary font-bold mb-4 border-t border-white/30 pt-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition"
+                  className="flex items-center gap-2 text-sm hover:text-tertiary cursor-pointer transition"
                 >
-                  <span className="text-primary">•</span> {item}
+                  <span className="text-secondary">•</span> {item}
                 </li>
               ))}
             </ul>
@@ -347,7 +296,7 @@ function Accreditation() {
         </div>
       </div>
 
-      {/* === Bottom Accordions Section (White like 2nd image) === */}
+      {/* === Bottom Accordions Section === */}
       <div className="bg-gray-50 py-16 px-6">
         <div className="max-w-6xl mx-auto space-y-4">
           {bottomAccordions.map((item, index) => (
@@ -357,15 +306,15 @@ function Accreditation() {
             >
               <button
                 onClick={() => toggleAccordion("bottom", index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-secondary hover:bg-gray-100 transition"
+                className="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-100 transition"
               >
                 {item.title}
-                <span className="text-xl text-primary">
+                <span className="text-xl text-secondary">
                   {openAccordions.bottom === index ? "−" : "+"}
                 </span>
               </button>
               {openAccordions.bottom === index && (
-                <div className="p-6 border-t border-gray-200 text-gray-700">
+                <div className="p-6 border-t border-gray-200 text-gray-700 bg-white">
                   {item.content}
                 </div>
               )}

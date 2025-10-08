@@ -64,39 +64,41 @@ function IcemStudentCouncil() {
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            The purpose of the <b>Students Council (SC)</b> is to provide programs,
-            activities, and services which serve the co-curricular, cultural,
-            social, recreational, and educational interests of students at the
-            University and Colleges. The SC seeks to contribute to the development
-            of students’ leadership skills and experience, program planning and
-            development, volunteering, and fiscal management.
+            The purpose of the <b>Students Council (SC)</b> is to provide
+            programs, activities, and services which serve the co-curricular,
+            cultural, social, recreational, and educational interests of
+            students at the University and Colleges. The SC seeks to contribute
+            to the development of students’ leadership skills and experience,
+            program planning and development, volunteering, and fiscal
+            management.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
             The Students’ Council is established under the{" "}
             <b>Maharashtra Public Universities Act, 1994 section 40 (B)</b> and
-            under the new <b>Maharashtra Public University Act 2016, Section 99</b>.
-            The act was passed with a view to improve the quality of higher
-            education and provides innovative measures for the welfare of
-            students, teachers, colleges, and universities.
+            under the new{" "}
+            <b>Maharashtra Public University Act 2016, Section 99</b>. The act
+            was passed with a view to improve the quality of higher education
+            and provides innovative measures for the welfare of students,
+            teachers, colleges, and universities.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
             This act provides for the formation of student unions or associated
-            student bodies, distinctively called <b>Students’ Councils</b>. There
-            shall be a University Students’ Council and a College Students’
-            Council for each affiliated college to look after the welfare of
-            students and to promote and coordinate extra-curricular activities
-            for a better campus life. It is specifically noted that the Councils
-            shall not engage in political activities. This chartered student
-            council is authorized by the University to manage student activity
-            funds responsibly.
+            student bodies, distinctively called <b>Students’ Councils</b>.
+            There shall be a University Students’ Council and a College
+            Students’ Council for each affiliated college to look after the
+            welfare of students and to promote and coordinate extra-curricular
+            activities for a better campus life. It is specifically noted that
+            the Councils shall not engage in political activities. This
+            chartered student council is authorized by the University to manage
+            student activity funds responsibly.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-6">
-            <b>Indira College of Engineering and Management (ICEM)</b> has formed
-            its Student Council under the guidance of the above-mentioned Act.
-            The following are the council members.
+            <b>Indira College of Engineering and Management (ICEM)</b> has
+            formed its Student Council under the guidance of the above-mentioned
+            Act. The following are the council members.
           </p>
 
           <h3 className="text-xl font-semibold text-secondary mb-4">
@@ -110,18 +112,18 @@ function IcemStudentCouncil() {
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            The <b>ICEM Student Council’s mission</b> is to encourage and promote
-            the values that represent good character in all students and build
-            responsible leaders within the student community. Together with ICEM
-            faculty, staff, alumni, and university support, it seeks to inspire
-            visions and actions for a more ethical and just world through the
-            exchange of ideas and information.
+            The <b>ICEM Student Council’s mission</b> is to encourage and
+            promote the values that represent good character in all students and
+            build responsible leaders within the student community. Together
+            with ICEM faculty, staff, alumni, and university support, it seeks
+            to inspire visions and actions for a more ethical and just world
+            through the exchange of ideas and information.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-10">
-            The executive committee of <b>ICEM-SC</b> comprises advisors from the
-            management and faculty, and students elected as office bearers and
-            representatives from all classes across disciplines.
+            The executive committee of <b>ICEM-SC</b> comprises advisors from
+            the management and faculty, and students elected as office bearers
+            and representatives from all classes across disciplines.
           </p>
 
           {/* Student Council Accordion Section */}
@@ -154,7 +156,7 @@ function IcemStudentCouncil() {
                       href={BEComp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 font-semibold underline hover:text-blue-800"
+                      className="text-primary font-semibold hover:underline"
                     >
                       View Report
                     </a>
@@ -166,13 +168,13 @@ function IcemStudentCouncil() {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
-          {/* About Links */}
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+          {/* Sidebar Links */}
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+                className="pb-2 border-b border-white/30 hover:text-tertiary cursor-pointer transition-all duration-300 hover:underline"
               >
                 {link}
               </li>
@@ -180,8 +182,8 @@ function IcemStudentCouncil() {
           </ul>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
-            <h3 className="text-center text-lg font-bold mb-4">
+          <div className="bg-tertiary p-6 rounded-lg mb-8">
+            <h3 className="text-center text-lg font-bold mb-4 text-secondary">
               GET IN TOUCH WITH US
             </h3>
             <form className="space-y-3">
@@ -191,7 +193,7 @@ function IcemStudentCouncil() {
                 className="w-full p-2 text-black rounded"
               />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
+                <span className="pl-2 text-black">🇮🇳</span>
                 <input
                   type="text"
                   placeholder="PHONE NUMBER*"
@@ -214,13 +216,13 @@ function IcemStudentCouncil() {
                 placeholder="STATE"
                 className="w-full p-2 text-black rounded"
               />
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-300">
                 By providing your contact details, you agree to receive updates
                 from Indira College through WhatsApp.
               </p>
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition"
+                className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-white hover:text-[#003c84] transition-colors duration-300"
               >
                 Apply Now
               </button>
@@ -229,16 +231,16 @@ function IcemStudentCouncil() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
+            <h4 className="text-center text-secondary font-bold mb-4 border-t border-white/30 pt-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
+                  className="flex items-center gap-2 text-sm hover:text-tertiary cursor-pointer transition"
                 >
-                  <span className="text-red-500">•</span> {item}
+                  <span className="text-secondary">•</span> {item}
                 </li>
               ))}
             </ul>
