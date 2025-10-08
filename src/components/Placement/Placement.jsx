@@ -26,11 +26,11 @@ function Placement() {
       {/* Career Advancement Services (CAS) Section */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
             Career Advancement Services (CAS)
           </h2>
           <p className="text-md text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
-            At Indira College, we don’t just prepare students for jobs—we
+            At Indira College, we don't just prepare students for jobs—we
             prepare them for thriving careers. Our Career Advancement Services
             (CAS) team is dedicated to building strong industry-academia
             collaborations, ensuring that our students have access to the best
@@ -42,11 +42,11 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {/* Internships */}
             <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-blue-700 mb-4">
+              <h3 className="text-lg font-bold text-secondary mb-4">
                 Internships: Learn by Doing
               </h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                We believe experience is the best teacher. That’s why we offer
+                We believe experience is the best teacher. That's why we offer
                 6-month to 1-year summer and winter internships across all our
                 schools, allowing students to apply their knowledge in
                 real-world settings. These internships equip students with
@@ -57,7 +57,7 @@ function Placement() {
 
             {/* Placements */}
             <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-blue-700 mb-4">
+              <h3 className="text-lg font-bold text-secondary mb-4">
                 Record Breaking Placements
               </h3>
               <p className="text-gray-700 leading-relaxed text-sm">
@@ -72,14 +72,14 @@ function Placement() {
 
             {/* Industry Network */}
             <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left  max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-blue-700 mb-4">
+              <h3 className="text-lg font-bold text-secondary mb-4">
                 Strong Industry Network
               </h3>
               <p className="text-gray-700 leading-relaxed text-sm">
                 Our deep-rooted ties with leading companies ensure that our
                 students have a competitive edge. From exclusive recruitment
                 opportunities to industrial training, we ensure they are able to
-                thrive in world’s top organisations. Regular industry
+                thrive in world's top organisations. Regular industry
                 interactions, corporate talks, and live projects prepare them
                 for dynamic career opportunities.
               </p>
@@ -97,8 +97,8 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Highest Package */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-blue-700 mb-2">₹27 LPA</h3>
-              <p className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-4xl font-bold text-secondary mb-2">₹27 LPA</h3>
+              <p className="text-lg font-semibold text-primary mb-2">
                 Highest Package
               </p>
               <p className="text-gray-600 text-sm">
@@ -108,8 +108,8 @@ function Placement() {
 
             {/* Students */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-blue-700 mb-2">₹10 LPA</h3>
-              <p className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-4xl font-bold text-secondary mb-2">₹10 LPA</h3>
+              <p className="text-lg font-semibold text-primary mb-2">
                 870+ Students
               </p>
               <p className="text-gray-600 text-sm">
@@ -119,8 +119,8 @@ function Placement() {
 
             {/* Companies */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-blue-700 mb-2">2000+</h3>
-              <p className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-4xl font-bold text-secondary mb-2">2000+</h3>
+              <p className="text-lg font-semibold text-primary mb-2">
                 Recruiting Companies
               </p>
               <p className="text-gray-600 text-sm">
@@ -130,8 +130,8 @@ function Placement() {
 
             {/* Graduates */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-blue-700 mb-2">72%</h3>
-              <p className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-4xl font-bold text-secondary mb-2">72%</h3>
+              <p className="text-lg font-semibold text-primary mb-2">
                 Indira Graduates
               </p>
               <p className="text-gray-600 text-sm">
@@ -152,7 +152,7 @@ function Placement() {
 
             {/* Right Content */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
                 Industry Partnerships & MOUs
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -166,7 +166,7 @@ function Placement() {
                 in hiring.
               </p>
 
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              <h3 className="text-lg font-semibold text-secondary mb-2">
                 Key Industry Partners:
               </h3>
 
@@ -204,7 +204,7 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200 shadow-md p-8 bg-white">
             {/* Left Content */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
                 Research Labs & Facilities
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -216,7 +216,7 @@ function Placement() {
                 and contribute to industry-focused Research and Development.
               </p>
 
-              <h3 className="text-lg font-semibold text-blue-800 mb-4">
+              <h3 className="text-lg font-semibold text-secondary mb-4">
                 Industry & Research Collaborators:
               </h3>
 
@@ -260,7 +260,7 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200 shadow-md p-8 bg-white">
             {/* Left Content */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
                 Centres of Excellence
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -273,7 +273,7 @@ function Placement() {
                 technology
               </p>
 
-              <h3 className="text-lg font-semibold text-blue-800 mb-4">
+              <h3 className="text-lg font-semibold text-secondary mb-4">
                 COE Partners:
               </h3>
 
@@ -340,7 +340,7 @@ function Placement() {
             {/* 1️⃣ Internships & Industry Exposure */}
             <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
               <div className="flex flex-col items-center text-center">
-                <FaBriefcase className="text-5xl mb-4 text-blue-400" />
+                <FaBriefcase className="text-5xl mb-4 text-secondary" />
                 <h3 className="text-xl font-bold mb-3">
                   Internships & Industry Exposure
                 </h3>
@@ -356,7 +356,7 @@ function Placement() {
             {/* 2️⃣ Global Learning Opportunities */}
             <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
               <div className="flex flex-col items-center text-center">
-                <FaGlobe className="text-5xl mb-4 text-blue-400" />
+                <FaGlobe className="text-5xl mb-4 text-secondary" />
                 <h3 className="text-xl font-bold mb-3">
                   Global Learning Opportunities
                 </h3>
@@ -372,7 +372,7 @@ function Placement() {
             {/* 3️⃣ Skills That Set You Apart */}
             <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
               <div className="flex flex-col items-center text-center">
-                <FaLightbulb className="text-5xl mb-4 text-blue-400" />
+                <FaLightbulb className="text-5xl mb-4 text-secondary" />
                 <h3 className="text-xl font-bold mb-3">
                   Skills That Set You Apart
                 </h3>
@@ -387,7 +387,7 @@ function Placement() {
             {/* 4️⃣ Industry-Specific Expertise */}
             <div className="bg-white/10 border border-white/20 p-8 shadow-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300">
               <div className="flex flex-col items-center text-center">
-                <FaIndustry className="text-5xl mb-4 text-blue-400" />
+                <FaIndustry className="text-5xl mb-4 text-secondary" />
                 <h3 className="text-xl font-bold mb-3">
                   Industry-Specific Expertise
                 </h3>
@@ -406,7 +406,7 @@ function Placement() {
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-secondary mb-8">
             Upskilling for the Future
           </h2>
 
@@ -419,7 +419,7 @@ function Placement() {
 
             {/* Right Text */}
             <div className="p-5 md:w-[65%] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              <h3 className="text-lg font-semibold text-secondary mb-2">
                 Skillverse: Gaining a Competitive Edge
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
@@ -442,7 +442,7 @@ function Placement() {
 
             {/* Right Text */}
             <div className="p-5 md:w-[65%] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              <h3 className="text-lg font-semibold text-secondary mb-2">
                 University Readiness Academy (URA): A Launchpad for Success
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
@@ -461,7 +461,7 @@ function Placement() {
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Heading and Intro */}
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-secondary mb-4">
             Staying Future-Ready
           </h2>
           <p className="text-gray-700 text-center max-w-4xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
@@ -481,7 +481,7 @@ function Placement() {
 
             {/* Right Text */}
             <div className="p-5 md:w-[65%] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              <h3 className="text-lg font-semibold text-secondary mb-2">
                 Board of Studies: Keeping Our Curriculum Aligned with Industry
                 Needs
               </h3>
@@ -505,7 +505,7 @@ function Placement() {
 
             {/* Right Text */}
             <div className="p-5 md:w-[65%] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              <h3 className="text-lg font-semibold text-secondary mb-2">
                 Professors of Practice: Learning from Industry Leaders
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
@@ -524,7 +524,7 @@ function Placement() {
       {/* For Recruiters: Upgrade your Workforce */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
             For Recruiters: Upgrade your Workforce
           </h2>
           <p className="text-md text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
@@ -532,13 +532,13 @@ function Placement() {
             industry-ready talent for jobs or internships, engage directly with
             students and faculty, collaborate across multiple levels, or explore
             research opportunities — we will work with you to craft an
-            engagement strategy aligned with your company’s interests.
+            engagement strategy aligned with your company's interests.
           </p>
 
           {/* Three Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-blue-700 mb-4">
+              <h3 className="text-lg font-bold text-secondary mb-4">
                 Summer & Winter Internships
               </h3>
               <p className="text-gray-700 leading-relaxed text-sm">
@@ -553,7 +553,7 @@ function Placement() {
 
             {/* Placements */}
             <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-blue-700 mb-4">
+              <h3 className="text-lg font-bold text-secondary mb-4">
                 Talent Acquisition
               </h3>
               <p className="text-gray-700 leading-relaxed text-sm">
@@ -568,7 +568,7 @@ function Placement() {
 
             {/* Industry Network */}
             <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 text-left  max-w-sm mx-auto">
-              <h3 className="text-lg font-bold text-blue-700 mb-4">
+              <h3 className="text-lg font-bold text-secondary mb-4">
                 Program Co-creation
               </h3>
               <p className="text-gray-700 leading-relaxed text-sm">
@@ -590,11 +590,11 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-2 items-center border border-gray-200 shadow-md bg-white overflow-hidden">
             {/* Left Text Section */}
             <div className="p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-4">
                 Empowering Students for Career Success
               </h2>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                At Indira College, we don’t just prepare students for jobs—we
+                At Indira College, we don't just prepare students for jobs—we
                 shape their future for long-term career growth and stability.
                 Industry readiness is not an add-on; it is ingrained in every
                 aspect of our education. With over <strong>2,000+</strong>{" "}
@@ -624,7 +624,7 @@ function Placement() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase">
             Indira Degree Opens Doors. Wide.
           </h2>
           <p className="text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -651,7 +651,7 @@ function Placement() {
       {/* Placement Information Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
             Placement Information
           </h2>
 
@@ -667,11 +667,11 @@ function Placement() {
                 ].map((tab, i) => (
                   <li
                     key={i}
-                    onClick={() => setActiveTab(tab)} // 👈 sets the active tab
+                    onClick={() => setActiveTab(tab)}
                     className={`p-3 rounded-md cursor-pointer font-medium ${
                       activeTab === tab
-                        ? "bg-blue-50 border-l-4 border-secondary text-secondary"
-                        : "hover:bg-gray-100 text-gray-700"
+                        ? "bg-tertiary border-l-4 border-secondary text-secondary"
+                        : "hover:bg-gray-100 text-primary"
                     }`}
                   >
                     {tab}
@@ -691,7 +691,7 @@ function Placement() {
                       title: "1. About the Placement Cell",
                       content: (
                         <>
-                          <p className="mb-4">
+                          <p className="mb-4 text-primary">
                             Placements give students the opportunity to gain
                             skills specific to their subject or industry of
                             choice as well as the employability skills required
@@ -700,7 +700,7 @@ function Placement() {
                             make better-informed decisions about future career
                             choices.
                           </p>
-                          <p className="mb-4">
+                          <p className="mb-4 text-primary">
                             The Training & Placement department facilitates the
                             process of placement of students passing out from
                             the Institute besides collaborating with leading
@@ -708,13 +708,13 @@ function Placement() {
                             programs for students. It enables them to get the
                             right direction and training to fulfil their dreams.
                           </p>
-                          <p className="mb-4">
+                          <p className="mb-4 text-primary">
                             The inculcation of guidance about market patterns
                             and employability helps the students in polishing
                             their skills — making a job available to every
                             student according to his capabilities.
                           </p>
-                          <p>
+                          <p className="text-primary">
                             To ensure the preparedness of students well before
                             they start facing recruiters, the dedicated Talent
                             Management Team under the placement cell edifies
@@ -729,9 +729,9 @@ function Placement() {
                     {
                       title: "2. Training Activities",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-2 text-primary">
                           <li>
-                            Create awareness about “career planning" and "career
+                            Create awareness about "career planning" and "career
                             mapping".
                           </li>
                           <li>
@@ -740,7 +740,7 @@ function Placement() {
                           </li>
                           <li>Equip the students with life skills.</li>
                           <li>
-                            Train the students on “Personality Development”.
+                            Train the students on "Personality Development".
                           </li>
                           <li>
                             Conduct mock interviews and group discussions to
@@ -755,7 +755,7 @@ function Placement() {
                     {
                       title: "3. Placement Team Details",
                       content: (
-                        <div className="space-y-3">
+                        <div className="space-y-3 text-primary">
                           <p>
                             <strong>
                               Director - Placement & Corporate Relations:
@@ -774,12 +774,12 @@ function Placement() {
                             <strong>Email:</strong>{" "}
                             <a
                               href="mailto:js.sidhu@indiraicem.ac.in"
-                              className="text-blue-700 underline"
+                              className="text-secondary underline"
                             >
                               js.sidhu@indiraicem.ac.in
                             </a>
                           </p>
-                          <blockquote className="italic text-gray-600 mt-4 border-l-4 border-blue-800 pl-4">
+                          <blockquote className="italic text-gray-600 mt-4 border-l-4 border-secondary pl-4">
                             "THERE IS NO ELEVATOR TO SUCCESS. YOU HAVE TO TAKE
                             THE STAIRS."
                           </blockquote>
@@ -795,7 +795,7 @@ function Placement() {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -805,7 +805,7 @@ function Placement() {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}
@@ -821,7 +821,7 @@ function Placement() {
                     {
                       title: "1. ICEM Top Recruiters",
                       content: (
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-gray-700">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-primary">
                           {[
                             "CLSA",
                             "Z S Solutions",
@@ -994,7 +994,7 @@ function Placement() {
                               key={index}
                               className="flex items-center gap-2"
                             >
-                              <span className="text-blue-700 font-medium">
+                              <span className="text-secondary font-medium">
                                 {company}
                               </span>
                             </div>
@@ -1011,7 +1011,7 @@ function Placement() {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -1021,7 +1021,7 @@ function Placement() {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}
@@ -1037,12 +1037,13 @@ function Placement() {
                     {
                       title: "1. Placed Students 2024-25",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2024-25
                             </a>
@@ -1053,12 +1054,13 @@ function Placement() {
                     {
                       title: "2. Placed Students 2023-24",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2023-24
                             </a>
@@ -1069,12 +1071,13 @@ function Placement() {
                     {
                       title: "3. Placed Students 2022-23",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2022-23
                             </a>
@@ -1085,12 +1088,13 @@ function Placement() {
                     {
                       title: "4. Placed Students 2021-22",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2021-22
                             </a>
@@ -1101,12 +1105,13 @@ function Placement() {
                     {
                       title: "5. Placed Students 2020-21",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2020-21
                             </a>
@@ -1117,12 +1122,13 @@ function Placement() {
                     {
                       title: "6. Placed Students 2019-20",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2019-20
                             </a>
@@ -1133,12 +1139,13 @@ function Placement() {
                     {
                       title: "7. Placed Students 2018-19",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2018-19
                             </a>
@@ -1149,12 +1156,13 @@ function Placement() {
                     {
                       title: "8. Placed Students 2017-18",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
+                        <ul className="list-disc pl-6 space-y-2 text-secondary">
                           <li>
                             <a
                               href={BEComp}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="hover:underline"
                             >
                               Placed Students 2017-18
                             </a>
@@ -1171,7 +1179,7 @@ function Placement() {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -1181,7 +1189,7 @@ function Placement() {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}
@@ -1190,85 +1198,6 @@ function Placement() {
                 </div>
               )}
 
-              {/* Research Activities Accordion */}
-              {activeTab === "Research Activities" && (
-                <div className="p-0">
-                  {[
-                    {
-                      title: "1. Workshops/Seminars Conducted AY-[2023-24]",
-                      content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
-                          <li>
-                            <a
-                              href={BEComp}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Workshops/Seminars Conducted AY-[2023-24]
-                            </a>
-                          </li>
-                        </ul>
-                      ),
-                    },
-                    {
-                      title: "2. Workshops/Seminars Conducted AY-[2022-23]",
-                      content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
-                          <li>
-                            <a
-                              href={BEComp}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Workshops/Seminars Conducted AY-[2022-23]
-                            </a>
-                          </li>
-                        </ul>
-                      ),
-                    },
-                    {
-                      title: "3. Workshops/Seminars Conducted AY-[2021-22]",
-                      content: (
-                        <ul className="list-disc pl-6 space-y-2 text-blue-700">
-                          <li>
-                            <a
-                              href={BEComp}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Workshops/Seminars Conducted AY-[2021-22]
-                            </a>
-                          </li>
-                        </ul>
-                      ),
-                    },
-                  ].map((section, i) => (
-                    <div key={i} className="border-b border-gray-200">
-                      <button
-                        onClick={() =>
-                          setActiveAccordion(activeAccordion === i ? null : i)
-                        }
-                        className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
-                          activeAccordion === i
-                            ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
-                        }`}
-                      >
-                        {section.title}
-                        <span className="text-xl font-bold">
-                          {activeAccordion === i ? "−" : "+"}
-                        </span>
-                      </button>
-
-                      {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
-                          {section.content}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
               {/* Placement Policy & Guidelines Accordion */}
               {activeTab === "Placement Policy" && (
                 <div className="p-0">
@@ -1277,7 +1206,7 @@ function Placement() {
                       title: "1. Overview",
                       content: (
                         <>
-                          <p className="mb-4">
+                          <p className="mb-4 text-primary">
                             The role of the Training and Placement Cell is that
                             of a facilitator and counselor for placement-related
                             activities. The Training and Placement Cell provides{" "}
@@ -1285,7 +1214,7 @@ function Placement() {
                             to all registered students as per the norms provided
                             here.
                           </p>
-                          <p>
+                          <p className="text-primary">
                             The placement team endeavors to assist all genuinely
                             interested and eligible B.E. students in beginning
                             their careers with organizations of repute.
@@ -1297,13 +1226,13 @@ function Placement() {
                       title: "2. Registration Process",
                       content: (
                         <>
-                          <p className="mb-4">
+                          <p className="mb-4 text-primary">
                             Students interested in placements need to register
                             themselves as per the registration link provided,
                             which includes their academic details and contact
                             information in the VI Semester.
                           </p>
-                          <p>
+                          <p className="text-primary">
                             Students failing to submit/update their details by
                             the end of the VI semester will{" "}
                             <strong>
@@ -1317,7 +1246,7 @@ function Placement() {
                     {
                       title: "3. Selection of Companies",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-2 text-primary">
                           <li>Job profile and growth prospects.</li>
                           <li>The package being offered by the company.</li>
                           <li>Past record of recruitment at ICEM.</li>
@@ -1328,7 +1257,7 @@ function Placement() {
                     {
                       title: "4. Eligibility Criteria",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-2 text-primary">
                           <li>
                             Minimum aggregate of 60% or above from SSC onwards.
                           </li>
@@ -1345,18 +1274,18 @@ function Placement() {
                       title: "5. Placement Rules",
                       content: (
                         <>
-                          <p className="mb-3">
+                          <p className="mb-3 text-primary">
                             The placement committee strictly enforces a
                             <strong>
                               {" "}
-                              “One Student - One Job Offer” policy
+                              "One Student - One Job Offer" policy
                             </strong>
                             .
                           </p>
-                          <p className="font-semibold mb-2">
+                          <p className="font-semibold mb-2 text-primary">
                             Company Categories:
                           </p>
-                          <ul className="list-disc pl-6 space-y-1">
+                          <ul className="list-disc pl-6 space-y-1 text-primary">
                             <li>
                               <strong>Category A:</strong> Companies offering
                               CTC ≥ ₹4 LPA.
@@ -1371,12 +1300,12 @@ function Placement() {
                             </li>
                           </ul>
 
-                          <p className="mt-4 mb-2 font-semibold">
+                          <p className="mt-4 mb-2 font-semibold text-primary">
                             Additional Rules:
                           </p>
-                          <ul className="list-disc pl-6 space-y-2">
+                          <ul className="list-disc pl-6 space-y-2 text-primary">
                             <li>
-                              Once a student’s name is submitted for an
+                              Once a student's name is submitted for an
                               interview and they do not attend, they will be{" "}
                               <strong>blacklisted</strong> and fined ₹1000
                               (subject to management approval).
@@ -1401,7 +1330,7 @@ function Placement() {
                     {
                       title: "6. Dress Code & Conduct",
                       content: (
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-2 text-primary">
                           <li>
                             Students must be <strong>formally dressed</strong>{" "}
                             during any company interaction.
@@ -1428,12 +1357,12 @@ function Placement() {
                       title: "7. Policy Revisions",
                       content: (
                         <>
-                          <p className="mb-4">
+                          <p className="mb-4 text-primary">
                             If market conditions or job scenarios necessitate
                             changes, the placement policy may be revised to{" "}
                             <strong>maximize student benefit</strong>.
                           </p>
-                          <p>
+                          <p className="text-primary">
                             The placement cell will select student coordinators
                             from all streams every December/January (post 5th
                             semester) to assist in the process.
@@ -1450,7 +1379,7 @@ function Placement() {
                         className={`w-full flex justify-between items-center p-4 text-left font-medium transition-all duration-200 ${
                           activeAccordion === i
                             ? "bg-secondary text-white"
-                            : "text-gray-800 hover:bg-gray-50"
+                            : "text-primary hover:bg-tertiary"
                         }`}
                       >
                         {section.title}
@@ -1460,7 +1389,7 @@ function Placement() {
                       </button>
 
                       {activeAccordion === i && (
-                        <div className="p-4 bg-gray-50 text-gray-700 rounded-b-md">
+                        <div className="p-4 bg-tertiary text-primary rounded-b-md">
                           {section.content}
                         </div>
                       )}
