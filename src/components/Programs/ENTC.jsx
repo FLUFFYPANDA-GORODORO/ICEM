@@ -36,14 +36,14 @@ export default function ENTC() {
   return (
     <div className="w-full text-white">
       {/* ===== TOP DARK SECTION ===== */}
-      <div className="w-full bg-secondary py-12">
+      <div className="w-full bg-primary py-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
           {/* LEFT TEXT SECTION */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold leading-snug">
               4-Year B.E. ENTC Program <br />
               with specialisation in <br />
-              <span className="text-primary">
+              <span className="text-secondary">
                 Electronics & Telecommunication
               </span>
             </h2>
@@ -59,13 +59,13 @@ export default function ENTC() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={toggleModal}
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-md transition-colors"
+                className="bg-secondary hover:bg-white hover:text-black text-white px-6 py-2 rounded-md transition-colors"
               >
                 Apply Now
               </button>
               <button
                 onClick={handleBrochureDownload}
-                className="border border-white hover:bg-white hover:text-secondary px-6 py-2 rounded-md transition-colors"
+                className="border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md transition-colors"
               >
                 Download Brochure
               </button>
@@ -158,9 +158,7 @@ export default function ENTC() {
 
           {/* RIGHT FORM SECTION */}
           <div className="flex-1 bg-gray-50 p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto">
-            <h3 className="text-2xl font-bold bg-secondary text-white text-center py-3 rounded-md mb-6">
-              Apply Now
-            </h3>
+            
 
             <form className="space-y-4">
               {/* Name */}
@@ -407,7 +405,7 @@ export default function ENTC() {
 
       {/* ===== NEXT STEPS SECTION ===== */}
       <div className="w-full bg-[#f7f7f7] py-16 flex justify-center px-6">
-        <div className="bg-secondary rounded-2xl max-w-5xl w-full text-center text-white py-12 px-6">
+        <div className="bg-primary rounded-2xl max-w-5xl w-full text-center text-white py-12 px-6">
           <h2 className="text-3xl font-semibold mb-4">The Next Steps</h2>
           <p className="text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
             The steps you take today shape your future. At Indira College, we
@@ -418,7 +416,7 @@ export default function ENTC() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleBrochureDownload}
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-md font-semibold transition-colors"
+              className="bg-secondary hover:bg-white hover:text-black text-white px-8 py-3 rounded-md font-semibold transition-colors"
             >
               Download Brochure
             </button>

@@ -14,7 +14,7 @@ const Home = () => {
       </div>
 
       {/* Explore Section */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-6 pt-2 pb-6  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 leading-snug">
             Explore Your Potential with
@@ -591,7 +591,7 @@ const Home = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-secondary rounded-xl text-center text-white py-14 px-6">
+          <div className="bg-primary rounded-xl text-center text-white py-14 px-6">
             <h2 className="text-3xl font-bold mb-4">
               Shape Your Future with Us
             </h2>

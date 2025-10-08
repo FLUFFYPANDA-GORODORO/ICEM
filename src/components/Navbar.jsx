@@ -335,6 +335,9 @@ const Navbar = () => {
             <Link to="/placement" className="hover:text-primary">
               Placement
             </Link>
+            <h2 className="hover:text-primary">
+              Career Development
+            </h2>
             <Link to="/alumni" className="hover:text-primary">
               Alumni
             </Link>

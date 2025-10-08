@@ -100,7 +100,7 @@ const Footer = () => {
       </div>
 
       {/* ===== Bottom Bar ===== */}
-      <div className="bg-[#003366] text-white text-center py-3 text-sm">
+      <div className="bg-primary text-white text-center py-3 text-sm">
         © 2024. Indira College of Engineering and Management.
       </div>
     </footer>
