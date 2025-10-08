@@ -34,7 +34,7 @@ const Home = () => {
     <div>
       {/* Hero Image Section */}
       {/* ✅ Hero Slider Section */}
-      <div className="w-full h-[78vh] relative overflow-hidden">
+      <div className="w-full  relative overflow-hidden">
         <div
           ref={sliderRef}
           className={`flex ${

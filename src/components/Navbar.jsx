@@ -6,12 +6,15 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isHelplineOpen, setIsHelplineOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // ✅ Modal State
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
 
   const toggleHelpline = () => setIsHelplineOpen(!isHelplineOpen);
-  const toggleModal = () => setIsModalOpen(!isModalOpen); // ✅ Toggle Modal
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const handleMouseEnter = (dropdownName) => {
     if (dropdownTimeout) clearTimeout(dropdownTimeout);
@@ -21,6 +24,10 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => setActiveDropdown(null), 150);
     setDropdownTimeout(timeout);
+  };
+
+  const toggleMobileDropdown = (dropdownName) => {
+    setMobileDropdown(mobileDropdown === dropdownName ? null : dropdownName);
   };
 
   const dropdownContent = {
@@ -198,7 +205,7 @@ const Navbar = () => {
     <div className="max-w-8xl px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {content.sections.map((section, index) => (
         <div key={index}>
-          <h3 className="text-lg  font-semibold text-secondary mb-4">
+          <h3 className="text-lg font-semibold text-secondary mb-4">
             {section.title || content.title}
           </h3>
           <ul className="space-y-4 text-gray-800 text-sm">
@@ -230,19 +237,58 @@ const Navbar = () => {
     </div>
   );
 
+  const renderMobileDropdown = (content, dropdownName) => (
+    <div className="bg-gray-50 rounded-lg mt-2 overflow-hidden">
+      {content.sections.map((section, index) => (
+        <div key={index} className="border-t border-gray-200 first:border-t-0">
+          {section.title && (
+            <h4 className="font-semibold text-secondary px-4 py-2 bg-gray-100">
+              {section.title}
+            </h4>
+          )}
+          <ul className="space-y-1">
+            {section.items.map((item, itemIndex) => (
+              <li key={itemIndex}>
+                {item.link ? (
+                  <Link
+                    to={item.link}
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span>{item.label || item}</span>
+                    <TbExternalLink className="text-gray-500 text-xs" />
+                  </Link>
+                ) : (
+                  <div className="flex items-center justify-between px-4 py-2 text-sm text-gray-500">
+                    <span>{item.label || item}</span>
+                    <TbExternalLink className="text-gray-400 text-xs" />
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <>
       {/* ===== NAVBAR ===== */}
       <nav className="w-full h-[12vh] flex bg-white shadow-sm font-sans relative">
-        {/* Left: Logo */}
-        <div className="w-[30%] h-full flex items-center justify-center">
+        {/* Left: Logo - 80% width on mobile */}
+        <div className="w-[80%] md:w-[30%] h-full flex items-center justify-start pl-4 md:pl-0 md:justify-center">
           <Link to="/">
-            <img src={Logo} alt="Logo" className="h-20 pl-4 cursor-pointer" />
+            <img
+              src={Logo}
+              alt="Logo"
+              className="h-16 md:h-20 cursor-pointer"
+            />
           </Link>
         </div>
 
-        {/* Right Section */}
-        <div className="w-[70%] h-full flex flex-col">
+        {/* Right Section - Desktop (unchanged) */}
+        <div className="hidden md:flex w-[70%] h-full flex-col">
           {/* Top Bar */}
           <div className="flex justify-end w-full h-[45%] text-xs text-gray-700 bg-white">
             <div className="flex gap-8">
@@ -300,7 +346,7 @@ const Navbar = () => {
               {/* Buttons */}
               <div className="flex">
                 <button
-                  onClick={toggleModal} // ✅ Opens Modal
+                  onClick={toggleModal}
                   className="bg-primary text-white px-8 py-1 text-xs hover:bg-primary/90 font-bold border-r border-white"
                 >
                   Apply Now
@@ -335,9 +381,9 @@ const Navbar = () => {
             <Link to="/placement" className="hover:text-primary">
               Placement
             </Link>
-            <h2 className="hover:text-primary">
+            <div className="hover:text-primary cursor-pointer">
               Career Development
-            </h2>
+            </div>
             <Link to="/alumni" className="hover:text-primary">
               Alumni
             </Link>
@@ -347,17 +393,214 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Dropdown Menu */}
+        {/* Mobile Menu Button - 20% width on mobile */}
+        <div className="md:hidden w-[20%] flex items-center justify-center pr-4">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-gray-700 hover:text-primary transition-colors"
+          >
+            <HiMenuAlt2 size={28} />
+          </button>
+        </div>
+
+        {/* Dropdown Menu - Desktop */}
         {activeDropdown && (
           <div
             onMouseEnter={() => handleMouseEnter(activeDropdown)}
             onMouseLeave={handleMouseLeave}
-            className="absolute top-full left-0 w-full backdrop-blur-md bg-white/60 shadow-xl border-t border-gray-200 z-50"
+            className="absolute top-full left-0 w-full backdrop-blur-md bg-white/60 shadow-xl border-t border-gray-200 z-50 hidden md:block"
           >
             {renderDropdownContent(dropdownContent[activeDropdown])}
           </div>
         )}
       </nav>
+
+      {/* Mobile Menu - Slides from bottom to top */}
+      {isMobileMenuOpen && (
+        <>
+          {/* Overlay */}
+          <div
+            className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={toggleMobileMenu}
+          />
+
+          {/* Mobile Menu Panel */}
+          <div
+            className={`md:hidden fixed bottom-0 left-0 right-0 bg-white rounded-t-2xl shadow-2xl z-50 transform transition-transform duration-300 ease-out ${
+              isMobileMenuOpen ? "translate-y-0" : "translate-y-full"
+            }`}
+            style={{ maxHeight: "85vh" }}
+          >
+            {/* Header with Close Button */}
+            <div className="flex justify-between items-center p-4 border-b border-gray-200">
+              <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
+              <button
+                onClick={toggleMobileMenu}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                <HiX size={24} />
+              </button>
+            </div>
+
+            {/* Scrollable Content */}
+            <div
+              className="overflow-y-auto"
+              style={{ maxHeight: "calc(85vh - 60px)" }}
+            >
+              {/* Quick Links Grid */}
+              <div className="p-4 border-b border-gray-200">
+                <div className="grid grid-cols-3 gap-2 text-xs">
+                  <a
+                    href="https://rapid.grayquest.com/iudp-master"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    Pay Fee
+                  </a>
+                  <a
+                    href="https://indira.edupluscampus.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    ERP Staff
+                  </a>
+                  <a
+                    href="https://myindira.edupluscampus.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    ERP Student
+                  </a>
+                  <a
+                    href="https://indiraicem.ac.in/ICEM-360-degree-virtual-tour/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    360° Tour
+                  </a>
+                  <a
+                    href="https://lc-icem-sumedh.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    Leaving Cert
+                  </a>
+                  <Link
+                    to="/contact"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="p-4 space-y-0">
+                {/* About Us */}
+                <div className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleMobileDropdown("aboutUs")}
+                    className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-primary transition-colors"
+                  >
+                    <span>About Us</span>
+                    <span className="text-lg">
+                      {mobileDropdown === "aboutUs" ? "−" : "+"}
+                    </span>
+                  </button>
+                  {mobileDropdown === "aboutUs" &&
+                    renderMobileDropdown(dropdownContent.aboutUs, "aboutUs")}
+                </div>
+
+                {/* Campus Life */}
+                <div className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleMobileDropdown("campusLife")}
+                    className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-primary transition-colors"
+                  >
+                    <span>Campus Life</span>
+                    <span className="text-lg">
+                      {mobileDropdown === "campusLife" ? "−" : "+"}
+                    </span>
+                  </button>
+                  {mobileDropdown === "campusLife" &&
+                    renderMobileDropdown(
+                      dropdownContent.campusLife,
+                      "campusLife"
+                    )}
+                </div>
+
+                {/* Programs & Admission */}
+                <div className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleMobileDropdown("programs")}
+                    className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-primary transition-colors"
+                  >
+                    <span>Programs & Admission</span>
+                    <span className="text-lg">
+                      {mobileDropdown === "programs" ? "−" : "+"}
+                    </span>
+                  </button>
+                  {mobileDropdown === "programs" &&
+                    renderMobileDropdown(dropdownContent.programs, "programs")}
+                </div>
+
+                {/* Single Links */}
+                <div className="border-b border-gray-200">
+                  <Link
+                    to="/placement"
+                    className="block py-4 font-medium text-gray-900 hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Placement
+                  </Link>
+                </div>
+                <div className="border-b border-gray-200">
+                  <div className="block py-4 font-medium text-gray-900">
+                    Career Development
+                  </div>
+                </div>
+                <div className="border-b border-gray-200">
+                  <Link
+                    to="/alumni"
+                    className="block py-4 font-medium text-gray-900 hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Alumni
+                  </Link>
+                </div>
+                <div className="border-b border-gray-200">
+                  <Link
+                    to="/research"
+                    className="block py-4 font-medium text-gray-900 hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Research
+                  </Link>
+                </div>
+              </div>
+
+              {/* Apply Now Button */}
+              <div className="p-4 border-t border-gray-200 bg-gray-50">
+                <button
+                  onClick={() => {
+                    toggleModal();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full bg-primary text-white py-3 font-bold rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Apply Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
 
       {/* ===== Helpline Drawer ===== */}
       <div

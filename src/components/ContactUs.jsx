@@ -52,9 +52,10 @@ function ContactUs() {
           {/* Right Section - Map */}
           <div>
             <iframe
-              title="ICEM Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.705458286948!2d73.69321917496152!3d18.504154870351818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8f00b59a8d9%3A0x4f9adbf77ef493b9!2sIndira%20College%20of%20Engineering%20and%20Management%20(ICEM)!5e0!3m2!1sen!2sin!4v1696420000000!5m2!1sen!2sin "
-              className="w-full h-[400px] border-0 rounded-lg shadow-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.0466238407625!2d73.65569987524128!3d18.706730682423288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b1d73f3714a9%3A0x67d53d3bd8ea5416!2sIndira%20College%20Of%20Engineering%20And%20Management%2C%20Pune%2C%20Maharashtra%20410506!5e0!3m2!1sen!2sin!4v1759919307664!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -158,7 +159,8 @@ function ContactUs() {
               Management
             </p>
             <p>
-              <strong>Campus Address:</strong> Gat No. 276, Tal. Maval, S.No. 64, 65, Indira College Road, Parandvadi, Maharashtra 410506
+              <strong>Campus Address:</strong> Gat No. 276, Tal. Maval, S.No.
+              64, 65, Indira College Road, Parandvadi, Maharashtra 410506
             </p>
             <p>
               <strong>Phone:</strong> +91 20-6673 7800 / +91 20-6673 7801
