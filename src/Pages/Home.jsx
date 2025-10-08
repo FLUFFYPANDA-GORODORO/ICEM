@@ -161,131 +161,134 @@ const Home = () => {
       </div>
 
       {/* Academic Year 2026 + Apply Form Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {/* Left Section - Program List */}
-          <div className="lg:col-span-2 bg-white rounded-lg p-8 shadow-sm border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              ACADEMIC <span className="text-secondary">YEAR 2026</span>
-            </h2>
+  <div className="bg-gray-50 py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
+    {/* Left Section - Program List */}
+    <div className="lg:col-span-2 bg-white rounded-lg p-4 sm:p-8 shadow-sm border border-gray-200">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+        ACADEMIC <span className="text-secondary">YEAR 2026</span>
+      </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-gray-800">
-              {[
-                "Civil Engineering",
-                "Computer Engineering",
-                "Mechanical Engineering",
-                "Artificial Intelligence and Data Science",
-                "Electronics and Telecommunication",
-                "First Year Engineering",
-                "Information Technology",
-                "Integrated MBA (BBA + MBA)",
-                "Integrated MBA (BCA + MCA)",
-                "MBA",
-                "MCA",
-                "M-Tech in Mechanical Engineering",
-                "M-Tech in Computer Science",
-              ].map((item, index) => (
-                <p key={index} className="flex items-start text-sm">
-                  <span className="text-secondary mr-2 font-bold">›</span>
-                  <span className="hover:underline cursor-pointer hover:text-primary transition-colors">
-                    {item}
-                  </span>
-                </p>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Section - Apply Now Form */}
-          <div className="bg-white rounded-lg p-8 shadow-md border border-gray-200">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-              Apply Now
-            </h3>
-
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Enter Name *"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-
-              <input
-                type="email"
-                placeholder="Enter Email Address *"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-
-              <div className="flex gap-2">
-                <select className="w-24 border border-gray-300 rounded-md px-2 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                  <option>+91</option>
-                </select>
-                <input
-                  type="tel"
-                  placeholder="Enter Mobile Number *"
-                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div className="flex gap-2">
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                  <option>Select State *</option>
-                </select>
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                  <option>Select City *</option>
-                </select>
-              </div>
-
-              {/* Discipline first, Course below */}
-              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                <option>Select Discipline Applying For *</option>
-              </select>
-
-              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                <option>Select Course *</option>
-              </select>
-
-              <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                <option>Select Program *</option>
-              </select>
-
-              <input
-                type="text"
-                placeholder="Enter CET Score"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-
-              {/* Captcha Section */}
-              <div className="flex gap-3 items-center">
-                <div className="bg-gray-100 border border-gray-300 rounded-md w-1/2 flex items-center justify-center py-2">
-                  <span className="text-lg font-bold text-gray-700 select-none">
-                    8fcb09
-                  </span>
-                </div>
-                <input
-                  type="text"
-                  placeholder="Enter Captcha"
-                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              {/* Agreement */}
-              <div className="flex items-center gap-2 mt-2">
-                <input type="checkbox" id="agree" />
-                <label htmlFor="agree" className="text-sm text-gray-700">
-                  I agree to receive information regarding my submitted enquiry*
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md transition"
-              >
-                SUBMIT
-              </button>
-            </form>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 text-gray-800">
+        {[
+          "Civil Engineering",
+          "Computer Engineering",
+          "Mechanical Engineering",
+          "Artificial Intelligence and Data Science",
+          "Electronics and Telecommunication",
+          "First Year Engineering",
+          "Information Technology",
+          "Integrated MBA (BBA + MBA)",
+          "Integrated MBA (BCA + MCA)",
+          "MBA",
+          "MCA",
+          "M-Tech in Mechanical Engineering",
+          "M-Tech in Computer Science",
+        ].map((item, index) => (
+          <p key={index} className="flex items-start text-sm sm:text-base">
+            <span className="text-secondary mr-2 font-bold">›</span>
+            <span className="hover:underline cursor-pointer hover:text-primary transition-colors">
+              {item}
+            </span>
+          </p>
+        ))}
       </div>
+    </div>
+
+    {/* Right Section - Apply Now Form */}
+    <div className="bg-white rounded-lg p-4 sm:p-8 shadow-md border border-gray-200 w-full overflow-hidden">
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 text-center">
+        Apply Now
+      </h3>
+
+      <form className="space-y-4">
+        <input
+          type="text"
+          placeholder="Enter Name *"
+          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+
+        <input
+          type="email"
+          placeholder="Enter Email Address *"
+          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+
+        {/* Mobile Number */}
+        <div className="flex flex-col sm:flex-row gap-2">
+          <select className="w-full sm:w-24 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>+91</option>
+          </select>
+          <input
+            type="tel"
+            placeholder="Enter Mobile Number *"
+            className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+
+        {/* State & City */}
+        <div className="flex flex-col sm:flex-row gap-2">
+          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>Select State *</option>
+          </select>
+          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+            <option>Select City *</option>
+          </select>
+        </div>
+
+        {/* Discipline first, Course below */}
+        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          <option>Select Discipline Applying For *</option>
+        </select>
+
+        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          <option>Select Course *</option>
+        </select>
+
+        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          <option>Select Program *</option>
+        </select>
+
+        <input
+          type="text"
+          placeholder="Enter CET Score"
+          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+
+        {/* Captcha Section */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          <div className="bg-gray-100 border border-gray-300 rounded-md flex items-center justify-center py-2 sm:w-1/2">
+            <span className="text-lg font-bold text-gray-700 select-none">
+              8fcb09
+            </span>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter Captcha"
+            className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+
+        {/* Agreement */}
+        <div className="flex items-start gap-2 mt-2">
+          <input type="checkbox" id="agree" className="mt-1" />
+          <label htmlFor="agree" className="text-xs sm:text-sm text-gray-700 leading-snug">
+            I agree to receive information regarding my submitted enquiry*
+          </label>
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md transition"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
 
       {/* Recruiters Section */}
       <div className="bg-gray-50 py-16">
