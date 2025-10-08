@@ -9,6 +9,14 @@ import SY_BTech from "../../assets/BTech.pdf";
 import MTech_2024 from "../../assets/MTECHFinal.pdf";
 import MTech_Syllabus from "../../assets/MTECHComp.pdf";
 
+// ✅ Import admission PDFs (you can use existing ones or add new ones)
+import AdmissionAdvertisement from "../../assets/BEComp.pdf"; // Using existing PDF as example
+import NoticeACAP from "../../assets/TEComp.pdf";
+import InstituteLevelAdmission from "../../assets/SEComp.pdf";
+import VacancyACAP from "../../assets/BTech.pdf";
+import BTechAdmission from "../../assets/MTECHFinal.pdf";
+import MBAAdmission from "../../assets/MTECHComp.pdf";
+
 // ✅ Import all Course Structure Images
 import FESEM1 from "../../assets/FESEM1.png";
 import FESEM2 from "../../assets/FESEM2.png";
@@ -48,6 +56,71 @@ const FAQSection = () => {
     "Staff",
     "Why Indira ICEM",
     "Features",
+  ];
+
+  // ✅ Scholarship Table Data
+  const scholarshipTableData = [
+    {
+      category: "ST/SC/Neo-Buddhist/VJNT",
+      eligibility: "• For SC/ST- No income limit\n• For others income < 8.00 Lacs",
+      scholarship: "Tuition Fee and Exam Fees"
+    },
+    {
+      category: "SBC",
+      eligibility: "Parent's annual income < 8.00 Lacs.",
+      scholarship: "Tuition Fee and Exam Fees"
+    },
+    {
+      category: "OBC",
+      eligibility: "Parent's annual income < 8.00 Lacs.",
+      scholarship: "50% of Tuition and Exam Fee"
+    },
+    {
+      category: "EBC",
+      eligibility: "• EBC students admitted through (CAP)\n• Parent's annual income < 8.00 Lacs.",
+      scholarship: "50% of Tuition and Exam Fee"
+    },
+    {
+      category: "Dr. Panjabrao Deshmukh (Hostel Scheme)",
+      eligibility: "Students whose parents are certified as a marginal farmer or whose parents are registered laborers.",
+      scholarship: "• For child of Registered Labor / Alpabhudharak (Marginal Land Holder) - For institute in MMRDA - Rs.30,000/- for 10 months.\n• For Annual Family income up to 8 Lakhs - For institute in MMRDA- Rs.10,000/- for 10 months."
+    },
+    {
+      category: "Minority Communities (Muslim, Buddhist, Christian, Sikh, Parsi, Jain & Jews Community)",
+      eligibility: "Parent's annual income < 8.00 Lacs.",
+      scholarship: "Scholarship Amount Maximum Rs.25,000/- Per Annum or Actual Tuition Fees whichever is less"
+    },
+    {
+      category: "TFWS",
+      eligibility: "Parent's annual income less than Rs. 8 Lakh",
+      scholarship: "Waiver is limited to the tuition fee"
+    },
+    {
+      category: "Indira Scholar Scholarship",
+      eligibility: "Applicable to Meritorious students of Civil and Mechanical only (For First year and DSE students)",
+      scholarship: "Please Contact: Prof. Ashwin Dharme 9764408057"
+    }
+  ];
+
+  // ✅ Admission Advertisement PDF Data
+  const admissionAdvertisementData = [
+    { id: "advertisement", name: "Admission Advertisement", pdf: AdmissionAdvertisement },
+    { id: "notice-acap", name: "Notice ACAP IL Admission Reporting", pdf: NoticeACAP },
+    { id: "institute-level", name: "Institute Level & Against CAP Admission", pdf: InstituteLevelAdmission },
+    { id: "vacancy-acap", name: "Vacancy of ACAP and Institute Level Admission", pdf: VacancyACAP },
+    { id: "btech-admission", name: "Institute Level & Against CAP Admission (BTech)", pdf: BTechAdmission },
+    { id: "mba-admission", name: "Institute Level & Against CAP Admission (MBA)", pdf: MBAAdmission },
+    { id: "notice", name: "Notice", pdf: NoticeACAP }
+  ];
+
+  // ✅ IL & ACAP Merit List PDF Data
+  const meritListData = [
+    { id: "btech", name: "BTECH Merit List", pdf: BTechAdmission },
+    { id: "mtech", name: "MTECH Merit List", pdf: MTech_Syllabus },
+    { id: "mba", name: "MBA Merit List", pdf: MBAAdmission },
+    { id: "mca", name: "MCA Merit List", pdf: AdmissionAdvertisement },
+    { id: "bba-mba", name: "BBA/MBA Integrated Merit List", pdf: InstituteLevelAdmission },
+    { id: "bca-mca", name: "BCA/MCA Integrated Merit List", pdf: VacancyACAP }
   ];
 
   // ✅ Overview Accreditation Questions
@@ -410,13 +483,41 @@ Several industrial tours organized by the institute help the students get expose
               </div>
             )}
 
-            {/* ✅ Admission Advertisement */}
+            {/* ✅ Admission Advertisement - Updated with PDF Accordions */}
             {activeTab === "Admission Advertisement" && (
               <div>
                 <h3 className="text-lg font-semibold mb-4">Admission Advertisement 2024-25</h3>
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                  <h4 className="font-bold text-lg text-yellow-800 mb-3">Admissions Open for Academic Year 2024-25</h4>
-                  <div className="space-y-2 text-yellow-700">
+                
+                {/* PDF Accordions */}
+                <div className="mb-6">
+                  {admissionAdvertisementData.map((item) => (
+                    <div key={item.id} className="border rounded-md mb-2">
+                      <div
+                        onClick={() => setActiveAdmission(activeAdmission === item.id ? null : item.id)}
+                        className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                      >
+                        <span>{item.name}</span>
+                        <span className="text-xl font-bold">
+                          {activeAdmission === item.id ? "−" : "+"}
+                        </span>
+                      </div>
+                      {activeAdmission === item.id && (
+                        <div className="p-3 bg-gray-50">
+                          <iframe
+                            src={item.pdf}
+                            title={item.name}
+                            className="w-full h-[600px] border rounded-md"
+                          ></iframe>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Additional Admission Info */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h4 className="font-bold text-lg text-blue-800 mb-3">Admissions Open for Academic Year 2024-25</h4>
+                  <div className="space-y-2 text-blue-700">
                     <p>• B.Tech Computer Engineering - 180 Seats</p>
                     <p>• M.Tech Computer Engineering - 24 Seats</p>
                     <p>• Apply through Maharashtra CAP Process</p>
@@ -432,15 +533,39 @@ Several industrial tours organized by the institute help the students get expose
               </div>
             )}
 
-            {/* ✅ IL & ACAP Merit List */}
+            {/* ✅ IL & ACAP Merit List - Updated with PDF Accordions */}
             {activeTab === "IL & ACAP Merit List" && (
               <div>
                 <h3 className="text-lg font-semibold mb-4">Institute Level & ACAP Merit Lists</h3>
+                
+                {/* PDF Accordions */}
+                <div className="mb-6">
+                  {meritListData.map((item) => (
+                    <div key={item.id} className="border rounded-md mb-2">
+                      <div
+                        onClick={() => setActiveAdmission(activeAdmission === item.id ? null : item.id)}
+                        className="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                      >
+                        <span>{item.name}</span>
+                        <span className="text-xl font-bold">
+                          {activeAdmission === item.id ? "−" : "+"}
+                        </span>
+                      </div>
+                      {activeAdmission === item.id && (
+                        <div className="p-3 bg-gray-50">
+                          <iframe
+                            src={item.pdf}
+                            title={item.name}
+                            className="w-full h-[600px] border rounded-md"
+                          ></iframe>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Additional Information */}
                 <div className="space-y-4">
-                  <div className="border rounded-lg p-4 bg-blue-50">
-                    <h4 className="font-bold text-blue-800 mb-2">ACAP (Centralized Admission Process) Merit List</h4>
-                    <p className="text-blue-700">Merit lists will be published on the official CAP website as per the schedule declared by Maharashtra State.</p>
-                  </div>
                   <div className="border rounded-lg p-4 bg-green-50">
                     <h4 className="font-bold text-green-800 mb-2">Institute Level Merit List</h4>
                     <p className="text-green-700">Institute level merit lists for vacant seats will be displayed on the college notice board and official website.</p>
@@ -470,12 +595,55 @@ Several industrial tours organized by the institute help the students get expose
               </div>
             )}
 
-            {/* ✅ Scholarship */}
+            {/* ✅ Scholarship - Updated with Table */}
             {activeTab === "Scholarship" && (
               <div>
                 <h3 className="text-lg font-semibold mb-4">Scholarship Schemes</h3>
+                
+                {/* Scholarship Table */}
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-3 text-gray-800">Scholarship Details</h4>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border border-gray-300 text-sm">
+                      <thead className="bg-gray-100">
+                        <tr>
+                          <th className="border p-3 text-left">Scholarship Category</th>
+                          <th className="border p-3 text-left">Scholarship Eligibility</th>
+                          <th className="border p-3 text-left">Nature of Scholarship</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {scholarshipTableData.map((scholarship, index) => (
+                          <tr key={index} className="hover:bg-gray-50">
+                            <td className="border p-3 font-medium">{scholarship.category}</td>
+                            <td className="border p-3 whitespace-pre-line">{scholarship.eligibility}</td>
+                            <td className="border p-3 whitespace-pre-line">{scholarship.scholarship}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Additional Information */}
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                  <p className="text-sm text-yellow-800 mb-2">
+                    <strong>Note:</strong> Above information is for basic understanding.
+                  </p>
+                  <p className="text-sm text-yellow-800 mb-2">
+                    Exact present rules / reforms, documents required and eligibility is available on Scholarship Schemes: 
+                    <a href="https://mahadbtmahait.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline ml-1">
+                      https://mahadbtmahait.gov.in/
+                    </a>
+                  </p>
+                  <p className="text-sm text-yellow-800">
+                    If applied to scholarship without complete documents, application will be rejected and candidates has to pay full fees.
+                  </p>
+                </div>
+
+                {/* Existing Scholarship Accordions */}
                 {admissionData.scholarship.map((scheme, index) => (
-                  <div key={index} className="border rounded-md mb-4">
+                  <div key={index} className="border rounded-md mb-4 mt-4">
                     <div
                       onClick={() => setActiveAdmission(activeAdmission === `scholarship-${index}` ? null : `scholarship-${index}`)}
                       className="flex justify-between items-center px-4 py-3 cursor-pointer bg-gray-50 hover:bg-gray-100"
