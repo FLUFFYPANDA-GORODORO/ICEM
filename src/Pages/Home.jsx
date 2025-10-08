@@ -1,20 +1,77 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Indira from "../assets/ICEM.jpg";
+import College from "../assets/ICEM_Banner.jpg";
+import Juspay from "../assets/Juspay.jpeg";
 
 const Home = () => {
+  const images = [Indira, College, Juspay];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+      setIsTransitioning(true);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Handle seamless looping
+  useEffect(() => {
+    if (currentIndex === images.length) {
+      // Wait until the transition finishes, then jump back instantly
+      const timeout = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+      }, 700); // same as CSS transition duration
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, images.length]);
+
   return (
     <div>
       {/* Hero Image Section */}
-      <div className="w-full relative">
-        <img
-          src={Indira}
-          alt="University Campus"
-          className="w-full h-full object-cover"
-        />
+      {/* ✅ Hero Slider Section */}
+      <div className="w-full h-[78vh] relative overflow-hidden">
+        <div
+          ref={sliderRef}
+          className={`flex ${
+            isTransitioning
+              ? "transition-transform duration-700 ease-in-out"
+              : ""
+          }`}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {[...images, images[0]].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Slide ${i + 1}`}
+              className="w-full h-[600px] object-cover flex-shrink-0"
+            />
+          ))}
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentIndex % images.length === i
+                  ? "bg-primary"
+                  : "bg-gray-300"
+              }`}
+            ></span>
+          ))}
+        </div>
       </div>
 
       {/* Explore Section */}
-      <div className="max-w-7xl mx-auto px-6 pt-2 pb-6  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-6 pt-12 pb-6  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 leading-snug">
             Explore Your Potential with
@@ -248,8 +305,7 @@ const Home = () => {
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold mb-14 leading-snug">
             At Indira College of Engineering & Management, you will discover an
-            Energy that runs through
-            Everything and Everyone.
+            Energy that runs through Everything and Everyone.
           </h2>
 
           {/* 3 Columns Grid */}
@@ -403,7 +459,8 @@ const Home = () => {
                 </div>
                 <div>
                   <h3 className="text-base font-medium text-gray-800 hover:underline cursor-pointer hover:text-primary transition-colors">
-                    A Journey of Academic & Professional Transformation | Virtual Tour 2025
+                    A Journey of Academic & Professional Transformation |
+                    Virtual Tour 2025
                   </h3>
                 </div>
               </div>
