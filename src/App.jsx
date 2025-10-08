@@ -46,6 +46,7 @@ import IcemStudentCouncil from "./components/StudentCorner/IcemStudentCouncil";
 import Academics from "./components/StudentCorner/Academics";
 import IcemAwards from "./components/StudentCorner/IcemAwards";
 import AwardDetails from "./components/StudentCorner/AwardDetails";
+import Accreditation from "./components/AboutUs/Accreditation";
 
 function App() {
   return (
@@ -59,32 +60,33 @@ function App() {
           <Route path="/about/chanakya-edu" element={<ChanakyaEdu />} />
           <Route path="/about/IGOI" element={<IGOI />} />
           <Route path="/about/cfcm" element={<CFCM />} />
+          <Route path="/accreditation" element={<Accreditation/>}/>
 
           {/* ==== STUDENT ROUTES ==== */}
           <Route
-            path="/student-corner/student-welfare"
+            path="/campus-life/student-welfare"
             element={<StudentWelfare />}
           />
-          <Route path="/student-corner/iic" element={<IIC />} />
+          <Route path="/campus-life/iic" element={<IIC />} />
           <Route
-            path="/student-corner/induction-programme"
+            path="/campus-life/induction-programme"
             element={<InductionProgramme />}
           />
-          <Route path="/student-corner/committees" element={<Statutory />} />
+          <Route path="/campus-life/committees" element={<Statutory />} />
           <Route
-            path="/student-corner/nss"
+            path="/campus-life/nss"
             element={<NationalServiceScheme />}
           />
           <Route
-            path="/student-corner/grievance-redressals"
+            path="/campus-life/grievance-redressals"
             element={<Grievance />}
           />
           <Route
-            path="/student-corner/student-council"
+            path="/campus-life/student-council"
             element={<IcemStudentCouncil />}
           />
-          <Route path="/student-corner/academics" element={<Academics />} />
-          <Route path="/student-corner/icem-awards" element={<IcemAwards />} />
+          <Route path="/campus-life/academics" element={<Academics />} />
+          <Route path="/campus-life/icem-awards" element={<IcemAwards />} />
           <Route path="/awards/:id" element={<AwardDetails />} />
 
           {/* ==== PROGRAMS ROUTES ==== */}
