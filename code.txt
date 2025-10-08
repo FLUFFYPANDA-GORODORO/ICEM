@@ -550,3 +550,62 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+-----------------------------------------------------------
+//center of Excellence 
+
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200 shadow-md p-8 bg-white">
+            {/* Left Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+                Centres of Excellence
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Indira College's Centres of Excellence (CoEs) serve as the
+                epicentre of industry-academia collaboration, equipping students
+                with cutting-edge skills, industry-recognised certifications,
+                and exposure to real-world challenges. Each CoE is established
+                in partnership with global leaders, ensuring students get
+                hands-on training, live projects, and access to the latest
+                technology
+              </p>
+
+              <h3 className="text-lg font-semibold text-secondary mb-4">
+                COE Partners:
+              </h3>
+
+              {/* Placeholder Boxes for Logos */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                {[
+                  "Adobe",
+                  "Airtel",
+                  "Biocon",
+                  "DRDO",
+                  "Honda",
+                  "Intel",
+                  "ISRO",
+                  "NVIDIA",
+                  "Philips",
+                  "Siemens",
+                  "Texas Instruments",
+                  "TCS",
+                ].map((partner, index) => (
+                  <div
+                    key={index}
+                    className="w-full h-20 bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 text-sm font-medium"
+                  >
+                    (image here)
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Image Placeholder */}
+            <div className="w-full h-[520px] bg-gray-200 flex items-center justify-center text-gray-500 text-lg font-medium">
+              (image here)
+            </div>
+          </div>
+        </div>
+      </section>
