@@ -1,0 +1,53 @@
+BLOG AND Insights Section .....
+
+   <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Blogs & Insights
+          </h2>
+
+          {/* Description */}
+          <p className="text-gray-700 text-lg max-w-6xl leading-relaxed mb-10">
+            Explore thought-provoking articles, industry insights, and expert
+            opinions from the faculty and students of Indira College of
+            Engineering & Management. Our blogs share perspectives on
+            technology, management, innovation, and personal growth — inspiring
+            you to learn beyond the classroom.
+          </p>
+
+          {/* Blog Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {Array(8)
+              .fill(0)
+              .map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition overflow-hidden"
+                >
+                  {/* Image Placeholder */}
+                  <div className="h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
+                    [ Blog Image {index + 1} ]
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-primary cursor-pointer transition-colors">
+                      Blog Title {index + 1}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-3">
+                      A short summary of the blog post highlighting key
+                      takeaways or insights from our students or faculty.
+                    </p>
+                    <p className="text-sm text-primary font-medium cursor-pointer hover:underline">
+                      Read More →
+                    </p>
+                  </div>
+                </div>
+              ))}
+          </div>
+          
+        </div>
+      </div>
+
+--------------------------------------------------------------------------
