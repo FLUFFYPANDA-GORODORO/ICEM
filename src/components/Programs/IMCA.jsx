@@ -36,7 +36,7 @@ export default function IMCA() {
   return (
     <div className="w-full text-white">
       {/* ===== TOP DARK SECTION ===== */}
-      <div className="w-full bg-primary py-12">
+      <div className="w-full bg-primary py-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
           {/* LEFT TEXT SECTION */}
           <div className="flex-1">
