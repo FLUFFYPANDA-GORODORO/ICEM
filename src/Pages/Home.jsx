@@ -11,6 +11,12 @@ const Home = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
+  setCurrentIndex(0);
+  setIsTransitioning(true);
+}, []);
+
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
       setIsTransitioning(true);
@@ -34,42 +40,45 @@ const Home = () => {
     <div>
       {/* Hero Image Section */}
       {/* ✅ Hero Slider Section */}
-      <div className="w-full  relative overflow-hidden">
-        <div
-          ref={sliderRef}
-          className={`flex ${
-            isTransitioning
-              ? "transition-transform duration-700 ease-in-out"
-              : ""
-          }`}
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-          }}
-        >
-          {[...images, images[0]].map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              alt={`Slide ${i + 1}`}
-              className="w-full h-[600px] object-cover flex-shrink-0"
-            />
-          ))}
-        </div>
+     <div className="w-full relative overflow-hidden bg-black">
+  <div
+    ref={sliderRef}
+    className={`flex ${
+      isTransitioning
+        ? "transition-transform duration-700 ease-in-out"
+        : ""
+    }`}
+    style={{
+      transform: `translateX(-${currentIndex * 100}%)`,
+    }}
+  >
+    {[...images, images[0]].map((img, i) => (
+      <img
+        key={i}
+        src={img}
+        alt={`Slide ${i + 1}`}
+        className="
+          w-full 
+          h-[200px] sm:h-[300px] md:h-[450px] lg:h-[600px] 
+          object-cover flex-shrink-0"
+      />
+    ))}
+  </div>
 
-        {/* Dots Indicator */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentIndex % images.length === i
-                  ? "bg-primary"
-                  : "bg-gray-300"
-              }`}
-            ></span>
-          ))}
-        </div>
-      </div>
+  {/* Dots Indicator */}
+  <div className="absolute bottom-3 sm:bottom-5 left-0 right-0 flex justify-center gap-2">
+    {images.map((_, i) => (
+      <span
+        key={i}
+        className={`
+          w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 
+          ${currentIndex % images.length === i ? "bg-primary" : "bg-gray-300"}
+        `}
+      ></span>
+    ))}
+  </div>
+</div>
+
 
       {/* Explore Section */}
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-6  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
