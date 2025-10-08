@@ -65,7 +65,7 @@ export default function MBA() {
               </button>
               <button
                 onClick={handleBrochureDownload}
-                className="border border-white hover:bg-white hover:text-secondary px-6 py-2 rounded-md transition-colors"
+                className="border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md transition-colors"
               >
                 Download Brochure
               </button>
