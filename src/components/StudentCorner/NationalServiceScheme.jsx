@@ -123,7 +123,7 @@ function NationalServiceScheme() {
                   onClick={() => toggleAccordion(index)}
                   className="w-full flex justify-between items-center px-4 py-3 bg-gray-50 hover:bg-gray-100 transition-colors"
                 >
-                  <span className="font-medium text-gray-800 underline">
+                  <span className="font-medium text-gray-800 underline hover:text-primary transition">
                     {report}
                   </span>
                   <span className="text-xl font-bold">
@@ -140,7 +140,7 @@ function NationalServiceScheme() {
                       href={BEComp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 font-semibold underline hover:text-blue-800"
+                      className="text-primary font-semibold hover:underline"
                     >
                       View Report
                     </a>
@@ -152,13 +152,13 @@ function NationalServiceScheme() {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           {/* About Links */}
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+                className="pb-2 border-b border-white/30 hover:text-tertiary cursor-pointer transition-all duration-300 hover:underline"
               >
                 {link}
               </li>
@@ -166,8 +166,8 @@ function NationalServiceScheme() {
           </ul>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
-            <h3 className="text-center text-lg font-bold mb-4">
+          <div className="bg-tertiary p-6 rounded-lg mb-8">
+            <h3 className="text-center text-lg font-bold mb-4 text-secondary">
               GET IN TOUCH WITH US
             </h3>
             <form className="space-y-3">
@@ -177,7 +177,7 @@ function NationalServiceScheme() {
                 className="w-full p-2 text-black rounded"
               />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
+                <span className="pl-2 text-black">🇮🇳</span>
                 <input
                   type="text"
                   placeholder="PHONE NUMBER*"
@@ -200,13 +200,13 @@ function NationalServiceScheme() {
                 placeholder="STATE"
                 className="w-full p-2 text-black rounded"
               />
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-300">
                 By providing your contact details, you agree to receive updates
                 from Indira College through WhatsApp.
               </p>
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition"
+                className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-white hover:text-[#003c84] transition-colors duration-300"
               >
                 Apply Now
               </button>
@@ -215,16 +215,16 @@ function NationalServiceScheme() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
+            <h4 className="text-center text-secondary font-bold mb-4 border-t border-white/30 pt-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
+                  className="flex items-center gap-2 text-sm hover:text-tertiary cursor-pointer transition"
                 >
-                  <span className="text-red-500">•</span> {item}
+                  <span className="text-secondary">•</span> {item}
                 </li>
               ))}
             </ul>

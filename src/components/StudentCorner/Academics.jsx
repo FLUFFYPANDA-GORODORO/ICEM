@@ -88,53 +88,25 @@ function Academics() {
           </h3>
 
           <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
-            <li>
-              Coordinate the Academic Calendar setting and teaching plan for the
-              college.
-            </li>
-            <li>
-              Coordinate with departments for load calculations and assignments
-              of faculties for subjects.
-            </li>
+            <li>Coordinate the Academic Calendar and teaching plan for the college.</li>
+            <li>Coordinate with departments for load calculations and faculty assignments.</li>
             <li>Counselling on NEP 2020.</li>
             <li>Curriculum development and review.</li>
-            <li>
-              Time Table preparation and monthly review ensuring effective
-              implementation.
-            </li>
+            <li>Time Table preparation and monthly review ensuring effective implementation.</li>
             <li>Classroom allotment and scheduling.</li>
-            <li>
-              Review and monitor proper conduction of classes and adherence to
-              the teaching plan.
-            </li>
-            <li>
-              Ensure proper conduction of teacher reviews, student feedback, and
-              mentoring programs.
-            </li>
-            <li>
-              Collate and report continuous student assessment marks.
-            </li>
-            <li>
-              Oversee preparation of provisional and final detention lists and
-              communicate students’ performance to parents/guardians.
-            </li>
+            <li>Review and monitor proper conduction of classes and adherence to teaching plan.</li>
+            <li>Ensure proper conduction of teacher reviews, student feedback, and mentoring.</li>
+            <li>Collate and report continuous student assessment marks.</li>
+            <li>Oversee preparation of provisional and final detention lists.</li>
             <li>Monitor result analysis and academic performance trends.</li>
-            <li>
-              Coordinate and conduct <b>Founders Day (Graduation Ceremony)</b>.
-            </li>
+            <li>Coordinate and conduct <b>Founders Day (Graduation Ceremony)</b>.</li>
             <li>Implement and monitor the Peer Teaching Scheme.</li>
-            <li>Collect and analyze feedback (online & in-classroom).</li>
-            <li>
-              Drive academic reforms and ensure effective implementation across
-              departments.
-            </li>
-            <li>
-              Coordinate <b>Digital Learning</b> initiatives and monitor Online
-              Teaching-Learning Processes (TLP).
-            </li>
+            <li>Collect and analyze feedback (online & classroom).</li>
+            <li>Drive academic reforms and ensure effective implementation.</li>
+            <li>Coordinate <b>Digital Learning</b> initiatives and monitor online TLP.</li>
           </ul>
 
-          {/* IAC Report  */}
+          {/* IAC Report Section */}
           <h3 className="text-xl font-semibold text-secondary mb-4">
             IAC Reports
           </h3>
@@ -147,9 +119,9 @@ function Academics() {
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-gray-900 hover:bg-gray-100 transition-colors"
+                  className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-gray-900 hover:bg-gray-100 transition"
                 >
-                  <span className="underline text-[16px] font-semibold hover:text-blue-700 transition">
+                  <span className="underline text-[16px] font-semibold hover:text-secondary transition">
                     {report}
                   </span>
                   <span className="text-xl text-gray-700">
@@ -166,7 +138,7 @@ function Academics() {
                       href={BEComp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 font-semibold underline hover:text-blue-800"
+                      className="text-secondary font-semibold underline hover:text-tertiary transition"
                     >
                       View Report
                     </a>
@@ -177,14 +149,14 @@ function Academics() {
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="md:w-1/3 bg-[#111] text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
-          {/* About Links */}
-          <ul className="space-y-4 w-full mb-8">
+        {/* Right Sidebar */}
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+          {/* Sidebar Links */}
+          <ul className="space-y-4 mb-8">
             {rightLinks.map((link, index) => (
               <li
                 key={index}
-                className="pb-2 border-b border-gray-500 hover:text-primary cursor-pointer transition-colors"
+                className="pb-2 border-b border-white/30 hover:text-tertiary cursor-pointer transition-all hover:underline"
               >
                 {link}
               </li>
@@ -192,8 +164,8 @@ function Academics() {
           </ul>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
-            <h3 className="text-center text-lg font-bold mb-4">
+          <div className="bg-tertiary p-6 rounded-lg mb-8">
+            <h3 className="text-center text-lg font-bold mb-4 text-secondary">
               GET IN TOUCH WITH US
             </h3>
             <form className="space-y-3">
@@ -203,7 +175,7 @@ function Academics() {
                 className="w-full p-2 text-black rounded"
               />
               <div className="flex items-center bg-white rounded">
-                <span className="pl-2">🇮🇳</span>
+                <span className="pl-2 text-black">🇮🇳</span>
                 <input
                   type="text"
                   placeholder="PHONE NUMBER*"
@@ -226,13 +198,13 @@ function Academics() {
                 placeholder="STATE"
                 className="w-full p-2 text-black rounded"
               />
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-300">
                 By providing your contact details, you agree to receive updates
                 from Indira College through WhatsApp.
               </p>
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700 transition"
+                className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-white hover:text-[#003c84] transition-colors duration-300"
               >
                 Apply Now
               </button>
@@ -241,16 +213,16 @@ function Academics() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-center text-red-500 font-bold mb-4 border-t border-gray-500 pt-4">
+            <h4 className="text-center text-secondary font-bold mb-4 border-t border-white/30 pt-4">
               QUICK LINKS
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 text-sm hover:text-primary cursor-pointer transition-colors"
+                  className="flex items-center gap-2 text-sm hover:text-tertiary cursor-pointer transition"
                 >
-                  <span className="text-red-500">•</span> {item}
+                  <span className="text-secondary">•</span> {item}
                 </li>
               ))}
             </ul>
