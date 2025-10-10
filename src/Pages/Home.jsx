@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import Indira from "../assets/ICEM.jpg";
-import College from "../assets/ICEM_Banner.jpg";
-import Juspay from "../assets/Juspay.jpeg";
+import Indira from "../assets/ICEMWebsiteBanner27.jpg";
+import College from "../assets/ICEMWebsiteBanner2.jpg";
+import Juspay from "../assets/ICEMWebsiteBanner4.jpg";
 import InstagramFeed from "./instagramFeed";
 
 const Home = () => {
