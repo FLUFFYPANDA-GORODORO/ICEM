@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Indira from "../assets/ICEMWebsiteBanner27.jpg";
+import Indira from "../assets/newicem.jpg";
 import College from "../assets/ICEMWebsiteBanner2.jpg";
 import Juspay from "../assets/ICEMWebsiteBanner4.jpg";
 import InstagramFeed from "./instagramFeed";
@@ -11,10 +11,9 @@ const Home = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
-  setCurrentIndex(0);
-  setIsTransitioning(true);
-}, []);
-
+    setCurrentIndex(0);
+    setIsTransitioning(true);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,45 +39,44 @@ const Home = () => {
     <div>
       {/* Hero Image Section */}
       {/* ✅ Hero Slider Section */}
-     <div className="w-full relative overflow-hidden bg-black">
-  <div
-    ref={sliderRef}
-    className={`flex ${
-      isTransitioning
-        ? "transition-transform duration-700 ease-in-out"
-        : ""
-    }`}
-    style={{
-      transform: `translateX(-${currentIndex * 100}%)`,
-    }}
-  >
-    {[...images, images[0]].map((img, i) => (
-      <img
-        key={i}
-        src={img}
-        alt={`Slide ${i + 1}`}
-        className="
+      <div className="w-full relative overflow-hidden bg-black">
+        <div
+          ref={sliderRef}
+          className={`flex ${
+            isTransitioning
+              ? "transition-transform duration-700 ease-in-out"
+              : ""
+          }`}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {[...images, images[0]].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Slide ${i + 1}`}
+              className="
           w-full 
-          h-[200px] sm:h-[300px] md:h-[450px] lg:h-[600px] 
+          
           object-cover flex-shrink-0"
-      />
-    ))}
-  </div>
+            />
+          ))}
+        </div>
 
-  {/* Dots Indicator */}
-  <div className="absolute bottom-3 sm:bottom-5 left-0 right-0 flex justify-center gap-2">
-    {images.map((_, i) => (
-      <span
-        key={i}
-        className={`
+        {/* Dots Indicator */}
+        <div className="absolute bottom-3 sm:bottom-5 left-0 right-0 flex justify-center gap-2">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`
           w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 
           ${currentIndex % images.length === i ? "bg-primary" : "bg-gray-300"}
         `}
-      ></span>
-    ))}
-  </div>
-</div>
-
+            ></span>
+          ))}
+        </div>
+      </div>
 
       {/* Explore Section */}
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-6  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -161,134 +159,139 @@ const Home = () => {
       </div>
 
       {/* Academic Year 2026 + Apply Form Section */}
-  <div className="bg-gray-50 py-16">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
-    {/* Left Section - Program List */}
-    <div className="lg:col-span-2 bg-white rounded-lg p-4 sm:p-8 shadow-sm border border-gray-200">
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-        ACADEMIC <span className="text-secondary">YEAR 2026</span>
-      </h2>
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
+          {/* Left Section - Program List */}
+          <div className="lg:col-span-2 bg-white rounded-lg p-4 sm:p-8 shadow-sm border border-gray-200">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+              ACADEMIC <span className="text-secondary">YEAR 2026</span>
+            </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 text-gray-800">
-        {[
-          "Civil Engineering",
-          "Computer Engineering",
-          "Mechanical Engineering",
-          "Artificial Intelligence and Data Science",
-          "Electronics and Telecommunication",
-          "First Year Engineering",
-          "Information Technology",
-          "Integrated MBA (BBA + MBA)",
-          "Integrated MBA (BCA + MCA)",
-          "MBA",
-          "MCA",
-          "M-Tech in Mechanical Engineering",
-          "M-Tech in Computer Science",
-        ].map((item, index) => (
-          <p key={index} className="flex items-start text-sm sm:text-base">
-            <span className="text-secondary mr-2 font-bold">›</span>
-            <span className="hover:underline cursor-pointer hover:text-primary transition-colors">
-              {item}
-            </span>
-          </p>
-        ))}
-      </div>
-    </div>
-
-    {/* Right Section - Apply Now Form */}
-    <div className="bg-white rounded-lg p-4 sm:p-8 shadow-md border border-gray-200 w-full overflow-hidden">
-      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 text-center">
-        Apply Now
-      </h3>
-
-      <form className="space-y-4">
-        <input
-          type="text"
-          placeholder="Enter Name *"
-          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-
-        <input
-          type="email"
-          placeholder="Enter Email Address *"
-          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-
-        {/* Mobile Number */}
-        <div className="flex flex-col sm:flex-row gap-2">
-          <select className="w-full sm:w-24 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-            <option>+91</option>
-          </select>
-          <input
-            type="tel"
-            placeholder="Enter Mobile Number *"
-            className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
-
-        {/* State & City */}
-        <div className="flex flex-col sm:flex-row gap-2">
-          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-            <option>Select State *</option>
-          </select>
-          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-            <option>Select City *</option>
-          </select>
-        </div>
-
-        {/* Discipline first, Course below */}
-        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-          <option>Select Discipline Applying For *</option>
-        </select>
-
-        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-          <option>Select Course *</option>
-        </select>
-
-        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-          <option>Select Program *</option>
-        </select>
-
-        <input
-          type="text"
-          placeholder="Enter CET Score"
-          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-
-        {/* Captcha Section */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <div className="bg-gray-100 border border-gray-300 rounded-md flex items-center justify-center py-2 sm:w-1/2">
-            <span className="text-lg font-bold text-gray-700 select-none">
-              8fcb09
-            </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 text-gray-800">
+              {[
+                "Civil Engineering",
+                "Computer Engineering",
+                "Mechanical Engineering",
+                "Artificial Intelligence and Data Science",
+                "Electronics and Telecommunication",
+                "First Year Engineering",
+                "Information Technology",
+                "Integrated MBA (BBA + MBA)",
+                "Integrated MBA (BCA + MCA)",
+                "MBA",
+                "MCA",
+                "M-Tech in Mechanical Engineering",
+                "M-Tech in Computer Science",
+              ].map((item, index) => (
+                <p
+                  key={index}
+                  className="flex items-start text-sm sm:text-base"
+                >
+                  <span className="text-secondary mr-2 font-bold">›</span>
+                  <span className="hover:underline cursor-pointer hover:text-primary transition-colors">
+                    {item}
+                  </span>
+                </p>
+              ))}
+            </div>
           </div>
-          <input
-            type="text"
-            placeholder="Enter Captcha"
-            className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-          />
+
+          {/* Right Section - Apply Now Form */}
+          <div className="bg-white rounded-lg p-4 sm:p-8 shadow-md border border-gray-200 w-full overflow-hidden">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 text-center">
+              Apply Now
+            </h3>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Enter Name *"
+                className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              <input
+                type="email"
+                placeholder="Enter Email Address *"
+                className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              {/* Mobile Number */}
+              <div className="flex flex-col sm:flex-row gap-2">
+                <select className="w-full sm:w-24 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>+91</option>
+                </select>
+                <input
+                  type="tel"
+                  placeholder="Enter Mobile Number *"
+                  className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              {/* State & City */}
+              <div className="flex flex-col sm:flex-row gap-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select State *</option>
+                </select>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select City *</option>
+                </select>
+              </div>
+
+              {/* Discipline first, Course below */}
+              <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Discipline Applying For *</option>
+              </select>
+
+              <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Course *</option>
+              </select>
+
+              <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Program *</option>
+              </select>
+
+              <input
+                type="text"
+                placeholder="Enter CET Score"
+                className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              {/* Captcha Section */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="bg-gray-100 border border-gray-300 rounded-md flex items-center justify-center py-2 sm:w-1/2">
+                  <span className="text-lg font-bold text-gray-700 select-none">
+                    8fcb09
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter Captcha"
+                  className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              {/* Agreement */}
+              <div className="flex items-start gap-2 mt-2">
+                <input type="checkbox" id="agree" className="mt-1" />
+                <label
+                  htmlFor="agree"
+                  className="text-xs sm:text-sm text-gray-700 leading-snug"
+                >
+                  I agree to receive information regarding my submitted enquiry*
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md transition"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
         </div>
-
-        {/* Agreement */}
-        <div className="flex items-start gap-2 mt-2">
-          <input type="checkbox" id="agree" className="mt-1" />
-          <label htmlFor="agree" className="text-xs sm:text-sm text-gray-700 leading-snug">
-            I agree to receive information regarding my submitted enquiry*
-          </label>
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md transition"
-        >
-          SUBMIT
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
+      </div>
 
       {/* Recruiters Section */}
       <div className="bg-gray-50 py-16">
@@ -679,9 +682,6 @@ const Home = () => {
       </div>
 
       {/* Blogs & Insights Section */}
-      
-   
-
 
       <InstagramFeed />
     </div>
