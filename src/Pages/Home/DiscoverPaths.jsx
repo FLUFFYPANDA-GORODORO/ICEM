@@ -2,7 +2,7 @@ import React from "react";
 
 const DiscoverPaths = () => {
   const courses = [
-    "Civil Engineering",
+    
     "Computer Engineering",
     "Mechanical Engineering",
     "Artificial Intelligence and Data Science",

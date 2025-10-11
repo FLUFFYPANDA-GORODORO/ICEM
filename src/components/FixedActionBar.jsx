@@ -22,12 +22,12 @@ const FixedActionBar = () => {
         {/* Hamburger Button with animated light border */}
         <div className="relative group">
           {/* Outer animated light border */}
-          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-transparent via-white to-transparent animate-border-move"></div>
+          <div className="absolute inset-0 rounded-r-md bg-gradient-to-r from-transparent via-white to-transparent animate-border-move"></div>
 
           {/* Inner button (actual hamburger) */}
           <button
             title="Menu"
-            className="relative bg-primary hover:brightness-110 p-4 shadow-md transition shrink-0 z-10 rounded-md overflow-hidden"
+            className="relative bg-primary hover:brightness-110 p-4 shadow-md transition shrink-0 z-10 rounded-r-md overflow-hidden"
           >
             <Menu size={22} className="text-white relative z-10" />
           </button>
@@ -114,9 +114,9 @@ const FixedActionBar = () => {
         }
         .animate-border-move {
           background-size: 200% 200%;
-          animation: border-move 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+          animation: border-move 2s linear infinite;
           opacity: 1;
-          filter: drop-shadow(0 0 10px rgba(247, 246, 246, 1));
+          filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
         }
       `}</style>
     </div>
