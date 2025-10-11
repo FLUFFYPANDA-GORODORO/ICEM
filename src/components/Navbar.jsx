@@ -347,7 +347,7 @@ const Navbar = () => {
               <div className="flex">
                 <button
                   onClick={toggleModal}
-                  className="bg-primary text-white px-8 py-1 text-xs hover:bg-primary/90 font-bold border-r border-white"
+                  className="bg-gradient-to-r from-[#278da4] to-[#003c84] text-white px-8 py-1 text-xs hover:from-[#278da4]/90 hover:to-[#003c84]/90 font-bold border-r border-white transition-all duration-300"
                 >
                   Apply Now
                 </button>
