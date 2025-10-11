@@ -1,8 +1,9 @@
 import React from "react";
+import CampusLife from "../../assets/CampusLife.jpg";
 
 const CampusBeat = () => {
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           The Campus Beat
@@ -14,18 +15,31 @@ const CampusBeat = () => {
           moments — making student life dynamic, buzzing, inspiring, and full
           of meaningful connections & opportunities.
         </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {Array(8).fill(0).map((_, index) => (
-            <div
-              key={index}
-              className="h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 text-sm"
-            >
-              [ Image {index + 1} Here ]
-            </div>
-          ))}
-        </div>
       </div>
+
+      {/* Moving Background Section (Full Width) */}
+      <div className="relative w-screen h-96 overflow-hidden shadow-lg">
+        <div
+          className="absolute top-0 left-0 w-[200%] h-full bg-cover bg-center bg-no-repeat animate-slide"
+          style={{ backgroundImage: `url(${CampusLife})` }}
+        ></div>
+      </div>
+
+      {/* Animation Styles */}
+      <style>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-slide {
+          animation: slide 30s linear infinite;
+        }
+      `}</style>
     </div>
   );
 };

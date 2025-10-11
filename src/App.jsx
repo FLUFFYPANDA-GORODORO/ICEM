@@ -42,11 +42,13 @@ import Academics from "./components/StudentCorner/Academics";
 import IcemAwards from "./components/StudentCorner/IcemAwards";
 import AwardDetails from "./components/StudentCorner/AwardDetails";
 import Accreditation from "./components/AboutUs/Accreditation";
+import FixedActionBar from "./components/FixedActionBar";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <FixedActionBar />
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
