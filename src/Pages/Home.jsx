@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import Indira from "../assets/newicem.jpg";
-import College from "../assets/ICEMWebsiteBanner2.jpg";
+import Indira from "../assets/ICEMBANNER27.jpg";
+import College from "../assets/ICEMBANNERMECH.jpg";
 import Juspay from "../assets/ICEMWebsiteBanner4.jpg";
 import InstagramFeed from "./instagramFeed";
 

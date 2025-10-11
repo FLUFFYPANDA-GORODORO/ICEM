@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 import StudentWelfare from "./components/StudentCorner/StudentWelfare";
 import IIC from "./components/StudentCorner/IIC";
 import InductionProgramme from "./components/StudentCorner/InductionProgramme";
