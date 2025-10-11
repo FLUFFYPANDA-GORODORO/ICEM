@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
 import Banner from "../../assets/ICEM_Banner.jpg";
 import Students from "../../assets/studentsraisinghands.jpg";
-import { FaBriefcase, FaGlobe, FaLightbulb, FaIndustry } from "react-icons/fa";
+import {
+  FaUserGraduate,
+  FaHandshake,
+  FaLightbulb,
+  FaIndustry,
+} from "react-icons/fa";
 import BEComp from "../../assets/BEComp.pdf";
+import TrainingOverviewImg from "../../assets/trainingoverview2.png";
 
 const words = ["Future", "Success", "Career", "Journey", "Impact", "Legacy"];
 function Placement() {
@@ -44,7 +50,7 @@ function Placement() {
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section */}
-      <section className="w-full h-[60vh] relative">
+      <section className="w-full relative">
         {/* Background Banner */}
         <img
           src={Banner}
@@ -125,6 +131,30 @@ function Placement() {
                 leadership roles and achieve long-term career growth.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          {/* Section Heading */}
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
+            Training Overview
+          </h2>
+
+          {/* Section Description */}
+          <p className="text-md text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed">
+            Structured training across core and domain-specific areas,
+            meticulously designed to equip students with the skills, knowledge,
+            and industry readiness required for professional success.
+          </p>
+
+          {/* Image */}
+          <div className="flex justify-center">
+            <img
+              src={TrainingOverviewImg}
+              alt="Training Overview Summary"
+              className=" shadow-md w-full "
+            />
           </div>
         </div>
       </section>
@@ -231,14 +261,16 @@ function Placement() {
         </div>
       </section> */}
       {/* Research Labs & Facilities Section */}
-      <section className="py-5 bg-white">
+      {/* Research Labs & Facilities Section */}
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200 shadow-md p-8 bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center border border-gray-200 shadow-md p-8 bg-white rounded-lg">
             {/* Left Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
                 Research Labs & Facilities
               </h2>
+
               <p className="text-gray-700 leading-relaxed mb-6">
                 ICEM stands as a hub of innovation and experiential learning,
                 where technology, creativity, and research converge. Every
@@ -253,34 +285,23 @@ function Placement() {
                 Key Facilities Include:
               </h3>
 
-              {/* Placeholder Boxes for Logos */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {[
-                  "Adobe",
-                  "Airtel",
-                  "Biocon",
-                  "DRDO",
-                  "Honda",
-                  "Intel",
-                  "ISRO",
-                  "NVIDIA",
-                  "Philips",
-                  "Siemens",
-                  "Texas Instruments",
-                  "TCS",
-                ].map((partner, index) => (
-                  <div
-                    key={index}
-                    className="w-full h-20 bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 text-sm font-medium"
-                  >
-                    (image here)
-                  </div>
-                ))}
-              </div>
+              {/* ✅ Replaced Logos with List */}
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Programming Labs – I & II</li>
+                <li>Artificial Intelligence & Research Labs – I & II</li>
+                <li>Project Lab</li>
+                <li>Database Management System Lab</li>
+                <li>iOS (Apple) Lab</li>
+                <li>Robotics & Automation Lab</li>
+                <li>Mechatronics Lab</li>
+                <li>CAD & Modelling Lab</li>
+                <li>Electronics & Digital Electronics Labs</li>
+                <li>Communication & IoT Labs</li>
+              </ul>
             </div>
 
             {/* Right Image Placeholder */}
-            <div className="w-full h-[520px] bg-gray-200 flex items-center justify-center text-gray-500 text-lg font-medium">
+            <div className="w-full h-[580px] bg-gray-200 flex items-center justify-center text-gray-500 text-lg font-medium rounded-md">
               (image here)
             </div>
           </div>
@@ -314,12 +335,12 @@ function Placement() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <FaBriefcase className="text-4xl mb-4 text-primary" />,
+                icon: <FaUserGraduate className="text-4xl mb-4 text-primary" />,
                 title: "Alumni Mentorship & Placement Guidance",
                 desc: "Connect with our powerful network of accomplished alumni for one-on-one mentorship. Get personalized guidance on career paths, resume building, and interview strategies to land your dream role.",
               },
               {
-                icon: <FaGlobe className="text-4xl mb-4 text-primary" />,
+                icon: <FaHandshake className="text-5xl mb-4 text-primary" />,
                 title: "Corporate Partnerships & Recruitment Drive",
                 desc: "We have established strong, lasting relationships with a diverse portfolio of national and multinational corporations. Benefit from exclusive recruitment drives, on-campus placements, and direct access to sought-after employers actively seeking ICEM talent.",
               },
