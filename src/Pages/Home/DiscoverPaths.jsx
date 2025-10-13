@@ -5,7 +5,7 @@ import CompEng from "../../assets/Comp.jpg";
 import MechEng from "../../assets/Mech.jpg";
 import AidsEng from "../../assets/Entc.jpg";
 import EntcEng from "../../assets/AIDS1.jpg";
-// import IMBA from "../../assets/IntigratedBBAMBA.jpg";
+import IMBA from "../../assets/IBBAMBA1.jpg";
 // import IMCA from "../../assets/IntigratedBCAMCA.jpg";
 
 import ITEng from "../../assets/IT1.jpg";
@@ -22,7 +22,7 @@ const DiscoverPaths = () => {
     { name: "Artificial Intelligence and Data Science", img: AidsEng },
     { name: "Electronics and Telecommunication", img: EntcEng },
     { name: "Information Technology", img: ITEng },
-    { name: "Integrated MBA (BBA + MBA)", img: Placeholder },
+    { name: "Integrated MBA (BBA + MBA)", img: IMBA },
     { name: "Integrated MBA (BCA + MCA)", img: Placeholder },
     { name: "MBA", img: Placeholder },
     { name: "MCA", img: Placeholder },
