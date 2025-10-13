@@ -11,6 +11,44 @@ import BEComp from "../../assets/BEComp.pdf";
 import TrainingOverviewImg from "../../assets/trainingoverview2.png";
 
 const words = ["Future", "Success", "Career", "Journey", "Impact", "Legacy"];
+const testimonials = [
+  {
+    logo: "Logo Here",
+    quote:
+      "ICEM has always provided us with trained mechanical engineers, and as an organization, we appreciate the college's efforts to prepare students for the industry.",
+    name: "Mr. Rahul Bagale",
+    position: "Group HR Head – Force Motors",
+  },
+  {
+    logo: "Logo Here",
+    quote:
+      "We have entered into an MOU with ICEM to actively support their endeavours in providing excellent job opportunities for civil engineering students. Our longstanding partnership of over a decade with ICEM will continue further.",
+    name: "Mr. Siddharth Moorthy",
+    position: "Managing Director – Vascon Engineers",
+  },
+  {
+    logo: "Logo Here",
+    quote:
+      "While conducting campus recruitment drives across the country, ICEM consistently emerges as the top choice due to their exceptional commitment to preparing students for their dream job offers.",
+    name: "Ms. Shilpi Mahar",
+    position: "Manager, TA – Data Axle",
+  },
+  {
+    logo: "Logo Here",
+    quote:
+      "We appreciate the designed training programs by ICEM aimed at equipping core Mechanical Engineering students with the necessary skills to excel in the industry. These programs ensure that students emerge as industry-ready professionals.",
+    name: "Ms. Sumana Chakraborty",
+    position: "HR Business Partner – Bridgestone India",
+  },
+  {
+    logo: "Logo Here",
+    quote:
+      "ICEM has been a part of the Ready Engineers Programme for a long time. Their way of creating resources ensures a transformative experience that prepares students effectively for the corporate world.",
+    name: "Mr. Sushant Kumar",
+    position:
+      "India Lead – University Relations & Campus Recruitment, Tata Technologies",
+  },
+];
 function Placement() {
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [activeTab, setActiveTab] = useState("Placement Team");
@@ -494,117 +532,6 @@ function Placement() {
           </div>
         </div>
       </section>
-      {/* For Recruiters: Upgrade your Workforce */}
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
-            Trusted by the Best in the Business
-          </h2>
-          <p className="text-md text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
-            Our strongest endorsements come from our recruitment partners.
-            Discover why leading companies consistently choose ICEM graduates to
-            drive their success.
-          </p>
-
-          {/* Testimonial Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2">
-            {/* 1️⃣ Force Motors */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
-                <span className="text-gray-400 text-sm">Logo Here</span>
-              </div>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
-                "ICEM has always provided us with trained mechanical engineers,
-                and as an organization, we appreciate the college's efforts to
-                prepare students for the industry."
-              </p>
-              <h3 className="text-sm font-semibold text-secondary">
-                Mr. Rahul Bagale
-              </h3>
-              <p className="text-xs text-gray-500">
-                Group HR Head – Force Motors
-              </p>
-            </div>
-
-            {/* 2️⃣ Vascon Engineers */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
-                <span className="text-gray-400 text-sm">Logo Here</span>
-              </div>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
-                "We have entered into an MOU with ICEM to actively support their
-                endeavours in providing excellent job opportunities for civil
-                engineering students. Our longstanding partnership of over a
-                decade with ICEM will continue further to support the civil
-                engineers."
-              </p>
-              <h3 className="text-sm font-semibold text-secondary">
-                Mr. Siddharth Moorthy
-              </h3>
-              <p className="text-xs text-gray-500">
-                Managing Director – Vascon Engineers
-              </p>
-            </div>
-
-            {/* 3️⃣ Data Axle */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
-                <span className="text-gray-400 text-sm">Logo Here</span>
-              </div>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
-                "While conducting campus recruitment drives across the country,
-                ICEM consistently emerges as the top choice due to their
-                exceptional commitment to preparing students for their dream job
-                offers."
-              </p>
-              <h3 className="text-sm font-semibold text-secondary">
-                Ms. Shilpi Mahar
-              </h3>
-              <p className="text-xs text-gray-500">Manager, TA – Data Axle</p>
-            </div>
-
-            {/* 4️⃣ Bridgestone */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6  max-w-sm mx-auto flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
-                <span className="text-gray-400 text-sm">Logo Here</span>
-              </div>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
-                "We appreciate the designed training programs by ICEM aimed at
-                equipping core Mechanical Engineering students with the
-                necessary skills to excel in the industry. These programs ensure
-                that students emerge as industry-ready professionals."
-              </p>
-              <h3 className="text-sm font-semibold text-secondary">
-                Ms. Sumana Chakraborty
-              </h3>
-              <p className="text-xs text-gray-500">
-                HR Business Partner – Bridgestone India
-              </p>
-            </div>
-
-            {/* 5️⃣ Tata Technologies */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6 max-w-sm mx-auto flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gray-100 flex items-center justify-center mb-4 rounded-full">
-                <span className="text-gray-400 text-sm">Logo Here</span>
-              </div>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4 italic">
-                "ICEM has been a part of the Ready Engineers Programme for a
-                long time. Their way of creating resources prepared specifically
-                to meet the needs of students ensures a transformative
-                experience that prepares them effectively for the corporate
-                world."
-              </p>
-              <h3 className="text-sm font-semibold text-secondary">
-                Mr. Sushant Kumar
-              </h3>
-              <p className="text-xs text-gray-500">
-                India Lead – University Relations & Campus Recruitment, Tata
-                Technologies
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Empowering Students for Career Success Section */}
       <section className="py-5 bg-white">
@@ -643,110 +570,50 @@ function Placement() {
       </section>
 
       {/* Recruiter Showcase Section */}
-      <section className="py-5 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase">
-            Your Career, Connected to the Best
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
+            Trusted by the Best in the Business
           </h2>
-          <p className="text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
-            The consistent quality and industry-readiness of ICEM graduates have
-            made our campus a preferred recruitment destination for top-tier
-            companies across the globe. These partnerships are a testament to
-            our shared commitment to nurturing future-ready professionals
+          <p className="text-gray-700 max-w-4xl mx-auto mb-14 leading-relaxed">
+            Our strongest endorsements come from our recruitment partners.
+            Discover why leading companies consistently choose ICEM graduates to
+            drive their success.
           </p>
 
-          {/* Company Placeholder Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {Array.from({ length: 24 }).map((_, index) => (
+          {/* Testimonial Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
+            {testimonials.map((item, i) => (
               <div
-                key={index}
-                className="h-20 bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-500 text-sm font-medium shadow-sm hover:shadow-md transition-all"
+                key={i}
+                className="bg-primary border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-3 rounded-md flex flex-col justify-between  text-center h-full min-h-[420px]"
               >
-                (image here)
+                {/* Top (Logo placeholder) */}
+                <div>
+                  <div className="flex-none">
+                  <div className="w-20 h-20 bg-gray-100 mx-auto flex items-center justify-center rounded-full mb-2">
+                    <span className="text-gray-400 text-sm">{item.logo}</span>
+                  </div> 
+                  </div>
+
+                  {/* Quote */}
+                  <div className="flex-1 flex items-center justify-center">
+                  <p className="text-white italic leading-relaxed text-sm px-2">
+                    “{item.quote}”
+                  </p>
+                </div>
+                </div>
+                {/* <div className="border-t border-gray-200 my-4 mx-auto w-3/4 flex-none"/> */}
+                {/* Author Info */}
+                <div className="">
+                  <h3 className="text-sm font-bold text-secondary">
+                    {item.name}
+                  </h3>
+                  <p className="text-xs text-secondary mb-2">{item.position}</p>
+                </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          {/* Section Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-5">
-            Empowering Future-Ready Professionals
-          </h2>
-          <p className="text-md text-gray-700 max-w-4xl mx-auto mb-14 leading-relaxed">
-            At ICEM, we nurture talent through structured programs that prepare
-            students for the corporate world and long-term leadership success.
-          </p>
-
-          {/* Two Program Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* 1️⃣ Industry Readiness Programme */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-8 text-left rounded-lg">
-              <h3 className="text-xl font-bold text-secondary mb-4">
-                Industry Readiness Programme (IRP)
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4">
-                This programme is designed to seamlessly bridge the gap between
-                campus and corporate, equipping you with the precise technical
-                and professional skills required to contribute from day one.
-              </p>
-
-              <ul className="text-gray-700 text-sm space-y-2 list-disc pl-5">
-                <li>
-                  <strong>Domain-Specific Certifications:</strong> Earn
-                  credentials in high-demand technologies like AWS, Python, and
-                  AutoCAD.
-                </li>
-                <li>
-                  <strong>Live Projects & Case Studies:</strong> Solve
-                  real-world business challenges from our industry partners.
-                </li>
-                <li>
-                  <strong>Corporate Communication & Etiquette:</strong> Master
-                  professional communication, presentations, and workplace
-                  conduct.
-                </li>
-                <li>
-                  <strong>Product & Project Management Tools:</strong> Gain
-                  hands-on experience with Jira and Trello to manage modern
-                  workflows.
-                </li>
-              </ul>
-            </div>
-
-            {/* 2️⃣ Career & Leadership Development Programme */}
-            <div className="bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-8 text-left rounded-lg">
-              <h3 className="text-xl font-bold text-secondary mb-4">
-                Career & Leadership Development Programme (CLDP)
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm mb-4">
-                Go beyond your first job and build a legacy. This programme
-                develops the strategic mindset, leadership qualities, and career
-                management skills for long-term success.
-              </p>
-
-              <ul className="text-gray-700 text-sm space-y-2 list-disc pl-5">
-                <li>
-                  <strong>Personal Branding & LinkedIn Mastery:</strong> Craft a
-                  powerful professional identity that stands out to recruiters.
-                </li>
-                <li>
-                  <strong>Advanced Interview & Negotiation Training:</strong>{" "}
-                  Master all interview rounds and the art of salary negotiation.
-                </li>
-                <li>
-                  <strong>Leadership & Team Management:</strong> Develop core
-                  skills in decision-making, conflict resolution, and leading
-                  teams.
-                </li>
-                <li>
-                  <strong>Lifelong Career Strategy:</strong> Access alumni
-                  networks and mentorship for continuous growth and opportunity.
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
