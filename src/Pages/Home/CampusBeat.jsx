@@ -17,17 +17,24 @@ const CampusBeat = () => {
         </p>
       </div>
 
-      {/* Moving Background Section (Full Width) */}
+      {/* ✅ Seamless Moving Background Section */}
       <div className="relative w-screen h-96 overflow-hidden shadow-lg">
-        <div
-          className="absolute top-0 left-0 w-[200%] h-full bg-cover bg-center bg-no-repeat animate-slide"
-          style={{ backgroundImage: `url(${CampusLife})` }}
-        ></div>
+        <div className="absolute top-0 left-0 flex w-[200%] h-full animate-smoothScroll">
+          {/* ✅ Duplicate image twice for continuous scroll */}
+          <div
+            className="w-1/2 h-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${CampusLife})` }}
+          ></div>
+          <div
+            className="w-1/2 h-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${CampusLife})` }}
+          ></div>
+        </div>
       </div>
 
-      {/* Animation Styles */}
+      {/* ✅ Animation Styles */}
       <style>{`
-        @keyframes slide {
+        @keyframes smoothScroll {
           0% {
             transform: translateX(0);
           }
@@ -36,8 +43,8 @@ const CampusBeat = () => {
           }
         }
 
-        .animate-slide {
-          animation: slide 30s linear infinite;
+        .animate-smoothScroll {
+          animation: smoothScroll 20s linear infinite;
         }
       `}</style>
     </div>

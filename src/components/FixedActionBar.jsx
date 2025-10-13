@@ -1,100 +1,90 @@
 import React, { useState } from "react";
-import {
-  Phone,
-  MessageCircle,
-  Video,
-  MapPin,
-  Menu,
-  RotateCcw,
-} from "lucide-react";
+import { Menu } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const FixedActionBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-1/2  -translate-y-1/2 z-[99999] flex items-center">
-      {/* Main container */}
-      <div className="flex items-center">
-        {/* Hamburger Button with glowing animated border */}
-        <div
-          className="relative group p-[2px] rounded-md bg-gradient-to-r from-[#00e5ff] via-[#ff00ea] to-[#00e5ff] bg-[length:200%_100%] animate-glow-border transition-all duration-500"
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-        >
-          {/* Button itself */}
+    <div className="fixed top-1/2 -translate-y-1/2 z-[99999] flex items-center">
+      {/* 👇 Single hover zone (Hamburger + Icons) */}
+      <div
+        className="relative flex items-center group"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+      >
+        {/* 🌈 Hamburger Button */}
+        <div className="relative p-[2px] bg-gradient-to-r from-[#00e5ff] via-[#ff00ea] to-[#00e5ff] bg-[length:200%_100%] animate-glow-border transition-all duration-500 rounded-md">
           <button
             title="Menu"
-            className="relative flex items-center justify-center bg-[#003c84] text-white p-4 rounded-md shadow-lg hover:brightness-110 transition-all duration-300"
+            className="relative flex items-center justify-center bg-[#278da4] text-white p-4 rounded-l-md shadow-lg hover:brightness-110 transition-all duration-300"
           >
             <Menu size={22} />
           </button>
+        </div>
 
-          {/* Expanding Icons container (only visible when hovering the button) */}
-          <div
-            className={`absolute left-full top-1/2 -translate-y-1/2 ml-3 flex items-center gap-2 transition-all duration-500 ease-in-out ${
-              isOpen
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-5 pointer-events-none"
-            }`}
-          >
-            <div className="bg-[#003c84] px-3 py-2 shadow-lg flex items-center gap-3 rounded-md">
-              {/* 360° View */}
-              <a
-                href="#"
-                title="360° View"
-                className="bg-white hover:bg-gray-100 p-2 rounded-full border border-white transition"
-              >
-                <RotateCcw size={20} className="text-[#003c84]" />
-              </a>
+        {/* 🚀 Social Icons Container */}
+        <div
+          className={`absolute left-full top-1/2 -translate-y-1/2 flex items-center transition-all duration-500 ease-in-out ${
+            isOpen
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-3 pointer-events-none"
+          }`}
+        >
+          <div className="bg-[#278da4] px-3 py-2 shadow-lg flex items-center gap-3 rounded-r-md">
+            {/* 🌐 Facebook */}
+            <a
+              href="https://www.facebook.com/ICEM.AVIRAT"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Facebook"
+              className="bg-[#003c84] hover:bg-[#0056b3] text-white p-2.5 rounded-full transition"
+            >
+              <FaFacebookF size={18} />
+            </a>
 
-              <span className="w-[1px] h-6 bg-white/40"></span>
+            {/* Divider */}
+            <span className="w-[1px] h-6 bg-white/40"></span>
 
-              {/* Call */}
-              <a
-                href="tel:+910000000000"
-                title="Call Us"
-                className="bg-white hover:bg-gray-100 p-2 rounded-full border border-white transition"
-              >
-                <Phone size={20} className="text-[#003c84]" />
-              </a>
+            {/* 🌐 LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/indira-college-of-engineering-and-management-pune/about/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+              className="bg-[#003c84] hover:bg-[#0056b3] text-white p-2.5 rounded-full transition"
+            >
+              <FaLinkedinIn size={18} />
+            </a>
 
-              <span className="w-[1px] h-6 bg-white/40"></span>
+            {/* Divider */}
+            <span className="w-[1px] h-6 bg-white/40"></span>
 
-              {/* WhatsApp */}
-              <a
-                href="https://wa.me/910000000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Chat on WhatsApp"
-                className="bg-white hover:bg-gray-100 p-2 rounded-full border border-white transition"
-              >
-                <MessageCircle size={20} className="text-[#003c84]" />
-              </a>
+            {/* 🌐 X (Twitter) */}
+            <a
+              href="https://x.com/igipune"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Twitter / X"
+              className="bg-[#003c84] hover:bg-[#0056b3] text-white p-2.5 rounded-full transition"
+            >
+              <FaSquareXTwitter size={18} />
+            </a>
 
-              <span className="w-[1px] h-6 bg-white/40"></span>
+            {/* Divider */}
+            <span className="w-[1px] h-6 bg-white/40"></span>
 
-              {/* Video */}
-              <a
-                href="#"
-                title="Campus Video"
-                className="bg-white hover:bg-gray-100 p-2 rounded-full border border-white transition"
-              >
-                <Video size={20} className="text-[#003c84]" />
-              </a>
-
-              <span className="w-[1px] h-6 bg-white/40"></span>
-
-              {/* Location */}
-              <a
-                href="https://maps.google.com?q=Indira+College+of+Engineering+and+Management"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Find Us"
-                className="bg-white hover:bg-gray-100 p-2 rounded-full border border-white transition"
-              >
-                <MapPin size={20} className="text-[#003c84]" />
-              </a>
-            </div>
+            {/* 🌐 Instagram */}
+            <a
+              href="https://www.instagram.com/icem_pune/#"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+              className="bg-[#003c84] hover:bg-[#0056b3] text-white p-2.5 rounded-full transition"
+            >
+              <FaInstagram size={18} />
+            </a>
           </div>
         </div>
       </div>
