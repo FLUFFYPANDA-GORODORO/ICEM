@@ -11,7 +11,7 @@ import EntcEng from "../../assets/AIDS1.jpg";
 import ITEng from "../../assets/IT1.jpg";
 
 // ✅ Placeholder (use a simple stock image or blank)
-import Placeholder from "../../assets/ICEM_BANNER.jpg"; // <-- you can replace this with your own placeholder
+import Placeholder from "../../assets/ICEM_Banner.jpg"; // <-- you can replace this with your own placeholder
 // if you don't have one, create a plain gray box as fallback
 
 const DiscoverPaths = () => {
