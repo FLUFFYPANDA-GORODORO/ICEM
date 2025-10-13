@@ -1,20 +1,33 @@
 import React from "react";
-import Comp1 from "../../assets/Comp1.jpg"; // ✅ import your image here
+
+// ✅ Import images
+import CompEng from "../../assets/Comp.jpg";
+import MechEng from "../../assets/Mech.jpg";
+import AidsEng from "../../assets/Entc.jpg";
+import EntcEng from "../../assets/AIDS1.jpg";
+import IMBA from "../../assets/IntigratedBBAMBA.jpg";
+import IMCA from "../../assets/IntigratedBCAMCA.jpg";
+
+import ITEng from "../../assets/IT1.jpg";
+
+// ✅ Placeholder (use a simple stock image or blank)
+import Placeholder from "../../assets/Placeholder.jpg"; // <-- you can replace this with your own placeholder
+// if you don't have one, create a plain gray box as fallback
 
 const DiscoverPaths = () => {
+  // ✅ Match images to courses
   const courses = [
-    "Computer Engineering",
-    "Mechanical Engineering",
-    "Artificial Intelligence and Data Science",
-    "Electronics and Telecommunication",
-    "First Year Engineering",
-    "Information Technology",
-    "Integrated MBA (BBA + MBA)",
-    "Integrated MBA (BCA + MCA)",
-    "MBA",
-    "MCA",
-    "M-Tech in Mechanical Engineering",
-    "M-Tech in Computer Science",
+    { name: "Computer Engineering", img: CompEng },
+    { name: "Mechanical Engineering", img: MechEng },
+    { name: "Artificial Intelligence and Data Science", img: AidsEng },
+    { name: "Electronics and Telecommunication", img: EntcEng },
+    { name: "Information Technology", img: ITEng },
+    { name: "Integrated MBA (BBA + MBA)", img: IMBA },
+    { name: "Integrated MBA (BCA + MCA)", img: IMCA },
+    { name: "MBA", img: Placeholder },
+    { name: "MCA", img: Placeholder },
+    { name: "M-Tech in Mechanical Engineering", img: Placeholder },
+    { name: "M-Tech in Computer Science", img: Placeholder },
   ];
 
   return (
@@ -24,22 +37,22 @@ const DiscoverPaths = () => {
           Discover Your Path to Success
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {courses.map((course, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-lg shadow-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02]"
+              className="relative bg-white shadow-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02]"
             >
               {/* Background Image */}
               <img
-                src={Comp1}
-                alt={course}
-                className="h-44 w-full object-cover group-hover:brightness-75 transition-all duration-300"
+                src={course.img}
+                alt={course.name}
+                className="w-full h-44 object-cover group-hover:brightness-75 transition-all duration-300"
               />
 
               {/* Transparent Overlay Title */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-center text-white font-semibold text-sm drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] group-hover:scale-105 transition-transform duration-300">
-                {course}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-center text-white font-semibold text-xs whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] group-hover:scale-105 group-hover:underline transition-transform duration-300">
+                {course.name}
               </div>
             </div>
           ))}
