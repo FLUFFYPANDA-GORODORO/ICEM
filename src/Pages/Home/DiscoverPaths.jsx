@@ -5,13 +5,13 @@ import CompEng from "../../assets/Comp.jpg";
 import MechEng from "../../assets/Mech.jpg";
 import AidsEng from "../../assets/Entc.jpg";
 import EntcEng from "../../assets/AIDS1.jpg";
-import IMBA from "../../assets/IntigratedBBAMBA.jpg";
-import IMCA from "../../assets/IntigratedBCAMCA.jpg";
+// import IMBA from "../../assets/IntigratedBBAMBA.jpg";
+// import IMCA from "../../assets/IntigratedBCAMCA.jpg";
 
 import ITEng from "../../assets/IT1.jpg";
 
 // ✅ Placeholder (use a simple stock image or blank)
-import Placeholder from "../../assets/Placeholder.jpg"; // <-- you can replace this with your own placeholder
+import Placeholder from "../../assets/ICEM_BANNER.jpg"; // <-- you can replace this with your own placeholder
 // if you don't have one, create a plain gray box as fallback
 
 const DiscoverPaths = () => {
@@ -22,8 +22,8 @@ const DiscoverPaths = () => {
     { name: "Artificial Intelligence and Data Science", img: AidsEng },
     { name: "Electronics and Telecommunication", img: EntcEng },
     { name: "Information Technology", img: ITEng },
-    { name: "Integrated MBA (BBA + MBA)", img: IMBA },
-    { name: "Integrated MBA (BCA + MCA)", img: IMCA },
+    { name: "Integrated MBA (BBA + MBA)", img: Placeholder },
+    { name: "Integrated MBA (BCA + MCA)", img: Placeholder },
     { name: "MBA", img: Placeholder },
     { name: "MCA", img: Placeholder },
     { name: "M-Tech in Mechanical Engineering", img: Placeholder },
