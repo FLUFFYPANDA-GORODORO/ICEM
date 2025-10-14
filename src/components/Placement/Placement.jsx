@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import Banner from "../../assets/ICEM_Banner.jpg";
+import Banner from "../../assets/ICEMBANNERPLACEMENT.jpg";
 import Students from "../../assets/studentsraisinghands.jpg";
 import {
   FaUserGraduate,
   FaHandshake,
   FaLightbulb,
   FaIndustry,
+  FaQuoteLeft,
+  FaQuoteRight,
 } from "react-icons/fa";
 import BEComp from "../../assets/BEComp.pdf";
 import TrainingOverviewImg from "../../assets/trainingoverview2.png";
@@ -95,31 +97,30 @@ function Placement() {
           alt="Indira College Banner"
           className="w-full h-full object-cover"
         />
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
-          {/* Dynamic Typing Text */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg text-center px-4">
-            Crafting Your{" "}
-            <span className="relative inline-block text-primary">
-              {currentText}
-              <span className="ml-1 animate-blink">|</span>
-            </span>
-          </h1>
-        </div>
-
-        {/* Cursor Blink Animation */}
-        <style>
-          {`
-          @keyframes blink {
-            50% { opacity: 0; }
-          }
-          .animate-blink {
-            animation: blink 1s step-start infinite;
-          }
-        `}
-        </style>
       </section>
+
+      {/* Typing Text Button Section */}
+      <div className="flex justify-center items-center pr-6 pt-14 md:-mt-12 relative z-10">
+        <button className="bg-primary text-white px-6 py-3 rounded-full text-2xl font-semibold shadow-lg hover:bg-primary/90 transition-all duration-300 flex items-center gap-2">
+          Crafting Your{" "}
+          <span className="relative inline-block text-white font-bold">
+            {currentText}
+            <span className="ml-1 animate-blink">|</span>
+          </span>
+        </button>
+      </div>
+
+      {/* Cursor Blink Animation */}
+      <style>
+        {`
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .animate-blink {
+      animation: blink 1s step-start infinite;
+    }
+  `}
+      </style>
 
       {/* Career Advancement Services (CAS) Section */}
       <section className="py-10 bg-white">
@@ -220,7 +221,7 @@ function Placement() {
                 ₹8.16LPA
               </h3>
               <p className="text-lg font-semibold text-primary mb-2">
-                Avg. Package
+                Average Package
               </p>
             </div>
 
@@ -234,9 +235,9 @@ function Placement() {
 
             {/* Graduates */}
             <div className="bg-white shadow-md border border-blue-100 p-8">
-              <h3 className="text-4xl font-bold text-secondary mb-2">72%</h3>
+              <h3 className="text-4xl font-bold text-secondary mb-2">100%</h3>
               <p className="text-lg font-semibold text-primary mb-2">
-                Indira Graduates
+                Placement Assistance
               </p>
             </div>
           </div>
@@ -370,35 +371,35 @@ function Placement() {
           </p>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {[
               {
-                icon: <FaUserGraduate className="text-4xl mb-4 text-primary" />,
+                icon: <FaUserGraduate className="text-4xl mb-2 text-primary" />,
                 title: "Alumni Mentorship & Placement Guidance",
                 desc: "Connect with our powerful network of accomplished alumni for one-on-one mentorship. Get personalized guidance on career paths, resume building, and interview strategies to land your dream role.",
               },
               {
-                icon: <FaHandshake className="text-5xl mb-4 text-primary" />,
+                icon: <FaHandshake className="text-4xl mb-2 text-primary" />,
                 title: "Corporate Partnerships & Recruitment Drive",
                 desc: "We have established strong, lasting relationships with a diverse portfolio of national and multinational corporations. Benefit from exclusive recruitment drives, on-campus placements, and direct access to sought-after employers actively seeking ICEM talent.",
               },
               {
-                icon: <FaLightbulb className="text-4xl mb-4 text-primary" />,
+                icon: <FaLightbulb className="text-4xl mb-2 text-primary" />,
                 title: "Internships & Industry Exposure",
                 desc: "Theory meets practice through mandatory, paid internships with our partner companies. From semester-long projects in Pune to global opportunities, gain invaluable hands-on experience that makes your resume stand out.",
               },
               {
-                icon: <FaIndustry className="text-4xl mb-4 text-primary" />,
+                icon: <FaIndustry className="text-4xl mb-2 text-primary" />,
                 title: "Career Development Workshops",
                 desc: "We polish your professional edge. Through a continuous schedule of workshops—from mastering communication and leadership to acing mock interviews and building a powerful personal brand—we ensure you are not just qualified, but truly job-ready.",
               },
             ].map((card, index) => (
               <div
                 key={index}
-                className="bg-white/10 border border-white/10 hover:border-primary/40 hover:bg-white/15 p-8 rounded-2xl shadow-lg backdrop-blur-md transition-all duration-300 flex flex-col items-center text-center"
+                className="bg-white/10 border border-white/10 hover:border-primary/40 hover:bg-white/15 p-8 rounded-2xl shadow-lg backdrop-blur-md transition-all duration-300 flex flex-col items-center text-center h-full"
               >
                 {/* ✅ Centered content */}
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-center text-center flex-1 justify-between">
                   {card.icon}
                   <h3 className="text-lg font-bold mb-3 text-white">
                     {card.title}
@@ -533,43 +534,6 @@ function Placement() {
         </div>
       </section>
 
-      {/* Empowering Students for Career Success Section */}
-      <section className="py-5 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center border border-gray-200 shadow-md bg-white overflow-hidden">
-            {/* Left Text Section */}
-            <div className="p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-4">
-                Empowering Students for Career Success
-              </h2>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                At Indira College, we don't just prepare students for jobs—we
-                shape their future for long-term career growth and stability.
-                Industry readiness is not an add-on; it is ingrained in every
-                aspect of our education. With over <strong>2,000+</strong>{" "}
-                organisations recruiting from our campus each year, we have
-                established ourselves as a preferred talent hub for top
-                employers across industries.
-              </p>
-
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed mt-4">
-                Our strong placement record reflects our commitment to ensuring
-                that students step into the workforce with confidence and
-                competence. We ensure that our students are industry-ready from
-                day one, equipped with the right mix of technical expertise,
-                soft skills, and real-world experience.
-              </p>
-            </div>
-
-            {/* Right Image Placeholder */}
-            <div className="bg-gray-200 h-64 md:h-full flex items-center justify-center text-gray-500 text-base font-medium">
-              (image here)
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recruiter Showcase Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
@@ -582,35 +546,35 @@ function Placement() {
             drive their success.
           </p>
 
-          {/* Testimonial Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
+          {/* Horizontal Testimonial Cards */}
+          <div className="flex flex-col space-y-5">
             {testimonials.map((item, i) => (
               <div
                 key={i}
-                className="bg-primary border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-3 rounded-md flex flex-col justify-between  text-center h-full min-h-[420px]"
+                className="flex flex-col md:flex-row items-center text-left bg-primary/90 text-secondary shadow-md hover:shadow-lg transition-all duration-300 p-6 md:p-8 gap-6"
               >
-                {/* Top (Logo placeholder) */}
-                <div>
-                  <div className="flex-none">
-                  <div className="w-20 h-20 bg-gray-100 mx-auto flex items-center justify-center rounded-full mb-2">
-                    <span className="text-gray-400 text-sm">{item.logo}</span>
-                  </div> 
-                  </div>
+                {/* Logo Circle */}
+                <div className="flex-shrink-0 w-24 h-24 bg-gray-400 rounded-full flex items-center justify-center text-sm font-medium text-gray-50">
+                  {item.logo}
+                </div>
 
-                  {/* Quote */}
-                  <div className="flex-1 flex items-center justify-center">
-                  <p className="text-white italic leading-relaxed text-sm px-2">
-                    “{item.quote}”
+                {/* Quote Section */}
+                <div className="flex-1">
+                  <FaQuoteLeft className="text-primary text-lg mb-2" />
+                  <p className="italic leading-relaxed text-sm md:text-base">
+                    {item.quote}
                   </p>
+                  <FaQuoteRight className="text-primary text-lg mt-2" />
                 </div>
-                </div>
-                {/* <div className="border-t border-gray-200 my-4 mx-auto w-3/4 flex-none"/> */}
+
                 {/* Author Info */}
-                <div className="">
-                  <h3 className="text-sm font-bold text-secondary">
+                <div className="text-center md:text-right md:w-1/4">
+                  <h3 className="text-sm md:text-base font-bold text-secondary">
                     {item.name}
                   </h3>
-                  <p className="text-xs text-secondary mb-2">{item.position}</p>
+                  <p className="text-xs md:text-sm text-black">
+                    {item.position}
+                  </p>
                 </div>
               </div>
             ))}
@@ -619,7 +583,7 @@ function Placement() {
       </section>
 
       {/* Placement Information Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
             Placement Information
