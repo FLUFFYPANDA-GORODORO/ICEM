@@ -1,10 +1,10 @@
 import React from "react";
-import CampusLife from "../../assets/Marque.jpg";
+import CampusLife from "../../assets/newnewMarque.jpg";
 
 const CampusBeat = () => {
   return (
     <div className="bg-white py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 44h-">
+      <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           The Campus Beat
         </h2>
@@ -17,14 +17,19 @@ const CampusBeat = () => {
         </p>
       </div>
 
-      {/* ✅ Full-width marquee with true image scroll */}
-      <div className="relative w-full overflow-hidden shadow-lg">
-        <div className="flex w-[200%] animate-smoothScroll">
-          <img src={CampusLife} alt="Campus Life" className="w-full h-auto" />
+      {/* ✅ Horizontal marquee for wide image */}
+      <div className="relative w-full  overflow-hidden">
+        <div className="flex w-[1000%] h-[60vh] animate-smoothScroll">
+          {/* Two identical images for seamless looping */}
+          <img
+            src={CampusLife}
+            alt="Campus Life"
+            className="w-1/2 h-auto object-cover"
+          />
           <img
             src={CampusLife}
             alt="Campus Life duplicate"
-            className="w-full h-auto"
+            className="w-1/2 h-auto object-cover"
           />
         </div>
       </div>
