@@ -1,5 +1,5 @@
 import React from "react";
-import CampusLife from "../../assets/CampusLife.jpg";
+import CampusLife from "../../assets/newnewMarque.jpg";
 
 const CampusBeat = () => {
   return (
@@ -12,23 +12,25 @@ const CampusBeat = () => {
         <p className="text-gray-700 text-lg max-w-5xl leading-relaxed mb-10">
           From celebrity talks to Lit Fests and interactions with industry
           icons, our campus pulses with energy, big ideas, and unforgettable
-          moments — making student life dynamic, buzzing, inspiring, and full
-          of meaningful connections & opportunities.
+          moments — making student life dynamic, buzzing, inspiring, and full of
+          meaningful connections & opportunities.
         </p>
       </div>
 
-      {/* ✅ Seamless Moving Background Section */}
-      <div className="relative w-screen h-96 overflow-hidden shadow-lg">
-        <div className="absolute top-0 left-0 flex w-[200%] h-full animate-smoothScroll">
-          {/* ✅ Duplicate image twice for continuous scroll */}
-          <div
-            className="w-1/2 h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${CampusLife})` }}
-          ></div>
-          <div
-            className="w-1/2 h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${CampusLife})` }}
-          ></div>
+      {/* ✅ Horizontal marquee for wide image */}
+      <div className="relative w-full  overflow-hidden">
+        <div className="flex w-[1000%] h-[60vh] animate-smoothScroll">
+          {/* Two identical images for seamless looping */}
+          <img
+            src={CampusLife}
+            alt="Campus Life"
+            className="w-1/2 h-auto object-cover"
+          />
+          <img
+            src={CampusLife}
+            alt="Campus Life duplicate"
+            className="w-1/2 h-auto object-cover"
+          />
         </div>
       </div>
 
@@ -44,7 +46,7 @@ const CampusBeat = () => {
         }
 
         .animate-smoothScroll {
-          animation: smoothScroll 20s linear infinite;
+          animation: smoothScroll 40s linear infinite;
         }
       `}</style>
     </div>
