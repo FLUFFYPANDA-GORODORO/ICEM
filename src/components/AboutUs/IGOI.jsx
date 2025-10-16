@@ -142,7 +142,7 @@ function IGOI() {
                 By providing your contact details, you agree to receive updates from Indira College through WhatsApp.
               </p>
               <button type="submit" className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-primary/90 transition">
-                Apply Now
+                Enquire Now
               </button>
             </form>
           </div>

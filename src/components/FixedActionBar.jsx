@@ -7,8 +7,8 @@ const FixedActionBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-1/2 -translate-y-1/2 z-[99999] flex items-center">
-      {/* 👇 Single hover zone (Hamburger + Icons) */}
+    <div className="fixed bottom-6  z-[99999] flex items-center">
+      {/* 👇 Hover zone (Hamburger + Icons) */}
       <div
         className="relative flex items-center group"
         onMouseEnter={() => setIsOpen(true)}
@@ -18,7 +18,7 @@ const FixedActionBar = () => {
         <div className="relative p-[2px] bg-gradient-to-r from-[#00e5ff] via-[#ff00ea] to-[#00e5ff] bg-[length:200%_100%] animate-glow-border transition-all duration-500 rounded-md">
           <button
             title="Menu"
-            className="relative flex items-center justify-center bg-[#278da4] text-white p-4 rounded-l-md shadow-lg hover:brightness-110 transition-all duration-300"
+            className="relative flex items-center justify-center bg-[#278da4] text-white p-4 rounded-md shadow-lg hover:brightness-110 transition-all duration-300"
           >
             <Menu size={22} />
           </button>
@@ -26,7 +26,7 @@ const FixedActionBar = () => {
 
         {/* 🚀 Social Icons Container */}
         <div
-          className={`absolute left-full top-1/2 -translate-y-1/2 flex items-center transition-all duration-500 ease-in-out ${
+          className={`absolute left-full bottom-1/2 translate-y-1/2 flex items-center transition-all duration-500 ease-in-out ${
             isOpen
               ? "opacity-100 translate-x-0"
               : "opacity-0 translate-x-3 pointer-events-none"
@@ -44,7 +44,6 @@ const FixedActionBar = () => {
               <FaFacebookF size={18} />
             </a>
 
-            {/* Divider */}
             <span className="w-[1px] h-6 bg-white/40"></span>
 
             {/* 🌐 LinkedIn */}
@@ -58,7 +57,6 @@ const FixedActionBar = () => {
               <FaLinkedinIn size={18} />
             </a>
 
-            {/* Divider */}
             <span className="w-[1px] h-6 bg-white/40"></span>
 
             {/* 🌐 X (Twitter) */}
@@ -72,7 +70,6 @@ const FixedActionBar = () => {
               <FaSquareXTwitter size={18} />
             </a>
 
-            {/* Divider */}
             <span className="w-[1px] h-6 bg-white/40"></span>
 
             {/* 🌐 Instagram */}
@@ -89,7 +86,7 @@ const FixedActionBar = () => {
         </div>
       </div>
 
-      {/* 🌈 Glowing Border Animation Styles */}
+      {/* 🌈 Glowing Border Animation */}
       <style>{`
         @keyframes glow-border {
           0% {

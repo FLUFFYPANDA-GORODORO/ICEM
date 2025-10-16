@@ -108,10 +108,10 @@ const Navbar = () => {
         {
           title: "Undergraduate Programs",
           items: [
-            { label: "Civil Engineering", link: "/programs/civil-engineering" },
+            
             {
               label: "Computer Engineering",
-              link: "/programs/computer-engineering",
+              link: "/programs/computer-engineering", 
             },
             {
               label: "Mechanical Engineering",
@@ -349,7 +349,7 @@ const Navbar = () => {
                   onClick={toggleModal}
                   className="bg-gradient-to-r from-[#278da4] to-[#003c84] text-white px-8 py-1 text-xs hover:from-[#278da4]/90 hover:to-[#003c84]/90 font-bold border-r border-white transition-all duration-300"
                 >
-                  Apply Now
+                  Enquire Now
                 </button>
               </div>
             </div>
@@ -594,7 +594,7 @@ const Navbar = () => {
                   }}
                   className="w-full bg-primary text-white py-3 font-bold rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  Apply Now
+                  Enquire Now
                 </button>
               </div>
             </div>
@@ -648,7 +648,7 @@ const Navbar = () => {
               ×
             </button>
             <h2 className="text-2xl font-bold text-center mb-6 text-blue-900">
-              Apply Now
+              Enquire Now
             </h2>
 
             <form className="space-y-4">

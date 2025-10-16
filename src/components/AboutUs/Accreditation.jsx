@@ -272,7 +272,7 @@ function Accreditation() {
                 type="submit"
                 className="w-full bg-secondary text-white font-semibold py-2 rounded hover:bg-white hover:text-[#003c84] transition-colors duration-300"
               >
-                Apply Now
+                Enquire Now
               </button>
             </form>
           </div>

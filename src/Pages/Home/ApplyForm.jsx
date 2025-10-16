@@ -4,7 +4,7 @@ const ApplyForm = () => {
   return (
     <div className="bg-white rounded-lg p-4 sm:p-8 shadow-md border border-gray-200 w-full overflow-hidden">
       <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 text-center">
-        Apply Now
+        Enquire Now
       </h3>
 
       <form className="space-y-4">

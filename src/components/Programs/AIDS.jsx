@@ -61,7 +61,7 @@ export default function AIDS() {
                 onClick={toggleModal}
                 className="bg-secondary hover:bg-white hover:text-black text-white px-6 py-2 rounded-md transition-colors"
               >
-                Apply Now
+                Enquire Now
               </button>
               <button
                 onClick={handleBrochureDownload}
@@ -424,7 +424,7 @@ export default function AIDS() {
               onClick={toggleModal}
               className="bg-white hover:bg-white hover:text-black text-secondary px-8 py-3 rounded-md font-semibold transition-colors"
             >
-              Apply Now
+              Enquire Now
             </button>
           </div>
         </div>
@@ -445,7 +445,7 @@ export default function AIDS() {
               ×
             </button>
             <h2 className="text-2xl font-bold text-center mb-6 text-secondary">
-              Apply Now
+              Enquire Now
             </h2>
 
             {/* Modal form - matches the long form */}

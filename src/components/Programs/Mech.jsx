@@ -61,7 +61,7 @@ export default function Mech() {
                 onClick={toggleModal}
                 className="bg-secondary hover:bg-white hover:text-black text-white px-6 py-2 rounded-md transition-colors"
               >
-                Apply Now
+                Enquire Now
               </button>
               <button
                 onClick={handleBrochureDownload}
@@ -252,7 +252,7 @@ export default function Mech() {
         <div className="flex items-start gap-2 mt-2">
           <input type="checkbox" className="mt-1" />
           <p className="text-xs text-gray-700 leading-snug">
-            I agree to receive information regarding my submitted enquiry*
+            I agree to receive information regarding my submitted Enquire*
           </p>
         </div>
 
@@ -421,7 +421,7 @@ export default function Mech() {
               onClick={toggleModal}
               className="bg-white hover:bg-gray-100 text-secondary px-8 py-3 rounded-md font-semibold transition-colors"
             >
-              Apply Now
+              Enquire Now
             </button>
           </div>
         </div>
@@ -442,7 +442,7 @@ export default function Mech() {
               ×
             </button>
             <h2 className="text-2xl font-bold text-center mb-6 text-secondary">
-              Apply Now
+              Enquire Now
             </h2>
 
             {/* Modal form - matches the long form */}
@@ -512,7 +512,7 @@ export default function Mech() {
               <div className="flex items-center gap-2 mt-2">
                 <input type="checkbox" id="agreeModal" />
                 <label htmlFor="agreeModal" className="text-sm text-gray-700">
-                  I agree to receive information regarding my submitted enquiry*
+                  I agree to receive information regarding my submitted Enquire*
                 </label>
               </div>
 
