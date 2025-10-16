@@ -8,6 +8,7 @@ import ResearchLab from "./ResearchLab";
 import Career from "./Career";
 import Impact from "./Impact";
 import Upskilling from "./Upskilling";
+import Companies from "./Companies";
 
 function Placement() {
   return (
@@ -26,10 +27,10 @@ function Placement() {
       <CASsection />
       <TrainingOverview />
       <Impact />
+      <Companies/>
       <ResearchLab />
-      <Career />
+      <Career /> {/* Add logos etc here */}
       <Upskilling />
-
       <Testimonials />
       <PlacementInformation />
     </div>
