@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import FAQSection from "./FAQSection";
 import CompBrochure from "../../assets/BEComp.pdf"; // brochure file
 
@@ -6,6 +6,9 @@ export default function Computer() {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("admissions");
+
+  // ✅ Ref for FAQ Section
+  const faqRef = useRef(null);
 
   // Toggle Apply Now Modal
   const toggleModal = () => setIsModalOpen(!isModalOpen);
@@ -18,6 +21,11 @@ export default function Computer() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  // ✅ Smooth scroll function
+  const scrollToFAQ = () => {
+    faqRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   // Calculate active tab index for sliding indicator
@@ -34,6 +42,7 @@ export default function Computer() {
 
   return (
     <div className="w-full text-white">
+      {/* ===== HERO SECTION ===== */}
       <div className="w-full bg-primary py-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
           {/* LEFT TEXT SECTION */}
@@ -78,11 +87,12 @@ export default function Computer() {
           </div>
         </div>
       </div>
+
       {/* ===== ENHANCED TAB NAVIGATION WITH SLIDING INDICATOR ===== */}
       <div className="my-4 relative bg-white border-b border-gray-200">
-        <div className="flex  mx-auto">
+        <div className="flex mx-auto">
           <button
-            className={`flex-1  py-4 font-medium text-md transition-all duration-150 ${
+            className={`flex-1 py-4 font-medium text-md transition-all duration-150 ${
               activeTab === "admissions"
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-500 hover:text-gray-700"
@@ -92,7 +102,7 @@ export default function Computer() {
             Admissions & Programs
           </button>
           <button
-            className={`flex-1  py-4 font-medium text-md transition-all duration-150 ${
+            className={`flex-1 py-4 font-medium text-md transition-all duration-150 ${
               activeTab === "department"
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-500 hover:text-gray-700"
@@ -115,8 +125,6 @@ export default function Computer() {
       {/* ===== TAB CONTENT ===== */}
       {activeTab === "admissions" ? (
         <>
-          {/* ===== TOP DARK SECTION ===== */}
-
           {/* ===== WHITE INFO SECTION ===== */}
           <div className="w-full bg-[#f8f8f8] text-black py-12">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
@@ -150,11 +158,15 @@ export default function Computer() {
                 </p>
               </div>
 
+              {/* ✅ Updated Eligibility section with scroll functionality */}
               <div>
                 <h4 className="font-semibold text-lg flex items-center gap-2 mb-2">
                   🎓 Eligibility
                 </h4>
-                <p className="text-gray-700">
+                <p
+                  onClick={scrollToFAQ}
+                  className="text-gray-700 cursor-pointer hover:text-blue-600 hover:underline transition-colors"
+                >
                   Click here to read more about eligibility for our CSE Program
                   with Specialisation in AI & Future Tech.
                 </p>
@@ -477,7 +489,10 @@ export default function Computer() {
           </div>
 
           {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
-          <FAQSection />
+          {/* ✅ Wrapped FAQSection with ref for smooth scrolling */}
+          <div ref={faqRef}>
+            <FAQSection />
+          </div>
         </>
       ) : (
         /* ===== DEPARTMENT INFO & STAFF SECTION ===== */

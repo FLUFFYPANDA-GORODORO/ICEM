@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import FAQSection from "./FAQSection";
 import CompBrochure from "../../assets/BEComp.pdf"; // brochure file
 
 export default function ENTC() {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // ✅ Ref for FAQ Section
+  const faqRef = useRef(null);
 
   // Toggle Apply Now Modal
   const toggleModal = () => setIsModalOpen(!isModalOpen);
@@ -17,6 +20,11 @@ export default function ENTC() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  // ✅ Smooth scroll function
+  const scrollToFAQ = () => {
+    faqRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const [activeTab, setActiveTab] = useState("Overview");
@@ -114,11 +122,15 @@ export default function ENTC() {
             </p>
           </div>
 
+          {/* ✅ Updated Eligibility section with scroll functionality */}
           <div>
             <h4 className="font-semibold text-lg flex items-center gap-2 mb-2">
               🎓 Eligibility
             </h4>
-            <p className="text-gray-700">
+            <p
+              onClick={scrollToFAQ}
+              className="text-gray-700 cursor-pointer hover:text-blue-600 hover:underline transition-colors"
+            >
               Click here to read more about eligibility for our CSE Program with
               Specialisation in AI & Future Tech.
             </p>
@@ -128,145 +140,145 @@ export default function ENTC() {
 
       {/* ===== PROGRAM STRUCTURE + APPLY FORM SECTION ===== */}
       <div className="w-full bg-white text-black py-16">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 px-4 sm:px-6 items-start">
-    {/* LEFT TEXT SECTION */}
-    <div className="flex-1 bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-      <h2 className="text-2xl sm:text-3xl font-bold text-secondary mb-4 leading-snug">
-        B.E. CSE with Artificial Intelligence <br /> & Future Technologies
-      </h2>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 px-4 sm:px-6 items-start">
+          {/* LEFT TEXT SECTION */}
+          <div className="flex-1 bg-white p-4 sm:p-6 rounded-lg shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-bold text-secondary mb-4 leading-snug">
+              B.E. CSE with Artificial Intelligence <br /> & Future Technologies
+            </h2>
 
-      <p className="text-gray-700 mb-6 leading-relaxed text-sm sm:text-base">
-        The program prepares graduates to drive innovation in industries like
-        AI, Cloud Computing, Cyber Security, and Blockchain. It combines academic
-        rigor with practical experience, ensuring students gain real-world skills
-        and exposure to emerging technologies.
-      </p>
+            <p className="text-gray-700 mb-6 leading-relaxed text-sm sm:text-base">
+              The program prepares graduates to drive innovation in industries like
+              AI, Cloud Computing, Cyber Security, and Blockchain. It combines academic
+              rigor with practical experience, ensuring students gain real-world skills
+              and exposure to emerging technologies.
+            </p>
 
-      <h3 className="font-semibold text-lg sm:text-xl text-secondary mb-3">
-        Program Structure
-      </h3>
+            <h3 className="font-semibold text-lg sm:text-xl text-secondary mb-3">
+              Program Structure
+            </h3>
 
-      <ul className="space-y-2 text-gray-800 text-sm sm:text-base">
-        <li>➜ Computer Science and Programming Foundations</li>
-        <li>➜ Data Structures and Advanced Algorithms</li>
-        <li>➜ Artificial Intelligence and Machine Learning</li>
-        <li>➜ Blockchain and Cybersecurity</li>
-        <li>➜ Cloud Computing and Emerging Tech Labs</li>
-      </ul>
-    </div>
-
-    {/* RIGHT FORM SECTION */}
-    <div className="flex-1 bg-gray-50 p-4 sm:p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto w-full">
-      <form className="space-y-4">
-        {/* Name */}
-        <input
-          type="text"
-          placeholder="Enter Name *"
-          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-
-        {/* Email */}
-        <input
-          type="email"
-          placeholder="Enter Email Address *"
-          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-
-        {/* Mobile Number */}
-        <div className="flex flex-col sm:flex-row border border-gray-300 rounded-md overflow-hidden">
-          <select className="bg-gray-100 border-b sm:border-b-0 sm:border-r border-gray-300 px-3 py-2 text-gray-700 outline-none">
-            <option>+91</option>
-          </select>
-          <input
-            type="tel"
-            placeholder="Enter Mobile Number *"
-            className="flex-1 px-3 sm:px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
-
-        {/* State & City */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
-            <option>Select State *</option>
-            <option>Maharashtra</option>
-            <option>Gujarat</option>
-            <option>Karnataka</option>
-          </select>
-
-          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
-            <option>Select City *</option>
-            <option>Pune</option>
-            <option>Mumbai</option>
-            <option>Nashik</option>
-          </select>
-        </div>
-
-        {/* Discipline & Course */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
-            <option>Select Discipline Applying For *</option>
-            <option>Engineering</option>
-            <option>Management</option>
-            <option>Computer Applications</option>
-          </select>
-
-          <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
-            <option>Select Course *</option>
-            <option>B.E.</option>
-            <option>MBA</option>
-            <option>MCA</option>
-          </select>
-        </div>
-
-        {/* Program */}
-        <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
-          <option>Select Program *</option>
-          <option>Computer Engineering</option>
-          <option>Mechanical Engineering</option>
-          <option>AI & Data Science</option>
-          <option>IT</option>
-        </select>
-
-        {/* CET Score */}
-        <input
-          type="text"
-          placeholder="Enter CET Score"
-          className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-
-        {/* Captcha Section */}
-        <div className="flex flex-col sm:flex-row gap-3 items-stretch">
-          <div className="bg-white border border-gray-300 rounded-md flex-1 sm:w-1/2 flex items-center justify-center py-2">
-            <span className="text-lg font-bold text-gray-700 select-none">
-              8fcb09
-            </span>
+            <ul className="space-y-2 text-gray-800 text-sm sm:text-base">
+              <li>➜ Computer Science and Programming Foundations</li>
+              <li>➜ Data Structures and Advanced Algorithms</li>
+              <li>➜ Artificial Intelligence and Machine Learning</li>
+              <li>➜ Blockchain and Cybersecurity</li>
+              <li>➜ Cloud Computing and Emerging Tech Labs</li>
+            </ul>
           </div>
-          <input
-            type="text"
-            placeholder="Enter Captcha"
-            className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
 
-        {/* Checkbox */}
-        <div className="flex items-start gap-2 mt-2">
-          <input type="checkbox" className="mt-1" />
-          <p className="text-xs text-gray-700 leading-snug">
-            I agree to receive information regarding my submitted enquiry*
-          </p>
-        </div>
+          {/* RIGHT FORM SECTION */}
+          <div className="flex-1 bg-gray-50 p-4 sm:p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto w-full">
+            <form className="space-y-4">
+              {/* Name */}
+              <input
+                type="text"
+                placeholder="Enter Name *"
+                className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md mt-3 transition-colors"
-        >
-          SUBMIT
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
+              {/* Email */}
+              <input
+                type="email"
+                placeholder="Enter Email Address *"
+                className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              {/* Mobile Number */}
+              <div className="flex flex-col sm:flex-row border border-gray-300 rounded-md overflow-hidden">
+                <select className="bg-gray-100 border-b sm:border-b-0 sm:border-r border-gray-300 px-3 py-2 text-gray-700 outline-none">
+                  <option>+91</option>
+                </select>
+                <input
+                  type="tel"
+                  placeholder="Enter Mobile Number *"
+                  className="flex-1 px-3 sm:px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              {/* State & City */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select State *</option>
+                  <option>Maharashtra</option>
+                  <option>Gujarat</option>
+                  <option>Karnataka</option>
+                </select>
+
+                <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select City *</option>
+                  <option>Pune</option>
+                  <option>Mumbai</option>
+                  <option>Nashik</option>
+                </select>
+              </div>
+
+              {/* Discipline & Course */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select Discipline Applying For *</option>
+                  <option>Engineering</option>
+                  <option>Management</option>
+                  <option>Computer Applications</option>
+                </select>
+
+                <select className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
+                  <option>Select Course *</option>
+                  <option>B.E.</option>
+                  <option>MBA</option>
+                  <option>MCA</option>
+                </select>
+              </div>
+
+              {/* Program */}
+              <select className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 text-gray-700 outline-none focus:ring-2 focus:ring-primary">
+                <option>Select Program *</option>
+                <option>Computer Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>AI & Data Science</option>
+                <option>IT</option>
+              </select>
+
+              {/* CET Score */}
+              <input
+                type="text"
+                placeholder="Enter CET Score"
+                className="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+
+              {/* Captcha Section */}
+              <div className="flex flex-col sm:flex-row gap-3 items-stretch">
+                <div className="bg-white border border-gray-300 rounded-md flex-1 sm:w-1/2 flex items-center justify-center py-2">
+                  <span className="text-lg font-bold text-gray-700 select-none">
+                    8fcb09
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter Captcha"
+                  className="flex-1 border border-gray-300 rounded-md px-3 sm:px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              {/* Checkbox */}
+              <div className="flex items-start gap-2 mt-2">
+                <input type="checkbox" className="mt-1" />
+                <p className="text-xs text-gray-700 leading-snug">
+                  I agree to receive information regarding my submitted enquiry*
+                </p>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-md mt-3 transition-colors"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
 
       {/* ===== PROGRAM HIGHLIGHTS SECTION ===== */}
       <div className="w-full bg-[#f7f7f7] py-16 text-black">
@@ -428,7 +440,10 @@ export default function ENTC() {
       </div>
 
       {/* ===== FREQUENTLY ASKED QUESTIONS SECTION ===== */}
-      <FAQSection />
+      {/* ✅ Wrapped FAQSection with ref for smooth scrolling */}
+      <div ref={faqRef}>
+        <FAQSection />
+      </div>
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (

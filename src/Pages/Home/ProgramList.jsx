@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProgramList = () => {
   const programs = [
-    "Civil Engineering",
-    "Computer Engineering",
-    "Mechanical Engineering",
-    "Artificial Intelligence and Data Science",
-    "Electronics and Telecommunication",
-    "First Year Engineering",
-    "Information Technology",
-    "Integrated MBA (BBA + MBA)",
-    "Integrated MBA (BCA + MCA)",
-    "MBA",
-    "MCA",
-    "M-Tech in Mechanical Engineering",
-    "M-Tech in Computer Science",
+    { name: "Computer Engineering", link: "/programs/computer-engineering" },
+    { name: "Mechanical Engineering", link: "/programs/mechanical-engineering" },
+    { name: "Artificial Intelligence and Data Science", link: "/programs/ai-ds" },
+    { name: "Electronics and Telecommunication", link: "/programs/entc" },
+    { name: "First Year Engineering", link: "/programs/fye" },
+    { name: "Information Technology", link: "/programs/it" },
+    { name: "Integrated MBA (BBA + MBA)", link: "/programs/imba" },
+    { name: "Integrated MCA (BCA + MCA)", link: "/programs/imca" },
+    { name: "MBA", link: "/programs/mba" },
+    { name: "MCA", link: "/programs/mca" },
+    { name: "M-Tech in Mechanical Engineering", link: "/programs/mtech-mech" },
+    { name: "M-Tech in Computer Science", link: "/programs/mtech-comp" },
   ];
 
   return (
@@ -27,9 +27,12 @@ const ProgramList = () => {
         {programs.map((item, index) => (
           <p key={index} className="flex items-start text-sm sm:text-base">
             <span className="text-secondary mr-2 font-bold">›</span>
-            <span className="hover:underline cursor-pointer hover:text-primary transition-colors">
-              {item}
-            </span>
+            <Link
+              to={item.link}
+              className="hover:underline cursor-pointer hover:text-primary transition-colors"
+            >
+              {item.name}
+            </Link>
           </p>
         ))}
       </div>

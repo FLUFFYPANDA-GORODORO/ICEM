@@ -1,30 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // ✅ Import images
 import CompEng from "../../assets/Comp.jpg";
 import MechEng from "../../assets/Mech.jpg";
 import AidsEng from "../../assets/Entc.jpg";
 import EntcEng from "../../assets/AIDS1.jpg";
-
-
 import ITEng from "../../assets/IT1.jpg";
 
-// ✅ Placeholder (use a simple stock image or blank)
-import Placeholder from "../../assets/ICEM_Banner.jpg"; // <-- you can replace this with your own placeholder
-// if you don't have one, create a plain gray box as fallback
+// ✅ Placeholder
+import Placeholder from "../../assets/ICEM_Banner.jpg";
 
 const DiscoverPaths = () => {
-  // ✅ Match images to courses
+  // ✅ Match images to courses and include correct routes
   const courses = [
-    { name: "Computer Engineering", img: CompEng },
-    { name: "Mechanical Engineering", img: MechEng },
-    { name: "Artificial Intelligence and Data Science", img: AidsEng },
-    { name: "Electronics and Telecommunication", img: EntcEng },
-    { name: "Information Technology", img: ITEng },
-    { name: "MBA", img: Placeholder },
-    { name: "MCA", img: Placeholder },
-    { name: "M-Tech in Mechanical Engineering", img: Placeholder },
-    { name: "M-Tech in Computer Science", img: Placeholder },
+    { name: "Computer Engineering", img: CompEng, link: "/programs/computer-engineering" },
+    { name: "Mechanical Engineering", img: MechEng, link: "/programs/mechanical-engineering" },
+    { name: "Artificial Intelligence and Data Science", img: AidsEng, link: "/programs/ai-ds" },
+    { name: "Electronics and Telecommunication", img: EntcEng, link: "/programs/entc" },
+    { name: "Information Technology", img: ITEng, link: "/programs/it" },
+    { name: "MBA", img: Placeholder, link: "/programs/mba" },
+    { name: "MCA", img: Placeholder, link: "/programs/mca" },
+    { name: "M-Tech in Mechanical Engineering", img: Placeholder, link: "/programs/mtech-mech" },
+    { name: "M-Tech in Computer Science", img: Placeholder, link: "/programs/mtech-comp" },
   ];
 
   return (
@@ -34,11 +32,13 @@ const DiscoverPaths = () => {
           Discover Your Path to Success
         </h2>
 
+        {/* Responsive Course Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {courses.map((course, index) => (
-            <div
+            <Link
               key={index}
-              className="relative bg-white shadow-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02]"
+              to={course.link}
+              className="relative bg-white shadow-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02] rounded-md"
             >
               {/* Background Image */}
               <img
@@ -47,11 +47,11 @@ const DiscoverPaths = () => {
                 className="w-full h-44 object-cover group-hover:brightness-75 transition-all duration-300"
               />
 
-              {/* Transparent Overlay Title */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-center text-white font-semibold text-xs whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] group-hover:scale-105 group-hover:underline transition-transform duration-300">
+              {/* Overlay Title */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-center text-white font-semibold text-xs sm:text-sm px-2 whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] group-hover:scale-105 group-hover:underline transition-transform duration-300">
                 {course.name}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
