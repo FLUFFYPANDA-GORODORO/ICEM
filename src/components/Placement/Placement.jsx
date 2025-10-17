@@ -9,30 +9,23 @@ import Career from "./Career";
 import Impact from "./Impact";
 import Upskilling from "./Upskilling";
 import Companies from "./Companies";
+import PlacementCarousel from "./PlacementCarousel";
 
 function Placement() {
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section */}
-      <section className="w-full relative">
-        {/* Background Banner */}
-        <img
-          src={Banner}
-          alt="Indira College Banner"
-          className="w-full h-full object-cover"
-        />
-      </section>
-
+      <PlacementCarousel/>
       <Typingsection />
-      <CASsection />
-      <TrainingOverview />
       <Impact />
-      <Companies/>
+      <Companies />
       <ResearchLab />
       <Career /> {/* Add logos etc here */}
+      <CASsection />
+      <TrainingOverview />
       <Upskilling />
       <Testimonials />
-      <PlacementInformation />
+      <PlacementInformation /> {/* All the extra content goes here */}
     </div>
   );
 }
