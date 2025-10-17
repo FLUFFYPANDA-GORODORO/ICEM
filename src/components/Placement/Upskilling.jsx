@@ -47,7 +47,7 @@ export default function Upskilling() {
     {
       title: "Computer",
       items: [
-        { image: "comp/full-stack.png", name: "Full Stack" },
+        { image: "comp/sample.png", name: "" },
         { image: "comp/react.png", name: "React" },
         { image: "comp/css.png", name: "HTML / CSS" },
         { image: "comp/python.png", name: "Python" },
@@ -155,21 +155,27 @@ export default function Upskilling() {
 
                 {/* Logos Grid (Same style as Companies section) */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center">
-                  {section.items.map((item, index) => (
-                    <div
-                      key={index}
-                      className="h-20 w-24 bg-white border border-gray-200 flex flex-col items-center justify-center text-gray-600 text-xs font-medium shadow-sm hover:shadow-md hover:-translate-y-1 transition-all rounded-md"
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-12 h-12 object-contain mb-1"
-                      />
-                      <p className="text-[10px] text-gray-700 font-semibold text-center leading-tight">
-                        {item.name}
-                      </p>
-                    </div>
-                  ))}
+                 {section.items.map((item, index) => (
+  <div
+    key={index}
+    className="relative h-20 w-20 bg-white border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all rounded-md overflow-hidden group"
+  >
+    {/* Logo */}
+    <img
+      src={item.image}
+      alt={item.name}
+      className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
+    />
+
+    {/* Hover Text Overlay */}
+    <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <p className="text-[10px] text-secondary font-semibold text-center px-2 leading-tight">
+        {item.name}
+      </p>
+    </div>
+  </div>
+))}
+
                 </div>
               </div>
             ))}
