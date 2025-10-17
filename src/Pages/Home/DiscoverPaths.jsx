@@ -7,6 +7,8 @@ import MechEng from "../../assets/Mech.jpg";
 import AidsEng from "../../assets/Entc.jpg";
 import EntcEng from "../../assets/AIDS1.jpg";
 import ITEng from "../../assets/IT1.jpg";
+import MBA from "../../assets/IBBAMBA1.jpg";
+import MCA from "../../assets/IBCAMCA.jpg";
 
 // ✅ Placeholder
 import Placeholder from "../../assets/ICEM_Banner.jpg";
@@ -19,8 +21,8 @@ const DiscoverPaths = () => {
     { name: "Artificial Intelligence and Data Science", img: AidsEng, link: "/programs/ai-ds" },
     { name: "Electronics and Telecommunication", img: EntcEng, link: "/programs/entc" },
     { name: "Information Technology", img: ITEng, link: "/programs/it" },
-    { name: "MBA", img: Placeholder, link: "/programs/mba" },
-    { name: "MCA", img: Placeholder, link: "/programs/mca" },
+    { name: "MBA", img: MBA, link: "/programs/mba" },
+    { name: "MCA", img: MCA, link: "/programs/mca" },
     { name: "M-Tech in Mechanical Engineering", img: Placeholder, link: "/programs/mtech-mech" },
     { name: "M-Tech in Computer Science", img: Placeholder, link: "/programs/mtech-comp" },
   ];
@@ -32,8 +34,8 @@ const DiscoverPaths = () => {
           Discover Your Path to Success
         </h2>
 
-        {/* Responsive Course Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {/* ✅ Responsive Course Grid (Now 3 Columns on Large Screens) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course, index) => (
             <Link
               key={index}
