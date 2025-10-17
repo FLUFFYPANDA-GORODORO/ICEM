@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import academic from "../../assets/academic.jpg";
 
 const ProgramList = () => {
   const programs = [
@@ -19,11 +20,13 @@ const ProgramList = () => {
 
   return (
     <div className="lg:col-span-2 bg-white rounded-lg p-4 sm:p-8 shadow-sm border border-gray-200">
+      {/* Heading */}
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
         ACADEMIC <span className="text-secondary">YEAR 2026</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 text-gray-800">
+      {/* Program Links */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 text-gray-800 mb-8">
         {programs.map((item, index) => (
           <p key={index} className="flex items-start text-sm sm:text-base">
             <span className="text-secondary mr-2 font-bold">›</span>
@@ -35,6 +38,15 @@ const ProgramList = () => {
             </Link>
           </p>
         ))}
+      </div>
+
+      {/* ✅ Academic Image */}
+      <div className="mt-4">
+        <img
+          src={academic}
+          alt="Academic"
+          className="w-full h-auto rounded-lg shadow-md object-cover"
+        />
       </div>
     </div>
   );

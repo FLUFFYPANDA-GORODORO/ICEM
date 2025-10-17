@@ -1,6 +1,6 @@
 import React from "react";
 
-// ✅ Import all 34 logos
+// ✅ Import all 44 logos
 import logo1 from "../../assets/Recruiters logos/logo1.png";
 import logo2 from "../../assets/Recruiters logos/logo2.png";
 import logo3 from "../../assets/Recruiters logos/logo3.png";
@@ -35,14 +35,25 @@ import logo31 from "../../assets/Recruiters logos/logo31.png";
 import logo32 from "../../assets/Recruiters logos/logo32.png";
 import logo33 from "../../assets/Recruiters logos/logo33.png";
 import logo34 from "../../assets/Recruiters logos/logo34.png";
+import logo35 from "../../assets/Recruiters logos/logo35.png";
+import logo36 from "../../assets/Recruiters logos/logo36.png";
+import logo37 from "../../assets/Recruiters logos/logo37.png";
+import logo38 from "../../assets/Recruiters logos/logo38.png";
+import logo39 from "../../assets/Recruiters logos/logo39.png";
+import logo40 from "../../assets/Recruiters logos/logo40.png";
+import logo41 from "../../assets/Recruiters logos/logo41.png";
+import logo42 from "../../assets/Recruiters logos/logo42.png";
+import logo43 from "../../assets/Recruiters logos/logo43.png";
+import logo44 from "../../assets/Recruiters logos/logo44.png";
 
 const RecruitersSection = () => {
   const logos = [
     logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8,
-    logo9, logo10, logo11, logo12, logo13, logo14, logo15, logo16,
+    logo9, logo10, logo11, logo12, logo42, logo14, logo41, logo16,
     logo17, logo18, logo19, logo20, logo21, logo22, logo23, logo24,
     logo25, logo26, logo27, logo28, logo29, logo30, logo31, logo32,
-    logo33, logo34,
+    logo33, logo34, logo35, logo36, logo37, logo38, logo39, logo40,
+    logo43, logo44,
   ];
 
   return (
@@ -60,8 +71,8 @@ const RecruitersSection = () => {
           excel in a rapidly evolving job market.
         </p>
 
-        {/* ✅ Compact Recruiter Logos Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-3 gap-y-4 place-items-center">
+        {/* ✅ Recruiter Logos Grid (7 per row on large screens) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-3 gap-y-4 place-items-center">
           {logos.map((logo, index) => (
             <div
               key={index}
@@ -70,7 +81,7 @@ const RecruitersSection = () => {
               <img
                 src={logo}
                 alt={`Recruiter Logo ${index + 1}`}
-                className="max-w-[80%] max-h-[60px] object-contain  hover:grayscale-0 transition duration-300"
+                className="max-w-[80%] max-h-[60px] object-contain hover:grayscale-0 transition duration-300"
               />
             </div>
           ))}
