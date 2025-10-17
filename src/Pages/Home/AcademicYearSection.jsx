@@ -2,6 +2,7 @@ import React from "react";
 import ProgramList from "./ProgramList";
 import ApplyForm from "./ApplyForm";
 
+
 const AcademicYearSection = () => {
   return (
     <div className="bg-gray-50 py-16">
