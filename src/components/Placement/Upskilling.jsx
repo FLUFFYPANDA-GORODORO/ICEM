@@ -33,6 +33,39 @@ export default function Upskilling() {
         { image: "/iot.png", name: "Internet of Things (IoT)" },
       ],
     },
+     {
+      title: "AI - DS - ML",
+      items: [
+        { image: "comp/ml.png", name: "Machine Learning" },
+        { image: "comp/python.png", name: "Python" },
+        { image: "comp/data-science.png", name: "Data Science" },
+        { image: "comp/tablo.png", name: "Tableau" },
+        { image: "comp/ai.png", name: "Artificial Intelligence" },
+        { image: "comp/deep.png", name: "Deep Learning" },
+      ],
+    },
+    {
+      title: "Computer",
+      items: [
+        { image: "comp/full-stack.png", name: "Full Stack" },
+        { image: "comp/react.png", name: "React" },
+        { image: "comp/css.png", name: "HTML / CSS" },
+        { image: "comp/python.png", name: "Python" },
+        { image: "comp/mongodb.png", name: "MongoDB" },
+        { image: "comp/dsa.png", name: "DSA" },
+      ],
+    },
+    {
+      title: "IT",
+      items: [
+        { image: "comp/nodejs.png", name: "Node.js" },
+        { image: "comp/django.png", name: "Django" },
+        { image: "comp/webdev.png", name: "App/Web Development" },
+        { image: "comp/linux.png", name: "Linux" },
+        { image: "comp/js.png", name: "JavaScript" },
+        { image: "comp/php.png", name: "PHP" }
+      ]
+    }
   ];
 
 
@@ -130,7 +163,7 @@ export default function Upskilling() {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-10 h-10 object-contain mb-1"
+                        className="w-12 h-12 object-contain mb-1"
                       />
                       <p className="text-[10px] text-gray-700 font-semibold text-center leading-tight">
                         {item.name}
