@@ -58,7 +58,7 @@ const EventsSection = () => {
             Shape Your Future with Us
           </h2>
           <p className="text-white/80 max-w-3xl mx-auto text-lg mb-8 leading-relaxed">
-            Discover limitless opportunities at Indira College, where
+            Discover limitless opportunities at Indira College of Engineering and Management, where
             innovation, learning, and industry connect. Take the first step
             towards your dreams. Explore our programs and get in touch to
             begin your journey with us.

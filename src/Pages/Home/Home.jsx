@@ -23,7 +23,7 @@ const Home = () => {
       <EnergyInnovation />
       <CampusBeat />
       <CollegeUnplugged />
-      <FacultySection />
+
       <NewsSection />
       <EventsSection />
       <InstagramFeed />
